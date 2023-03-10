@@ -2,5 +2,5 @@
 
 int main()
 {
-	cout << "Nai dobrata dizainerka";
+	cout << "Nai dobrata dizainerka - Soner";
 }
