@@ -12,7 +12,7 @@ int main()
     // Setting window
     InitWindow(screenWidth, screenHeight, "Neos - Chemistry project");
     SetTargetFPS(60);
-    //SetWindowIcon(LoadImage("../../assets/icon.png"));
+    SetWindowIcon(LoadImage("../assets/icon.png"));
 
     sceneManager sceneManager;
 
