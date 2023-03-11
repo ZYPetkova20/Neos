@@ -1,0 +1,9 @@
+﻿  sceneManager.cpp
+  The contents of <format> are available only in c++latest mode with concepts support;
+  see https://github.com/microsoft/STL/issues/1814 for details.
+  The contents of <ranges> are available only in c++latest mode with concepts support;
+  see https://github.com/microsoft/STL/issues/1814 for details.
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\sceneManager.cpp(28,19): error C3083: 'ranges': the symbol to the left of a '::' must be a type
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\sceneManager.cpp(28,27): error C2672: 'std::find_if': no matching overloaded function found
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\sceneManager.cpp(28,116): error C2780: '_InIt std::find_if(_InIt,const _InIt,_Pr)': expects 3 arguments - 2 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xutility(5615): message : see declaration of 'std::find_if'
