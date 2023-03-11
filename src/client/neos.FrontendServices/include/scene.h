@@ -11,6 +11,9 @@ public:
 	}
 	std::string mySceneName;
 
+	// Basic variables for all scenes
+	Color backgroundColor = { 248, 248, 248, 255 };
+
 	// Basic methods for all scenes
 	virtual void Start() = 0;
 	virtual void Update() = 0;

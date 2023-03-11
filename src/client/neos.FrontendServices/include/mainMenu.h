@@ -8,7 +8,7 @@ private:
 	sceneManager &mySceneManager;
 
 	// Vector2
-	Vector2 mousePos;
+	Vector2 mousePos = {0.f, 0.f};
 
 	// Methods
 

@@ -1,8 +1,2 @@
-﻿  main.cpp
-  The contents of <ranges> are available only in c++latest mode with concepts support;
-  see https://github.com/microsoft/STL/issues/1814 for details.
-  sceneManager.cpp
-  The contents of <ranges> are available only in c++latest mode with concepts support;
-  see https://github.com/microsoft/STL/issues/1814 for details.
-  Generating Code...
+﻿  loadingScreen.cpp
   neos.FrontendServices.vcxproj -> C:\Users\S\Documents\GitHub\Neos\src\x64\Debug\neos.FrontendServices.exe

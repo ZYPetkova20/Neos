@@ -1,6 +1,7 @@
-#include "raylib.h"
 #include "../include/sceneManager.h"
+#include "../include/loadingScreen.h"
 #include "../include/mainMenu.h"
+#include "raylib.h"
 
 // Screen size
 const int screenWidth = 1406;
@@ -10,21 +11,21 @@ int main()
 {
     // Setting window
     InitWindow(screenWidth, screenHeight, "Neos - Chemistry project");
-
     SetTargetFPS(60);
-
-    // SetWindowIcon(LoadImage(*img*));
+    //SetWindowIcon(LoadImage("../../assets/icon.png"));
 
     sceneManager sceneManager;
 
     // Creating scenes
+    loadingScreen sceneLoadingScreen{ "LoadingScreen", sceneManager };
     mainMenu sceneMainMenu{ "MainMenu", sceneManager };
 
     // Adding scenes to the scene vector
+    sceneManager.addScene(&sceneLoadingScreen);
     sceneManager.addScene(&sceneMainMenu);
 
     // Setting the first current scene
-    sceneManager.setCurrentScene("MainMenu");
+    sceneManager.setCurrentScene("LoadingScreen");
 
     // Main event loop
     while (!WindowShouldClose())

@@ -15,7 +15,7 @@ void mainMenu::Update()
 {
 	BeginDrawing();
 
-	ClearBackground(RAYWHITE);
+	ClearBackground(backgroundColor);
 
 	EndDrawing();
 }
