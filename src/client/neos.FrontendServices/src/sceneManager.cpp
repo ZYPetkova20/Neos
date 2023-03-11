@@ -22,5 +22,5 @@ void sceneManager::addScene(scene* scene)
 
 scene* sceneManager::getScene(std::string sceneName)
 {
-    return (*std::ranges::find_if(allScenes, [&sceneName](scene* scene) { return scene->mySceneName == sceneName; }));
+    return(*std::ranges::find_if(allScenes, [&sceneName](scene* scene) { return scene->mySceneName == sceneName; }));
 }

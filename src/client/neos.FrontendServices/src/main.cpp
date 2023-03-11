@@ -1,39 +1,37 @@
 #include "raylib.h"
+#include "../include/sceneManager.h"
+#include "../include/mainMenu.h"
 
-using namespace std;
+// Screen size
+const int screenWidth = 1406;
+const int screenHeight = 790;
 
 int main()
 {
-    // Initialization
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    // Setting window
+    InitWindow(screenWidth, screenHeight, "Neos - Chemistry project");
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - keyboard input");
+    SetTargetFPS(60);
 
-    Vector2 ballPosition = { (float)screenWidth / 2, (float)screenHeight / 2 };
+    // SetWindowIcon(LoadImage(*img*));
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    sceneManager sceneManager;
 
-    // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
+    // Creating scenes
+    mainMenu sceneMainMenu{ "MainMenu", sceneManager };
+
+    // Adding scenes to the scene vector
+    sceneManager.addScene(&sceneMainMenu);
+
+    // Setting the first current scene
+    sceneManager.setCurrentScene("MainMenu");
+
+    // Main event loop
+    while (!WindowShouldClose())
     {
-        if (IsKeyDown(KEY_RIGHT)) ballPosition.x += 2.0f;
-        if (IsKeyDown(KEY_LEFT)) ballPosition.x -= 2.0f;
-        if (IsKeyDown(KEY_UP)) ballPosition.y -= 2.0f;
-        if (IsKeyDown(KEY_DOWN)) ballPosition.y += 2.0f;
-        BeginDrawing();
-
-        ClearBackground(RAYWHITE);
-
-        DrawText("move the ball with arrow keys", 10, 10, 20, DARKGRAY);
-
-        DrawCircleV(ballPosition, 50, MAROON);
-
-        EndDrawing();
+        sceneManager.updateScene();
     }
 
     // De-Initialization
-    CloseWindow();        // Close window and OpenGL context
-
-    return 0;
+    CloseWindow();
 }

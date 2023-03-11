@@ -11,6 +11,7 @@ public:
 	}
 	std::string mySceneName;
 
+	// Basic methods for all scenes
 	virtual void Start() = 0;
 	virtual void Update() = 0;
 	virtual void onExit() = 0;
