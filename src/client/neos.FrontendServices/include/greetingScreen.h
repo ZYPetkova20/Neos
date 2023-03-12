@@ -28,6 +28,7 @@ private:
 	Vector2 registerButtonPos = {108, 440};
 
 	// Methods
+	void handleCollisions(); // Checks and handles all possible buttons
 	void fadeAnimation(); // Fades out the texture
 
 	// For drawing textures

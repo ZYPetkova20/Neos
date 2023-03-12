@@ -74,9 +74,9 @@ void loadingScreen::increaseOpacity()
 	}
 
 	if (animationCounter < 230)
-		loadingOpacity.a += 3.0f;
+		loadingOpacity.a += 3;
 	else
-		loadingOpacity.a += 4.0f;
+		loadingOpacity.a += 4;
 }
 
 // Method for fading out the texture
@@ -90,7 +90,7 @@ void loadingScreen::decreaseOpacity()
 		return;
 
 	if (animationCounter < 90)
-		loadingOpacity.a -= 2.0f;
+		loadingOpacity.a -= 2;
 	else
-		loadingOpacity.a -= 3.0f;
+		loadingOpacity.a -= 3;
 }
