@@ -7,13 +7,23 @@ class loadingScreen : public scene
 private:
 	sceneManager &mySceneManager;
 
+	// Variables
+	bool animationIsOver = false;
+	float animationCounter = 0;
+
+	// Vector variables
+	Color loadingOpacity = {255, 255, 255, 255};
+
 	// Textures
+	Texture2D defaultTexture;
 	Texture2D logoTexture;
+	Texture2D transitionTexture;
 
-	// Methods
-
-	// For drawing textures
-	void drawTextures();
+	// Methods:
+	void handleIntro(); // For intro animation
+	void increaseOpacity(); // Fades in the texture
+	void decreaseOpacity(); // Fades out the texture
+	void drawTextures();  // For drawing textures
 
 public:
 	loadingScreen(std::string sceneName, sceneManager& sceneManager);

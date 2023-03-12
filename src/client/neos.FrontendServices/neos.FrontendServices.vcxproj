@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\greetingScreen.cpp" />
     <ClCompile Include="src\loadingScreen.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\mainMenu.cpp" />
     <ClCompile Include="src\sceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\greetingScreen.h" />
     <ClInclude Include="include\loadingScreen.h" />
     <ClInclude Include="include\mainMenu.h" />
     <ClInclude Include="include\scene.h" />
