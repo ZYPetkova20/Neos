@@ -1,4 +1,8 @@
 ﻿  greetingScreen.cpp
-C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(64,26): warning C4244: '-=': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(66,26): warning C4244: '-=': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(60,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(60,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(61,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(61,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(79,26): warning C4244: '-=': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\S\Documents\GitHub\Neos\src\client\neos.FrontendServices\src\greetingScreen.cpp(81,26): warning C4244: '-=': conversion from 'float' to 'unsigned char', possible loss of data
   neos.FrontendServices.vcxproj -> C:\Users\S\Documents\GitHub\Neos\src\x64\Debug\neos.FrontendServices.exe

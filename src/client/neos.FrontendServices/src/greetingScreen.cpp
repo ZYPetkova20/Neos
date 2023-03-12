@@ -32,18 +32,33 @@ void greetingScreen::onExit()
 // Method for loading the variables / assets
 void greetingScreen::loadAssets()
 {
+	greetingText = LoadTexture("../assets/greetingScreen/greetingText.png");
+	logoTexture = LoadTexture("../assets/greetingScreen/smallIcon.png");
+	backgroundTexture = LoadTexture("../assets/greetingScreen/backGroundImg.png");
+	signInButton = LoadTexture("../assets/greetingScreen/signInButton.png");
+	registerButton = LoadTexture("../assets/registerButton.png");
 	transitionTexture = LoadTexture("../assets/loadingTransition.png");
 }
 
 // Method for unloading the variables / assets
 void greetingScreen::deleteAssets()
 {
+	UnloadTexture(greetingText);
+	UnloadTexture(logoTexture);
+	UnloadTexture(backgroundTexture);
+	UnloadTexture(signInButton);
+	UnloadTexture(registerButton);
 	UnloadTexture(transitionTexture);
 }
 
 // Method for drawning the raylib textures
 void greetingScreen::drawTextures()
 {
+	DrawTexture(backgroundTexture, 578, 30, WHITE);
+	DrawTexture(logoTexture, 1293, 745, WHITE);
+	DrawTexture(greetingText, 108, 67, WHITE);
+	DrawTexture(signInButton, signInButtonPos.x, signInButtonPos.y, WHITE);
+	DrawTexture(registerButton, registerButtonPos.x, registerButtonPos.y, WHITE);
 
 	DrawTexture(transitionTexture, 0, 0, transitionOpacity);
 }

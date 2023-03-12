@@ -12,13 +12,20 @@ private:
 	float animationCounter = 0;
 
 	// Vector variables
-	Vector2 mousePos = { 0.f, 0.f };
 	Color transitionOpacity = { 255, 255, 255, 255 };
+	Vector2 mousePos = { 0.f, 0.f };
 
 	// Textures
 	Texture2D greetingText;
 	Texture2D logoTexture;
+	Texture2D backgroundTexture;
+	Texture2D signInButton;
+	Texture2D registerButton;
 	Texture2D transitionTexture;
+
+	// Texture Positions
+	Vector2 signInButtonPos = {108, 331};
+	Vector2 registerButtonPos = {108, 440};
 
 	// Methods
 	void fadeAnimation(); // Fades out the texture
