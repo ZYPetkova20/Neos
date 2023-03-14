@@ -74,7 +74,7 @@ void greetingScreen::handleCollisions()
 	static_cast<float>(signInButton.width), static_cast<float>(signInButton.height) })
 		&& IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		std::cout << "button 1" << std::endl;
+		mySceneManager.setCurrentScene("MainMenu");
 	}
 
 	// Handles the Register button
@@ -82,8 +82,7 @@ void greetingScreen::handleCollisions()
 	static_cast<float>(registerButton.width), static_cast<float>(registerButton.height) })
 		&& IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		/*mySceneManager.setCurrentScene("MainMenu");*/
-		std::cout << "button 2" << std::endl;
+		mySceneManager.setCurrentScene("MainMenu");
 	}
 }
 
