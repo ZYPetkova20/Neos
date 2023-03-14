@@ -3,6 +3,18 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Vs generated files (Visual Studio)
+*.suo
+*.db-wal
+*.db-shm
+*.opendb
+*.ipch
+*.tlog
+*.ilk
+*.log
+*.idb
+*.pdb
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
