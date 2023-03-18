@@ -1,5 +1,4 @@
 #include "../include/inputField.h"
-#include <iostream>
 
 using namespace cp;
 
@@ -10,7 +9,7 @@ inputField::inputField(Rectangle field, string type, float fontSize, Color textC
     this->fontSize = fontSize;
     this->textColor = textColor;
     font = LoadFontEx("../assets/fonts/Comfortaa-SemiBold.ttf", this->type == "email" ? 18 : 22, 0, 0);
-    maxChars = this->type == "email" ? 24 : 17;
+    maxChars = this->type == "email" ? 28 : 18;
 
     for (int i = 0; i < 30; i++)
     {
@@ -36,7 +35,15 @@ void inputField::updateField(Vector2 mousePos)
 
 void inputField::printInput()
 {
-    DrawTextEx(font, input, { field.x, field.y + 4 }, fontSize, 4.f, textColor);
+    char toPass[30];
+    if (type == "password")
+    {
+        for (int i = 0; i < charCount; i++)
+            toPass[i] = '*';
+        for (int i = charCount; i < 30; i++)
+            toPass[i] = '\0';
+    }
+    DrawTextEx(font, type == "password" ? toPass : input, {field.x, field.y + 4}, fontSize, 4.f, textColor);
 }
 
 void inputField::handleInput()

@@ -14,6 +14,12 @@ void registerForm::Start()
 void registerForm::Update()
 {
 	mousePos = GetMousePosition();
+
+	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+	{
+		mySceneManager.setCurrentScene("SignInForm");
+	}
+
 	BeginDrawing();
 
 	ClearBackground(backgroundColor);

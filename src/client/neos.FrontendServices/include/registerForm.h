@@ -8,15 +8,17 @@ class registerForm : public scene
 private:
 	sceneManager& mySceneManager;
 
-	// Vector2
+	// Vectors
 	Vector2 mousePos = { 0.f, 0.f };
 	Color darkGray = {64, 64, 64, 255};
+	Rectangle returnButton = { 112 ,663 , 215, 25};
+	
 
 	// Input Fields
 	cp::inputField 	fNameField = { {111,324,308,32} ,"text", 22, darkGray };
-	cp::inputField 	lNameField = { {485,324,308,32} ,"text", 22, darkGray };
-	cp::inputField 	passwordField = { {110,456,330,27} ,"email" , 18, darkGray };
-	cp::inputField 	emailField = { {485,452,308,32} ,"password", 22, darkGray };
+	cp::inputField 	lNameField = { {538,324,308,32} ,"text", 22, darkGray };
+	cp::inputField 	passwordField = { {538,452,308,32} ,"password", 22, darkGray };
+	cp::inputField 	emailField = { {110, 456, 330, 27}, "email", 18, darkGray };
 
 	// Textures
 	Texture2D headerText;
