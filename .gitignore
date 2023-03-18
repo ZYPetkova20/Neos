@@ -300,3 +300,5 @@ html/
 
 #JSON files
 statistics/*.json
+src/.vs/neos/v17/Browse.VC.db
+src/.vs/neos/v17/Solution.VC.db
