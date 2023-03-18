@@ -15,6 +15,7 @@
         </div>
         <div class="left-section__download-button-wrapper">
           <button class="left-section__download-button">Download</button>
+
         </div>
       </div>
     </div>
@@ -48,6 +49,7 @@ body,
 html {
   margin: 0 !important;
   padding: 0 !important;
+  overflow-x: hidden;
 }
 .section-wrapper {
   display: flex;
@@ -129,6 +131,7 @@ nav {
   background-image: url('../assets/images/hero-image.png');
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 /*
