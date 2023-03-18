@@ -1,6 +1,8 @@
 #include "../include/sceneManager.h"
 #include "../include/loadingScreen.h"
 #include "../include/greetingScreen.h"
+#include "../include/registerForm.h"
+#include "../include/signInForm.h"
 #include "../include/mainMenu.h"
 #include "raylib.h"
 
@@ -20,11 +22,15 @@ int main()
     // Creating scenes
     loadingScreen sceneLoadingScreen{ "LoadingScreen", sceneManager };
     greetingScreen sceneGreetingScreen{ "GreetingScreen", sceneManager };
+    registerForm sceneRegisterForm{ "RegisterForm", sceneManager };
+    signInForm sceneSignInForm{ "SignInForm", sceneManager };
     mainMenu sceneMainMenu{ "MainMenu", sceneManager };
 
     // Adding scenes to the scene vector
     sceneManager.addScene(&sceneLoadingScreen);
     sceneManager.addScene(&sceneGreetingScreen);
+    sceneManager.addScene(&sceneRegisterForm);
+    sceneManager.addScene(&sceneSignInForm);
     sceneManager.addScene(&sceneMainMenu);
 
     // Setting the first current scene

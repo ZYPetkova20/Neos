@@ -1,5 +1,4 @@
 #include "../include/greetingScreen.h"
-#include <iostream>
 
 greetingScreen::greetingScreen(std::string sceneName, sceneManager& sceneManager) : scene(sceneName), mySceneManager(sceneManager)
 {
@@ -36,7 +35,7 @@ void greetingScreen::onExit()
 void greetingScreen::loadAssets()
 {
 	greetingText = LoadTexture("../assets/greetingScreen/greetingText.png");
-	logoTexture = LoadTexture("../assets/greetingScreen/smallIcon.png");
+	logoTexture = LoadTexture("../assets/smallIcon.png");
 	backgroundTexture = LoadTexture("../assets/greetingScreen/backGroundImg.png");
 	signInButton = LoadTexture("../assets/greetingScreen/signInButton.png");
 	registerButton = LoadTexture("../assets/registerButton.png");
@@ -74,7 +73,7 @@ void greetingScreen::handleCollisions()
 	static_cast<float>(signInButton.width), static_cast<float>(signInButton.height) })
 		&& IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		mySceneManager.setCurrentScene("MainMenu");
+		mySceneManager.setCurrentScene("SignInForm");
 	}
 
 	// Handles the Register button
@@ -82,7 +81,7 @@ void greetingScreen::handleCollisions()
 	static_cast<float>(registerButton.width), static_cast<float>(registerButton.height) })
 		&& IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		mySceneManager.setCurrentScene("MainMenu");
+		mySceneManager.setCurrentScene("RegisterForm");
 	}
 }
 
