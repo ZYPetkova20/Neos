@@ -302,3 +302,12 @@ html/
 statistics/*.json
 src/.vs/neos/v17/Browse.VC.db
 src/.vs/neos/v17/Solution.VC.db
+src/x64/Debug/neos.FrontendServices.exe
+src/client/neos.FrontendServices/x64/Debug/signInForm.obj
+src/client/neos.FrontendServices/x64/Debug/sceneManager.obj
+src/client/neos.FrontendServices/x64/Debug/registerForm.obj
+src/client/neos.FrontendServices/x64/Debug/mainMenu.obj
+src/client/neos.FrontendServices/x64/Debug/main.obj
+src/client/neos.FrontendServices/x64/Debug/loadingScreen.obj
+src/client/neos.FrontendServices/x64/Debug/inputField.obj
+src/client/neos.FrontendServices/x64/Debug/greetingScreen.obj
