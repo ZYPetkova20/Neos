@@ -24,10 +24,12 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\mainMenu.cpp" />
     <ClCompile Include="src\sceneManager.cpp" />
+    <ClCompile Include="src\loginRegister.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\greetingScreen.h" />
     <ClInclude Include="include\loadingScreen.h" />
+    <ClInclude Include="include\loginRegister.h" />
     <ClInclude Include="include\mainMenu.h" />
     <ClInclude Include="include\scene.h" />
     <ClInclude Include="include\sceneManager.h" />
