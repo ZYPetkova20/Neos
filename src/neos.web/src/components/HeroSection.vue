@@ -71,13 +71,20 @@ nav{
       height: 49px;
     }
 }
+.left-section__link{
+  font-family: "Lato-light";
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  text-decoration: none;
+}
 .hero-title-wrapper{
   width: 100%;
   height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
 }
 .hero-title{
   font-size: 96px;
@@ -85,12 +92,26 @@ nav{
   color: #fff;
   font-family: "Tex";
 }
+
+.left-section__download-button{
+  width: 200px;
+  height: 50px;
+  background-color: #E1E6E0;
+  border: none;
+  border-radius: 100px;
+  font-family: "Tex";
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  cursor: pointer;
+}
+
+
 .right-section{
   width: 45%;
   height: 100%;
   background-image: url("../assets/images/hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rebeccapurple;
 }
 </style>
