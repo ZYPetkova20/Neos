@@ -28,7 +28,7 @@ userRouter.get("/:id", async(request: Request, response: Response) => {
         if(user){
             return response.status(200).json(user)
         }
-        return response.status(400).json("Author could not ne found")
+        return response.status(404).json("Author could not ne found")
     }
     catch(error: any){
         return response.status(500).json(error.message)

@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include <cpr/cpr.h>
 #include <string>
+#include <curl/curl.h>
+#include <cpr/cpr.h>
 #include <nlohmann/json.hpp>
 
 struct user {

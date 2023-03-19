@@ -10,8 +10,7 @@ std::string APIHandler::registerHandler(registerData regData)
             {"password", regData.password}
         });
 
-    
-    nlohmann::json JSONRes;
+      nlohmann::json JSONRes;
 
     try
     {
