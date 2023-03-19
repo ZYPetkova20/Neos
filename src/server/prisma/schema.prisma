@@ -16,7 +16,6 @@ model User{
   lastName String
   email String @unique @db.VarChar(30)
   password String
-  createdAt DateTime @default(now())
 
   @@unique([firstName, lastName])
 }

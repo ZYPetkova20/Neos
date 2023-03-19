@@ -1,16 +1,16 @@
 #include "../include/APIHandler.h"
 
-string APIHandler::registerHandler(registerData regData)
+std::string APIHandler::registerHandler(registerData regData)
 {
     cpr::Response r = cpr::Post(cpr::Url{ "http://localhost:8000/api/users" },
         cpr::Payload{
             {"firstName", regData.fname},
             {"lastName", regData.lname},
-            {"username", regData.username},
             {"email", regData.email},
             {"password", regData.password}
         });
 
+    
     nlohmann::json JSONRes;
 
     try
@@ -24,23 +24,36 @@ string APIHandler::registerHandler(registerData regData)
 
     if (JSONRes["type"] == "register-success")
     {
-        return;
+        return "";
+    }
+
+    std::string returnVal;
+
+    if (JSONRes["fields"].size() != 1)
+    {
+        returnVal = "The following fileds are incorrect: ";
+
+        for (auto& el : JSONRes["fields"].items())
+        {
+            returnVal += el.value();
+            returnVal += " ";
+        }
     }
 
     return JSONRes["fields"][0];
 }
 
-string APIHandler::loginHandler(loginData logData)
+std::string APIHandler::loginHandler(loginData logData)
 {
-	return string();
+    return std::string();
 }
 
-string APIHandler::getUserInfo(std::string username, user& user)
+std::string APIHandler::getUserInfo(std::string username, user& user)
 {
-	return string();
+    return std::string();
 }
 
-string APIHandler::getUserInfoById(std::string userId, user& user)
+std::string APIHandler::getUserInfoById(std::string userId, user& user)
 {
-	return string();
+    return std::string();
 }

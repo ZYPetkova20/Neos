@@ -1,22 +1,22 @@
 #pragma once
-#include "../../neos.App/Src/precompile.hpp"
+#include <iostream>
+#include <vector>
 #include <cpr/cpr.h>
 #include <string>
 #include <nlohmann/json.hpp>
 
 struct user {
-	string id;
-	string fName;
-	string lName;
-	string email;
-    string password;
+    std::string id;
+    std::string fName;
+    std::string lName;
+    std::string email;
+    std::string password;
 };
 
 struct registerData
 {
     std::string fname;
     std::string lname;
-    std::string username;
     std::string email;
     std::string password;
 };
@@ -29,8 +29,8 @@ struct loginData
 
 class APIHandler {
 public:
-    string registerHandler(registerData regData);
-    string loginHandler(loginData logData);
-    string getUserInfo(std::string username, user& user);
-    string getUserInfoById(std::string userId, user& user);
+    std::string registerHandler(registerData regData);
+    std::string loginHandler(loginData logData);
+    std::string getUserInfo(std::string username, user& user);
+    std::string getUserInfoById(std::string userId, user& user);
 };

@@ -11,7 +11,6 @@ type User = {
     lastName: string,
     email: string,
     password: string,
-    createdAt: Date
 }
 
 export const  listUsers = async ():  Promise<User[]> => {
@@ -22,7 +21,6 @@ export const  listUsers = async ():  Promise<User[]> => {
             lastName: true,
             email: true,
             password: true,
-            createdAt: true
         }
     })
 }
@@ -38,8 +36,7 @@ export const getUser = async(id: number): Promise<User | null> => {
           firstName: true,
           lastName: true, 
           email: true,
-          password: true,
-          createdAt: true
+          password: true
         },
     })
 }
@@ -61,7 +58,6 @@ export const createUser = async(user: Omit<User, "id">): Promise<User> => {
             lastName: true,
             email: true,
             password: true,
-            createdAt: true
         }
     })
 }
@@ -86,7 +82,6 @@ export const updateUser = async(user: Omit<User, "id">, id: number): Promise<Use
             lastName: true,
             email: true,
             password: true,
-            createdAt: true
         }
     })
 }
