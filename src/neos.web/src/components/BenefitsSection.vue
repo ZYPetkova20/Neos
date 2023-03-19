@@ -1,22 +1,22 @@
 <template>
     <div class="benefits">
         <div class="benefits__card">
-            <img src="../assets/images/benefits-icon.png" alt="Icon">
+            <img src="../assets/images/book-icon.png" alt="Icon">
             <p class="benefits__heading">Interactive learning</p>
             <p class="benefits__text">We offer interactive and immersive learning experiance.</p>
         </div>
         <div class="benefits__card">
-            <img src="../assets/images/benefits-icon.png" alt="Icon">
+            <img src="../assets/images/accessibility-icon.png" alt="Icon">
             <p class="benefits__heading">Accessibility</p>
             <p class="benefits__text">Designed to be accessible to all learners.</p>
         </div>
         <div class="benefits__card">
-            <img src="../assets/images/benefits-icon.png" alt="Icon">
+            <img src="../assets/images/flexibility-icon.png" alt="Icon">
             <p class="benefits__heading">Flexibility</p>
             <p class="benefits__text">Learn on your own pace, from anywhere and any time.</p>
         </div>
         <div class="benefits__card">
-            <img src="../assets/images/benefits-icon.png" alt="Icon">
+            <img src="../assets/images/exclusive-icon.png" alt="Icon">
             <p class="benefits__heading">Exclusive content</p>
             <p class="benefits__text">Comprehensive range of content, covering a wide variety of topics.</p>
         </div>
