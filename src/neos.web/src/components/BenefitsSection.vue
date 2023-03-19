@@ -21,7 +21,6 @@
             <p class="benefits__text">Comprehensive range of content, covering a wide variety of topics.</p>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </template>
 
 <style lang="scss" scoped>
@@ -45,6 +44,7 @@
         font-family: 'Lato-bold';
         src: url(../assets/fonts/Lato-Bold.ttf);
     }
+    
     .benefits{
         display: flex;
         flex-direction: row;
