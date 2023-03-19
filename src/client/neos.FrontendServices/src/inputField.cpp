@@ -83,6 +83,15 @@ void inputField::selectField(Vector2 mousePos)
         isSelected = false;
 }
 
+void inputField::resetField()
+{
+    for (int i = 0; i < 30; i++)
+    {
+        input[i] = '\0';
+    }
+    charCount = 0;
+}
+
 bool inputField::isKeyAllowed()
 {
     bool keyPressed = false;

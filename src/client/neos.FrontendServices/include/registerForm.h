@@ -11,7 +11,8 @@ private:
 	// Vectors
 	Vector2 mousePos = { 0.f, 0.f };
 	Color darkGray = {64, 64, 64, 255};
-	Rectangle returnButton = { 112 ,663 , 215, 25};
+	Rectangle registerButtonPos = { 99, 559, 270 , 67 };
+	Rectangle returnButton = { 105 ,660 , 215, 25};
 	
 
 	// Input Fields
@@ -26,9 +27,6 @@ private:
 	Texture2D backgroundTexture;
 	Texture2D registerButton;
 	Texture2D labelsTexture;
-
-	// Texture Positions
-	Vector2 registerButtonPos = { 99, 559 };
 
 	// Methods
 

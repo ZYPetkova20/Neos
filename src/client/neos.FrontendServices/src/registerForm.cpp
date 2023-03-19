@@ -35,6 +35,10 @@ void registerForm::Update()
 // Method called when we exit the scene or the program
 void registerForm::onExit()
 {
+	fNameField.resetField();
+	lNameField.resetField();
+	emailField.resetField();
+	passwordField.resetField();
 	deleteAssets();
 }
 
