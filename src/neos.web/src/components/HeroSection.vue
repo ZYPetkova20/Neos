@@ -52,7 +52,7 @@
       width: 100%;
       height: 100vh;
       background-color: #1F1F1F;
-      min-height: 750px;
+      min-height: 850px;
     }
     .hero-section{
       display: flex;

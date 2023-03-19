@@ -3,7 +3,6 @@
         <p class="section-heading"><b>Save time & money</b> with our chemistry simulator</p>
     </div>
     <div class="process">
-        <p class="process__heading"></p>
         <div class="process__card">
             <div class="process__circle"></div>
             <p class="process__heading">Your Digital World</p>
@@ -73,12 +72,12 @@
         width: 300px;
         height:100%;
         margin: 0 auto; 
-            .process__circle{
-                width:30px;
-                height:30px;
-                background-color: #89BEA8;
-                border-radius: 50%;
-            }
+    }
+    .process__circle{
+        width:30px;
+        height:30px;
+        background-color: #89BEA8;
+        border-radius: 50%;
     }
     .process__heading{
         font-size:26px;
