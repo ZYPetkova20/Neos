@@ -1,6 +1,6 @@
-#include "precompile.hpp"
+#include <iostream>
 
 int main()
 {
-	cout << "Nai dobrata dizainerka - Soner";
+	std::cout << "Nai dobrata dizainerka - Soner";
 }

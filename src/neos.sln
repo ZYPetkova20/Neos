@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.App", "client\neos.App\neos.App.vcxproj", "{719F85BE-1FE3-473F-90D7-D6F177BC8B64}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.components", "client\neos.components\neos.components.vcxproj", "{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.FrontendServices", "client\neos.FrontendServices\neos.FrontendServices.vcxproj", "{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.app", "client\neos.app\neos.app.vcxproj", "{719F85BE-1FE3-473F-90D7-D6F177BC8B64}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.BackendServices", "client\neos.BackendServices\neos.BackendServices.vcxproj", "{3CC74B06-DB4D-4207-BAC1-972FD4259384}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.services", "client\neos.services\neos.services.vcxproj", "{3CC74B06-DB4D-4207-BAC1-972FD4259384}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.Data", "client\neos.Data\neos.Data.vcxproj", "{22234E8A-4A65-4022-A493-15F68A87461D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neos.data", "client\neos.data\neos.data.vcxproj", "{22234E8A-4A65-4022-A493-15F68A87461D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x64.ActiveCfg = Debug|x64
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x64.Build.0 = Debug|x64
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x86.ActiveCfg = Debug|Win32
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x86.Build.0 = Debug|Win32
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x64.ActiveCfg = Release|x64
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x64.Build.0 = Release|x64
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x86.ActiveCfg = Release|Win32
-		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x86.Build.0 = Release|Win32
 		{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}.Debug|x64.ActiveCfg = Debug|x64
 		{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}.Debug|x64.Build.0 = Debug|x64
 		{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}.Debug|x86.ActiveCfg = Debug|Win32
@@ -35,6 +27,14 @@ Global
 		{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}.Release|x64.Build.0 = Release|x64
 		{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}.Release|x86.ActiveCfg = Release|Win32
 		{CB7C4775-9B1E-4641-AC0F-2060C41EDED1}.Release|x86.Build.0 = Release|Win32
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x64.ActiveCfg = Debug|x64
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x64.Build.0 = Debug|x64
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x86.ActiveCfg = Debug|Win32
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Debug|x86.Build.0 = Debug|Win32
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x64.ActiveCfg = Release|x64
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x64.Build.0 = Release|x64
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x86.ActiveCfg = Release|Win32
+		{719F85BE-1FE3-473F-90D7-D6F177BC8B64}.Release|x86.Build.0 = Release|Win32
 		{3CC74B06-DB4D-4207-BAC1-972FD4259384}.Debug|x64.ActiveCfg = Debug|x64
 		{3CC74B06-DB4D-4207-BAC1-972FD4259384}.Debug|x64.Build.0 = Debug|x64
 		{3CC74B06-DB4D-4207-BAC1-972FD4259384}.Debug|x86.ActiveCfg = Debug|Win32
