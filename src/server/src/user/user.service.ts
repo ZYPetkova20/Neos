@@ -11,6 +11,7 @@ type User = {
     lastName: string,
     email: string,
     password: string,
+    salt: string
 }
 
 export const  listUsers = async ():  Promise<User[]> => {
@@ -21,6 +22,7 @@ export const  listUsers = async ():  Promise<User[]> => {
             lastName: true,
             email: true,
             password: true,
+            salt: true
         }
     })
 }
@@ -36,20 +38,22 @@ export const getUser = async(id: number): Promise<User | null> => {
           firstName: true,
           lastName: true, 
           email: true,
-          password: true
+          password: true,
+          salt: true
         },
     })
 }
 
 export const createUser = async(user: Omit<User, "id">): Promise<User> => {
-    const {firstName, lastName, email, password} = user
+    const {firstName, lastName, email, password, salt} = user
     return  db.user.create({
         data: 
         {
             firstName,
             lastName,
             email,
-            password
+            password,
+            salt
         },
 
         select: {
@@ -58,12 +62,13 @@ export const createUser = async(user: Omit<User, "id">): Promise<User> => {
             lastName: true,
             email: true,
             password: true,
+            salt: true
         }
     })
 }
 
 export const updateUser = async(user: Omit<User, "id">, id: number): Promise<User> => {
-    const {firstName, lastName, email, password} = user
+    const {firstName, lastName, email, password, salt} = user
     return db.user.update({
         where: {
             id,
@@ -73,7 +78,8 @@ export const updateUser = async(user: Omit<User, "id">, id: number): Promise<Use
             firstName, 
             lastName,
             email,
-            password
+            password,
+            salt
         },
 
         select: {
@@ -82,6 +88,7 @@ export const updateUser = async(user: Omit<User, "id">, id: number): Promise<Use
             lastName: true,
             email: true,
             password: true,
+            salt: true
         }
     })
 }

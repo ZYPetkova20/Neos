@@ -1,7 +1,7 @@
 import express from "express"
 import type { Request, Response } from "express"
 import {body, validationResult} from "express-validator"
-
+import bcrypt from "bcrypt"
 import * as userService from "./user.service"
 import { request } from "http"
 
@@ -48,6 +48,18 @@ async(request: Request, response: Response) => {
 
     try{
         const user = request.body
+        const salt = await bcrypt.genSalt();
+        const passwordHash = await bcrypt.hash(user.password, salt);
+        
+        user.push({
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            password: passwordHash,
+            salt: salt
+        })
+
+
         const newUser = await userService.createUser(user)
         return response.status(201).json(newUser)
     }
@@ -55,7 +67,6 @@ async(request: Request, response: Response) => {
         return response.status(500).json(error.message)
     }
 })
-
 
 //POST: updating an user
 //params:: fName, lName, email, pass
