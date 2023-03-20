@@ -1,6 +1,7 @@
 #include <iostream>
+#include <main.cpp>
 
 int main()
 {
-	std::cout << "Nai dobrata dizainerka - Soner";
+	start();
 }

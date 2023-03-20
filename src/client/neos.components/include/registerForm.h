@@ -32,6 +32,8 @@ private:
 
 	// For drawing textures
 	void drawTextures();
+	// For handling collision events
+	void handleCollision();
 
 public:
 	registerForm(std::string sceneName, sceneManager& sceneManager);

@@ -14,11 +14,7 @@ void registerForm::Start()
 void registerForm::Update()
 {
 	mousePos = GetMousePosition();
-
-	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
-	{
-		mySceneManager.setCurrentScene("SignInForm");
-	}
+	handleCollision();
 
 	BeginDrawing();
 
@@ -51,6 +47,20 @@ void registerForm::drawTextures()
 	DrawTexture(labelsTexture, 99, 282, WHITE);
 	DrawTexture(headerText, 99, 37, WHITE);
 	DrawTexture(registerButton, registerButtonPos.x, registerButtonPos.y, WHITE);
+}
+
+// Method for handling collision events
+void registerForm::handleCollision()
+{
+	if (CheckCollisionPointRec(mousePos, registerButtonPos) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+	{
+		mySceneManager.setCurrentScene("MainMenu");
+	}
+
+	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+	{
+		mySceneManager.setCurrentScene("SignInForm");
+	}
 }
 
 // Method for loading the variables / assets

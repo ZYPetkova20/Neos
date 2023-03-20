@@ -29,6 +29,8 @@ private:
 
 	// For drawing textures
 	void drawTextures();
+	// For handling collision events
+	void handleCollision();
 
 public:
 	signInForm(std::string sceneName, sceneManager& sceneManager);
