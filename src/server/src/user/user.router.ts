@@ -68,6 +68,29 @@ async(request: Request, response: Response) => {
     }
 })
 
+/*userRouter.post("/", body("email").isString(), body("password").isString(), 
+async(request: Request, response: Response) => {
+    const errors = validationResult(request)
+
+    if(!errors.isEmpty()){
+        return response.status(400).json({errors: errors.array()})
+    }
+
+    try{
+        const user = request.body
+        if (await bcrypt.compare(request.body.password, user.password)) {
+            const newUser = await userService.createUser(user)
+            return response.status(201).json(newUser)
+        } else {
+            response.send('Not Valid User!');
+        }
+        
+    }
+    catch(error: any){
+        return response.status(500).json(error.message)
+    }
+})*/
+
 //POST: updating an user
 //params:: fName, lName, email, pass
 userRouter.put("/:id", body("firstName").isString(), body("lastName").isString(), 
@@ -91,6 +114,7 @@ async(request: Request, response: Response) => {
         return response.status(500).json(error.message)
     }
 })
+
 
 //DELETE: Delete an author based on the id
 userRouter.delete("/:id", async(request: Request, response: Response) => {
