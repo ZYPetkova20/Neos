@@ -1,3 +1,5 @@
+
+
 <template>
     <div class="dev-section">
         <div class="dev-section__title-wrapper">
@@ -7,7 +9,7 @@
         <div class="dev-section__content-wrapper">
             <div class="development">
                 <div class="development__field">
-                    <p class="development__text">Lorem</p>
+                    <p class="development__text">{{ elapsedTime }} Days</p>
                 </div>  
                 <p class="development__text">We tackled our educational and creative journey by doing the NEOS chemistry simulator</p>
             </div>
@@ -29,6 +31,28 @@
         </div>
     </div>
 </template>
+
+<script lang="ts" setup>
+  import { defineComponent, onMounted, ref } from 'vue';  
+
+    const startDate = new Date("March 4, 2023 03:00:00");
+    let elapsedTime =  ref(0);
+
+    onMounted(() => {
+      setInterval(() => {
+        elapsedTime.value = getDifferenceInSeconds(startDate, new Date());
+        console.log(getDifferenceInSeconds(startDate, new Date()));
+      }, 1000); // Milliseconds in one day 
+    });
+
+    function getDifferenceInSeconds(date1: Date, date2: Date): number {
+        var diff = Math.abs(date1.getTime() - date2.getTime());
+        var diffDays = Math.ceil(diff / (1000 * 3600 * 24)); 
+        return diffDays;
+
+    }
+
+</script>
 
 <style style lang="scss">
     //Import Fonts
