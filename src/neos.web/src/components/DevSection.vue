@@ -42,7 +42,7 @@
       setInterval(() => {
         elapsedTime.value = getDifferenceInSeconds(startDate, new Date());
         console.log(getDifferenceInSeconds(startDate, new Date()));
-      }, 1000); // Milliseconds in one day 
+      }, 86400000); // Milliseconds in one day 
     });
 
     function getDifferenceInSeconds(date1: Date, date2: Date): number {
