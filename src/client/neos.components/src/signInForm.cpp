@@ -50,7 +50,7 @@ void signInForm::handleCollision()
 {
 	if (CheckCollisionPointRec(mousePos, signInButtonPos) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		mySceneManager.setCurrentScene("MainMenu");
+		mySceneManager.setCurrentScene("MainScene");
 	}
 
 	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))

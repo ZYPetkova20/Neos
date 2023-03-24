@@ -54,7 +54,7 @@ void registerForm::handleCollision()
 {
 	if (CheckCollisionPointRec(mousePos, registerButtonPos) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		mySceneManager.setCurrentScene("MainMenu");
+		mySceneManager.setCurrentScene("MainScene");
 	}
 
 	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))

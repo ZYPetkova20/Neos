@@ -3,7 +3,7 @@
 #include "../include/greetingScreen.h"
 #include "../include/registerForm.h"
 #include "../include/signInForm.h"
-#include "../include/mainMenu.h"
+#include "../include/mainScene.h"
 #include "raylib.h"
 
 // Screen size
@@ -24,14 +24,14 @@ int start()
     greetingScreen sceneGreetingScreen{ "GreetingScreen", sceneManager };
     registerForm sceneRegisterForm{ "RegisterForm", sceneManager };
     signInForm sceneSignInForm{ "SignInForm", sceneManager };
-    mainMenu sceneMainMenu{ "MainMenu", sceneManager };
+    mainScene sceneMainScene{ "MainScene", sceneManager };
 
     // Adding scenes to the scene vector
     sceneManager.addScene(&sceneLoadingScreen);
     sceneManager.addScene(&sceneGreetingScreen);
     sceneManager.addScene(&sceneRegisterForm);
     sceneManager.addScene(&sceneSignInForm);
-    sceneManager.addScene(&sceneMainMenu);
+    sceneManager.addScene(&sceneMainScene);
 
     // Setting the first current scene
     sceneManager.setCurrentScene("LoadingScreen");

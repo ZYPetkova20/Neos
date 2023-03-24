@@ -23,7 +23,7 @@
     <ClCompile Include="src\inputField.cpp" />
     <ClCompile Include="src\loadingScreen.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\mainMenu.cpp" />
+    <ClCompile Include="src\mainScene.cpp" />
     <ClCompile Include="src\registerForm.cpp" />
     <ClCompile Include="src\sceneManager.cpp" />
     <ClCompile Include="src\signInForm.cpp" />
@@ -32,7 +32,7 @@
     <ClInclude Include="include\greetingScreen.h" />
     <ClInclude Include="include\inputField.h" />
     <ClInclude Include="include\loadingScreen.h" />
-    <ClInclude Include="include\mainMenu.h" />
+    <ClInclude Include="include\mainScene.h" />
     <ClInclude Include="include\registerForm.h" />
     <ClInclude Include="include\scene.h" />
     <ClInclude Include="include\sceneManager.h" />
