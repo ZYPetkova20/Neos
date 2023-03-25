@@ -14,8 +14,66 @@
 </p>
 <br>
 
-## 💻 Description
+## 📋 Description
+  
+The essence of this project was to create a C++ game based on Bool logic. In the game you can choose between four game modes, two of which have a special “NOT” card. We have created the application with a graphical interface for a more pleasant user experience. You can also enjoy various card packs on our hosted website.
 
-<p>This repository contains our Chemistry/Biology programming project</p>
-<p>Lorem Ipsum...</p>
+## 🚀 Languages 
+  <p align="left"> 
+  <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
+  <a href="https://www.sfml-dev.org/"><img src="https://cdn.discordapp.com/attachments/895221336006332427/971795038596108318/1200px-SFML_Logo_1.png" alt="SFML"/></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML 5"/></a>
+  <a href="https://sass-lang.com/"><img src="https://img.icons8.com/color/48/000000/sass.png" alt="SASS"/></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript"/></a>
+ 
+  </p>
+
+## 🔧 Tools 
+  <p align="left"> 
+  <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
+  <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" alt="Visual Studio Code"/></a>
+  <a href="https://www.figma.com/"><img src="https://img.icons8.com/color/48/000000/figma--v1.png"/></a>
+  <a href="https://www.adobe.com/creativecloud.html"><img src="https://www.adobe.com/content/dam/shared/images/product-icons/svg/creative-cloud.svg" alt="adobe creative cloud" width=48px /></a>
+    <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px /></a>
+    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=48px />
+    <a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo"/></a>
+    <a href="https://git-scm.com/"><img src="https://img.icons8.com/color/48/000000/git.png" alt="Git"/></a>
+  </p> 
+  
+## 💼 Documents
+  - [Doxygen](https://smtashev20.github.io/onsens-documentation/index.html)
+  - [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/smtashev20_codingburgas_bg/EY1_RLRBHW9HpcPIItgth34B8O6ahVzfYTFvJLxnABLu-g?e=75FR40)
+  - [Design documentation](https://codingburgas-my.sharepoint.com/:b:/g/personal/smtashev20_codingburgas_bg/EVzCky06sG9HmZ4zXHWple0B_2vvSgoKkPfWTwd0NN80BA?e=B8AoFy)
+  - [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/smtashev20_codingburgas_bg/EZJgDqwBizdEsS__nWfKLY8B0tvMTLdYYjmwt31oPsmuMA?e=8VSavq)
+  - [QA Unit Testing](https://codingburgas-my.sharepoint.com/:x:/g/personal/smtashev20_codingburgas_bg/Ebi25gemNjBCoUS9hWusvrAB6ZYk34KQb7wtvvKlHFw_Kw?e=F0phq5)
+  - [QA - Test Plan](https://codingburgas-my.sharepoint.com/:b:/g/personal/smtashev20_codingburgas_bg/EV5tnWXsHqRCizarP8p8LIkBGKeYv0Q_7rOza5dnRrPyyw?e=RkTI0I)
+
+## 🔧 Installation
+
+```
+You can download our project by using the green "Code" button.
+
+Or by pasting the following code in your CMD:
+git clone https://github.com/SYSolakov20/onsens.git
+```
+
+ ## 🎬 Demo of the project 
+  
+  <p align="center">
+  <img src="https://cdn.discordapp.com/attachments/895221336006332427/975109810997571584/Mocup_2.png" width = "80000px" >
+  </p>
+
+## ⚙ Website Access
+
+*You can access our website by pasting this link into your browser.*
+```
+Paste link here.
+```
+
+## 🖥 Team Members
+* **Zhanet Petkova** - *Scrum trainer* 
+* **Simeon Boev** - *Back-end developer* 
+* **David Donchev** - *Back-end developer* 
+* **Zhivko Spasov** - *Front-end developer*
+* **Soner Solakov** - *Designer & Front-end developer* 
 
