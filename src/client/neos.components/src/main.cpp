@@ -10,7 +10,7 @@
 const int screenWidth = 1406;
 const int screenHeight = 790;
 
-int start()
+void start()
 {
     // Setting window
     InitWindow(screenWidth, screenHeight, "Neos - Chemistry project");

@@ -37,17 +37,17 @@ seed()
 function getUsers(): Array<User>{
     return [
         {
-            firstName: "Pencho",
-            lastName: "Penchov",
-            email: "ppenchov@gmail.com",
+            firstName: "Penchso",
+            lastName: "Penchsov",
+            email: "ppenchosv@gmail.com",
             password: "malinki12",
             salt: ""
         },
 
         {
-            firstName: "Mincho",
-            lastName: "Minchov",
-            email: "mminchov@gmail.com",
+            firstName: "Msincho",
+            lastName: "Minschov",
+            email: "mminchsov@gmail.com",
             password: "malinki13",
             salt: ""
         }

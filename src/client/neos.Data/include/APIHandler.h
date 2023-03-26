@@ -6,32 +6,25 @@
 #include <cpr/cpr.h>
 #include <nlohmann/json.hpp>
 
-struct user {
-    std::string id;
-    std::string fName;
-    std::string lName;
-    std::string email;
-    std::string password;
-};
+using std::string;
 
-struct registerData
+struct RegisterData
 {
-    std::string fname;
-    std::string lname;
-    std::string email;
-    std::string password;
+    string fname;
+    string lname;
+    string username;
+    string email;
+    string password;
 };
 
 struct loginData
 {
-    std::string loginCred;
-    std::string pass;
+    string loginCred;
+    string pass;
 };
 
 class APIHandler {
 public:
-    std::string registerHandler(registerData regData);
-    std::string loginHandler(loginData logData);
-    std::string getUserInfo(std::string username, user& user);
-    std::string getUserInfoById(std::string userId, user& user);
+    void registerHandler(RegisterData regData);
+    string loginHandler(loginData logData);
 };

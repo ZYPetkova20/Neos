@@ -102,8 +102,7 @@ bool inputField::isKeyAllowed()
     return keyPressed;
 }
 
-string inputField::getResult()
+string inputField::getResult(string str)
 {
-    string str(input);
     return str;
 }

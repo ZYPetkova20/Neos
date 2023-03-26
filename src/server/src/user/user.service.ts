@@ -11,7 +11,6 @@ type User = {
     lastName: string,
     email: string,
     password: string,
-    salt: string
 }
 
 export const  listUsers = async ():  Promise<User[]> => {
@@ -22,7 +21,6 @@ export const  listUsers = async ():  Promise<User[]> => {
             lastName: true,
             email: true,
             password: true,
-            salt: true
         }
     })
 }
@@ -39,13 +37,12 @@ export const getUser = async(id: number): Promise<User | null> => {
           lastName: true, 
           email: true,
           password: true,
-          salt: true
         },
     })
 }
 
 export const createUser = async(user: Omit<User, "id">): Promise<User> => {
-    const {firstName, lastName, email, password, salt} = user
+    const {firstName, lastName, email, password} = user
     return  db.user.create({
         data: 
         {
@@ -53,7 +50,6 @@ export const createUser = async(user: Omit<User, "id">): Promise<User> => {
             lastName,
             email,
             password,
-            salt
         },
 
         select: {
@@ -62,13 +58,12 @@ export const createUser = async(user: Omit<User, "id">): Promise<User> => {
             lastName: true,
             email: true,
             password: true,
-            salt: true
         }
     })
 }
 
 export const updateUser = async(user: Omit<User, "id">, id: number): Promise<User> => {
-    const {firstName, lastName, email, password, salt} = user
+    const {firstName, lastName, email, password} = user
     return db.user.update({
         where: {
             id,
@@ -79,7 +74,6 @@ export const updateUser = async(user: Omit<User, "id">, id: number): Promise<Use
             lastName,
             email,
             password,
-            salt
         },
 
         select: {
@@ -88,7 +82,6 @@ export const updateUser = async(user: Omit<User, "id">, id: number): Promise<Use
             lastName: true,
             email: true,
             password: true,
-            salt: true
         }
     })
 }

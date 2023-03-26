@@ -48,17 +48,6 @@ async(request: Request, response: Response) => {
 
     try{
         const user = request.body
-        const salt = await bcrypt.genSalt();
-        const passwordHash = await bcrypt.hash(user.password, salt);
-        
-        user.push({
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-            password: passwordHash,
-            salt: salt
-        })
-
 
         const newUser = await userService.createUser(user)
         return response.status(201).json(newUser)
@@ -67,29 +56,6 @@ async(request: Request, response: Response) => {
         return response.status(500).json(error.message)
     }
 })
-
-/*userRouter.post("/", body("email").isString(), body("password").isString(), 
-async(request: Request, response: Response) => {
-    const errors = validationResult(request)
-
-    if(!errors.isEmpty()){
-        return response.status(400).json({errors: errors.array()})
-    }
-
-    try{
-        const user = request.body
-        if (await bcrypt.compare(request.body.password, user.password)) {
-            const newUser = await userService.createUser(user)
-            return response.status(201).json(newUser)
-        } else {
-            response.send('Not Valid User!');
-        }
-        
-    }
-    catch(error: any){
-        return response.status(500).json(error.message)
-    }
-})*/
 
 //POST: updating an user
 //params:: fName, lName, email, pass

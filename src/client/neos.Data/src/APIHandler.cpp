@@ -1,58 +1,36 @@
 #include "../include/APIHandler.h"
 
-std::string APIHandler::registerHandler(registerData regData)
+void APIHandler::registerHandler(RegisterData regData)
 {
-    cpr::Response r = cpr::Post(cpr::Url{ "http://localhost:8000/api/users" },
-        cpr::Payload{
-            {"firstName", regData.fname},
-            {"lastName", regData.lname},
-            {"email", regData.email},
-            {"password", regData.password}
-        });
 
-      nlohmann::json JSONRes;
+    nlohmann::json  my_json = nlohmann::json{
+        {"id", "70"},
+        {"firstName", regData.fname},
+        {"lastName", regData.lname},
+        {"email", regData.email},
+        {"password", regData.password},
+    };
 
-    try
-    {
-        JSONRes = nlohmann::json::parse(r.text);
+    cpr::Response r = cpr::Post(
+        cpr::Url{ "http://localhost:8000/api/users" },
+        cpr::Authentication{ "neosadmin", "Zdrasti123@" },
+        cpr::Body{
+            my_json.dump()
+        },
+        cpr::Header{ {"Content-Type", "application/json"} }
+    );
+
+
+    if (r.status_code >= 200 && r.status_code < 300) {
+        std::cout << "Data posted successfully!\n";
     }
-    catch (nlohmann::json::parse_error& ex)
-    {
-        return "There is a problem with the server! Please try again later!";
+    else {
+        std::cout << "Error posting data: " << r.text << "\n";
     }
-
-    if (JSONRes["type"] == "register-success")
-    {
-        return "";
-    }
-
-    std::string returnVal;
-
-    if (JSONRes["fields"].size() != 1)
-    {
-        returnVal = "The following fileds are incorrect: ";
-
-        for (auto& el : JSONRes["fields"].items())
-        {
-            returnVal += el.value();
-            returnVal += " ";
-        }
-    }
-
-    return JSONRes["fields"][0];
 }
 
 std::string APIHandler::loginHandler(loginData logData)
 {
-    return std::string();
-}
-
-std::string APIHandler::getUserInfo(std::string username, user& user)
-{
-    return std::string();
-}
-
-std::string APIHandler::getUserInfoById(std::string userId, user& user)
-{
-    return std::string();
+    cpr::Response r = cpr::Get(cpr::Url{ "http://www.httpbin.org/digest-auth/auth/user/pass" },
+        cpr::Authentication{ "neosadmin", "Zdrasti123@"});
 }
