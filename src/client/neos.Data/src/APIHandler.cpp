@@ -29,8 +29,34 @@ void APIHandler::registerHandler(RegisterData regData)
     }
 }
 
+void APIHandler::getUserById(string fName, User user)
+{
+    cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:8000/api/users/" + fName},
+        cpr::Authentication{ "neosadmin", "Zdrasti123@" });
+
+    nlohmann::json JSONRes;
+
+    try
+    {
+        JSONRes = nlohmann::json::parse(r.text);
+    }
+    catch (nlohmann::json::parse_error& ex)
+    {
+        std::cout << "There is a problem with the server! Please try again later!";
+    }
+
+    if (JSONRes["type"] == "user-success")
+    {
+        user.id = JSONRes["data"][0];
+        user.fname = JSONRes["data"][1];
+        user.lname = JSONRes["data"][2];
+        user.email = JSONRes["data"][3];
+        user.password = JSONRes["data"][4];
+    }
+    else std::cout << "The user wasn't found";
+}
+
 std::string APIHandler::loginHandler(loginData logData)
 {
-    cpr::Response r = cpr::Get(cpr::Url{ "http://www.httpbin.org/digest-auth/auth/user/pass" },
-        cpr::Authentication{ "neosadmin", "Zdrasti123@"});
+    
 }
