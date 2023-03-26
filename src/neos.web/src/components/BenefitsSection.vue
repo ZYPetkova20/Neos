@@ -93,4 +93,40 @@
         }
     }
 
+    @media  screen and (max-width: 1440px) {
+        .benefits{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height:340px;
+            column-gap:50px;
+            background-color: #282D2F;  
+        }
+        .benefits__card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            width: 250px;
+            height:100%;
+                img{
+                    width:45px;
+                    height:47px;
+                    padding-bottom: 13px;
+                }
+        }
+        .benefits__heading{
+            font-size:23px;
+            font-family: Tex;
+            color:white;
+            line-height: 0px;
+        }
+        .benefits__text{
+            font-size:17px;
+            font-family: Inter;
+            color:white;
+        }
+    }   
+
 </style>
