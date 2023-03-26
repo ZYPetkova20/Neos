@@ -127,6 +127,41 @@
             font-family: Inter;
             color:white;
         }
-    }   
+    }
+    @media  screen and (max-width: 1200px) {
+        .benefits{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height:340px;
+            column-gap:50px;
+            background-color: #282D2F;  
+        }
+        .benefits__card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            width: 200px;
+            height:100%;    
+                img{
+                    width:40px;
+                    height:42px;
+                    padding-bottom: 13px;
+                }
+        }
+        .benefits__heading{
+            font-size:20px;
+            font-family: Tex;
+            color:white;
+            line-height: 0px;
+        }
+        .benefits__text{
+            font-size:15px;
+            font-family: Inter;
+            color:white;
+        }
+    }
 
 </style>
