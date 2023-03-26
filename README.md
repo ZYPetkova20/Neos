@@ -16,9 +16,9 @@
 
 ## 📋 Description
   
-The essence of this project was to create a C++ game based on Bool logic. In the game you can choose between four game modes, two of which have a special “NOT” card. We have created the application with a graphical interface for a more pleasant user experience. You can also enjoy various card packs on our hosted website.
+<p align="center">Our NEOS Chemistry Simulator app offers a comprehensive platform for simulating chemical systems and visualizing their behavior. The application is based on C++ with Raylib, including some 3D models. With the NEOS Chemistry Simulator, users can explore different scenarios & gain a better understanding of how chemistry works.</p>
 
-## 🚀 Languages 
+## 🚀 Application Tech Stack 
   <p align="left"> 
   <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
   <a href="https://www.sfml-dev.org/"><img src="https://cdn.discordapp.com/attachments/895221336006332427/971795038596108318/1200px-SFML_Logo_1.png" alt="SFML"/></a>
@@ -28,7 +28,7 @@ The essence of this project was to create a C++ game based on Bool logic. In the
  
   </p>
 
-## 🔧 Tools 
+## 🔧 Website Tech Stack 
   <p align="left"> 
   <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
   <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" alt="Visual Studio Code"/></a>
@@ -39,6 +39,18 @@ The essence of this project was to create a C++ game based on Bool logic. In the
     <a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo"/></a>
     <a href="https://git-scm.com/"><img src="https://img.icons8.com/color/48/000000/git.png" alt="Git"/></a>
   </p> 
+  
+  
+## 🔗 DB & Server Tech Stack 
+  <p align="left"> 
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
+  </p> 
+  
+## 🔨 Tools
+  <p align="left"> 
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
+  </p>   
+  
   
 ## 💼 Documents
   - [Doxygen](https://smtashev20.github.io/onsens-documentation/index.html)
