@@ -290,18 +290,90 @@
             font-size:19px;
             font-family: 'Lato-bold';
         }
-K)        .footer__right-section__text__wrapper{
+        .footer__right-section__text__wrapper{
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             width:90%;
             height:70px;
             padding-right: 30px;
-         
         
         }
         .footer__right-section__text{
             font-size:15px;
+            padding-right:0px;
+            color:#767676;
+            font-family: 'Lato-light';
+            
+        }
+    }
+    @media  screen and (max-width: 768px) {
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: #EAEAEA;
+            width: 100%;
+            height: 180px;
+        }
+        .footer__left-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            width: 300px;
+            padding-left: 20px;
+            height: 90%;
+
+            img {
+                padding-bottom: 5px;
+                width:36px;
+                height: 42px;
+            }
+        }
+        .footer__left-section__phone-text {
+            font-family: 'Lato-bold';
+            font-size: 17px;
+        }
+        .footer__left-section__email-text {
+            font-family: 'Lato-bold';
+            font-size: 14px;
+        }
+        .footer__right-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            width:400px;
+            height:90%;
+
+        }
+        .footer__right-section__nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width:90%;
+            height:100px;
+            align-items: flex-end;
+            padding-right: 0px;
+      
+        }
+        .footer__right-section__nav__links{
+            font-size:17px;
+            font-family: 'Lato-bold';
+        }
+        .footer__right-section__text__wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width:90%;
+            height:70px;
+            padding-right: 30px;
+        
+        }
+        .footer__right-section__text{
+            font-size:14px;
             padding-right:0px;
             color:#767676;
             font-family: 'Lato-light';

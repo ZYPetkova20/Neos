@@ -262,6 +262,61 @@
             font-family: Inter;
         }
     }
+    @media  screen and (max-width: 768px) {
+
+        .process-wrapper{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            height: 460px;
+        }
+        .heading-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width:100%;
+            height:140px;
+        }
+        .section-heading{
+            width: 93%;
+            font-size: 43px;
+            font-family: Lato-light;
+        }
+        .process{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width:100%;
+            height:320px;
+            column-gap:0px; 
+        }
+        .process__card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            width: 150px;
+            height:unset;
+            margin: 0 auto;
+        }
+        .process__circle{
+            width:27px;
+            height:27px;
+            background-color: #89BEA8;
+            border-radius: 50%;
+        }
+        .process__heading{
+            font-size:20px;
+            font-family: Tex;
+            line-height: 20px;
+        }
+        .process__text{
+            font-size:15px;
+            font-family: Inter;
+        }
+    }
 
 </style>
 
