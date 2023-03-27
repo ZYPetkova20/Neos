@@ -146,9 +146,6 @@
     <ClCompile Include="Src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Src\precompile.hpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\neos.components\neos.components.vcxproj">
       <Project>{cb7c4775-9b1e-4641-ac0f-2060c41eded1}</Project>
     </ProjectReference>

@@ -47,11 +47,11 @@ void APIHandler::getUserById(string fName, User user)
 
     if (JSONRes["type"] == "user-success")
     {
-        user.id = JSONRes["data"][0];
+        /*user.id = JSONRes["data"][0];
         user.fname = JSONRes["data"][1];
-        user.lname = JSONRes["data"][2];
-        user.email = JSONRes["data"][3];
-        user.password = JSONRes["data"][4];
+        user.lname = JSONRes["data"][2];*/
+        user.email = JSONRes["data"][0];
+        user.password = JSONRes["data"][1];
     }
     else std::cout << "The user wasn't found";
 }

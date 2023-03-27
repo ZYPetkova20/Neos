@@ -8,6 +8,15 @@
 
 using std::string;
 
+struct User
+{
+    string id;
+    string fname;
+    string lname;
+    string email;
+    string password;
+};
+
 struct RegisterData
 {
     string fname;
@@ -26,6 +35,6 @@ struct loginData
 class APIHandler {
 public:
     void registerHandler(RegisterData regData);
-    void getUserById(string id);
+    void getUserById(string id, User user);
     string loginHandler(loginData logData);
 };
