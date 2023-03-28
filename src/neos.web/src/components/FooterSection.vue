@@ -5,6 +5,7 @@
             <p class="footer__left-section__phone-text">+359 879 909 034</p>
             <p class="footer__left-section__email-text">sysolakov20@codingburgas.bg</p>
         </div>
+        <div class="footer__line"></div>
         <div class="footer__right-section">
             <div class="footer__right-section__nav">
                 <p class="footer__right-section__nav__links">Contact Us</p>
@@ -69,6 +70,9 @@
         font-family: 'Lato-bold';
         font-size: 18px;
     }
+    .footer__line{
+        display: none;
+    }
     .footer__right-section {
         display: flex;
         flex-direction: column;
@@ -87,6 +91,7 @@
     .footer__right-section__nav__links{
         font-size:22px;
         font-family: 'Lato-bold';
+        cursor: pointer;
     }
     .footer__right-section__text__wrapper{
         display: flex;
@@ -374,6 +379,87 @@
         }
         .footer__right-section__text{
             font-size:14px;
+            padding-right:0px;
+            color:#767676;
+            font-family: 'Lato-light';
+            
+        }
+    }
+    @media  screen and (max-width: 576px) {
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #EAEAEA;
+            width: 100%;
+            height: 480px;
+            row-gap: 10px;
+        }
+        .footer__left-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            width: 90%;
+            padding-left: 0px;
+            height: 200px;  
+            img {
+                margin-bottom: 15px;
+                width:50px;
+                height: 56px;
+            }
+        }
+        .footer__left-section__phone-text {
+            font-family: 'Lato-bold';
+            font-size: 19px;
+        }
+        .footer__left-section__email-text {
+            font-family: 'Lato-bold';
+            font-size: 15px;
+        }
+        .footer__line{
+            display: block;
+            height: 1px;
+            width: 80%;
+            align-self: center;
+            background-color: black;
+        }
+        .footer__right-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width:90%;
+            height:unset;
+            
+        }
+        .footer__right-section__nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 0px;
+            width:100%;
+            height:unset;
+            align-items: flex-start;
+            padding-right: 0px;
+        }
+        .footer__right-section__nav__links{
+            font-size:19px;
+            font-family: 'Lato-bold';
+        }
+        .footer__right-section__text__wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            width:100%;
+            height:unset;
+            padding-right: 0px;
+        
+        }
+        .footer__right-section__text{
+            font-size:15px;
             padding-right:0px;
             color:#767676;
             font-family: 'Lato-light';

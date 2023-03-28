@@ -267,5 +267,57 @@
             width:90%;
         }
     }
+    @media  screen and (max-width: 576px) {
+        .benefits{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            width:100%;
+            height:900px;
+            column-gap:unset;
+            background-color: #282D2F;  
+            flex-wrap: unset;
+            
+                div:nth-child(1){
+                    margin-top: 0px;
+                }
+                div:nth-child(2){
+                    margin-top: 0px;
+                }
+                div:nth-child(3){
+                    margin-bottom: 0px;
+                }
+                div:nth-child(4){
+                    margin-bottom: 0px;
+                }
+        }
+        .benefits__card{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: flex-start;
+            width: 90%;
+            height:170px;   
+            padding-left: 0px;
+                img{
+                    width:45px;
+                    height:47px;
+                    padding-bottom: 13px;
+                }
+        }
+        .benefits__heading{
+            font-size:24px;
+            font-family: Tex;
+            color:white;
+            line-height: 0px;
+        }
+        .benefits__text{
+            font-size:18px;
+            font-family: Inter;
+            color:white;
+            width:90%;
+        }
+    }
 
 </style>
