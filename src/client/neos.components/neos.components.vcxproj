@@ -167,7 +167,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GRAPHICS_API_OPENGL_33;PLATFORM_DESKTOP</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)client\neos.components\lib\raylib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)client\neos.components\lib\raylib;$(SolutionDir)client\neos.services\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalHeaderUnitDependencies>
       </AdditionalHeaderUnitDependencies>
@@ -181,9 +181,8 @@
       <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>neos.services.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64;$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
