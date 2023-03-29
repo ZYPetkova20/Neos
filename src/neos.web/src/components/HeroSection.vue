@@ -14,9 +14,18 @@
       </div>
       <button class="hero-section__button">Download</button>
     </div>
-    <div class="hero-image"></div>
+    <div class="hero-image">
+      <div class="login_button">
+        <p>Login</p>  
+      </div>
+    </div>
   </div>
 </template>
+
+<script setup>
+  console.log(200)
+
+</script>
 
 <style lang="scss">
     //Import Fonts
@@ -122,6 +131,22 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+    .login_button{
+      position: absolute;
+      top:40px;
+      right:40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      height: 47px;
+      background-color: white;
+      border: none;
+      border-radius: 100px;
+      font-family: 'Tex';
+      font-size: 20px;
+      cursor: pointer;
+    }
 
     //To 1440px
     @media  only screen and (max-width:1600px){
@@ -223,6 +248,22 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      .login_button{
+      position: absolute;
+      top:30px;
+      right:30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 44px;
+      background-color: white;
+      border: none;
+      border-radius: 100px;
+      font-family: 'Tex';
+      font-size: 18px;
+      cursor: pointer;
+      }
     }
     @media  screen and (max-width: 1200px) {
       .hero{
@@ -299,6 +340,22 @@
         background-image: url('../assets/images/hero-image.png');
         background-repeat: no-repeat;
         background-size: cover;
+      }
+      .login_button{
+        position: absolute;
+        top:25px;
+        right:25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 38px;
+        background-color: white;
+        border: none;
+        border-radius: 100px;
+        font-family: 'Tex';
+        font-size: 16px;
+        cursor: pointer;
       }
     }
     @media  screen and (max-width: 1024px) {
@@ -377,6 +434,7 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      
     }
     @media  screen and (max-width: 768px) {
       .hero{
@@ -454,6 +512,22 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      .login_button{
+        position: absolute;
+        top:25px;
+        right:25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 34px;
+        background-color: white;
+        border: none;
+        border-radius: 100px;
+        font-family: 'Tex';
+        font-size: 14px;
+        cursor: pointer;
+      }
     }
     @media  screen and (max-width: 576px) {
       .hero{
@@ -475,9 +549,9 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        column-gap: 35px;
+        column-gap: 25px;
         justify-content: flex-start;
-        width: 100%;
+        width: 50%;
         height: 80px;
         img {
           width: 32px;
@@ -490,6 +564,7 @@
         line-height: 21px;
         color: #fff;
         text-decoration: none;
+        display: none;
       }
       .hero-section__title-wrapper{
         width:100%;
@@ -526,12 +601,28 @@
         cursor: pointer;
       }
       .hero-image {
-        display: none;
-        width: 42%;
-        height: 100%;
-        background-image: url('../assets/images/hero-image.png');
+        display: flex;
+        width: unset;
+        height: unset;
+        background-image: unset;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+      .login_button{
+        position: absolute;
+        top:25px;
+        right:25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 34px;
+        background-color: white;
+        border: none;
+        border-radius: 100px;
+        font-family: 'Tex';
+        font-size: 14px;
+        cursor: pointer;
       }
     }
     @media  screen and (max-width: 480px) {
@@ -551,21 +642,8 @@
         height: 100%; 
       }
       
-      .hamburger__nav{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 90%;
-        height: 80px;
-        align-self: flex-start;
-        justify-content: space-between;
-        img {
-          width: 32px;
-          height: 38px;
-        }
-      }
       nav {
-        display: none;
+        display: flex;
         flex-direction: row;
         align-items: center;
         column-gap: 35px;
@@ -578,6 +656,7 @@
         }
       }
       .hero-section__link{
+        display: none;
         font-family: 'Inter';
         font-size: 18px;
         line-height: 21px;
@@ -619,12 +698,28 @@
         cursor: pointer;
       }
       .hero-image {
-        display: none;
-        width: 42%;
-        height: 100%;
-        background-image: url('../assets/images/hero-image.png');
+        display: flex;
+        width: unset;
+        height: unset;
+        background-image: unset;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+      .login_button{
+        position: absolute;
+        top:25px;
+        right:25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 34px;
+        background-color: white;
+        border: none;
+        border-radius: 100px;
+        font-family: 'Tex';
+        font-size: 14px;
+        cursor: pointer;
       }
     }
 
