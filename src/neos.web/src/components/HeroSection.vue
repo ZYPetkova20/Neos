@@ -534,6 +534,100 @@
         background-size: cover;
       }
     }
+    @media  screen and (max-width: 480px) {
+      .hero{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100vh;
+        background-color: #1F1F1F;
+        min-height: 400px;
+        max-height: 400px;
+      }
+      .hero-section{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 100%; 
+      }
+      
+      .hamburger__nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        height: 80px;
+        align-self: flex-start;
+        justify-content: space-between;
+        img {
+          width: 32px;
+          height: 38px;
+        }
+      }
+      nav {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 35px;
+        justify-content: flex-start;
+        width: 100%;
+        height: 80px;
+        img {
+          width: 32px;
+          height: 38px;
+        }
+      }
+      .hero-section__link{
+        font-family: 'Inter';
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .hero-section__title-wrapper{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+      .hero-section__title{
+        font-size: 40px;
+        line-height: 0px;
+        color: #fff;
+        font-family: 'Tex';
+        letter-spacing: 0.1em;
+        
+          &:nth-child(1){
+            margin-top: 25px;
+            margin-bottom: 25px;
+          }
+          &:nth-child(2){
+            margin-bottom: 25px;
+          }
+
+      }
+      .hero-section__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        border: none;
+        border-radius: 100px;
+        font-family: 'Tex'; 
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .hero-image {
+        display: none;
+        width: 42%;
+        height: 100%;
+        background-image: url('../assets/images/hero-image.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
     /*
   @media  screen and (max-width: 1440px) {
 
@@ -559,8 +653,6 @@
     
   }
 
-  @media  screen and (max-width: 360px) {
-
-  }
+ 
   */
 </style>

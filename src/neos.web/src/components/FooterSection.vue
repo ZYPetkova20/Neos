@@ -466,5 +466,87 @@
             
         }
     }
+    @media  screen and (max-width: 480px) {
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #EAEAEA;
+            width: 100%;
+            height: 390px;
+            row-gap: 10px;
+        }
+        .footer__left-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            width: 90%;
+            padding-left: 0px;
+            height: 200px;
+            img {
+                margin-bottom: 15px;
+                width:46px;
+                height: 52px;
+            }
+        }
+        .footer__left-section__phone-text {
+            font-family: 'Lato-bold';
+            font-size: 17px;
+        }
+        .footer__left-section__email-text {
+            font-family: 'Lato-bold';
+            font-size: 15px;
+        }
+        .footer__line{
+            display: block;
+            height: 1px;
+            width: 80%;
+            align-self: center;
+            background-color: black;
+        }
+        .footer__right-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width:90%;
+            height:unset;
+            
+        }
+        .footer__right-section__nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 0px;
+            width:100%;
+            height:unset;
+            align-items: flex-start;
+            padding-right: 0px;
+        }
+        .footer__right-section__nav__links{
+            font-size:17px;
+            font-family: 'Lato-bold';
+            line-height: 0.5em;
+        }
+        .footer__right-section__text__wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            width:100%;
+            height:unset;
+            padding-right: 0px;
+        
+        }
+        .footer__right-section__text{
+            font-size:13px;
+            padding-right:0px;
+            color:#767676;
+            font-family: 'Lato-light';
+            
+        }
+    }
 
 </style>
