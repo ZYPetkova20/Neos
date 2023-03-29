@@ -1,14 +1,14 @@
 #include "../include/APIHandler.h"
 
-void APIHandler::registerHandler(RegisterData regData)
+void APIHandler::registerHandler()
 {
 
     nlohmann::json  my_json = nlohmann::json{
         {"id", "70"},
-        {"firstName", regData.fname},
-        {"lastName", regData.lname},
-        {"email", regData.email},
-        {"password", regData.password},
+        {"firstName", "dnes"},
+        {"lastName", "ez"},
+        {"email", "utre"},
+        {"password", "data"},
     };
 
     cpr::Response r = cpr::Post(
