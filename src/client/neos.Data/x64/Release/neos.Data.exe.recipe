@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Projects\Neos\src\x64\Release\neos.data.exe</FullPath>
+      <FullPath>D:\Projects\Neos\src\client\neos.services\lib\neos.data.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

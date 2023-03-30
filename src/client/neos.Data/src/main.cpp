@@ -6,5 +6,5 @@
 int main() 
 {
 	APIHandler apiHandler;
-	apiHandler.registerHandler();
+	apiHandler.getUsers();
 }

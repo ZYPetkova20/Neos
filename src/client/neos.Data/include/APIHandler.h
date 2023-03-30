@@ -35,6 +35,6 @@ struct loginData
 class APIHandler {
 public:
     void registerHandler();
-    void getUserById(string id, User user);
+    void getUsers();
     string loginHandler(loginData logData);
 };
