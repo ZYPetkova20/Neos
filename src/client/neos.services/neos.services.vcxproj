@@ -138,6 +138,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>neos.data.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.services\lib</AdditionalLibraryDirectories>
     </Link>
     <Lib>
       <AdditionalDependencies>neos.data.lib;%(AdditionalDependencies)</AdditionalDependencies>

@@ -35,14 +35,36 @@ void APIHandler::getUsers()
         cpr::Authentication{ "neosadmin", "Zdrasti123@" });
 
     if (r.status_code >= 200 && r.status_code < 300) {
-        std::cout << r.text;
+        try
+        {
+            JSONRes = json::parse(r.text);
+        }
+        catch (json::parse_error& ex)
+        {
+            std::cout << "There is a problem with the server! Please try again later!";
+        }
+
+        //std::cout << JSONRes.dump(2);
+
+        for (const auto& obj : JSONRes) {
+            string email = obj.at("email").get<string>();
+            emails.push_back(email);
+
+            string password = obj.at("password").get<string>();
+            passwords.push_back(password);
+        }
+
+        /*for (const auto& email : emails) {
+            std::cout << email << " ";
+        }
+        std::cout << std::endl;
+
+        for (const auto& password : passwords) {
+            std::cout << password << " ";
+        }
+        std::cout << std::endl;*/
     }
     else {
         std::cout << "Error posting data: " << r.text << "\n";
     }
-}
-
-std::string APIHandler::loginHandler(loginData logData)
-{
-    
 }

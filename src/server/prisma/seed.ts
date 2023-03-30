@@ -19,7 +19,6 @@ async function seed()
                     lastName: user.lastName,
                     email: user.email,
                     password: user.password,
-                    salt: user.salt
                 }
             })
         })

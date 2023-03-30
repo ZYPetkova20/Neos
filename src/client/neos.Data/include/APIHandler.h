@@ -7,15 +7,7 @@
 #include <nlohmann/json.hpp>
 
 using std::string;
-
-struct User
-{
-    string id;
-    string fname;
-    string lname;
-    string email;
-    string password;
-};
+using json = nlohmann::json;
 
 struct RegisterData
 {
@@ -26,15 +18,11 @@ struct RegisterData
     string password;
 };
 
-struct loginData
-{
-    string loginCred;
-    string pass;
-};
-
 class APIHandler {
 public:
+    json JSONRes;
+    std::vector<string> emails, passwords;
+    
     void registerHandler();
     void getUsers();
-    string loginHandler(loginData logData);
 };
