@@ -1,5 +1,15 @@
 #include "../include/APIHandler.h"
 
+APIHandler::APIHandler()
+{
+    myFile.open(".env");
+
+    if (!myFile.is_open()) {
+        return;
+    }
+    myFile >> adminPasswordString;
+}
+
 void APIHandler::registerHandler()
 {
 
@@ -13,7 +23,7 @@ void APIHandler::registerHandler()
 
     cpr::Response r = cpr::Post(
         cpr::Url{ "http://localhost:8000/api/users" },
-        cpr::Authentication{ "neosadmin", "Zdrasti123@" },
+        cpr::Authentication{ "neosadmin", adminPasswordString },
         cpr::Body{
             my_json.dump()
         },
@@ -32,7 +42,7 @@ void APIHandler::registerHandler()
 void APIHandler::getUsers()
 {
     cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:8000/api/users"},
-        cpr::Authentication{ "neosadmin", "Zdrasti123@" });
+        cpr::Authentication{ "neosadmin", adminPasswordString });
 
     if (r.status_code >= 200 && r.status_code < 300) {
         try

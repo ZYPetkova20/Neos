@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 #include <cctype>
 #include <curl/curl.h>
 #include <cpr/cpr.h>
@@ -10,20 +11,16 @@
 using std::string;
 using json = nlohmann::json;
 
-struct RegisterData
-{
-    string fname;
-    string lname;
-    string username;
-    string email;
-    string password;
-};
-
 class APIHandler {
 public:
+    string adminPasswordString;
+    std::ifstream myFile;
+
     json JSONRes;
     std::vector<string> emails, passwords;
     
+    APIHandler();
+
     void registerHandler();
     void getUsers();
 };
