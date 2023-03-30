@@ -43,15 +43,37 @@ void APIHandler::getUsers()
         {
             std::cout << "There is a problem with the server! Please try again later!";
         }
-
-        //std::cout << JSONRes.dump(2);
-
+        
         for (const auto& obj : JSONRes) {
             string email = obj.at("email").get<string>();
             emails.push_back(email);
 
             string password = obj.at("password").get<string>();
             passwords.push_back(password);
+        }
+
+        string enteredEmail, enteredPassword;
+        bool foundEmail = false, foundPassword = false;
+
+        for (const auto& email : emails) {
+            if (email == enteredEmail) {
+                foundEmail = true;
+                break;
+            }
+        }
+
+        for (const auto& password : passwords) {
+            if (password == enteredPassword) {
+                foundPassword = true;
+                break;
+            }
+        }
+
+        if (foundEmail && foundPassword) {
+            //mainMenu();
+        }
+        else {
+            //try again exception
         }
 
         /*for (const auto& email : emails) {
