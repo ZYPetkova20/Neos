@@ -6,6 +6,7 @@ type User = {
     lastName: string,
     email: string,
     password: string,
+    salt: string
 }
 
 async function seed()
@@ -39,6 +40,7 @@ function getUsers(): Array<User>{
             lastName: "Penchsov",
             email: "ppenchosv@gmail.com",
             password: "malinki12",
+            salt: ""
         },
 
         {
@@ -46,6 +48,7 @@ function getUsers(): Array<User>{
             lastName: "Minschov",
             email: "mminchsov@gmail.com",
             password: "malinki13",
+            salt: ""
         }
     ]
 }
