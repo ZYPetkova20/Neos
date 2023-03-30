@@ -54,7 +54,33 @@ void APIHandler::getUsers()
             passwords.push_back(password);
         }
 
-        /*for (const auto& email : emails) {
+        string enteredEmail = "da", enteredPassword = "da";
+        bool foundEmail = false, foundPassword = false;
+
+        for (const auto& email : emails) {
+            if (enteredEmail == email) {
+                foundEmail = true;
+                break;
+            }
+        }
+
+        for (const auto& password : passwords) {
+            if (enteredPassword == password) 
+            {
+                foundPassword = true;
+                break;
+            }
+        }
+
+        if (foundEmail && foundPassword) {
+            //mainMenu();
+            std::cout << "raboti" << std::endl;
+        }
+        else {
+            //try again exception
+        }
+
+        for (const auto& email : emails) {
             std::cout << email << " ";
         }
         std::cout << std::endl;
@@ -62,7 +88,7 @@ void APIHandler::getUsers()
         for (const auto& password : passwords) {
             std::cout << password << " ";
         }
-        std::cout << std::endl;*/
+        std::cout << std::endl;
     }
     else {
         std::cout << "Error posting data: " << r.text << "\n";

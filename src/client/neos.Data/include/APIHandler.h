@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cctype>
 #include <curl/curl.h>
 #include <cpr/cpr.h>
 #include <nlohmann/json.hpp>
