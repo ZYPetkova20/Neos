@@ -12,9 +12,7 @@ APIHandler::APIHandler()
 
 void APIHandler::registerHandler()
 {
-
     nlohmann::json  my_json = nlohmann::json{
-        {"id", "70"},
         {"firstName", "dnes"},
         {"lastName", "ez"},
         {"email", "utre"},
@@ -64,15 +62,22 @@ void APIHandler::getUsers()
             passwords.push_back(password);
         }
 
-        string enteredEmail = "da", enteredPassword = "da";
-        bool foundEmail = false, foundPassword = false;
-
         for (const auto& email : emails) {
             if (enteredEmail == email) {
                 foundEmail = true;
+
+                obj = JSONRes[index];
+                fName = obj.at("firstName");
+                lName = obj.at("lastName");
+
                 break;
             }
+            index++;
         }
+
+
+        std::cout << fName << std::endl;
+        std::cout << lName << std::endl;
 
         for (const auto& password : passwords) {
             if (enteredPassword == password) 

@@ -18,6 +18,12 @@ public:
 
     json JSONRes;
     std::vector<string> emails, passwords;
+
+    string enteredEmail = "da", enteredPassword = "da";
+    string fName, lName;
+    json obj;
+    int index = 0;
+    bool foundEmail = false, foundPassword = false;
     
     APIHandler();
 
