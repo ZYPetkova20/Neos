@@ -1,23 +1,23 @@
 <template>
     <div class="process-wrapper">
         <div class="heading-wrapper">
-            <p class="section-heading"><b>Save time & money</b> with our chemistry simulator</p>
+            <p class="section-heading"><b>Get to know </b>about process as well as trail and errors</p>
         </div>
         <div class="process">
             <div class="process__card">
                 <div class="process__circle"></div>
-                <p class="process__heading">Your Digital World</p>
-                <p class="process__text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="process__heading">Building Blocks</p>
+                <p class="process__text">Creating a chemistry simulator requires a solid foundation.There was a lot of selection and processing.</p>
             </div>
             <div class="process__card">
                 <div class="process__circle"></div>
-                <p class="process__heading">Your Digital World</p>
-                <p class="process__text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="process__heading">Trial and Error</p>
+                <p class="process__text">Developing a chemistry simulator involves a lot of trial and error. Making such a big project can be challenging.</p>
             </div>
             <div class="process__card">
                 <div class="process__circle"></div>
-                <p class="process__heading">Your Digital World</p>
-                <p class="process__text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="process__heading">Putting It All Together</p>
+                <p class="process__text">Creating a chemistry simulator is a complex process that involves putting together many different pieces.</p>
             </div>
         </div>
     </div>

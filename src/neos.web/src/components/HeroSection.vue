@@ -3,9 +3,9 @@
     <div class="hero-section">
       <nav>
         <img src="../assets/images/logo.png" alt="logo" />
-        <p class="hero-section__link">Reactivity</p>
-        <p class="hero-section__link">Mockup</p>
-        <p class="hero-section__link">Last Section</p>
+        <p class="hero-section__link">Concept</p>
+        <p class="hero-section__link">Benefits</p>
+        <p class="hero-section__link">Process</p>
       </nav>
       <div class="hero-section__title-wrapper">
         <p class="hero-section__title">Neos</p>
