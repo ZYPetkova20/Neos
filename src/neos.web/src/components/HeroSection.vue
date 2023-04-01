@@ -22,10 +22,7 @@
   </div>
 </template>
 
-<script setup>
-  console.log(200)
 
-</script>
 
 <style lang="scss">
     //Import Fonts
@@ -62,6 +59,7 @@
       height: 100vh;
       background-color: #1F1F1F;
       min-height: 850px;
+      max-height: 1080px;
     }
     .hero-section{
       display: flex;
@@ -722,32 +720,4 @@
         cursor: pointer;
       }
     }
-
-    /*
-  @media  screen and (max-width: 1440px) {
-
-  }
-
-  @media  screen and (max-width: 1200px) {
-    
-  }
-
-  @media  screen and (max-width: 1024px) {
-    
-  }
-
-  @media  screen and (max-width: 768px) {
-    
-  }
-
-  @media  screen and (max-width: 576px) {
-    
-  }
-
-  @media  screen and (max-width: 480px) {
-    
-  }
-
- 
-  */
 </style>
