@@ -9,14 +9,19 @@ void mainScene::Start()
 {
 	for (int i = 0; i < 5; i++)
 	{
-		tabsPos[i] = { 0.f, 230.f + (50.f * i), 250, 52};
+		tabsPos[i] = { 0.0f, 230.0f + (50.1f * i), 250, 52};
 	}
+	tabsPos[1].y += 4.8f;
+	tabsPos[2].y += 2.8f;
+	selectedTabPos = tabsPos[0];
 	loadAssets();
 }
 
 // Method updating the scene every frame
 void mainScene::Update()
 {
+	mousePos = GetMousePosition();
+	handleCollision();
 	BeginDrawing();
 
 	ClearBackground(backgroundColor);
@@ -39,12 +44,38 @@ void mainScene::drawTextures()
 	DrawTexture(tableTexture, 332, 152, WHITE);
 	DrawTexture(userInfo, 30, 37, WHITE);
 	DrawTexture(logOutButton, 40, 700, WHITE);
-	DrawTexture(selectedTab, tabsPos[0].x, tabsPos[0].y, WHITE);
+	DrawTexture(selectedTab, selectedTabPos.x, selectedTabPos.y, WHITE);
 	DrawTexture(tableTab, 42, 242, WHITE);
 	DrawTexture(calculatorTab, 42, 295, WHITE);
 	DrawTexture(simulationTab, 42, 345, WHITE);
 	DrawTexture(archiveTab, 43, 395, WHITE);
 	DrawTexture(settingsTab, 41, 445, WHITE);
+}
+
+// Method for handling collision events
+void mainScene::handleCollision()
+{
+	for (int i = 0; i < 6; i++)
+	{
+		if (CheckCollisionPointRec(mousePos, tabsPos[i]))
+		{
+			if (selectedTabPos.y != tabsPos[i].y)
+				selectedTabPos.y = tabsPos[i].y + (i * 1.4f);
+			tabsAnimation = 0;
+		}
+		else if(tabsAnimation > 35)
+		{
+
+			if (selectedTabPos.y >= tabsPos[0].y)
+				selectedTabPos.y -= 10.0f;
+			if (selectedTabPos.y <= tabsPos[0].y)
+				selectedTabPos.y = tabsPos[0].y;
+		}
+		else
+		{
+			tabsAnimation++;
+		}
+	}
 }
 
 // Method for loading the variables / assets

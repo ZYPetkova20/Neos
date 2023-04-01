@@ -7,8 +7,9 @@ class mainScene : public scene
 private:
 	sceneManager &mySceneManager;
 
-	// Vector2
+	// Variables
 	Vector2 mousePos = {0.f, 0.f};
+	int tabsAnimation = 0;
 
 	// Textures
 	Texture backgroundTexture;
@@ -25,13 +26,16 @@ private:
 	Texture settingsTab;
 
 	// Positions of the Textures
-	Rectangle readyElementsPos[10]; // Position of the implemented elements
+	Rectangle elementsPos[10]; // Position of the implemented elements
 	Rectangle tabsPos[5];
+	Rectangle selectedTabPos;
 	Rectangle logOutPos;
 
 	// Methods
 	// For drawing textures
 	void drawTextures();
+	// For handling collision events
+	void handleCollision();
 
 public:
 	mainScene(std::string sceneName, sceneManager& sceneManager);
