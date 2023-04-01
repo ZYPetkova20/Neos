@@ -50,7 +50,7 @@
   </template>
   
   
-  <style lang="scss">
+  <style lang="scss" scoped>
       //Import Fonts
       @font-face {
         font-family: 'Tex';
@@ -628,7 +628,7 @@
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 700px;
+          min-height: 600px;
           margin: auto;
           position: relative;
         }
@@ -993,7 +993,7 @@
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 570px;
+          min-height: 600px;
           margin: auto;
           position: relative;
         }
@@ -1175,7 +1175,7 @@
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 770px;
+          min-height: 800px;
           margin: auto;
           position: relative;
         }
