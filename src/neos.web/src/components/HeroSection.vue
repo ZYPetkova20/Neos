@@ -146,7 +146,7 @@
       cursor: pointer;
     }
 
-    //To 1440px
+    
     @media  only screen and (max-width:1600px){
       .hero-section{
         display: flex;
