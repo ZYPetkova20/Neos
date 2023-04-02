@@ -1,5 +1,5 @@
 <template>
-    <div class="dev-section">
+    <div class="dev-section" id="dev-section">
         <div class="dev-section__title-wrapper">
             <p class="dev-section__title dev-section__title--bold">Concept to Creation,</p>
             <p class="dev-section__title">The story of our chemistry simulator</p>

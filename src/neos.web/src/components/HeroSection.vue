@@ -3,7 +3,7 @@
     <div class="hero-section">
       <nav>
         <img src="../assets/images/logo.png" alt="logo" />
-        <p class="hero-section__link">Concept</p>
+        <a href="#dev-section"><p class="hero-section__link">Concept</p></a>
         <p class="hero-section__link">Benefits</p>
         <p class="hero-section__link">Process</p>
       </nav>
@@ -15,9 +15,11 @@
       <button class="hero-section__button">Download</button>
     </div>
     <div class="hero-image">
-      <div class="login_button">
-        <p>Login</p>  
-      </div>
+      
+        <div class="login_button">
+          <p>Login</p>  
+        </div>
+      
     </div>
   </div>
 </template>
@@ -51,6 +53,7 @@
       margin: 0 !important;
       padding: 0 !important;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
     .hero{
       display: flex;
@@ -92,11 +95,14 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 35px;
+      background-image: linear-gradient(90deg, #FFFFFF, #FBEEE6, #C5ECF2, #C1ECF3);
+      background-clip: text;
+      -webkit-background-clip: text;
     }
     .hero-section__title{
       font-size: 125px;
       line-height: 0px;
-      color: #fff;
+      color: transparent;
       font-family: 'Tex';
       
         &:nth-child(1){
@@ -157,7 +163,7 @@
       .hero-section__title{
         font-size: 105px;
         line-height: 0px;
-        color: #fff;
+        color: transparent;
         font-family: 'Tex';
         
           &:nth-child(1){
@@ -210,11 +216,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 35px;
+        background-image: linear-gradient(90deg, #FFFFFF, #FBEEE6, #C5ECF2, #C1ECF3);
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       .hero-section__title{
         font-size: 85px;
         line-height: 0px;
-        color: #fff;
+        color: transparent;
         font-family: 'Tex';
         
           &:nth-child(1){
@@ -303,11 +312,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 35px;
+        background-image: linear-gradient(90deg, #FFFFFF, #FBEEE6, #C5ECF2, #C1ECF3);
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       .hero-section__title{
         font-size: 65px;
         line-height: 0px;
-        color: #fff;
+        color: transparent;
         font-family: 'Tex';
         
           &:nth-child(1){
@@ -396,11 +408,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 35px;
+        background-image: linear-gradient(90deg, #FFFFFF, #FBEEE6, #C5ECF2, #C1ECF3);
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       .hero-section__title{
         font-size: 60px;
         line-height: 0px;
-        color: #fff;
+        color: transparent;
         font-family: 'Tex';
         
           &:nth-child(1){
@@ -474,11 +489,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
+        background-image: linear-gradient(90deg, #FFFFFF, #FBEEE6, #C5ECF2, #C1ECF3);
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       .hero-section__title{
         font-size: 42px;
         line-height: 0px;
-        color: #fff;
+        color: transparent;
         font-family: 'Tex';
         
           &:nth-child(1){
@@ -569,11 +587,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
+        background-image: linear-gradient(90deg, #FFFFFF, #FBEEE6, #C5ECF2, #C1ECF3);
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       .hero-section__title{
         font-size: 50px;
         line-height: 0px;
-        color: #fff;
+        color: transparent;
         font-family: 'Tex';
         letter-spacing: 0.1em;
         
@@ -666,11 +687,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
+        background-image: linear-gradient(90deg, #FFFFFF, #FBEEE6, #C5ECF2, #C1ECF3);
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       .hero-section__title{
         font-size: 40px;
         line-height: 0px;
-        color: #fff;
+        color: transparent;
         font-family: 'Tex';
         letter-spacing: 0.1em;
         
