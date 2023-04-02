@@ -157,7 +157,6 @@ zlib.lib;Ws2_32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencie
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\APIHandler.cpp" />
-    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\APIHandler.h" />

@@ -22,13 +22,16 @@ public:
     std::vector<string> emails, passwords; // vectors to store user emails and passwords
 
     string enteredEmail = "ppenchos54v@gmail.com", enteredPassword = "malinki12"; // default values for user input
-    string fName, lName; // variables to store first and last name of user
+
     json obj; // JSON object to store user info
     int index = 0; // index to iterate through JSON array
-    bool foundEmail = false, foundPassword = false; // flags to indicate if user email and password were found
     
     APIHandler(); // constructor to read admin password from .env file
 
     void registerHandler(); // function to handle user registration
+
+    bool checkLogin(string enteredEmail, string enteredPassword);
+    string getFirstName(string enteredEmail);
+    string getLastName(string enteredEmail);
     void getUsers(); // function to get user data from server
 };

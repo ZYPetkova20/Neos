@@ -43,6 +43,67 @@ void APIHandler::registerHandler()
     }
 }
 
+bool APIHandler::checkLogin(string enteredEmail, string enteredPassword)
+{
+    // check if matching email and password are found
+    bool foundPassword;
+    for (const auto& password : passwords) {
+        if (enteredPassword == password)
+        {
+            foundPassword = true;
+            break;
+        }
+    }
+
+    bool foundEmail;
+    for (const auto& email : emails) {
+        if (enteredEmail == email) {
+            foundEmail = true;
+            break;
+        }
+    }
+
+    return foundEmail && foundPassword;
+}
+
+string APIHandler::getFirstName(string enteredEmail)
+{
+    // extract email and password of each user from response JSON
+    int index = 0;
+    string fName;
+    for (const auto& email : emails) {
+        if (enteredEmail == email) {
+            // extract firstName of each user from response JSON
+            obj = JSONRes[index];
+            fName = obj.at("firstName");
+            
+            break;
+        }
+        index++;
+    }
+
+    return fName;
+}
+
+string APIHandler::getLastName(string enteredEmail)
+{
+    // extract email and password of each user from response JSON
+    int index = 0;
+    string lName;
+    for (const auto& email : emails) {
+        if (enteredEmail == email) {
+            // extract firstName of each user from response JSON
+            obj = JSONRes[index];
+            lName = obj.at("lastName");
+
+            break;
+        }
+        index++;
+    }
+
+    return lName;
+}
+
 // function to get all users from API and check user login credentials
 void APIHandler::getUsers()
 {
@@ -72,43 +133,8 @@ void APIHandler::getUsers()
             passwords.push_back(password);
         }
 
-        // extract email and password of each user from response JSON
-        for (const auto& email : emails) {
-            if (enteredEmail == email) {
-                foundEmail = true;
-
-                // extract email and password of each user from response JSON
-                obj = JSONRes[index];
-                fName = obj.at("firstName");
-                lName = obj.at("lastName");
-
-                break;
-            }
-            index++;
-        }
-
-
         std::cout << fName << std::endl;
         std::cout << lName << std::endl;
-
-        // check if matching email and password are found
-        for (const auto& password : passwords) {
-            if (enteredPassword == password)
-            {
-                foundPassword = true;
-                break;
-            }
-        }
-
-        // if both email and password are correct, proceed to main menu
-        if (foundEmail && foundPassword) {
-            //mainMenu();
-            std::cout << "raboti" << std::endl;
-        }
-        else {
-            //try again exception
-        }
-
 
         // print all emails and passwords for testing purposes
         for (const auto& email : emails) {
