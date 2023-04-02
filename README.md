@@ -20,35 +20,40 @@
 
 ## 🚀 Application Tech Stack 
   <p align="left"> 
-  <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
-  <a href="https://www.sfml-dev.org/"><img src="https://cdn.discordapp.com/attachments/895221336006332427/971795038596108318/1200px-SFML_Logo_1.png" alt="SFML"/></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML 5"/></a>
-  <a href="https://sass-lang.com/"><img src="https://img.icons8.com/color/48/000000/sass.png" alt="SASS"/></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript"/></a>
- 
+     <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
+     <a href="https://www.cplusplus.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092194637701189822/Raylib_logo_1.png"/></a>
   </p>
 
 ## 🔧 Website Tech Stack 
   <p align="left"> 
-  <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
-  <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" alt="Visual Studio Code"/></a>
-  <a href="https://www.figma.com/"><img src="https://img.icons8.com/color/48/000000/figma--v1.png"/></a>
-  <a href="https://www.adobe.com/creativecloud.html"><img src="https://www.adobe.com/content/dam/shared/images/product-icons/svg/creative-cloud.svg" alt="adobe creative cloud" width=48px /></a>
-    <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px /></a>
-    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=48px />
-    <a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo"/></a>
-    <a href="https://git-scm.com/"><img src="https://img.icons8.com/color/48/000000/git.png" alt="Git"/></a>
+      <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-color-tal-revivo.png"/></a>
+      <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/55/null/typescript--v1.png"/></a>
+      <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/55/null/html-5--v1.png"/></a> 
+      <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/55/null/sass.png"/></a>
+      <a href="https://visualstudio.microsoft.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092192709718048969/logo-with-shadow_1.png"/></a> 
   </p> 
   
   
 ## 🔗 DB & Server Tech Stack 
   <p align="left"> 
-    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/ios/50/null/prisma-orm.png"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/48/null/postgreesql.png"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/null/azure-1.png"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092188134793560176/687474703a2f2f692e696d6775722e636f6d2f643958747974732e706e67_1.png"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092189749625753831/68747470733a2f2f6375726c2e73652f6c6f676f2f6375726c2d6c6f676f2e737667_1.png"/></a>
   </p> 
   
 ## 🔨 Tools
   <p align="left"> 
     <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/51/null/visual-studio-code-2019.png"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/null/figma.png"/></a>
+    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/null/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png"/></a>
+     <a href="https://www.adobe.com/creativecloud.html"><img src="https://www.adobe.com/content/dam/shared/images/product-icons/svg/creative-cloud.svg" alt="adobe creative cloud" width=48px /></a>
+      <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px /></a>
+    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=48px />
+    <a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo"/></a>
+    <a href="https://git-scm.com/"><img src="https://img.icons8.com/color/48/000000/git.png" alt="Git"/></a>
   </p>   
   
   
