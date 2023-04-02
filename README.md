@@ -144,4 +144,6 @@ release/x64
 
 *then debug the project and run it or open the .exe file*
  
-
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&customColorList=2,3,12,19,21,23,26" width="1200px"/>
+</p>
