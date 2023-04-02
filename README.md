@@ -18,6 +18,7 @@
   
 <p align="center">Our NEOS Chemistry Simulator app offers a comprehensive platform for simulating chemical systems and visualizing their behavior. The application is based on C++ with Raylib, including some 3D models. With the NEOS Chemistry Simulator, users can explore different scenarios & gain a better understanding of how chemistry works.</p>
 
+
 ## 🚀 Application Tech Stack 
   <p align="left"> 
      <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
@@ -57,7 +58,7 @@
   </p>   
   
   
-## 💼 Documents
+## 📰 Docs
   - [Doxygen](https://smtashev20.github.io/onsens-documentation/index.html)
   - [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/smtashev20_codingburgas_bg/EY1_RLRBHW9HpcPIItgth34B8O6ahVzfYTFvJLxnABLu-g?e=75FR40)
   - [Design documentation](https://codingburgas-my.sharepoint.com/:b:/g/personal/smtashev20_codingburgas_bg/EVzCky06sG9HmZ4zXHWple0B_2vvSgoKkPfWTwd0NN80BA?e=B8AoFy)
@@ -74,6 +75,13 @@ Or by pasting the following code in your CMD:
 git clone https://github.com/SYSolakov20/onsens.git
 ```
 
+## 🖥 Team Members
+* **Zhanet Petkova** - *Scrum trainer* 
+* **Simeon Boev** - *Back-end developer* 
+* **David Donchev** - *Back-end developer* 
+* **Zhivko Spasov** - *Front-end developer*
+* **Soner Solakov** - *Designer & Front-end developer*
+
  ## 🎬 Demo of the project 
   
   <p align="center">
@@ -87,10 +95,53 @@ git clone https://github.com/SYSolakov20/onsens.git
 Paste link here.
 ```
 
-## 🖥 Team Members
-* **Zhanet Petkova** - *Scrum trainer* 
-* **Simeon Boev** - *Back-end developer* 
-* **David Donchev** - *Back-end developer* 
-* **Zhivko Spasov** - *Front-end developer*
-* **Soner Solakov** - *Designer & Front-end developer* 
+*To run the website on your local device follow these steps:*
+
+```
+git clone https://github.com/ZYPetkova20/Neos.git
+```
+*Navigate to the proper directory*
+
+```
+cd src
+
+cd neos.web
+
+cd src
+```
+*Install node packages*
+
+```
+npm install
+```
+*Run on local surver*
+
+```
+npm run dev
+```
+
+
+## 🔑 Application Access
+
+*You can access our program by:*
+<ol>
+    <li>Downloading it from our site link to site</li>
+    <li>Downloading it from github release</li>
+    <li>Or you can run the code on your local device by these steps:</li>
+    <li>Open cmd and clone our repo by typing:</li>
+</ol>
+
+```
+git clone https://github.com/ZYPetkova20/Neos.git
+```
+
+*Then navigate to our solution file and open it with VS2022
+On platform and debugger choose:*
+
+```
+release/x64 
+```
+
+*then debug the project and run it or open the .exe file*
+ 
 
