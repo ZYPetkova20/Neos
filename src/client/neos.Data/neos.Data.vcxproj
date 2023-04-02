@@ -149,8 +149,7 @@ zlib.lib;Ws2_32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencie
       <AdditionalLibraryDirectories>$(SolutionDir)client\neos.Data\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies>libcurl.lib;cpr.lib;zlib.lib;Ws2_32.lib;Crypt32.lib</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)client\neos.Data\lib</AdditionalLibraryDirectories>

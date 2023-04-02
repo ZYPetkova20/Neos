@@ -144,7 +144,7 @@
       <AdditionalLibraryDirectories>$(SolutionDir)client\neos.services\lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>neos.data.lib;libcurl.lib;cpr.lib;zlib.lib;Ws2_32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)client\neos.services\lib\$(Platform)\$(Configuration);$(SolutionDir)client\neos.Data\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>

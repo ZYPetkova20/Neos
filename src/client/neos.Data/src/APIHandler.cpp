@@ -90,7 +90,6 @@ string APIHandler::getLastName(string enteredEmail)
     // extract email and password of each user from response JSON
     int index = 0;
     string lName;
-
     for (const auto& email : emails) {
         if (enteredEmail == email) {
             // extract firstName of each user from response JSON
@@ -133,6 +132,9 @@ void APIHandler::getUsers()
             string password = obj.at("password").get<string>();
             passwords.push_back(password);
         }
+
+        std::cout << fName << std::endl;
+        std::cout << lName << std::endl;
 
         // print all emails and passwords for testing purposes
         for (const auto& email : emails) {
