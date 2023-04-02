@@ -146,8 +146,14 @@
       <AdditionalDependencies>libcurl.lib;
 cpr.lib;
 zlib.lib;Ws2_32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.data\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.Data\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalDependencies>libcurl.lib;cpr.lib;zlib.lib;Ws2_32.lib;Crypt32.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.Data\lib</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\APIHandler.cpp" />

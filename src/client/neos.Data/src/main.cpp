@@ -3,8 +3,8 @@
 #include <nlohmann/json.hpp>
 #include "APIHandler.h"
 
-int main() 
-{
-	APIHandler apiHandler;
-	apiHandler.getUsers();
-}
+//int main() 
+//{
+//	APIHandler apiHandler;
+//	apiHandler.registerHandler(apiHandler.r);
+//}

@@ -21,12 +21,11 @@ void APIHandler::registerHandler()
     nlohmann::json  my_json = nlohmann::json{
         {"firstName", "dnes"},
         {"lastName", "ez"},
-        {"email", "utre"},
+        {"email", "utre3"},
         {"password", "data"},
     };
 
-    // create JSON object with user data
-    cpr::Response r = cpr::Post(
+        r = cpr::Post(
         cpr::Url{ "http://localhost:8000/api/users" },
         cpr::Authentication{ "neosadmin", adminPasswordString },
         cpr::Body{
@@ -48,7 +47,7 @@ void APIHandler::registerHandler()
 void APIHandler::getUsers()
 {
     // function to get all users from API and check user login credentials
-    cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:8000/api/users"},
+    r = cpr::Get(cpr::Url{ "http://localhost:8000/api/users"},
         cpr::Authentication{ "neosadmin", adminPasswordString });
 
     // check if request was successful
@@ -94,7 +93,7 @@ void APIHandler::getUsers()
 
         // check if matching email and password are found
         for (const auto& password : passwords) {
-            if (enteredPassword == password) 
+            if (enteredPassword == password)
             {
                 foundPassword = true;
                 break;

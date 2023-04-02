@@ -6,7 +6,6 @@ type User = {
     lastName: string,
     email: string,
     password: string,
-    salt: string
 }
 
 async function seed()
@@ -23,12 +22,6 @@ async function seed()
             })
         })
     )
-
-    const user = await db.user.findFirst({
-        where:{
-            firstName: "Pencho"
-        }
-    })
 }
 
 seed()
@@ -38,17 +31,15 @@ function getUsers(): Array<User>{
         {
             firstName: "Penchso",
             lastName: "Penchsov",
-            email: "ppenchosv@gmail.com",
+            email: "ppenchos54v@gmail.com",
             password: "malinki12",
-            salt: ""
         },
 
         {
             firstName: "Msincho",
             lastName: "Minschov",
-            email: "mminchsov@gmail.com",
+            email: "mminchso5v2@gmail.com",
             password: "malinki13",
-            salt: ""
         }
     ]
 }

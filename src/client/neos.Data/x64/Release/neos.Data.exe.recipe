@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\S\Documents\GitHub\Neos\src\client\neos.services\lib\neos.data.exe</FullPath>
+      <FullPath>D:\Projects\jamurkata\src\client\neos.services\lib\x64\Release\neos.data.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

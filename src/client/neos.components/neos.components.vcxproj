@@ -167,10 +167,11 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GRAPHICS_API_OPENGL_33;PLATFORM_DESKTOP</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)client\neos.components\lib\raylib;$(SolutionDir)client\neos.services\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)client\neos.components\lib\raylib;$(SolutionDir)client\neos.services\include;$(SolutionDir)client\neos.Data\include;$(SolutionDir)client\neos.services\src;$(SolutionDir)client\neos.Data\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalHeaderUnitDependencies>
       </AdditionalHeaderUnitDependencies>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -181,8 +182,8 @@
       <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalDependencies>neos.services.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64;$(SolutionDir)client\neos.components\lib\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>neos.services.lib;libcurl.lib;cpr.lib;zlib.lib;Ws2_32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64;$(SolutionDir)client\neos.components\lib\$(Platform)\$(Configuration)\;$(SolutionDir)client\neos.Data\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
