@@ -15,11 +15,11 @@
       <button class="hero-section__button">Download</button>
     </div>
     <div class="hero-image">
-      
+      <router-link to="/login">
         <div class="login_button">
           <p>Login</p>  
         </div>
-      
+      </router-link>
     </div>
   </div>
 </template>

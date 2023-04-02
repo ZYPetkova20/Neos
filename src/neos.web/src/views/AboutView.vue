@@ -1,5 +1,6 @@
 <template>
     <RouterView></RouterView>
+    <h1>Hello</h1>
 </template>
 
 <script setup lang="ts">  

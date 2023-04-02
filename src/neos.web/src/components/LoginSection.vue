@@ -31,7 +31,9 @@
                   
               <input type="submit" value="Register" class="submit-button" >
             </form>
-            <p class="neos-text">2022 © NEOS | All rights reserved</p>
+            <router-link to="/register">
+              <p class="neos-text">2022 © NEOS | All rights reserved</p>
+            </router-link>
           </div>
         </div>
       </div>
