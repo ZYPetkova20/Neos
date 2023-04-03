@@ -3,25 +3,38 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# Vs generated files (Visual Studio)
+# User-specific files
+*.rsuser
 *.suo
-*.db-wal
-*.db-shm
-*.opendb
-*.ipch
-*.tlog
-*.ilk
-*.log
-*.idb
-*.pdb
-*.vsidx
-*.lock
+*.user
+*.userosscache
+*.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Mono auto generated files
 mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
@@ -36,6 +49,8 @@ TestResult.xml
 nunit-*.xml
 
 # Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
 dlldata.c
 
 # Benchmark Results
@@ -46,14 +61,60 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
 # StyleCop
 StyleCopReport.xml
 
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
 # Chutzpah Test files
 _Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Visual Studio Trace Files
+*.e2e
 
 # TFS 2012 Local Workspace
 $tf/
@@ -75,11 +136,6 @@ _TeamCity*
 # AxoCover is a Code Coverage Tool
 .axoCover/*
 !.axoCover/settings.json
-
-# Coverlet is a free, cross platform Code Coverage Tool
-coverage*.json
-coverage*.xml
-coverage*.info
 
 # Visual Studio code coverage results
 *.coverage
@@ -293,23 +349,35 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-# Fody - auto-generated XML schema
-FodyWeavers.xsd
+node_modules
+# Keep environment variables out of version control
+migrations
 
-#Doxygen Files
-doxygen-awesome.css
-html/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-#JSON files
-statistics/*.json
-src/.vs/neos/v17/Browse.VC.db
-src/.vs/neos/v17/Solution.VC.db
-src/x64/Debug/neos.FrontendServices.exe
-src/client/neos.FrontendServices/x64/Debug/signInForm.obj
-src/client/neos.FrontendServices/x64/Debug/sceneManager.obj
-src/client/neos.FrontendServices/x64/Debug/registerForm.obj
-src/client/neos.FrontendServices/x64/Debug/mainMenu.obj
-src/client/neos.FrontendServices/x64/Debug/main.obj
-src/client/neos.FrontendServices/x64/Debug/loadingScreen.obj
-src/client/neos.FrontendServices/x64/Debug/inputField.obj
-src/client/neos.FrontendServices/x64/Debug/greetingScreen.obj
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
