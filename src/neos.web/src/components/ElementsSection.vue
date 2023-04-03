@@ -154,6 +154,8 @@
     .elements{
         width:100%;
         height:700px;
+        background-repeat: no-repeat;
+        background-size: cover;
         background-image: url(../assets/images/elements-background.png);
     }
     .header-wrapper{
