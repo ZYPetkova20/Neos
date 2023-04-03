@@ -46,7 +46,7 @@ void APIHandler::registerHandler()
 bool APIHandler::checkLogin(string enteredEmail, string enteredPassword)
 {
     // check if matching email and password are found
-    bool foundPassword;
+    bool foundPassword = 0;
     for (const auto& password : passwords) {
         if (enteredPassword == password)
         {
@@ -55,7 +55,7 @@ bool APIHandler::checkLogin(string enteredEmail, string enteredPassword)
         }
     }
 
-    bool foundEmail;
+    bool foundEmail = 0;
     for (const auto& email : emails) {
         if (enteredEmail == email) {
             foundEmail = true;

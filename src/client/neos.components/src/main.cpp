@@ -14,8 +14,8 @@ const int screenHeight = 790;
 
 void start()
 {
-    ReqHandler logReg;
-    logReg.login();
+    //ReqHandler logReg;  Testing the logging
+    //logReg.login();
 
     // Setting window
     InitWindow(screenWidth, screenHeight, "Neos - Chemistry project");

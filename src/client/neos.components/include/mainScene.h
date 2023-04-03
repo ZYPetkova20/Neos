@@ -1,6 +1,7 @@
 #pragma once
 #include "sceneManager.h"
 #include <raylib.h>
+#include <string>
 
 class mainScene : public scene
 {
@@ -9,12 +10,16 @@ private:
 
 	// Variables
 	Vector2 mousePos = {0.f, 0.f};
+	Vector2 sectionPos[10]; // Positions of the table sections
 	int tabsAnimation = 0;
+	int sIndex = 0; // index of the current hovered section
 
 	// Textures
 	Texture backgroundTexture;
 	Texture headerText;
 	Texture tableTexture;
+	Texture sectionsTexture[10];
+	Texture tableHover;
 	Texture userInfo;
 	Texture logOutButton;
 	// Tabs
@@ -26,8 +31,9 @@ private:
 	Texture settingsTab;
 
 	// Positions of the Textures
-	Rectangle elementsPos[10]; // Position of the implemented elements
+	Rectangle elementsPos[30]; // Positions of the implemented elements
 	Rectangle tabsPos[5];
+	Rectangle tableHoverPos;
 	Rectangle selectedTabPos;
 	Rectangle logOutPos;
 
@@ -36,6 +42,12 @@ private:
 	void drawTextures();
 	// For handling collision events
 	void handleCollision();
+	// For setting the positions of the atoms
+	void setAtomsPos();
+	// For setting the positions of the table sections
+	void setSectionsPos();
+	// For setting the positions of the tabs
+	void setTabsPos();
 
 public:
 	mainScene(std::string sceneName, sceneManager& sceneManager);
