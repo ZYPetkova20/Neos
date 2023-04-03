@@ -25,6 +25,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\mainScene.cpp" />
     <ClCompile Include="src\registerForm.cpp" />
+    <ClCompile Include="src\reqHandler.cpp" />
     <ClCompile Include="src\sceneManager.cpp" />
     <ClCompile Include="src\signInForm.cpp" />
   </ItemGroup>
@@ -34,9 +35,11 @@
     <ClInclude Include="include\loadingScreen.h" />
     <ClInclude Include="include\mainScene.h" />
     <ClInclude Include="include\registerForm.h" />
+    <ClInclude Include="include\reqHandler.h" />
     <ClInclude Include="include\scene.h" />
     <ClInclude Include="include\sceneManager.h" />
     <ClInclude Include="include\signInForm.h" />
+    <ClInclude Include="main.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -182,8 +185,8 @@
       <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalDependencies>neos.services.lib;libcurl.lib;cpr.lib;zlib.lib;Ws2_32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\release\x64;$(SolutionDir)client\neos.components\lib\$(Platform)\$(Configuration)\;$(SolutionDir)client\neos.Data\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>neos.services.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)client\neos.components\lib\raylib\;$(SolutionDir)client\neos.components\lib\$(Platform)\$(Configuration)\;$(SolutionDir)client\neos.Data\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>

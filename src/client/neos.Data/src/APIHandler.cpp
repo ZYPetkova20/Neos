@@ -133,9 +133,6 @@ void APIHandler::getUsers()
             passwords.push_back(password);
         }
 
-        std::cout << fName << std::endl;
-        std::cout << lName << std::endl;
-
         // print all emails and passwords for testing purposes
         for (const auto& email : emails) {
             std::cout << email << " ";

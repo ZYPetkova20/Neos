@@ -39,6 +39,9 @@
     <ClCompile Include="src\inputField.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\reqHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\sceneManager.h">
@@ -63,6 +66,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\inputField.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\reqHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
