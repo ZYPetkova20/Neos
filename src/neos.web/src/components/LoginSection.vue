@@ -1,4 +1,7 @@
   <template>
+      <div class="back-arrow-wrapper">
+      <img src="../assets/images/back-icon.png" class="back-arrrow" alt="back arrow">
+    </div>
     <div class="register-wrapper">
       <div class="register">
         <div class="register__left-section">
@@ -63,17 +66,25 @@
         src: url(../assets/fonts/Lato-Bold.ttf);
       }
   
+
       body,
       html {
         margin: 0 !important;
         padding: 0 !important;
         overflow-x: hidden;
       }
-      body,
-      html {
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow-x: hidden;
+      .back-arrow-wrapper{
+        position: relative;
+        width:100%;
+        height:100px;
+      }
+      .back-arrrow{
+        position: absolute;
+        width:62px;
+        height:62px;
+        top:50px;
+        left: 80px;
+        cursor: pointer;
       }
       .register-wrapper{
         max-width:1920px;
@@ -411,7 +422,8 @@
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 800px;
+          min-height: 700px;
+          max-height: 700px;
           margin: auto;
           position: relative;
         }
@@ -574,7 +586,8 @@
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 600px;
+          min-height: 630px;
+          max-height: 630px;
           margin: auto;
           position: relative;
         }
@@ -733,6 +746,19 @@
         }
       }
       @media  screen and (max-width: 768px) {
+        .back-arrow-wrapper{
+          position: relative;
+          width:100%;
+          height:100px;
+        }
+        .back-arrrow{
+          position: absolute;
+          width:62px;
+          height:62px;
+          top:40px;
+          left: 40px;
+          cursor: pointer;
+        }
         .register-wrapper{
           max-width:1920px;
           height:100vh;
@@ -1055,10 +1081,24 @@
         }
       }
       @media  screen and (max-width: 420px) {
+        .back-arrow-wrapper{
+          position: relative;
+          width:100%;
+          height:60px;
+        }
+        .back-arrrow{
+          position: absolute;
+          width:52px;
+          height:52px;
+          top:40px;
+          left: 40px;
+          cursor: pointer;
+        }
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 600px;
+          min-height: 650px;
+          max-height: 650px;
           margin: auto;
           position: relative;
         }

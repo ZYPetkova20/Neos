@@ -1,4 +1,8 @@
   <template>
+    <div class="back-arrow-wrapper">
+      <img src="../assets/images/back-icon.png" class="back-arrrow" alt="back arrow">
+    </div>
+    
     <div class="register-wrapper">
       <div class="register">
         <div class="register__left-section">
@@ -79,6 +83,19 @@
         margin: 0 !important;
         padding: 0 !important;
         overflow-x: hidden;
+      }
+      .back-arrow-wrapper{
+        position: relative;
+        width:100%;
+        height:100px;
+      }
+      .back-arrrow{
+        position: absolute;
+        width:62px;
+        height:62px;
+        top:50px;
+        left: 80px;
+        cursor: pointer;
       }
       .register-wrapper{
         max-width:1920px;
@@ -627,10 +644,24 @@
         }
       }
       @media  screen and (max-width: 1024px) {
+        .back-arrow-wrapper{
+          position: relative;
+          width:100%;
+          height:80px;
+        }
+        .back-arrrow{
+          position: absolute;
+          width:62px;
+          height:62px;
+          top:50px;
+          left: 80px;
+          cursor: pointer;
+        }
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 600px;
+          min-height: 700px;
+          max-height: 700px;
           margin: auto;
           position: relative;
         }
@@ -813,7 +844,8 @@
         .register-wrapper{
           max-width:1920px;
           height:100vh;
-          min-height: 600px;
+          min-height: 655px;
+          max-height: 675px;
           margin: auto;
           position: relative;
         }
@@ -1174,6 +1206,19 @@
         }
       }
       @media  screen and (max-width: 420px) {
+        .back-arrow-wrapper{
+        position: relative;
+        width:100%;
+        height:60px;
+      }
+      .back-arrrow{
+        position: absolute;
+        width:42px;
+        height:42px;
+        top:40px;
+        left: 40px;
+        cursor: pointer;
+      }
         .register-wrapper{
           max-width:1920px;
           height:100vh;

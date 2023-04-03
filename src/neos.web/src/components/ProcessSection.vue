@@ -10,12 +10,12 @@
                 <p class="process__text">Creating a chemistry simulator requires a solid foundation.There was a lot of selection and processing.</p>
             </div>
             <div class="process__card">
-                <div class="process__circle"></div>
+                <div class="process__circle process__circle--purple"></div>
                 <p class="process__heading">Trial and Error</p>
                 <p class="process__text">Developing a chemistry simulator involves a lot of trial and error. Making such a big project can be challenging.</p>
             </div>
             <div class="process__card">
-                <div class="process__circle"></div>
+                <div class="process__circle process__circle--brown"></div>
                 <p class="process__heading">Putting It All Together</p>
                 <p class="process__text">Creating a chemistry simulator is a complex process that involves putting together many different pieces.</p>
             </div>
@@ -68,11 +68,11 @@
     .process{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         width:100%;
         height:400px;
-        column-gap:100px; 
+        column-gap:unset; 
     }
     .process__card{
         display: flex;
@@ -80,13 +80,18 @@
         justify-content: center; 
         width: 300px;
         height:100%;
-        margin: 0 auto; 
+        margin: unset; 
     }
     .process__circle{
         width:30px;
         height:30px;
         background-color: #89BEA8;
         border-radius: 50%;
+    }.process__circle--purple{
+        background-color: #C1BFF3;
+    }
+    .process__circle--brown{
+        background-color: #FBEEE6;
     }
     .process__heading{
         font-size:26px;
@@ -141,6 +146,12 @@
             height:30px;
             background-color: #89BEA8;
             border-radius: 50%;
+        }
+        .process__circle--purple{
+            background-color: #C1BFF3;
+        }
+        .process__circle--brown{
+            background-color: #FBEEE6;
         }
         .process__heading{
             font-size:26px;
@@ -197,6 +208,12 @@
             background-color: #89BEA8;
             border-radius: 50%;
         }
+        .process__circle--purple{
+            background-color: #C1BFF3;
+        }
+        .process__circle--brown{
+            background-color: #FBEEE6;
+        }
         .process__heading{
             font-size:26px;
             font-family: Tex;
@@ -252,6 +269,12 @@
             background-color: #89BEA8;
             border-radius: 50%;
         }
+        .process__circle--purple{
+            background-color: #C1BFF3;
+        }
+        .process__circle--brown{
+            background-color: #FBEEE6;
+        }
         .process__heading{
             font-size:21px;
             font-family: Tex;
@@ -263,7 +286,6 @@
         }
     }
     @media  screen and (max-width: 768px) {
-
         .process-wrapper{
             display: flex;
             flex-direction: column;
@@ -306,6 +328,12 @@
             height:27px;
             background-color: #89BEA8;
             border-radius: 50%;
+        }
+        .process__circle--purple{
+            background-color: #C1BFF3;
+        }
+        .process__circle--brown{
+            background-color: #FBEEE6;
         }
         .process__heading{
             font-size:20px;
@@ -364,6 +392,12 @@
             height:32px;
             background-color: #89BEA8;
             border-radius: 50%;
+        }
+        .process__circle--purple{
+            background-color: #C1BFF3;
+        }
+        .process__circle--brown{
+            background-color: #FBEEE6;
         }
         .process__heading{
             font-size:24px;
@@ -425,6 +459,12 @@
             height:30px;
             background-color: #89BEA8;
             border-radius: 50%;
+        }
+        .process__circle--purple{
+            background-color: #C1BFF3;
+        }
+        .process__circle--brown{
+            background-color: #FBEEE6;
         }
         .process__heading{
             font-size:22px;

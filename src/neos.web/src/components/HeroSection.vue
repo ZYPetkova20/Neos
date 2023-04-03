@@ -55,6 +55,10 @@
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
+    a{
+      color:black;
+      text-decoration: none;
+    }
     .hero{
       display: flex;
       justify-content: flex-end;
