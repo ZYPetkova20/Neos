@@ -52,7 +52,7 @@
 
 </script>
 
-<style style lang="scss">
+<style lang="scss">
     //Import Fonts
     @font-face {
       font-family: 'Tex';

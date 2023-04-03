@@ -8,7 +8,7 @@
         <div class="benefits__card">
             <img src="../assets/images/accessibility-icon.png" alt="Icon">
             <p class="benefits__heading">Accessibility</p>
-            <p class="benefits__text">Designed to be accessible to all learners.</p>
+            <p class="benefits__text">30+ Elements provided in our application.</p>
         </div>
         <div class="benefits__card">
             <img src="../assets/images/flexibility-icon.png" alt="Icon">
