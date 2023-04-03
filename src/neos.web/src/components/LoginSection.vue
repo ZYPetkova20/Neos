@@ -1,7 +1,9 @@
   <template>
+    <router-link to="/">
       <div class="back-arrow-wrapper">
-      <img src="../assets/images/back-icon.png" class="back-arrrow" alt="back arrow">
-    </div>
+        <img src="../assets/images/back-icon.png" class="back-arrrow" alt="back arrow">
+      </div>
+    </router-link>
     <div class="register-wrapper">
       <div class="register">
         <div class="register__left-section">
@@ -9,7 +11,7 @@
               <p class="left-section__inner__title">Neos</p>
               <p class="left-section__inner__title">Chemistry</p>
               <p class="left-section__inner__title">Simulator</p>
-              <p class="left-section__inner__text">This is a pure filler text, and I am going to make some typos and make some extra connections</p>
+              <p class="left-section__inner__text">Sign in to get the full experiance of your great application, don't forget you can always register.</p>
             </div>
         </div>
         <div class="register__right-section">
@@ -19,7 +21,7 @@
               <p class="hello-text">Hey, hello</p>
               <img src="../assets/images/hello-icon.png" alt="wave emoji">
             </div>
-            <p class="greeting-text">This is a pure filler text, and I am.</p>
+            <p class="greeting-text">Sign in to get access to the app.</p>
             <form action="">
               <div class="input-wrapper">
                 <div class="input-and-label-wrapper">
@@ -32,10 +34,10 @@
                   </div>
               </div>
                   
-              <input type="submit" value="Register" class="submit-button" >
+              <input type="submit" value="Sign in" class="submit-button" >
             </form>
             <router-link to="/register">
-              <p class="neos-text">2022 © NEOS | All rights reserved</p>
+              <p class="neos-text">Don't have an account? Sign up!</p>
             </router-link>
           </div>
         </div>
@@ -124,7 +126,7 @@
         background: rgba(248, 248, 248, 0.4);
         backdrop-filter: blur(15px);
         border-radius: 2px;
-        text-align: center;
+        text-align: left;
       }
       .left-section__inner__title{
         font-size: 64px;

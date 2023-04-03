@@ -4,8 +4,8 @@
       <nav>
         <img src="../assets/images/logo.png" alt="logo" />
         <a href="#dev-section"><p class="hero-section__link">Concept</p></a>
-        <p class="hero-section__link">Benefits</p>
-        <p class="hero-section__link">Process</p>
+        <a href="#benefits"><p class="hero-section__link">Benefits</p></a>
+        <a href="#process"><p class="hero-section__link">Process</p></a>
       </nav>
       <div class="hero-section__title-wrapper">
         <p class="hero-section__title">Neos</p>

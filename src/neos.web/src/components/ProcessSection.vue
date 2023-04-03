@@ -1,5 +1,5 @@
 <template>
-    <div class="process-wrapper">
+    <div class="process-wrapper" id="process">
         <div class="heading-wrapper">
             <p class="section-heading"><b>Get to know </b>about process as well as trail and errors</p>
         </div>
@@ -91,7 +91,7 @@
         background-color: #C1BFF3;
     }
     .process__circle--brown{
-        background-color: #FBEEE6;
+        background-color: #EDD5C6;
     }
     .process__heading{
         font-size:26px;
@@ -151,7 +151,7 @@
             background-color: #C1BFF3;
         }
         .process__circle--brown{
-            background-color: #FBEEE6;
+            background-color: #EDD5C6;
         }
         .process__heading{
             font-size:26px;
@@ -212,7 +212,7 @@
             background-color: #C1BFF3;
         }
         .process__circle--brown{
-            background-color: #FBEEE6;
+            background-color: #EDD5C6;
         }
         .process__heading{
             font-size:26px;
@@ -273,7 +273,7 @@
             background-color: #C1BFF3;
         }
         .process__circle--brown{
-            background-color: #FBEEE6;
+            background-color: #EDD5C6;
         }
         .process__heading{
             font-size:21px;
@@ -333,7 +333,7 @@
             background-color: #C1BFF3;
         }
         .process__circle--brown{
-            background-color: #FBEEE6;
+            background-color: #EDD5C6;
         }
         .process__heading{
             font-size:20px;
@@ -397,7 +397,7 @@
             background-color: #C1BFF3;
         }
         .process__circle--brown{
-            background-color: #FBEEE6;
+            background-color: #EDD5C6;
         }
         .process__heading{
             font-size:24px;
@@ -464,7 +464,7 @@
             background-color: #C1BFF3;
         }
         .process__circle--brown{
-            background-color: #FBEEE6;
+            background-color: #EDD5C6;
         }
         .process__heading{
             font-size:22px;

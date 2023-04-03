@@ -1,5 +1,5 @@
 <template>
-    <div class="benefits">
+    <div class="benefits" id="benefits">
         <div class="benefits__card">
             <img src="../assets/images/book-icon.png" alt="Icon">
             <p class="benefits__heading">Interactive learning</p>
