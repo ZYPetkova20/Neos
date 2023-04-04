@@ -19,11 +19,11 @@ reactionRouter.get("/", async(request: Request, response: Response) => {
 })
 
 //GET: a single reaction by id 
-reactionRouter.get("/:id", async(request: Request, response: Response) => {
-    const id: number = parseInt(request.params.id, 10)
+reactionRouter.get("/:userId", async(request: Request, response: Response) => {
+    const userId: number = parseInt(request.params.userId, 10)
 
     try{
-        const reaction = await reactionService.getReaction(id)
+        const reaction = await reactionService.getReaction(userId)
 
         if(reaction){
             return response.status(200).json(reaction)
@@ -36,7 +36,7 @@ reactionRouter.get("/:id", async(request: Request, response: Response) => {
 }) 
 
 //POST: create an reaction
-reactionRouter.post("/", body("water").isBoolean(), body("fName").isString(), 
+reactionRouter.post("/", body("userId").isInt(), body("ReactionType").isInt(), 
 async(request: Request, response: Response) => {
     const errors = validationResult(request)
 
@@ -56,7 +56,7 @@ async(request: Request, response: Response) => {
 })
 
 //POST: updating an reaction
-reactionRouter.put("/:id", body("water").isBoolean(), body("fName").isString(), 
+reactionRouter.put("/:id", body("userId").isInt(), body("ReactionType").isInt(), 
 async(request: Request, response: Response) => {
     const errors = validationResult(request)
 

@@ -4,71 +4,71 @@ import type { Request, Response } from "express"
 import { request } from "http";
 
 import * as reactionService from "./reaction.service"
-import { Reaction } from "@prisma/client";
 
-type Rection = {
+type Reaction = {
     id: number,
-    water: boolean,
-    fName: string
+    userId: number
+    ReactionType: number
 }
 
 export const  listReactions = async ():  Promise<Reaction[]> => {
     return db.reaction.findMany({
+        
         select:{
             id: true,
-            water: true,
-            fName: true
+            userId: true,
+            ReactionType: true
         }
     })
 }
 
-export const getReaction = async(id: number): Promise<Reaction | null> => {
-    return db.reaction.findUnique({
+export const getReaction = async(userId: number): Promise<Reaction[] | null> => {
+    return db.reaction.findMany({
         where: {
-            id,
+            userId
         },
 
         select: {
           id: true,
-          water: true,
-          fName: true
+          userId: true,
+          ReactionType: true
         },
     })
 }
 
-export const createReaction = async(Reaction: Omit<Rection, "id">): Promise<Reaction> => {
-    const {water, fName} = Reaction
+export const createReaction = async(Reaction: Omit<Reaction, "id">): Promise<Reaction> => {
+    const {userId, ReactionType} = Reaction
     return  db.reaction.create({
         data: 
         {
-           water,
-           fName
+           userId,
+           ReactionType
         },
 
         select: {
             id: true,
-            water: true,
-            fName: true
+            userId: true,
+            ReactionType: true
         }
     })
 }
 
 export const updateReaction = async(Reaction: Omit<Reaction, "id">, id: number): Promise<Reaction> => {
-    const {water, fName} = Reaction
+    const {userId, ReactionType} = Reaction
     return db.reaction.update({
         where: {
             id,
         },
 
         data: {
-            water,
-            fName,
+            userId,
+            ReactionType
         },
 
         select: {
            id: true,
-           water: true,
-           fName: true
+           userId: true,
+           ReactionType: true
         }
     })
 }

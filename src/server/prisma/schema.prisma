@@ -12,7 +12,7 @@ datasource db {
 
 model User {
   id Int @id @default(autoincrement())
-  firstName String @unique
+  firstName String 
   lastName String
   email String @unique @db.VarChar(30)
   password String
@@ -21,7 +21,7 @@ model User {
 
 model Reaction {
   id Int @id @default(autoincrement())
-  water Boolean
-  user User @relation(fields: [fName], references: [firstName], onDelete: Cascade)
-  fName String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId Int
+  ReactionType Int
 }

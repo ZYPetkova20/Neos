@@ -1,7 +1,8 @@
 <h1 align="center">Chemistry Project</h1>
 <br>
 <p align="center">
-<img width="70%" src="https://cdn.discordapp.com/attachments/1082258890995011614/1084948043356459118/Group_22_3.png">
+  <img width="70%" src="docs/banners/lightBanner.png#gh-dark-mode-only"/>
+  <img width="70%" src="docs/banners/darkBanner.png#gh-light-mode-only"/>
 </p>
 <br>
 
