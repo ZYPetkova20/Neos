@@ -1,7 +1,7 @@
 #include <iostream>
-#include "../main.h"
+#include "main.h"
 
 int main()
 {
-	start();
+	setup();
 }

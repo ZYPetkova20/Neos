@@ -103,7 +103,10 @@ void mainScene::handleCollision()
 			tableHoverPos.y = elementsPos[i].y - 2.7f;
 			DrawTexture(sectionsTexture[sIndex], sectionPos[sIndex].x, sectionPos[sIndex].y, WHITE);
 			DrawTexture(tableHover, tableHoverPos.x, tableHoverPos.y, WHITE);
-			std::cout << i << std::endl;
+
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				atomsPreview.Start(i);
+			
 		}
 	}
 }
@@ -152,10 +155,10 @@ void mainScene::setAtomsPos()
 // Method for setting the sections positions
 void mainScene::setSectionsPos()
 {
-	sectionPos[0] = {333.0, 152.0}; //
-	sectionPos[1] = {333.8, 206.7}; //
-	sectionPos[2] = {387.4, 207.0}; //
-	sectionPos[3] = {443.0, 317.0}; //
+	sectionPos[0] = {333.0, 152.0}; 
+	sectionPos[1] = {333.8, 206.7}; 
+	sectionPos[2] = {387.4, 207.0}; 
+	sectionPos[3] = {443.0, 317.0}; 
 	sectionPos[4] = {991.0, 262.0};
 	sectionPos[5] = {991.0, 207.0};
 	sectionPos[6] = {1266.0, 152.0};

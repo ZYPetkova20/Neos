@@ -2,13 +2,13 @@
 
 using namespace cp;
 
-inputField::inputField(Rectangle field, string type, float fontSize, Color textColor)
+inputField::inputField(Rectangle _field, string _type, float _fontSize, Color _textColor)
 {
-    this->field = field;
-    this->type = type;
-    this->fontSize = fontSize;
-    this->textColor = textColor;
-    font = LoadFontEx("../assets/fonts/Comfortaa-SemiBold.ttf", this->type == "email" ? 18 : 22, 0, 0);
+    field = _field;
+    type = _type;
+    fontSize = _fontSize;
+    textColor = _textColor;
+    font = LoadFontEx("../assets/fonts/Comfortaa-SemiBold.ttf", _type == "email" ? 18 : 22, 0, 0);
     maxChars = this->type == "email" ? 28 : 18;
 
     for (int i = 0; i < 30; i++)
@@ -35,7 +35,7 @@ void inputField::updateField(Vector2 mousePos)
 
 void inputField::printInput()
 {
-    char toPass[30];
+    char toPass[30] = "";
     if (type == "password")
     {
         for (int i = 0; i < charCount; i++)

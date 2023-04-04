@@ -1,5 +1,6 @@
 #pragma once
 #include "sceneManager.h"
+#include "atomsScene.h"
 #include <raylib.h>
 #include <string>
 
@@ -9,6 +10,7 @@ private:
 	sceneManager &mySceneManager;
 
 	// Variables
+	atomsScene atomsPreview;
 	Vector2 mousePos = {0.f, 0.f};
 	Vector2 sectionPos[10]; // Positions of the table sections
 	int tabsAnimation = 0;
@@ -51,6 +53,9 @@ private:
 
 public:
 	mainScene(std::string sceneName, sceneManager& sceneManager);
+
+	// Public methods
+	int getAtomId(); // returns the id of the selected atom
 
 	// Methods from class 'scene'
 	virtual void Start();

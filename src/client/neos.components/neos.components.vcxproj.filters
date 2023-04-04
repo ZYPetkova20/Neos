@@ -42,6 +42,9 @@
     <ClCompile Include="src\reqHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\atomsScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\sceneManager.h">
@@ -68,10 +71,13 @@
     <ClInclude Include="include\inputField.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
+    <ClInclude Include="include\reqHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\reqHandler.h">
+    <ClInclude Include="include\atomsScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\atomsScene.cpp" />
     <ClCompile Include="src\greetingScreen.cpp" />
     <ClCompile Include="src\inputField.cpp" />
     <ClCompile Include="src\loadingScreen.cpp" />
@@ -30,16 +31,17 @@
     <ClCompile Include="src\signInForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\atomsScene.h" />
     <ClInclude Include="include\greetingScreen.h" />
     <ClInclude Include="include\inputField.h" />
     <ClInclude Include="include\loadingScreen.h" />
+    <ClInclude Include="include\main.h" />
     <ClInclude Include="include\mainScene.h" />
     <ClInclude Include="include\registerForm.h" />
     <ClInclude Include="include\reqHandler.h" />
     <ClInclude Include="include\scene.h" />
     <ClInclude Include="include\sceneManager.h" />
     <ClInclude Include="include\signInForm.h" />
-    <ClInclude Include="main.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
