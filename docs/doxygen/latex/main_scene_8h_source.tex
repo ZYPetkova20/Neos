@@ -1,0 +1,67 @@
+\hypertarget{main_scene_8h_source}{}\doxysection{main\+Scene.\+h}
+\label{main_scene_8h_source}\index{neos.components/include/mainScene.h@{neos.components/include/mainScene.h}}
+\mbox{\hyperlink{main_scene_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene_manager_8h}{sceneManager.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{raylib_8h}{raylib.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_scene}{mainScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classscene}{scene}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classscene_manager}{sceneManager}}\ \&\mbox{\hyperlink{classmain_scene_a9d984929e676eb09bb7229ae43b09a95}{mySceneManager}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Variables}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}\ \mbox{\hyperlink{classmain_scene_ae2b645a540c8b08132d978e3da296a9b}{mousePos}}\ =\ \{0.f,\ 0.f\};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}\ \mbox{\hyperlink{classmain_scene_aba9d6761182b35b2a186ef15db803839}{sectionPos}}[10];\ \textcolor{comment}{//\ Positions\ of\ the\ table\ sections}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmain_scene_a9a2a92bcea5254191ef392bb5b3e516d}{tabsAnimation}}\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmain_scene_a7785b7a1dd3052a88d3b04518c9daead}{sIndex}}\ =\ 0;\ \textcolor{comment}{//\ index\ of\ the\ current\ hovered\ section}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Textures}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a2fa1c6760a547f880e63666aea8b6938}{backgroundTexture}};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a40fb8539324c13c0ab8f2ead950c63df}{headerText}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a585d6ee7fa6a95e7ec42da941a54faa9}{tableTexture}};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_ad4d26b38425fb4c4414efe6cd7ff3097}{sectionsTexture}}[10];}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_aa4764724c3497bf55d7334016eb7b39a}{tableHover}};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_afcda896ac8365648ead915ac473f1f48}{userInfo}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a725b7f00da27974a8f338854f0f5e350}{logOutButton}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Tabs}}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a23f080b72ba339bb0c11ab9551958d21}{selectedTab}};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_ab8452df4446f1c40032fc63318ec067e}{tableTab}};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a311b4786cd30a321a62f6d4d70926ed1}{calculatorTab}};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a92e1364ae33d77bfc4b084e1e4cae361}{simulationTab}};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a94cf64629a72e4e39e5339f09cf106ac}{archiveTab}};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ \mbox{\hyperlink{classmain_scene_a6f40eda61f7c112e32c1f845dd4742a5}{settingsTab}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Positions\ of\ the\ Textures}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classmain_scene_a05fbc4c69d640e80a89489667d6dff5c}{elementsPos}}[30];\ \textcolor{comment}{//\ Positions\ of\ the\ implemented\ elements}}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classmain_scene_a7eefd0ded590fabd73e424cdde2688e7}{tabsPos}}[5];}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classmain_scene_abf3729e1892dd32585e60fe5f50a4f64}{tableHoverPos}};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classmain_scene_a045ca4dfefcd6e0c6f8212967437d659}{selectedTabPos}};}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classmain_scene_aa5f6b48c2e64a6666ac8a50c8a8e22de}{logOutPos}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Methods}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ For\ drawing\ textures}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_a55274d3499717f189a865246356ee387}{drawTextures}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ For\ handling\ collision\ events}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_aebec5a62094b208b19630d6a1f365cad}{handleCollision}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ For\ setting\ the\ positions\ of\ the\ atoms}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_abbd5e8de7cbbe939ada7d15835e7f211}{setAtomsPos}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ For\ setting\ the\ positions\ of\ the\ table\ sections}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_a61bca103b7f8d525fe06bd739ea1044a}{setSectionsPos}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ For\ setting\ the\ positions\ of\ the\ tabs}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_abda2ebc61cc2b2159ccae894ece39e92}{setTabsPos}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classmain_scene}{mainScene}}(std::string\ sceneName,\ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classscene_manager}{sceneManager}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Methods\ from\ class\ 'scene'}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_a1f8caf5fd8292f6e4d8bc35daeaf060d}{Start}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_a462b45f1597dfe7e83d76ea085d9cbf7}{Update}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_ab5c3fe7031e5e85ab97e80f1422f2b91}{onExit}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_a1a5b7290d519ca0746b107ce42e37005}{loadAssets}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_scene_a2ea1860b344372e81b69719a6a912727}{deleteAssets}}();}
+\DoxyCodeLine{00061\ \};}
+
+\end{DoxyCode}

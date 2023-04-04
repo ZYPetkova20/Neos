@@ -1,0 +1,215 @@
+\hypertarget{classloading_screen}{}\doxysection{loading\+Screen Class Reference}
+\label{classloading_screen}\index{loadingScreen@{loadingScreen}}
+
+
+{\ttfamily \#include $<$loading\+Screen.\+h$>$}
+
+Inheritance diagram for loading\+Screen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classloading_screen}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classloading_screen_acfd4f78bc1cde99f6cff8074eea7b942}{delete\+Assets}} ()
+\item 
+virtual void \mbox{\hyperlink{classloading_screen_a27b86dce965b7ab4967d82d943adc756}{load\+Assets}} ()
+\item 
+\mbox{\hyperlink{classloading_screen_a5f72c08dfb819b5b11899e08f358e98f}{loading\+Screen}} (std\+::string scene\+Name, \mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&\mbox{\hyperlink{classscene_manager}{scene\+Manager}})
+\item 
+virtual void \mbox{\hyperlink{classloading_screen_a356a95cb4d24c09435412c08e7866456}{on\+Exit}} ()
+\item 
+virtual void \mbox{\hyperlink{classloading_screen_ad3b059b2b5b9768b74737476535e20d4}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{classloading_screen_ac6c85ccc4df946975d979e69b32d49dd}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{delete\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{load\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{on\+Exit}} ()=0
+\item 
+\mbox{\hyperlink{classscene_a5b05a26e377bc9c61c05808f50fe47bf}{scene}} (std\+::string scene\+Name)
+\item 
+virtual void \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{Start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{Update}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classloading_screen_ac42beb31c03b0c4fdf769cd7715f6f44}{decrease\+Opacity}} ()
+\item 
+void \mbox{\hyperlink{classloading_screen_a6dd001bf4a86f7483b36d10ccd992090}{draw\+Textures}} ()
+\item 
+void \mbox{\hyperlink{classloading_screen_aba1b542abbd95eeaf6e134b4f2bc652a}{handle\+Intro}} ()
+\item 
+void \mbox{\hyperlink{classloading_screen_a4c3d8779bbb6682c1264b7db59ebbd01}{increase\+Opacity}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classloading_screen_a119ed1a4ceb3e208cc75623e1ef75bb8}{animation\+Counter}} = 0
+\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{classloading_screen_a347c41005aa3eadda2780e949dc2b673}{animation\+Is\+Over}} = \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classloading_screen_aff049402744db5d082d3139bb28c380f}{default\+Texture}}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classloading_screen_aba88ac1be9ece0f968d191926f7bccbf}{loading\+Opacity}} = \{255, 255, 255, 255\}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classloading_screen_aaeb45f8ceae27bb9d01132cc11d6e4cc}{logo\+Texture}}
+\item 
+\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \& \mbox{\hyperlink{classloading_screen_ab63fc56f34a693213b1ca3dd5085aba2}{my\+Scene\+Manager}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classloading_screen_a206f3cbb90d3fba385644f1d00a20b69}{transition\+Texture}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Data Fields inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classscene_a4fa409117e401be3bb6b09ee75d5e9ab}{background\+Color}} = \{ 248, 248, 248, 255 \}
+\item 
+std\+::string \mbox{\hyperlink{classscene_aa36644f63cdc2039386fa1f6ca3263d9}{my\+Scene\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloading_screen_a5f72c08dfb819b5b11899e08f358e98f}\label{classloading_screen_a5f72c08dfb819b5b11899e08f358e98f}} 
+\index{loadingScreen@{loadingScreen}!loadingScreen@{loadingScreen}}
+\index{loadingScreen@{loadingScreen}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{loadingScreen()}{loadingScreen()}}
+{\footnotesize\ttfamily loading\+Screen\+::loading\+Screen (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name,  }\item[{\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&}]{scene\+Manager }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloading_screen_ac42beb31c03b0c4fdf769cd7715f6f44}\label{classloading_screen_ac42beb31c03b0c4fdf769cd7715f6f44}} 
+\index{loadingScreen@{loadingScreen}!decreaseOpacity@{decreaseOpacity}}
+\index{decreaseOpacity@{decreaseOpacity}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{decreaseOpacity()}{decreaseOpacity()}}
+{\footnotesize\ttfamily void loading\+Screen\+::decrease\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_acfd4f78bc1cde99f6cff8074eea7b942}\label{classloading_screen_acfd4f78bc1cde99f6cff8074eea7b942}} 
+\index{loadingScreen@{loadingScreen}!deleteAssets@{deleteAssets}}
+\index{deleteAssets@{deleteAssets}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{deleteAssets()}{deleteAssets()}}
+{\footnotesize\ttfamily void loading\+Screen\+::delete\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{scene}}.
+
+\mbox{\Hypertarget{classloading_screen_a6dd001bf4a86f7483b36d10ccd992090}\label{classloading_screen_a6dd001bf4a86f7483b36d10ccd992090}} 
+\index{loadingScreen@{loadingScreen}!drawTextures@{drawTextures}}
+\index{drawTextures@{drawTextures}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{drawTextures()}{drawTextures()}}
+{\footnotesize\ttfamily void loading\+Screen\+::draw\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_aba1b542abbd95eeaf6e134b4f2bc652a}\label{classloading_screen_aba1b542abbd95eeaf6e134b4f2bc652a}} 
+\index{loadingScreen@{loadingScreen}!handleIntro@{handleIntro}}
+\index{handleIntro@{handleIntro}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{handleIntro()}{handleIntro()}}
+{\footnotesize\ttfamily void loading\+Screen\+::handle\+Intro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_a4c3d8779bbb6682c1264b7db59ebbd01}\label{classloading_screen_a4c3d8779bbb6682c1264b7db59ebbd01}} 
+\index{loadingScreen@{loadingScreen}!increaseOpacity@{increaseOpacity}}
+\index{increaseOpacity@{increaseOpacity}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{increaseOpacity()}{increaseOpacity()}}
+{\footnotesize\ttfamily void loading\+Screen\+::increase\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_a27b86dce965b7ab4967d82d943adc756}\label{classloading_screen_a27b86dce965b7ab4967d82d943adc756}} 
+\index{loadingScreen@{loadingScreen}!loadAssets@{loadAssets}}
+\index{loadAssets@{loadAssets}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{loadAssets()}{loadAssets()}}
+{\footnotesize\ttfamily void loading\+Screen\+::load\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{scene}}.
+
+\mbox{\Hypertarget{classloading_screen_a356a95cb4d24c09435412c08e7866456}\label{classloading_screen_a356a95cb4d24c09435412c08e7866456}} 
+\index{loadingScreen@{loadingScreen}!onExit@{onExit}}
+\index{onExit@{onExit}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void loading\+Screen\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{scene}}.
+
+\mbox{\Hypertarget{classloading_screen_ad3b059b2b5b9768b74737476535e20d4}\label{classloading_screen_ad3b059b2b5b9768b74737476535e20d4}} 
+\index{loadingScreen@{loadingScreen}!Start@{Start}}
+\index{Start@{Start}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void loading\+Screen\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{scene}}.
+
+\mbox{\Hypertarget{classloading_screen_ac6c85ccc4df946975d979e69b32d49dd}\label{classloading_screen_ac6c85ccc4df946975d979e69b32d49dd}} 
+\index{loadingScreen@{loadingScreen}!Update@{Update}}
+\index{Update@{Update}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void loading\+Screen\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{scene}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classloading_screen_a119ed1a4ceb3e208cc75623e1ef75bb8}\label{classloading_screen_a119ed1a4ceb3e208cc75623e1ef75bb8}} 
+\index{loadingScreen@{loadingScreen}!animationCounter@{animationCounter}}
+\index{animationCounter@{animationCounter}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{animationCounter}{animationCounter}}
+{\footnotesize\ttfamily float loading\+Screen\+::animation\+Counter = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_a347c41005aa3eadda2780e949dc2b673}\label{classloading_screen_a347c41005aa3eadda2780e949dc2b673}} 
+\index{loadingScreen@{loadingScreen}!animationIsOver@{animationIsOver}}
+\index{animationIsOver@{animationIsOver}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{animationIsOver}{animationIsOver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} loading\+Screen\+::animation\+Is\+Over = \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_aff049402744db5d082d3139bb28c380f}\label{classloading_screen_aff049402744db5d082d3139bb28c380f}} 
+\index{loadingScreen@{loadingScreen}!defaultTexture@{defaultTexture}}
+\index{defaultTexture@{defaultTexture}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{defaultTexture}{defaultTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} loading\+Screen\+::default\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_aba88ac1be9ece0f968d191926f7bccbf}\label{classloading_screen_aba88ac1be9ece0f968d191926f7bccbf}} 
+\index{loadingScreen@{loadingScreen}!loadingOpacity@{loadingOpacity}}
+\index{loadingOpacity@{loadingOpacity}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{loadingOpacity}{loadingOpacity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} loading\+Screen\+::loading\+Opacity = \{255, 255, 255, 255\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_aaeb45f8ceae27bb9d01132cc11d6e4cc}\label{classloading_screen_aaeb45f8ceae27bb9d01132cc11d6e4cc}} 
+\index{loadingScreen@{loadingScreen}!logoTexture@{logoTexture}}
+\index{logoTexture@{logoTexture}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{logoTexture}{logoTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} loading\+Screen\+::logo\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_ab63fc56f34a693213b1ca3dd5085aba2}\label{classloading_screen_ab63fc56f34a693213b1ca3dd5085aba2}} 
+\index{loadingScreen@{loadingScreen}!mySceneManager@{mySceneManager}}
+\index{mySceneManager@{mySceneManager}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{mySceneManager}{mySceneManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscene_manager}{scene\+Manager}}\& loading\+Screen\+::my\+Scene\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloading_screen_a206f3cbb90d3fba385644f1d00a20b69}\label{classloading_screen_a206f3cbb90d3fba385644f1d00a20b69}} 
+\index{loadingScreen@{loadingScreen}!transitionTexture@{transitionTexture}}
+\index{transitionTexture@{transitionTexture}!loadingScreen@{loadingScreen}}
+\doxysubsubsection{\texorpdfstring{transitionTexture}{transitionTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} loading\+Screen\+::transition\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+neos.\+components/include/\mbox{\hyperlink{loading_screen_8h}{loading\+Screen.\+h}}\item 
+neos.\+components/src/\mbox{\hyperlink{loading_screen_8cpp}{loading\+Screen.\+cpp}}\end{DoxyCompactItemize}

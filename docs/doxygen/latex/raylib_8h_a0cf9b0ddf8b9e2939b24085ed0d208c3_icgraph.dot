@@ -1,0 +1,16 @@
+digraph "InitWindow"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="InitWindow",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="start",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a60de64d75454385b23995437f1d72669",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="Lerp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$raymath_8h.html#aae383c100851880be4e0ebdc93e63126",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="Normalize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$raymath_8h.html#a5addef0c374207a9592172a53378a704",tooltip=" "];
+}

@@ -1,0 +1,182 @@
+\hypertarget{classcp_1_1input_field}{}\doxysection{cp\+::input\+Field Class Reference}
+\label{classcp_1_1input_field}\index{cp::inputField@{cp::inputField}}
+
+
+{\ttfamily \#include $<$input\+Field.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classcp_1_1input_field_a2f6f360ed29743fdbd547ba7182c8bce}{get\+Result}} (string str)
+\item 
+\mbox{\hyperlink{classcp_1_1input_field_a8268f1a4fef5678ce2f7383065dfd693}{input\+Field}} (\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classcp_1_1input_field_a62b513810e5e776491bfc455c2286f98}{field}}, string \mbox{\hyperlink{classcp_1_1input_field_a997e799eaf43356f35c46197bef5d491}{type}}, float \mbox{\hyperlink{classcp_1_1input_field_adb4ff8ecc08a1ef4dfec6bcf42c64969}{font\+Size}}, \mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classcp_1_1input_field_a3ba28946a11107075413c5c337d9f766}{text\+Color}})
+\item 
+void \mbox{\hyperlink{classcp_1_1input_field_afef139171c5dff13db0a1ba5e516c295}{reset\+Field}} ()
+\item 
+void \mbox{\hyperlink{classcp_1_1input_field_ab596e3d07ae045fac14193a94f1d6267}{update\+Field}} (\mbox{\hyperlink{struct_vector2}{Vector2}} mouse\+Pos)
+\item 
+\mbox{\hyperlink{classcp_1_1input_field_a8772e3cf6ab272553b9ff1213fc67304}{$\sim$input\+Field}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcp_1_1input_field_af533e3c3e81db1c9ddd2bc1d7c8148cd}{handle\+Input}} ()
+\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{classcp_1_1input_field_ac2f5eb8e06c474ebb8478e252546c530}{is\+Key\+Allowed}} ()
+\item 
+void \mbox{\hyperlink{classcp_1_1input_field_aa28a82676d110a90e479f4b354de2415}{print\+Input}} ()
+\item 
+void \mbox{\hyperlink{classcp_1_1input_field_a02bc6c5c96e143c2ddd6b7c4917f3f9a}{select\+Field}} (\mbox{\hyperlink{struct_vector2}{Vector2}} mouse\+Pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{classcp_1_1input_field_aab0745180f7c506932e30656aadbbc3d}{animation\+Counter}}
+\item 
+int \mbox{\hyperlink{classcp_1_1input_field_a93ea40715ebc063500f11387c9fe5aab}{char\+Count}} = 0
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classcp_1_1input_field_a62b513810e5e776491bfc455c2286f98}{field}}
+\item 
+\mbox{\hyperlink{struct_font}{Font}} \mbox{\hyperlink{classcp_1_1input_field_aafb44e5542620498add38a091dd1d965}{font}}
+\item 
+float \mbox{\hyperlink{classcp_1_1input_field_adb4ff8ecc08a1ef4dfec6bcf42c64969}{font\+Size}}
+\item 
+char \mbox{\hyperlink{classcp_1_1input_field_a2cec9760b308934f71a7c92ff3b6f260}{input}} \mbox{[}30\mbox{]}
+\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{classcp_1_1input_field_a829689fe47d2c19b26cfdbd2d82c45df}{is\+Selected}} = \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false}}
+\item 
+int \mbox{\hyperlink{classcp_1_1input_field_a999ffaef2eb537ccec225ca96c8a1af9}{max\+Chars}}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classcp_1_1input_field_a3ba28946a11107075413c5c337d9f766}{text\+Color}}
+\item 
+string \mbox{\hyperlink{classcp_1_1input_field_a997e799eaf43356f35c46197bef5d491}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcp_1_1input_field_a8268f1a4fef5678ce2f7383065dfd693}\label{classcp_1_1input_field_a8268f1a4fef5678ce2f7383065dfd693}} 
+\index{cp::inputField@{cp::inputField}!inputField@{inputField}}
+\index{inputField@{inputField}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{inputField()}{inputField()}}
+{\footnotesize\ttfamily input\+Field\+::input\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rectangle}{Rectangle}}}]{field,  }\item[{string}]{type,  }\item[{float}]{font\+Size,  }\item[{\mbox{\hyperlink{struct_color}{Color}}}]{text\+Color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a8772e3cf6ab272553b9ff1213fc67304}\label{classcp_1_1input_field_a8772e3cf6ab272553b9ff1213fc67304}} 
+\index{cp::inputField@{cp::inputField}!````~inputField@{$\sim$inputField}}
+\index{````~inputField@{$\sim$inputField}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{$\sim$inputField()}{~inputField()}}
+{\footnotesize\ttfamily input\+Field\+::$\sim$input\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcp_1_1input_field_a2f6f360ed29743fdbd547ba7182c8bce}\label{classcp_1_1input_field_a2f6f360ed29743fdbd547ba7182c8bce}} 
+\index{cp::inputField@{cp::inputField}!getResult@{getResult}}
+\index{getResult@{getResult}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily string input\+Field\+::get\+Result (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcp_1_1input_field_af533e3c3e81db1c9ddd2bc1d7c8148cd}\label{classcp_1_1input_field_af533e3c3e81db1c9ddd2bc1d7c8148cd}} 
+\index{cp::inputField@{cp::inputField}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void input\+Field\+::handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_ac2f5eb8e06c474ebb8478e252546c530}\label{classcp_1_1input_field_ac2f5eb8e06c474ebb8478e252546c530}} 
+\index{cp::inputField@{cp::inputField}!isKeyAllowed@{isKeyAllowed}}
+\index{isKeyAllowed@{isKeyAllowed}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{isKeyAllowed()}{isKeyAllowed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} input\+Field\+::is\+Key\+Allowed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_aa28a82676d110a90e479f4b354de2415}\label{classcp_1_1input_field_aa28a82676d110a90e479f4b354de2415}} 
+\index{cp::inputField@{cp::inputField}!printInput@{printInput}}
+\index{printInput@{printInput}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{printInput()}{printInput()}}
+{\footnotesize\ttfamily void input\+Field\+::print\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_afef139171c5dff13db0a1ba5e516c295}\label{classcp_1_1input_field_afef139171c5dff13db0a1ba5e516c295}} 
+\index{cp::inputField@{cp::inputField}!resetField@{resetField}}
+\index{resetField@{resetField}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{resetField()}{resetField()}}
+{\footnotesize\ttfamily void input\+Field\+::reset\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a02bc6c5c96e143c2ddd6b7c4917f3f9a}\label{classcp_1_1input_field_a02bc6c5c96e143c2ddd6b7c4917f3f9a}} 
+\index{cp::inputField@{cp::inputField}!selectField@{selectField}}
+\index{selectField@{selectField}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{selectField()}{selectField()}}
+{\footnotesize\ttfamily void input\+Field\+::select\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_ab596e3d07ae045fac14193a94f1d6267}\label{classcp_1_1input_field_ab596e3d07ae045fac14193a94f1d6267}} 
+\index{cp::inputField@{cp::inputField}!updateField@{updateField}}
+\index{updateField@{updateField}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{updateField()}{updateField()}}
+{\footnotesize\ttfamily void input\+Field\+::update\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classcp_1_1input_field_aab0745180f7c506932e30656aadbbc3d}\label{classcp_1_1input_field_aab0745180f7c506932e30656aadbbc3d}} 
+\index{cp::inputField@{cp::inputField}!animationCounter@{animationCounter}}
+\index{animationCounter@{animationCounter}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{animationCounter}{animationCounter}}
+{\footnotesize\ttfamily unsigned cp\+::input\+Field\+::animation\+Counter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a93ea40715ebc063500f11387c9fe5aab}\label{classcp_1_1input_field_a93ea40715ebc063500f11387c9fe5aab}} 
+\index{cp::inputField@{cp::inputField}!charCount@{charCount}}
+\index{charCount@{charCount}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{charCount}{charCount}}
+{\footnotesize\ttfamily int cp\+::input\+Field\+::char\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a62b513810e5e776491bfc455c2286f98}\label{classcp_1_1input_field_a62b513810e5e776491bfc455c2286f98}} 
+\index{cp::inputField@{cp::inputField}!field@{field}}
+\index{field@{field}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{field}{field}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} cp\+::input\+Field\+::field\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_aafb44e5542620498add38a091dd1d965}\label{classcp_1_1input_field_aafb44e5542620498add38a091dd1d965}} 
+\index{cp::inputField@{cp::inputField}!font@{font}}
+\index{font@{font}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_font}{Font}} cp\+::input\+Field\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_adb4ff8ecc08a1ef4dfec6bcf42c64969}\label{classcp_1_1input_field_adb4ff8ecc08a1ef4dfec6bcf42c64969}} 
+\index{cp::inputField@{cp::inputField}!fontSize@{fontSize}}
+\index{fontSize@{fontSize}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{fontSize}{fontSize}}
+{\footnotesize\ttfamily float cp\+::input\+Field\+::font\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a2cec9760b308934f71a7c92ff3b6f260}\label{classcp_1_1input_field_a2cec9760b308934f71a7c92ff3b6f260}} 
+\index{cp::inputField@{cp::inputField}!input@{input}}
+\index{input@{input}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{input}{input}}
+{\footnotesize\ttfamily char cp\+::input\+Field\+::input\mbox{[}30\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a829689fe47d2c19b26cfdbd2d82c45df}\label{classcp_1_1input_field_a829689fe47d2c19b26cfdbd2d82c45df}} 
+\index{cp::inputField@{cp::inputField}!isSelected@{isSelected}}
+\index{isSelected@{isSelected}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{isSelected}{isSelected}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} cp\+::input\+Field\+::is\+Selected = \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a999ffaef2eb537ccec225ca96c8a1af9}\label{classcp_1_1input_field_a999ffaef2eb537ccec225ca96c8a1af9}} 
+\index{cp::inputField@{cp::inputField}!maxChars@{maxChars}}
+\index{maxChars@{maxChars}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{maxChars}{maxChars}}
+{\footnotesize\ttfamily int cp\+::input\+Field\+::max\+Chars\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a3ba28946a11107075413c5c337d9f766}\label{classcp_1_1input_field_a3ba28946a11107075413c5c337d9f766}} 
+\index{cp::inputField@{cp::inputField}!textColor@{textColor}}
+\index{textColor@{textColor}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{textColor}{textColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} cp\+::input\+Field\+::text\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcp_1_1input_field_a997e799eaf43356f35c46197bef5d491}\label{classcp_1_1input_field_a997e799eaf43356f35c46197bef5d491}} 
+\index{cp::inputField@{cp::inputField}!type@{type}}
+\index{type@{type}!cp::inputField@{cp::inputField}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string cp\+::input\+Field\+::type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+neos.\+components/include/\mbox{\hyperlink{input_field_8h}{input\+Field.\+h}}\item 
+neos.\+components/src/\mbox{\hyperlink{input_field_8cpp}{input\+Field.\+cpp}}\end{DoxyCompactItemize}

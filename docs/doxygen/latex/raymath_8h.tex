@@ -1,0 +1,1110 @@
+\hypertarget{raymath_8h}{}\doxysection{neos.\+components/lib/raylib/raymath.h File Reference}
+\label{raymath_8h}\index{neos.components/lib/raylib/raymath.h@{neos.components/lib/raylib/raymath.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfloat16}{float16}}
+\item 
+struct \mbox{\hyperlink{structfloat3}{float3}}
+\item 
+struct \mbox{\hyperlink{struct_matrix}{Matrix}}
+\item 
+struct \mbox{\hyperlink{struct_vector2}{Vector2}}
+\item 
+struct \mbox{\hyperlink{struct_vector3}{Vector3}}
+\item 
+struct \mbox{\hyperlink{struct_vector4}{Vector4}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{raymath_8h_af7e8592d0a634bd3642e9fd508ea8022}{DEG2\+RAD}}~(\mbox{\hyperlink{raylib_8h_a598a3330b3c21701223ee0ca14316eca}{PI}}/180.\+0f)
+\item 
+\#define \mbox{\hyperlink{raymath_8h_a002b2f4894492820fe708b1b7e7c5e70}{EPSILON}}~0.\+000001f
+\item 
+\#define \mbox{\hyperlink{raymath_8h_a213517ea65d946bf0f89671ab467d602}{Matrix\+To\+Float}}(mat)~(\mbox{\hyperlink{raymath_8h_a878ab48c99790b47601594cf478e2fc1}{Matrix\+To\+FloatV}}(mat).v)
+\item 
+\#define \mbox{\hyperlink{raymath_8h_a598a3330b3c21701223ee0ca14316eca}{PI}}~3.\+14159265358979323846f
+\item 
+\#define \mbox{\hyperlink{raymath_8h_ac5a945020d3528355cda82d383676736}{RAD2\+DEG}}~(180.\+0f/\mbox{\hyperlink{raylib_8h_a598a3330b3c21701223ee0ca14316eca}{PI}})
+\item 
+\#define \mbox{\hyperlink{raymath_8h_ac7b0358c4c37298a3c9e19f785d91cc3}{RL\+\_\+\+MATRIX\+\_\+\+TYPE}}
+\item 
+\#define \mbox{\hyperlink{raymath_8h_a7b0fb9a6020eb3770913ac38cc2e8255}{RL\+\_\+\+QUATERNION\+\_\+\+TYPE}}
+\item 
+\#define \mbox{\hyperlink{raymath_8h_af57843b068498c1c44f02eb521eaa187}{RL\+\_\+\+VECTOR2\+\_\+\+TYPE}}
+\item 
+\#define \mbox{\hyperlink{raymath_8h_a29f8cc2853339356998ddc4cc763844f}{RL\+\_\+\+VECTOR3\+\_\+\+TYPE}}
+\item 
+\#define \mbox{\hyperlink{raymath_8h_a7658936d78d8268ff15b145a2030716c}{RL\+\_\+\+VECTOR4\+\_\+\+TYPE}}
+\item 
+\#define \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}}~inline
+\begin{DoxyCompactList}\small\item\em raymath v1.\+5 -\/ Math functions to work with \mbox{\hyperlink{struct_vector2}{Vector2}}, \mbox{\hyperlink{struct_vector3}{Vector3}}, \mbox{\hyperlink{struct_matrix}{Matrix}} and Quaternions \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{raymath_8h_a3d6b04df0f18e51d2d98b684023b6c20}{Vector3\+To\+Float}}(vec)~(\mbox{\hyperlink{raymath_8h_aa58b8701d2a45cf7a7d26a42eaba9454}{Vector3\+To\+FloatV}}(vec).v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structfloat16}{float16}} \mbox{\hyperlink{raymath_8h_a252876b42017de5f4410b3fa36c20c8f}{float16}}
+\item 
+typedef struct \mbox{\hyperlink{structfloat3}{float3}} \mbox{\hyperlink{raymath_8h_a79779bd606ab5af52c38e59729245f27}{float3}}
+\item 
+typedef struct \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a9570374e3dbc873595100dae1e584459}{Matrix}}
+\item 
+typedef \mbox{\hyperlink{struct_vector4}{Vector4}} \mbox{\hyperlink{raymath_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}
+\item 
+typedef struct \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a682e0907769244e5f75f92e91460878f}{Vector2}}
+\item 
+typedef struct \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a3b29ec21f9ba832999ff4fdff39dd804}{Vector3}}
+\item 
+typedef struct \mbox{\hyperlink{struct_vector4}{Vector4}} \mbox{\hyperlink{raymath_8h_aff3ba508436bec4750e91364badfbc99}{Vector4}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a0b07a45c6e21093f520658daecd01f36}{Clamp}} (float value, float min, float max)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int \mbox{\hyperlink{raymath_8h_a41ac641607e78233960eaf5cc545777a}{Float\+Equals}} (float x, float y)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_aae383c100851880be4e0ebdc93e63126}{Lerp}} (float \mbox{\hyperlink{main_8h_a60de64d75454385b23995437f1d72669}{start}}, float end, float amount)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_ac75e0c944d4a790babd770c0a736885d}{Matrix\+Add}} (\mbox{\hyperlink{struct_matrix}{Matrix}} left, \mbox{\hyperlink{struct_matrix}{Matrix}} right)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_aa4383cc17b3509d75ff39251c95deaf1}{Matrix\+Determinant}} (\mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_ae1efda40c1401419f671075dd5260f0b}{Matrix\+Frustum}} (double left, double right, double bottom, double top, double near, double far)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a647abce78f01ab51115f210e8f21138a}{Matrix\+Identity}} (void)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_aa9ff37e5d26599d6f1fc9347a09190b6}{Matrix\+Invert}} (\mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_af461572ca6cbbe6054df81ad38583bda}{Matrix\+Look\+At}} (\mbox{\hyperlink{struct_vector3}{Vector3}} eye, \mbox{\hyperlink{struct_vector3}{Vector3}} target, \mbox{\hyperlink{struct_vector3}{Vector3}} up)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_afd6ab41d3aa131a2e56c163d4d804843}{Matrix\+Multiply}} (\mbox{\hyperlink{struct_matrix}{Matrix}} left, \mbox{\hyperlink{struct_matrix}{Matrix}} right)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_ae634629db086656dcc7452bba8640c6c}{Matrix\+Ortho}} (double left, double right, double bottom, double top, double near, double far)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_aa7e0bb06a49e0e672aa9928b59e676c3}{Matrix\+Perspective}} (double fovy, double aspect, double near, double far)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a291d82b271ce29260f45270f0cad292a}{Matrix\+Rotate}} (\mbox{\hyperlink{struct_vector3}{Vector3}} axis, float angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a67985a003e1746e2c626210435dfcf2f}{Matrix\+RotateX}} (float angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a290faba02990e8ee64560548c5a0bb97}{Matrix\+Rotate\+XYZ}} (\mbox{\hyperlink{struct_vector3}{Vector3}} angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_ad123328c35e071554d4b6ec997af9e01}{Matrix\+RotateY}} (float angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_adda398deaad82ea5122f47859a3bd638}{Matrix\+RotateZ}} (float angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_ad8937d6d10eec038b1a4c9414f6843e6}{Matrix\+Rotate\+ZYX}} (\mbox{\hyperlink{struct_vector3}{Vector3}} angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a4aa28cf2ed4f7c4be868d097be426f74}{Matrix\+Scale}} (float x, float y, float z)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_aaa3add0a36ad3b4b2577a74a9cdf3d8e}{Matrix\+Subtract}} (\mbox{\hyperlink{struct_matrix}{Matrix}} left, \mbox{\hyperlink{struct_matrix}{Matrix}} right)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{structfloat16}{float16}} \mbox{\hyperlink{raymath_8h_a878ab48c99790b47601594cf478e2fc1}{Matrix\+To\+FloatV}} (\mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_abfb830cd60d2e12d8b317d08628fb368}{Matrix\+Trace}} (\mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a7d29c7724a2715f7eb09f2c72f3b4a29}{Matrix\+Translate}} (float x, float y, float z)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_af0a31f5fe6c4e07b29ec187c6a37f91c}{Matrix\+Transpose}} (\mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a5addef0c374207a9592172a53378a704}{Normalize}} (float value, float \mbox{\hyperlink{main_8h_a60de64d75454385b23995437f1d72669}{start}}, float end)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a7ab920bfdb27b848bc55e3fd3833969f}{Quaternion\+Add}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q1, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_acd14e6c221eb31f61438f616c7fa437c}{Quaternion\+Add\+Value}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q, float add)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a7a5d60c555e3536d702085c00e01a712}{Quaternion\+Divide}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q1, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int \mbox{\hyperlink{raymath_8h_a870610d97f178dc2904949e327f4631a}{Quaternion\+Equals}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} p, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_ab9f4d7ea8c16fcb7cafa09967b49b744}{Quaternion\+From\+Axis\+Angle}} (\mbox{\hyperlink{struct_vector3}{Vector3}} axis, float angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a31e173c48cc5d630bb455485f5b0f9ab}{Quaternion\+From\+Euler}} (float pitch, float yaw, float roll)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a36f723e41a0b52c747e4f41d268a95e1}{Quaternion\+From\+Matrix}} (\mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a3a481ec8d13df9243b22436d7382cfb6}{Quaternion\+From\+Vector3\+To\+Vector3}} (\mbox{\hyperlink{struct_vector3}{Vector3}} from, \mbox{\hyperlink{struct_vector3}{Vector3}} to)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a35f16cc7a2d8b48e7c48b8be2e802feb}{Quaternion\+Identity}} (void)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a3620ee8107ca78e468dbbffc3ffc5cfa}{Quaternion\+Invert}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a1227fe190d75c25b8e52dd8e84b9a4a6}{Quaternion\+Length}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_adbf9b4f5ff33611ddf1095e4f77c19d8}{Quaternion\+Lerp}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q1, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q2, float amount)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_ad87ce027683887b4764979a62dbb43d4}{Quaternion\+Multiply}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q1, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a397eb5f38ae2fbb412f1e4ee10c1bd3a}{Quaternion\+Nlerp}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q1, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q2, float amount)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a317b9e6624c9116d5988b871357f1321}{Quaternion\+Normalize}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a418dc380426604f4742f4b682a0eedfa}{Quaternion\+Scale}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q, float mul)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_ab653195bf6545ca4dc3951bd391fd06f}{Quaternion\+Slerp}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q1, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q2, float amount)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_a7069bcc6194b249508a4e469498dd492}{Quaternion\+Subtract}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q1, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_ae8f45f9ec838b53756edd9565e127650}{Quaternion\+Subtract\+Value}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q, float sub)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} void \mbox{\hyperlink{raymath_8h_ad34da500a4c816c1f3e8e037f2872ec6}{Quaternion\+To\+Axis\+Angle}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q, \mbox{\hyperlink{struct_vector3}{Vector3}} $\ast$out\+Axis, float $\ast$out\+Angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_abe5352214a9fb6a4fcc021c0dc891cd6}{Quaternion\+To\+Euler}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{raymath_8h_a3a89d1b6c028bdac4b51371c78fa8bde}{Quaternion\+To\+Matrix}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} \mbox{\hyperlink{raymath_8h_aa7df7469aefb4a2d84111396c58a2fef}{Quaternion\+Transform}} (\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q, \mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_aedcf4bebe646ff13ffda8a8b2c52ba4f}{Remap}} (float value, float input\+Start, float input\+End, float output\+Start, float output\+End)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a63a37b645cea3eadb21eb25bae3a16be}{Vector2\+Add}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a3dcb077edb2485b4b67ae04258169042}{Vector2\+Add\+Value}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, float add)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_af93a4bd7244a5828ef7b29d8d54f3017}{Vector2\+Angle}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a8b92f34da510cd9d24c6eac837282b05}{Vector2\+Clamp}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, \mbox{\hyperlink{struct_vector2}{Vector2}} min, \mbox{\hyperlink{struct_vector2}{Vector2}} max)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a090f410ccd7877303169c08a254b3961}{Vector2\+Clamp\+Value}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, float min, float max)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_abbf4114e21224b9c25d164980c9c7da9}{Vector2\+Distance}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_ab41e2b4e0a05ddca2f52969a094a6974}{Vector2\+Distance\+Sqr}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a3ca3a18fadc9976562d1b41a1592aa6c}{Vector2\+Divide}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a723285294d8d92d248d606f893b4112a}{Vector2\+Dot\+Product}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int \mbox{\hyperlink{raymath_8h_ae9c28dc782952e088f9f713d34447e06}{Vector2\+Equals}} (\mbox{\hyperlink{struct_vector2}{Vector2}} p, \mbox{\hyperlink{struct_vector2}{Vector2}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a34edd96bba66ff0becd7adbd9d3882eb}{Vector2\+Invert}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a7d277ce7aa67e778c700b693f7373f33}{Vector2\+Length}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a2f27b4fecd5a44d802474ec6e2753fd1}{Vector2\+Length\+Sqr}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_ae49f5034e7d995f045ae9bd0fc0e9b5a}{Vector2\+Lerp}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2, float amount)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a64b3f6b6756ec17a7da30a5b9e40f804}{Vector2\+Move\+Towards}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, \mbox{\hyperlink{struct_vector2}{Vector2}} target, float max\+Distance)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a316c466fedd2a713c7cc235ee15b3ec1}{Vector2\+Multiply}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a13703754a211b5a0af74bd97324c33aa}{Vector2\+Negate}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a78652b9abae16b9b0f2c6d1ec21a8c44}{Vector2\+Normalize}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a2cad4af19d258dabdb7e9887dcb4e9f8}{Vector2\+One}} (void)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a62a8e12bd9c63b46033aa68c3b365698}{Vector2\+Reflect}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, \mbox{\hyperlink{struct_vector2}{Vector2}} normal)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a5179291da22a5e7971aecc97057ac1d5}{Vector2\+Rotate}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, float angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a6d910886c3f0feaca37c97d8f4592a5d}{Vector2\+Scale}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, float scale)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_ab5bfa0e0076f68073927cc085451b690}{Vector2\+Subtract}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v1, \mbox{\hyperlink{struct_vector2}{Vector2}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_ab4e5e31ec7acfbe569a901bfa479afca}{Vector2\+Subtract\+Value}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, float sub)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a12bf6e9273b8f3e4922f6ba2300e3098}{Vector2\+Transform}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v, \mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{raymath_8h_a27733083400b2aabc79ad5f3e7a675d2}{Vector2\+Zero}} (void)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a580d9c8fc252e98becdf33bd36733b08}{Vector3\+Add}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a36cada3013deb53f9717045a4eb45e6e}{Vector3\+Add\+Value}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, float add)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a37f2f5cab795b979f648f384aec5d4dc}{Vector3\+Angle}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a52f19210b09f8fc809fdc4bb2b3f0a92}{Vector3\+Barycenter}} (\mbox{\hyperlink{struct_vector3}{Vector3}} p, \mbox{\hyperlink{struct_vector3}{Vector3}} a, \mbox{\hyperlink{struct_vector3}{Vector3}} b, \mbox{\hyperlink{struct_vector3}{Vector3}} c)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a151bdc43cc948cc65c920fba1f2be239}{Vector3\+Clamp}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, \mbox{\hyperlink{struct_vector3}{Vector3}} min, \mbox{\hyperlink{struct_vector3}{Vector3}} max)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_ab6abe31f8df17d39a71e0aaa15d3ca40}{Vector3\+Clamp\+Value}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, float min, float max)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_acaa552c2daada4f459d363ac9cf41259}{Vector3\+Cross\+Product}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_aa34c74ead1e86cea925973c7f9a69f75}{Vector3\+Distance}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a7415f2074e6a8ff662676b377e70f8f3}{Vector3\+Distance\+Sqr}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a9edf61ff3c0e7f60cac383c260ebcee9}{Vector3\+Divide}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a49b8b970f2e879b393530ee1d58ca41f}{Vector3\+Dot\+Product}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int \mbox{\hyperlink{raymath_8h_a77f45411fe5d1267a5b37cbbf4da0273}{Vector3\+Equals}} (\mbox{\hyperlink{struct_vector3}{Vector3}} p, \mbox{\hyperlink{struct_vector3}{Vector3}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_aef7677c3662dc0e459d7be1354cc3f03}{Vector3\+Invert}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_ac42e3be1a7d90c9259845ad643cbb0b0}{Vector3\+Length}} (const \mbox{\hyperlink{struct_vector3}{Vector3}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a41dd411f5e739a81ffcc5c04caf4aeaa}{Vector3\+Length\+Sqr}} (const \mbox{\hyperlink{struct_vector3}{Vector3}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_aa819c27c890517641054e5511acf66b2}{Vector3\+Lerp}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2, float amount)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_ad825d3f589fd17698932c0ce558f806d}{Vector3\+Max}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a3c9e56f74162ce286311a1a4537481d8}{Vector3\+Min}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a8511713318cf1b1f75b2ef22b0bf9cdc}{Vector3\+Multiply}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a8d398944c2d9e9966f14bd4b7a1cda8c}{Vector3\+Negate}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a0e2191ad7b6a38ee47af21f994f4c39f}{Vector3\+Normalize}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a600ffc14fcf899d0361ae74c8c6a9ffa}{Vector3\+One}} (void)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} void \mbox{\hyperlink{raymath_8h_abc1dc1d75e42165ae2da6298e0513507}{Vector3\+Ortho\+Normalize}} (\mbox{\hyperlink{struct_vector3}{Vector3}} $\ast$v1, \mbox{\hyperlink{struct_vector3}{Vector3}} $\ast$v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a3d7a1ad4dc9f7992ef9d4f2a6e1737f0}{Vector3\+Perpendicular}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_ab965a588540ea1bb46366a2f87e9aca1}{Vector3\+Reflect}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, \mbox{\hyperlink{struct_vector3}{Vector3}} normal)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_ab79daf932f3afe960326048f9568207c}{Vector3\+Refract}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, \mbox{\hyperlink{struct_vector3}{Vector3}} n, float r)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a4f5012987d7666737237b12312e5d8b3}{Vector3\+Rotate\+By\+Axis\+Angle}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, \mbox{\hyperlink{struct_vector3}{Vector3}} axis, float angle)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a1b814bf604a5927365a949d33fc50efc}{Vector3\+Rotate\+By\+Quaternion}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} q)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_af00337f5400339f373edb3e8398097e8}{Vector3\+Scale}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, float scalar)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a6c10f5797e02ba55659c00b4b4f3949b}{Vector3\+Subtract}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v1, \mbox{\hyperlink{struct_vector3}{Vector3}} v2)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_aaef8e89e905132d211d0e4a65615e4c0}{Vector3\+Subtract\+Value}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, float sub)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{structfloat3}{float3}} \mbox{\hyperlink{raymath_8h_aa58b8701d2a45cf7a7d26a42eaba9454}{Vector3\+To\+FloatV}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a157a392e361e981a65dd27620d13d2e9}{Vector3\+Transform}} (\mbox{\hyperlink{struct_vector3}{Vector3}} v, \mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a84c94029a9c38fc54aec1cde99039ed5}{Vector3\+Unproject}} (\mbox{\hyperlink{struct_vector3}{Vector3}} source, \mbox{\hyperlink{struct_matrix}{Matrix}} projection, \mbox{\hyperlink{struct_matrix}{Matrix}} view)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{raymath_8h_a6bdec50a530323f4074137aa62ceb8b9}{Vector3\+Zero}} (void)
+\item 
+\mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float \mbox{\hyperlink{raymath_8h_a860599a4d89fb83090024811f068f114}{Wrap}} (float value, float min, float max)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{raymath_8h_af7e8592d0a634bd3642e9fd508ea8022}\label{raymath_8h_af7e8592d0a634bd3642e9fd508ea8022}} 
+\index{raymath.h@{raymath.h}!DEG2RAD@{DEG2RAD}}
+\index{DEG2RAD@{DEG2RAD}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{DEG2RAD}{DEG2RAD}}
+{\footnotesize\ttfamily \#define DEG2\+RAD~(\mbox{\hyperlink{raylib_8h_a598a3330b3c21701223ee0ca14316eca}{PI}}/180.\+0f)}
+
+\mbox{\Hypertarget{raymath_8h_a002b2f4894492820fe708b1b7e7c5e70}\label{raymath_8h_a002b2f4894492820fe708b1b7e7c5e70}} 
+\index{raymath.h@{raymath.h}!EPSILON@{EPSILON}}
+\index{EPSILON@{EPSILON}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{EPSILON}{EPSILON}}
+{\footnotesize\ttfamily \#define EPSILON~0.\+000001f}
+
+\mbox{\Hypertarget{raymath_8h_a213517ea65d946bf0f89671ab467d602}\label{raymath_8h_a213517ea65d946bf0f89671ab467d602}} 
+\index{raymath.h@{raymath.h}!MatrixToFloat@{MatrixToFloat}}
+\index{MatrixToFloat@{MatrixToFloat}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixToFloat}{MatrixToFloat}}
+{\footnotesize\ttfamily \#define Matrix\+To\+Float(\begin{DoxyParamCaption}\item[{}]{mat }\end{DoxyParamCaption})~(\mbox{\hyperlink{raymath_8h_a878ab48c99790b47601594cf478e2fc1}{Matrix\+To\+FloatV}}(mat).v)}
+
+\mbox{\Hypertarget{raymath_8h_a598a3330b3c21701223ee0ca14316eca}\label{raymath_8h_a598a3330b3c21701223ee0ca14316eca}} 
+\index{raymath.h@{raymath.h}!PI@{PI}}
+\index{PI@{PI}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#define PI~3.\+14159265358979323846f}
+
+\mbox{\Hypertarget{raymath_8h_ac5a945020d3528355cda82d383676736}\label{raymath_8h_ac5a945020d3528355cda82d383676736}} 
+\index{raymath.h@{raymath.h}!RAD2DEG@{RAD2DEG}}
+\index{RAD2DEG@{RAD2DEG}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{RAD2DEG}{RAD2DEG}}
+{\footnotesize\ttfamily \#define RAD2\+DEG~(180.\+0f/\mbox{\hyperlink{raylib_8h_a598a3330b3c21701223ee0ca14316eca}{PI}})}
+
+\mbox{\Hypertarget{raymath_8h_ac7b0358c4c37298a3c9e19f785d91cc3}\label{raymath_8h_ac7b0358c4c37298a3c9e19f785d91cc3}} 
+\index{raymath.h@{raymath.h}!RL\_MATRIX\_TYPE@{RL\_MATRIX\_TYPE}}
+\index{RL\_MATRIX\_TYPE@{RL\_MATRIX\_TYPE}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{RL\_MATRIX\_TYPE}{RL\_MATRIX\_TYPE}}
+{\footnotesize\ttfamily \#define RL\+\_\+\+MATRIX\+\_\+\+TYPE}
+
+\mbox{\Hypertarget{raymath_8h_a7b0fb9a6020eb3770913ac38cc2e8255}\label{raymath_8h_a7b0fb9a6020eb3770913ac38cc2e8255}} 
+\index{raymath.h@{raymath.h}!RL\_QUATERNION\_TYPE@{RL\_QUATERNION\_TYPE}}
+\index{RL\_QUATERNION\_TYPE@{RL\_QUATERNION\_TYPE}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{RL\_QUATERNION\_TYPE}{RL\_QUATERNION\_TYPE}}
+{\footnotesize\ttfamily \#define RL\+\_\+\+QUATERNION\+\_\+\+TYPE}
+
+\mbox{\Hypertarget{raymath_8h_af57843b068498c1c44f02eb521eaa187}\label{raymath_8h_af57843b068498c1c44f02eb521eaa187}} 
+\index{raymath.h@{raymath.h}!RL\_VECTOR2\_TYPE@{RL\_VECTOR2\_TYPE}}
+\index{RL\_VECTOR2\_TYPE@{RL\_VECTOR2\_TYPE}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{RL\_VECTOR2\_TYPE}{RL\_VECTOR2\_TYPE}}
+{\footnotesize\ttfamily \#define RL\+\_\+\+VECTOR2\+\_\+\+TYPE}
+
+\mbox{\Hypertarget{raymath_8h_a29f8cc2853339356998ddc4cc763844f}\label{raymath_8h_a29f8cc2853339356998ddc4cc763844f}} 
+\index{raymath.h@{raymath.h}!RL\_VECTOR3\_TYPE@{RL\_VECTOR3\_TYPE}}
+\index{RL\_VECTOR3\_TYPE@{RL\_VECTOR3\_TYPE}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{RL\_VECTOR3\_TYPE}{RL\_VECTOR3\_TYPE}}
+{\footnotesize\ttfamily \#define RL\+\_\+\+VECTOR3\+\_\+\+TYPE}
+
+\mbox{\Hypertarget{raymath_8h_a7658936d78d8268ff15b145a2030716c}\label{raymath_8h_a7658936d78d8268ff15b145a2030716c}} 
+\index{raymath.h@{raymath.h}!RL\_VECTOR4\_TYPE@{RL\_VECTOR4\_TYPE}}
+\index{RL\_VECTOR4\_TYPE@{RL\_VECTOR4\_TYPE}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{RL\_VECTOR4\_TYPE}{RL\_VECTOR4\_TYPE}}
+{\footnotesize\ttfamily \#define RL\+\_\+\+VECTOR4\+\_\+\+TYPE}
+
+\mbox{\Hypertarget{raymath_8h_a19c1202d4696b35627119b67a344dc44}\label{raymath_8h_a19c1202d4696b35627119b67a344dc44}} 
+\index{raymath.h@{raymath.h}!RMAPI@{RMAPI}}
+\index{RMAPI@{RMAPI}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{RMAPI}{RMAPI}}
+{\footnotesize\ttfamily \#define RMAPI~inline}
+
+
+
+raymath v1.\+5 -\/ Math functions to work with \mbox{\hyperlink{struct_vector2}{Vector2}}, \mbox{\hyperlink{struct_vector3}{Vector3}}, \mbox{\hyperlink{struct_matrix}{Matrix}} and Quaternions 
+
+CONFIGURATION\+:
+
+\#define RAYMATH\+\_\+\+IMPLEMENTATION Generates the implementation of the library into the included file. If not defined, the library is in header only mode and can be included in other headers or source files without problems. But only ONE file should hold the implementation.
+
+\#define RAYMATH\+\_\+\+STATIC\+\_\+\+INLINE Define static inline functions code, so \#include header suffices for use. This may use up lots of memory.
+
+CONVENTIONS\+:
+
+
+\begin{DoxyItemize}
+\item Functions are always self-\/contained, no function use another raymath function inside, required code is directly re-\/implemented inside
+\item Functions input parameters are always received by value (2 unavoidable exceptions)
+\item Functions use always a \char`\"{}result\char`\"{} variable for return
+\item Functions are always defined inline
+\item Angles are always in radians (DEG2\+RAD/\+RAD2\+DEG macros provided for convenience)
+\end{DoxyItemize}
+
+LICENSE\+: zlib/libpng
+
+Copyright (c) 2015-\/2022 Ramon Santamaria (@raysan5)
+
+This software is provided \char`\"{}as-\/is\char`\"{}, without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions\+:
+
+
+\begin{DoxyEnumerate}
+\item The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+\item Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+\item This notice may not be removed or altered from any source distribution. 
+\end{DoxyEnumerate}\mbox{\Hypertarget{raymath_8h_a3d6b04df0f18e51d2d98b684023b6c20}\label{raymath_8h_a3d6b04df0f18e51d2d98b684023b6c20}} 
+\index{raymath.h@{raymath.h}!Vector3ToFloat@{Vector3ToFloat}}
+\index{Vector3ToFloat@{Vector3ToFloat}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3ToFloat}{Vector3ToFloat}}
+{\footnotesize\ttfamily \#define Vector3\+To\+Float(\begin{DoxyParamCaption}\item[{}]{vec }\end{DoxyParamCaption})~(\mbox{\hyperlink{raymath_8h_aa58b8701d2a45cf7a7d26a42eaba9454}{Vector3\+To\+FloatV}}(vec).v)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{raymath_8h_a252876b42017de5f4410b3fa36c20c8f}\label{raymath_8h_a252876b42017de5f4410b3fa36c20c8f}} 
+\index{raymath.h@{raymath.h}!float16@{float16}}
+\index{float16@{float16}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{float16}{float16}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structfloat16}{float16}} \mbox{\hyperlink{structfloat16}{float16}}}
+
+\mbox{\Hypertarget{raymath_8h_a79779bd606ab5af52c38e59729245f27}\label{raymath_8h_a79779bd606ab5af52c38e59729245f27}} 
+\index{raymath.h@{raymath.h}!float3@{float3}}
+\index{float3@{float3}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{float3}{float3}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structfloat3}{float3}} \mbox{\hyperlink{structfloat3}{float3}}}
+
+\mbox{\Hypertarget{raymath_8h_a9570374e3dbc873595100dae1e584459}\label{raymath_8h_a9570374e3dbc873595100dae1e584459}} 
+\index{raymath.h@{raymath.h}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Matrix}{Matrix}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{struct_matrix}{Matrix}}}
+
+\mbox{\Hypertarget{raymath_8h_a6dd5722261331a39205262505daaa349}\label{raymath_8h_a6dd5722261331a39205262505daaa349}} 
+\index{raymath.h@{raymath.h}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Quaternion}{Quaternion}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_vector4}{Vector4}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}
+
+\mbox{\Hypertarget{raymath_8h_a682e0907769244e5f75f92e91460878f}\label{raymath_8h_a682e0907769244e5f75f92e91460878f}} 
+\index{raymath.h@{raymath.h}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2}{Vector2}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2}{Vector2}}}
+
+\mbox{\Hypertarget{raymath_8h_a3b29ec21f9ba832999ff4fdff39dd804}\label{raymath_8h_a3b29ec21f9ba832999ff4fdff39dd804}} 
+\index{raymath.h@{raymath.h}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3}{Vector3}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_vector3}{Vector3}} \mbox{\hyperlink{struct_vector3}{Vector3}}}
+
+\mbox{\Hypertarget{raymath_8h_aff3ba508436bec4750e91364badfbc99}\label{raymath_8h_aff3ba508436bec4750e91364badfbc99}} 
+\index{raymath.h@{raymath.h}!Vector4@{Vector4}}
+\index{Vector4@{Vector4}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector4}{Vector4}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_vector4}{Vector4}} \mbox{\hyperlink{struct_vector4}{Vector4}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{raymath_8h_a0b07a45c6e21093f520658daecd01f36}\label{raymath_8h_a0b07a45c6e21093f520658daecd01f36}} 
+\index{raymath.h@{raymath.h}!Clamp@{Clamp}}
+\index{Clamp@{Clamp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Clamp()}{Clamp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Clamp (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a41ac641607e78233960eaf5cc545777a}\label{raymath_8h_a41ac641607e78233960eaf5cc545777a}} 
+\index{raymath.h@{raymath.h}!FloatEquals@{FloatEquals}}
+\index{FloatEquals@{FloatEquals}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{FloatEquals()}{FloatEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int Float\+Equals (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aae383c100851880be4e0ebdc93e63126}\label{raymath_8h_aae383c100851880be4e0ebdc93e63126}} 
+\index{raymath.h@{raymath.h}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Lerp (\begin{DoxyParamCaption}\item[{float}]{start,  }\item[{float}]{end,  }\item[{float}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ac75e0c944d4a790babd770c0a736885d}\label{raymath_8h_ac75e0c944d4a790babd770c0a736885d}} 
+\index{raymath.h@{raymath.h}!MatrixAdd@{MatrixAdd}}
+\index{MatrixAdd@{MatrixAdd}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixAdd()}{MatrixAdd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{left,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aa4383cc17b3509d75ff39251c95deaf1}\label{raymath_8h_aa4383cc17b3509d75ff39251c95deaf1}} 
+\index{raymath.h@{raymath.h}!MatrixDeterminant@{MatrixDeterminant}}
+\index{MatrixDeterminant@{MatrixDeterminant}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixDeterminant()}{MatrixDeterminant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Matrix\+Determinant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ae1efda40c1401419f671075dd5260f0b}\label{raymath_8h_ae1efda40c1401419f671075dd5260f0b}} 
+\index{raymath.h@{raymath.h}!MatrixFrustum@{MatrixFrustum}}
+\index{MatrixFrustum@{MatrixFrustum}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixFrustum()}{MatrixFrustum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Frustum (\begin{DoxyParamCaption}\item[{double}]{left,  }\item[{double}]{right,  }\item[{double}]{bottom,  }\item[{double}]{top,  }\item[{double}]{near,  }\item[{double}]{far }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a647abce78f01ab51115f210e8f21138a}\label{raymath_8h_a647abce78f01ab51115f210e8f21138a}} 
+\index{raymath.h@{raymath.h}!MatrixIdentity@{MatrixIdentity}}
+\index{MatrixIdentity@{MatrixIdentity}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixIdentity()}{MatrixIdentity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Identity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aa9ff37e5d26599d6f1fc9347a09190b6}\label{raymath_8h_aa9ff37e5d26599d6f1fc9347a09190b6}} 
+\index{raymath.h@{raymath.h}!MatrixInvert@{MatrixInvert}}
+\index{MatrixInvert@{MatrixInvert}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixInvert()}{MatrixInvert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Invert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_af461572ca6cbbe6054df81ad38583bda}\label{raymath_8h_af461572ca6cbbe6054df81ad38583bda}} 
+\index{raymath.h@{raymath.h}!MatrixLookAt@{MatrixLookAt}}
+\index{MatrixLookAt@{MatrixLookAt}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixLookAt()}{MatrixLookAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Look\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{eye,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{target,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{up }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_afd6ab41d3aa131a2e56c163d4d804843}\label{raymath_8h_afd6ab41d3aa131a2e56c163d4d804843}} 
+\index{raymath.h@{raymath.h}!MatrixMultiply@{MatrixMultiply}}
+\index{MatrixMultiply@{MatrixMultiply}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixMultiply()}{MatrixMultiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{left,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ae634629db086656dcc7452bba8640c6c}\label{raymath_8h_ae634629db086656dcc7452bba8640c6c}} 
+\index{raymath.h@{raymath.h}!MatrixOrtho@{MatrixOrtho}}
+\index{MatrixOrtho@{MatrixOrtho}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixOrtho()}{MatrixOrtho()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Ortho (\begin{DoxyParamCaption}\item[{double}]{left,  }\item[{double}]{right,  }\item[{double}]{bottom,  }\item[{double}]{top,  }\item[{double}]{near,  }\item[{double}]{far }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aa7e0bb06a49e0e672aa9928b59e676c3}\label{raymath_8h_aa7e0bb06a49e0e672aa9928b59e676c3}} 
+\index{raymath.h@{raymath.h}!MatrixPerspective@{MatrixPerspective}}
+\index{MatrixPerspective@{MatrixPerspective}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixPerspective()}{MatrixPerspective()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Perspective (\begin{DoxyParamCaption}\item[{double}]{fovy,  }\item[{double}]{aspect,  }\item[{double}]{near,  }\item[{double}]{far }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a291d82b271ce29260f45270f0cad292a}\label{raymath_8h_a291d82b271ce29260f45270f0cad292a}} 
+\index{raymath.h@{raymath.h}!MatrixRotate@{MatrixRotate}}
+\index{MatrixRotate@{MatrixRotate}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixRotate()}{MatrixRotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{axis,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a67985a003e1746e2c626210435dfcf2f}\label{raymath_8h_a67985a003e1746e2c626210435dfcf2f}} 
+\index{raymath.h@{raymath.h}!MatrixRotateX@{MatrixRotateX}}
+\index{MatrixRotateX@{MatrixRotateX}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixRotateX()}{MatrixRotateX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+RotateX (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a290faba02990e8ee64560548c5a0bb97}\label{raymath_8h_a290faba02990e8ee64560548c5a0bb97}} 
+\index{raymath.h@{raymath.h}!MatrixRotateXYZ@{MatrixRotateXYZ}}
+\index{MatrixRotateXYZ@{MatrixRotateXYZ}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixRotateXYZ()}{MatrixRotateXYZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Rotate\+XYZ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ad123328c35e071554d4b6ec997af9e01}\label{raymath_8h_ad123328c35e071554d4b6ec997af9e01}} 
+\index{raymath.h@{raymath.h}!MatrixRotateY@{MatrixRotateY}}
+\index{MatrixRotateY@{MatrixRotateY}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixRotateY()}{MatrixRotateY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+RotateY (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_adda398deaad82ea5122f47859a3bd638}\label{raymath_8h_adda398deaad82ea5122f47859a3bd638}} 
+\index{raymath.h@{raymath.h}!MatrixRotateZ@{MatrixRotateZ}}
+\index{MatrixRotateZ@{MatrixRotateZ}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixRotateZ()}{MatrixRotateZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+RotateZ (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ad8937d6d10eec038b1a4c9414f6843e6}\label{raymath_8h_ad8937d6d10eec038b1a4c9414f6843e6}} 
+\index{raymath.h@{raymath.h}!MatrixRotateZYX@{MatrixRotateZYX}}
+\index{MatrixRotateZYX@{MatrixRotateZYX}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixRotateZYX()}{MatrixRotateZYX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Rotate\+ZYX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a4aa28cf2ed4f7c4be868d097be426f74}\label{raymath_8h_a4aa28cf2ed4f7c4be868d097be426f74}} 
+\index{raymath.h@{raymath.h}!MatrixScale@{MatrixScale}}
+\index{MatrixScale@{MatrixScale}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixScale()}{MatrixScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Scale (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aaa3add0a36ad3b4b2577a74a9cdf3d8e}\label{raymath_8h_aaa3add0a36ad3b4b2577a74a9cdf3d8e}} 
+\index{raymath.h@{raymath.h}!MatrixSubtract@{MatrixSubtract}}
+\index{MatrixSubtract@{MatrixSubtract}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixSubtract()}{MatrixSubtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Subtract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{left,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a878ab48c99790b47601594cf478e2fc1}\label{raymath_8h_a878ab48c99790b47601594cf478e2fc1}} 
+\index{raymath.h@{raymath.h}!MatrixToFloatV@{MatrixToFloatV}}
+\index{MatrixToFloatV@{MatrixToFloatV}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixToFloatV()}{MatrixToFloatV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{structfloat16}{float16}} Matrix\+To\+FloatV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_abfb830cd60d2e12d8b317d08628fb368}\label{raymath_8h_abfb830cd60d2e12d8b317d08628fb368}} 
+\index{raymath.h@{raymath.h}!MatrixTrace@{MatrixTrace}}
+\index{MatrixTrace@{MatrixTrace}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixTrace()}{MatrixTrace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Matrix\+Trace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a7d29c7724a2715f7eb09f2c72f3b4a29}\label{raymath_8h_a7d29c7724a2715f7eb09f2c72f3b4a29}} 
+\index{raymath.h@{raymath.h}!MatrixTranslate@{MatrixTranslate}}
+\index{MatrixTranslate@{MatrixTranslate}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixTranslate()}{MatrixTranslate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Translate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_af0a31f5fe6c4e07b29ec187c6a37f91c}\label{raymath_8h_af0a31f5fe6c4e07b29ec187c6a37f91c}} 
+\index{raymath.h@{raymath.h}!MatrixTranspose@{MatrixTranspose}}
+\index{MatrixTranspose@{MatrixTranspose}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{MatrixTranspose()}{MatrixTranspose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Matrix\+Transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a5addef0c374207a9592172a53378a704}\label{raymath_8h_a5addef0c374207a9592172a53378a704}} 
+\index{raymath.h@{raymath.h}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Normalize (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{float}]{start,  }\item[{float}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a7ab920bfdb27b848bc55e3fd3833969f}\label{raymath_8h_a7ab920bfdb27b848bc55e3fd3833969f}} 
+\index{raymath.h@{raymath.h}!QuaternionAdd@{QuaternionAdd}}
+\index{QuaternionAdd@{QuaternionAdd}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionAdd()}{QuaternionAdd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q1,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_acd14e6c221eb31f61438f616c7fa437c}\label{raymath_8h_acd14e6c221eb31f61438f616c7fa437c}} 
+\index{raymath.h@{raymath.h}!QuaternionAddValue@{QuaternionAddValue}}
+\index{QuaternionAddValue@{QuaternionAddValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionAddValue()}{QuaternionAddValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Add\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q,  }\item[{float}]{add }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a7a5d60c555e3536d702085c00e01a712}\label{raymath_8h_a7a5d60c555e3536d702085c00e01a712}} 
+\index{raymath.h@{raymath.h}!QuaternionDivide@{QuaternionDivide}}
+\index{QuaternionDivide@{QuaternionDivide}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionDivide()}{QuaternionDivide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Divide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q1,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a870610d97f178dc2904949e327f4631a}\label{raymath_8h_a870610d97f178dc2904949e327f4631a}} 
+\index{raymath.h@{raymath.h}!QuaternionEquals@{QuaternionEquals}}
+\index{QuaternionEquals@{QuaternionEquals}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionEquals()}{QuaternionEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int Quaternion\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{p,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab9f4d7ea8c16fcb7cafa09967b49b744}\label{raymath_8h_ab9f4d7ea8c16fcb7cafa09967b49b744}} 
+\index{raymath.h@{raymath.h}!QuaternionFromAxisAngle@{QuaternionFromAxisAngle}}
+\index{QuaternionFromAxisAngle@{QuaternionFromAxisAngle}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionFromAxisAngle()}{QuaternionFromAxisAngle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+From\+Axis\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{axis,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a31e173c48cc5d630bb455485f5b0f9ab}\label{raymath_8h_a31e173c48cc5d630bb455485f5b0f9ab}} 
+\index{raymath.h@{raymath.h}!QuaternionFromEuler@{QuaternionFromEuler}}
+\index{QuaternionFromEuler@{QuaternionFromEuler}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionFromEuler()}{QuaternionFromEuler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+From\+Euler (\begin{DoxyParamCaption}\item[{float}]{pitch,  }\item[{float}]{yaw,  }\item[{float}]{roll }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a36f723e41a0b52c747e4f41d268a95e1}\label{raymath_8h_a36f723e41a0b52c747e4f41d268a95e1}} 
+\index{raymath.h@{raymath.h}!QuaternionFromMatrix@{QuaternionFromMatrix}}
+\index{QuaternionFromMatrix@{QuaternionFromMatrix}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionFromMatrix()}{QuaternionFromMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+From\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a3a481ec8d13df9243b22436d7382cfb6}\label{raymath_8h_a3a481ec8d13df9243b22436d7382cfb6}} 
+\index{raymath.h@{raymath.h}!QuaternionFromVector3ToVector3@{QuaternionFromVector3ToVector3}}
+\index{QuaternionFromVector3ToVector3@{QuaternionFromVector3ToVector3}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionFromVector3ToVector3()}{QuaternionFromVector3ToVector3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+From\+Vector3\+To\+Vector3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{from,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{to }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a35f16cc7a2d8b48e7c48b8be2e802feb}\label{raymath_8h_a35f16cc7a2d8b48e7c48b8be2e802feb}} 
+\index{raymath.h@{raymath.h}!QuaternionIdentity@{QuaternionIdentity}}
+\index{QuaternionIdentity@{QuaternionIdentity}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionIdentity()}{QuaternionIdentity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Identity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a3620ee8107ca78e468dbbffc3ffc5cfa}\label{raymath_8h_a3620ee8107ca78e468dbbffc3ffc5cfa}} 
+\index{raymath.h@{raymath.h}!QuaternionInvert@{QuaternionInvert}}
+\index{QuaternionInvert@{QuaternionInvert}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionInvert()}{QuaternionInvert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Invert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a1227fe190d75c25b8e52dd8e84b9a4a6}\label{raymath_8h_a1227fe190d75c25b8e52dd8e84b9a4a6}} 
+\index{raymath.h@{raymath.h}!QuaternionLength@{QuaternionLength}}
+\index{QuaternionLength@{QuaternionLength}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionLength()}{QuaternionLength()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Quaternion\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_adbf9b4f5ff33611ddf1095e4f77c19d8}\label{raymath_8h_adbf9b4f5ff33611ddf1095e4f77c19d8}} 
+\index{raymath.h@{raymath.h}!QuaternionLerp@{QuaternionLerp}}
+\index{QuaternionLerp@{QuaternionLerp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionLerp()}{QuaternionLerp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Lerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q1,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q2,  }\item[{float}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ad87ce027683887b4764979a62dbb43d4}\label{raymath_8h_ad87ce027683887b4764979a62dbb43d4}} 
+\index{raymath.h@{raymath.h}!QuaternionMultiply@{QuaternionMultiply}}
+\index{QuaternionMultiply@{QuaternionMultiply}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionMultiply()}{QuaternionMultiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q1,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a397eb5f38ae2fbb412f1e4ee10c1bd3a}\label{raymath_8h_a397eb5f38ae2fbb412f1e4ee10c1bd3a}} 
+\index{raymath.h@{raymath.h}!QuaternionNlerp@{QuaternionNlerp}}
+\index{QuaternionNlerp@{QuaternionNlerp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionNlerp()}{QuaternionNlerp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Nlerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q1,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q2,  }\item[{float}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a317b9e6624c9116d5988b871357f1321}\label{raymath_8h_a317b9e6624c9116d5988b871357f1321}} 
+\index{raymath.h@{raymath.h}!QuaternionNormalize@{QuaternionNormalize}}
+\index{QuaternionNormalize@{QuaternionNormalize}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionNormalize()}{QuaternionNormalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a418dc380426604f4742f4b682a0eedfa}\label{raymath_8h_a418dc380426604f4742f4b682a0eedfa}} 
+\index{raymath.h@{raymath.h}!QuaternionScale@{QuaternionScale}}
+\index{QuaternionScale@{QuaternionScale}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionScale()}{QuaternionScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q,  }\item[{float}]{mul }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab653195bf6545ca4dc3951bd391fd06f}\label{raymath_8h_ab653195bf6545ca4dc3951bd391fd06f}} 
+\index{raymath.h@{raymath.h}!QuaternionSlerp@{QuaternionSlerp}}
+\index{QuaternionSlerp@{QuaternionSlerp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionSlerp()}{QuaternionSlerp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Slerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q1,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q2,  }\item[{float}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a7069bcc6194b249508a4e469498dd492}\label{raymath_8h_a7069bcc6194b249508a4e469498dd492}} 
+\index{raymath.h@{raymath.h}!QuaternionSubtract@{QuaternionSubtract}}
+\index{QuaternionSubtract@{QuaternionSubtract}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionSubtract()}{QuaternionSubtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Subtract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q1,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ae8f45f9ec838b53756edd9565e127650}\label{raymath_8h_ae8f45f9ec838b53756edd9565e127650}} 
+\index{raymath.h@{raymath.h}!QuaternionSubtractValue@{QuaternionSubtractValue}}
+\index{QuaternionSubtractValue@{QuaternionSubtractValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionSubtractValue()}{QuaternionSubtractValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Subtract\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q,  }\item[{float}]{sub }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ad34da500a4c816c1f3e8e037f2872ec6}\label{raymath_8h_ad34da500a4c816c1f3e8e037f2872ec6}} 
+\index{raymath.h@{raymath.h}!QuaternionToAxisAngle@{QuaternionToAxisAngle}}
+\index{QuaternionToAxisAngle@{QuaternionToAxisAngle}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionToAxisAngle()}{QuaternionToAxisAngle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} void Quaternion\+To\+Axis\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}} $\ast$}]{out\+Axis,  }\item[{float $\ast$}]{out\+Angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_abe5352214a9fb6a4fcc021c0dc891cd6}\label{raymath_8h_abe5352214a9fb6a4fcc021c0dc891cd6}} 
+\index{raymath.h@{raymath.h}!QuaternionToEuler@{QuaternionToEuler}}
+\index{QuaternionToEuler@{QuaternionToEuler}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionToEuler()}{QuaternionToEuler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Quaternion\+To\+Euler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a3a89d1b6c028bdac4b51371c78fa8bde}\label{raymath_8h_a3a89d1b6c028bdac4b51371c78fa8bde}} 
+\index{raymath.h@{raymath.h}!QuaternionToMatrix@{QuaternionToMatrix}}
+\index{QuaternionToMatrix@{QuaternionToMatrix}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionToMatrix()}{QuaternionToMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_matrix}{Matrix}} Quaternion\+To\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aa7df7469aefb4a2d84111396c58a2fef}\label{raymath_8h_aa7df7469aefb4a2d84111396c58a2fef}} 
+\index{raymath.h@{raymath.h}!QuaternionTransform@{QuaternionTransform}}
+\index{QuaternionTransform@{QuaternionTransform}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{QuaternionTransform()}{QuaternionTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}} Quaternion\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aedcf4bebe646ff13ffda8a8b2c52ba4f}\label{raymath_8h_aedcf4bebe646ff13ffda8a8b2c52ba4f}} 
+\index{raymath.h@{raymath.h}!Remap@{Remap}}
+\index{Remap@{Remap}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Remap()}{Remap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Remap (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{float}]{input\+Start,  }\item[{float}]{input\+End,  }\item[{float}]{output\+Start,  }\item[{float}]{output\+End }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a63a37b645cea3eadb21eb25bae3a16be}\label{raymath_8h_a63a37b645cea3eadb21eb25bae3a16be}} 
+\index{raymath.h@{raymath.h}!Vector2Add@{Vector2Add}}
+\index{Vector2Add@{Vector2Add}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Add()}{Vector2Add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a3dcb077edb2485b4b67ae04258169042}\label{raymath_8h_a3dcb077edb2485b4b67ae04258169042}} 
+\index{raymath.h@{raymath.h}!Vector2AddValue@{Vector2AddValue}}
+\index{Vector2AddValue@{Vector2AddValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2AddValue()}{Vector2AddValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Add\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{float}]{add }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_af93a4bd7244a5828ef7b29d8d54f3017}\label{raymath_8h_af93a4bd7244a5828ef7b29d8d54f3017}} 
+\index{raymath.h@{raymath.h}!Vector2Angle@{Vector2Angle}}
+\index{Vector2Angle@{Vector2Angle}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Angle()}{Vector2Angle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector2\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a8b92f34da510cd9d24c6eac837282b05}\label{raymath_8h_a8b92f34da510cd9d24c6eac837282b05}} 
+\index{raymath.h@{raymath.h}!Vector2Clamp@{Vector2Clamp}}
+\index{Vector2Clamp@{Vector2Clamp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Clamp()}{Vector2Clamp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Clamp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{min,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a090f410ccd7877303169c08a254b3961}\label{raymath_8h_a090f410ccd7877303169c08a254b3961}} 
+\index{raymath.h@{raymath.h}!Vector2ClampValue@{Vector2ClampValue}}
+\index{Vector2ClampValue@{Vector2ClampValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2ClampValue()}{Vector2ClampValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Clamp\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_abbf4114e21224b9c25d164980c9c7da9}\label{raymath_8h_abbf4114e21224b9c25d164980c9c7da9}} 
+\index{raymath.h@{raymath.h}!Vector2Distance@{Vector2Distance}}
+\index{Vector2Distance@{Vector2Distance}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Distance()}{Vector2Distance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector2\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab41e2b4e0a05ddca2f52969a094a6974}\label{raymath_8h_ab41e2b4e0a05ddca2f52969a094a6974}} 
+\index{raymath.h@{raymath.h}!Vector2DistanceSqr@{Vector2DistanceSqr}}
+\index{Vector2DistanceSqr@{Vector2DistanceSqr}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2DistanceSqr()}{Vector2DistanceSqr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector2\+Distance\+Sqr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a3ca3a18fadc9976562d1b41a1592aa6c}\label{raymath_8h_a3ca3a18fadc9976562d1b41a1592aa6c}} 
+\index{raymath.h@{raymath.h}!Vector2Divide@{Vector2Divide}}
+\index{Vector2Divide@{Vector2Divide}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Divide()}{Vector2Divide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Divide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a723285294d8d92d248d606f893b4112a}\label{raymath_8h_a723285294d8d92d248d606f893b4112a}} 
+\index{raymath.h@{raymath.h}!Vector2DotProduct@{Vector2DotProduct}}
+\index{Vector2DotProduct@{Vector2DotProduct}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2DotProduct()}{Vector2DotProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector2\+Dot\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ae9c28dc782952e088f9f713d34447e06}\label{raymath_8h_ae9c28dc782952e088f9f713d34447e06}} 
+\index{raymath.h@{raymath.h}!Vector2Equals@{Vector2Equals}}
+\index{Vector2Equals@{Vector2Equals}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Equals()}{Vector2Equals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int Vector2\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{p,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a34edd96bba66ff0becd7adbd9d3882eb}\label{raymath_8h_a34edd96bba66ff0becd7adbd9d3882eb}} 
+\index{raymath.h@{raymath.h}!Vector2Invert@{Vector2Invert}}
+\index{Vector2Invert@{Vector2Invert}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Invert()}{Vector2Invert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Invert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a7d277ce7aa67e778c700b693f7373f33}\label{raymath_8h_a7d277ce7aa67e778c700b693f7373f33}} 
+\index{raymath.h@{raymath.h}!Vector2Length@{Vector2Length}}
+\index{Vector2Length@{Vector2Length}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Length()}{Vector2Length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector2\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a2f27b4fecd5a44d802474ec6e2753fd1}\label{raymath_8h_a2f27b4fecd5a44d802474ec6e2753fd1}} 
+\index{raymath.h@{raymath.h}!Vector2LengthSqr@{Vector2LengthSqr}}
+\index{Vector2LengthSqr@{Vector2LengthSqr}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2LengthSqr()}{Vector2LengthSqr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector2\+Length\+Sqr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ae49f5034e7d995f045ae9bd0fc0e9b5a}\label{raymath_8h_ae49f5034e7d995f045ae9bd0fc0e9b5a}} 
+\index{raymath.h@{raymath.h}!Vector2Lerp@{Vector2Lerp}}
+\index{Vector2Lerp@{Vector2Lerp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Lerp()}{Vector2Lerp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Lerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2,  }\item[{float}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a64b3f6b6756ec17a7da30a5b9e40f804}\label{raymath_8h_a64b3f6b6756ec17a7da30a5b9e40f804}} 
+\index{raymath.h@{raymath.h}!Vector2MoveTowards@{Vector2MoveTowards}}
+\index{Vector2MoveTowards@{Vector2MoveTowards}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2MoveTowards()}{Vector2MoveTowards()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Move\+Towards (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{target,  }\item[{float}]{max\+Distance }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a316c466fedd2a713c7cc235ee15b3ec1}\label{raymath_8h_a316c466fedd2a713c7cc235ee15b3ec1}} 
+\index{raymath.h@{raymath.h}!Vector2Multiply@{Vector2Multiply}}
+\index{Vector2Multiply@{Vector2Multiply}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Multiply()}{Vector2Multiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a13703754a211b5a0af74bd97324c33aa}\label{raymath_8h_a13703754a211b5a0af74bd97324c33aa}} 
+\index{raymath.h@{raymath.h}!Vector2Negate@{Vector2Negate}}
+\index{Vector2Negate@{Vector2Negate}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Negate()}{Vector2Negate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Negate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a78652b9abae16b9b0f2c6d1ec21a8c44}\label{raymath_8h_a78652b9abae16b9b0f2c6d1ec21a8c44}} 
+\index{raymath.h@{raymath.h}!Vector2Normalize@{Vector2Normalize}}
+\index{Vector2Normalize@{Vector2Normalize}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Normalize()}{Vector2Normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a2cad4af19d258dabdb7e9887dcb4e9f8}\label{raymath_8h_a2cad4af19d258dabdb7e9887dcb4e9f8}} 
+\index{raymath.h@{raymath.h}!Vector2One@{Vector2One}}
+\index{Vector2One@{Vector2One}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2One()}{Vector2One()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+One (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a62a8e12bd9c63b46033aa68c3b365698}\label{raymath_8h_a62a8e12bd9c63b46033aa68c3b365698}} 
+\index{raymath.h@{raymath.h}!Vector2Reflect@{Vector2Reflect}}
+\index{Vector2Reflect@{Vector2Reflect}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Reflect()}{Vector2Reflect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Reflect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{normal }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a5179291da22a5e7971aecc97057ac1d5}\label{raymath_8h_a5179291da22a5e7971aecc97057ac1d5}} 
+\index{raymath.h@{raymath.h}!Vector2Rotate@{Vector2Rotate}}
+\index{Vector2Rotate@{Vector2Rotate}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Rotate()}{Vector2Rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a6d910886c3f0feaca37c97d8f4592a5d}\label{raymath_8h_a6d910886c3f0feaca37c97d8f4592a5d}} 
+\index{raymath.h@{raymath.h}!Vector2Scale@{Vector2Scale}}
+\index{Vector2Scale@{Vector2Scale}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Scale()}{Vector2Scale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{float}]{scale }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab5bfa0e0076f68073927cc085451b690}\label{raymath_8h_ab5bfa0e0076f68073927cc085451b690}} 
+\index{raymath.h@{raymath.h}!Vector2Subtract@{Vector2Subtract}}
+\index{Vector2Subtract@{Vector2Subtract}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Subtract()}{Vector2Subtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Subtract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab4e5e31ec7acfbe569a901bfa479afca}\label{raymath_8h_ab4e5e31ec7acfbe569a901bfa479afca}} 
+\index{raymath.h@{raymath.h}!Vector2SubtractValue@{Vector2SubtractValue}}
+\index{Vector2SubtractValue@{Vector2SubtractValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2SubtractValue()}{Vector2SubtractValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Subtract\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{float}]{sub }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a12bf6e9273b8f3e4922f6ba2300e3098}\label{raymath_8h_a12bf6e9273b8f3e4922f6ba2300e3098}} 
+\index{raymath.h@{raymath.h}!Vector2Transform@{Vector2Transform}}
+\index{Vector2Transform@{Vector2Transform}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Transform()}{Vector2Transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a27733083400b2aabc79ad5f3e7a675d2}\label{raymath_8h_a27733083400b2aabc79ad5f3e7a675d2}} 
+\index{raymath.h@{raymath.h}!Vector2Zero@{Vector2Zero}}
+\index{Vector2Zero@{Vector2Zero}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Zero()}{Vector2Zero()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+Zero (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a580d9c8fc252e98becdf33bd36733b08}\label{raymath_8h_a580d9c8fc252e98becdf33bd36733b08}} 
+\index{raymath.h@{raymath.h}!Vector3Add@{Vector3Add}}
+\index{Vector3Add@{Vector3Add}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Add()}{Vector3Add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a36cada3013deb53f9717045a4eb45e6e}\label{raymath_8h_a36cada3013deb53f9717045a4eb45e6e}} 
+\index{raymath.h@{raymath.h}!Vector3AddValue@{Vector3AddValue}}
+\index{Vector3AddValue@{Vector3AddValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3AddValue()}{Vector3AddValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Add\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{float}]{add }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a37f2f5cab795b979f648f384aec5d4dc}\label{raymath_8h_a37f2f5cab795b979f648f384aec5d4dc}} 
+\index{raymath.h@{raymath.h}!Vector3Angle@{Vector3Angle}}
+\index{Vector3Angle@{Vector3Angle}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Angle()}{Vector3Angle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector3\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a52f19210b09f8fc809fdc4bb2b3f0a92}\label{raymath_8h_a52f19210b09f8fc809fdc4bb2b3f0a92}} 
+\index{raymath.h@{raymath.h}!Vector3Barycenter@{Vector3Barycenter}}
+\index{Vector3Barycenter@{Vector3Barycenter}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Barycenter()}{Vector3Barycenter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Barycenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{p,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{a,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{b,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a151bdc43cc948cc65c920fba1f2be239}\label{raymath_8h_a151bdc43cc948cc65c920fba1f2be239}} 
+\index{raymath.h@{raymath.h}!Vector3Clamp@{Vector3Clamp}}
+\index{Vector3Clamp@{Vector3Clamp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Clamp()}{Vector3Clamp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Clamp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{min,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab6abe31f8df17d39a71e0aaa15d3ca40}\label{raymath_8h_ab6abe31f8df17d39a71e0aaa15d3ca40}} 
+\index{raymath.h@{raymath.h}!Vector3ClampValue@{Vector3ClampValue}}
+\index{Vector3ClampValue@{Vector3ClampValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3ClampValue()}{Vector3ClampValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Clamp\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_acaa552c2daada4f459d363ac9cf41259}\label{raymath_8h_acaa552c2daada4f459d363ac9cf41259}} 
+\index{raymath.h@{raymath.h}!Vector3CrossProduct@{Vector3CrossProduct}}
+\index{Vector3CrossProduct@{Vector3CrossProduct}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3CrossProduct()}{Vector3CrossProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Cross\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aa34c74ead1e86cea925973c7f9a69f75}\label{raymath_8h_aa34c74ead1e86cea925973c7f9a69f75}} 
+\index{raymath.h@{raymath.h}!Vector3Distance@{Vector3Distance}}
+\index{Vector3Distance@{Vector3Distance}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Distance()}{Vector3Distance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector3\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a7415f2074e6a8ff662676b377e70f8f3}\label{raymath_8h_a7415f2074e6a8ff662676b377e70f8f3}} 
+\index{raymath.h@{raymath.h}!Vector3DistanceSqr@{Vector3DistanceSqr}}
+\index{Vector3DistanceSqr@{Vector3DistanceSqr}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3DistanceSqr()}{Vector3DistanceSqr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector3\+Distance\+Sqr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a9edf61ff3c0e7f60cac383c260ebcee9}\label{raymath_8h_a9edf61ff3c0e7f60cac383c260ebcee9}} 
+\index{raymath.h@{raymath.h}!Vector3Divide@{Vector3Divide}}
+\index{Vector3Divide@{Vector3Divide}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Divide()}{Vector3Divide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Divide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a49b8b970f2e879b393530ee1d58ca41f}\label{raymath_8h_a49b8b970f2e879b393530ee1d58ca41f}} 
+\index{raymath.h@{raymath.h}!Vector3DotProduct@{Vector3DotProduct}}
+\index{Vector3DotProduct@{Vector3DotProduct}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3DotProduct()}{Vector3DotProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector3\+Dot\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a77f45411fe5d1267a5b37cbbf4da0273}\label{raymath_8h_a77f45411fe5d1267a5b37cbbf4da0273}} 
+\index{raymath.h@{raymath.h}!Vector3Equals@{Vector3Equals}}
+\index{Vector3Equals@{Vector3Equals}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Equals()}{Vector3Equals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} int Vector3\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{p,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aef7677c3662dc0e459d7be1354cc3f03}\label{raymath_8h_aef7677c3662dc0e459d7be1354cc3f03}} 
+\index{raymath.h@{raymath.h}!Vector3Invert@{Vector3Invert}}
+\index{Vector3Invert@{Vector3Invert}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Invert()}{Vector3Invert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Invert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ac42e3be1a7d90c9259845ad643cbb0b0}\label{raymath_8h_ac42e3be1a7d90c9259845ad643cbb0b0}} 
+\index{raymath.h@{raymath.h}!Vector3Length@{Vector3Length}}
+\index{Vector3Length@{Vector3Length}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Length()}{Vector3Length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector3\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector3}{Vector3}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a41dd411f5e739a81ffcc5c04caf4aeaa}\label{raymath_8h_a41dd411f5e739a81ffcc5c04caf4aeaa}} 
+\index{raymath.h@{raymath.h}!Vector3LengthSqr@{Vector3LengthSqr}}
+\index{Vector3LengthSqr@{Vector3LengthSqr}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3LengthSqr()}{Vector3LengthSqr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Vector3\+Length\+Sqr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector3}{Vector3}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aa819c27c890517641054e5511acf66b2}\label{raymath_8h_aa819c27c890517641054e5511acf66b2}} 
+\index{raymath.h@{raymath.h}!Vector3Lerp@{Vector3Lerp}}
+\index{Vector3Lerp@{Vector3Lerp}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Lerp()}{Vector3Lerp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Lerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2,  }\item[{float}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ad825d3f589fd17698932c0ce558f806d}\label{raymath_8h_ad825d3f589fd17698932c0ce558f806d}} 
+\index{raymath.h@{raymath.h}!Vector3Max@{Vector3Max}}
+\index{Vector3Max@{Vector3Max}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Max()}{Vector3Max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a3c9e56f74162ce286311a1a4537481d8}\label{raymath_8h_a3c9e56f74162ce286311a1a4537481d8}} 
+\index{raymath.h@{raymath.h}!Vector3Min@{Vector3Min}}
+\index{Vector3Min@{Vector3Min}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Min()}{Vector3Min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a8511713318cf1b1f75b2ef22b0bf9cdc}\label{raymath_8h_a8511713318cf1b1f75b2ef22b0bf9cdc}} 
+\index{raymath.h@{raymath.h}!Vector3Multiply@{Vector3Multiply}}
+\index{Vector3Multiply@{Vector3Multiply}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Multiply()}{Vector3Multiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a8d398944c2d9e9966f14bd4b7a1cda8c}\label{raymath_8h_a8d398944c2d9e9966f14bd4b7a1cda8c}} 
+\index{raymath.h@{raymath.h}!Vector3Negate@{Vector3Negate}}
+\index{Vector3Negate@{Vector3Negate}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Negate()}{Vector3Negate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Negate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a0e2191ad7b6a38ee47af21f994f4c39f}\label{raymath_8h_a0e2191ad7b6a38ee47af21f994f4c39f}} 
+\index{raymath.h@{raymath.h}!Vector3Normalize@{Vector3Normalize}}
+\index{Vector3Normalize@{Vector3Normalize}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Normalize()}{Vector3Normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a600ffc14fcf899d0361ae74c8c6a9ffa}\label{raymath_8h_a600ffc14fcf899d0361ae74c8c6a9ffa}} 
+\index{raymath.h@{raymath.h}!Vector3One@{Vector3One}}
+\index{Vector3One@{Vector3One}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3One()}{Vector3One()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+One (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_abc1dc1d75e42165ae2da6298e0513507}\label{raymath_8h_abc1dc1d75e42165ae2da6298e0513507}} 
+\index{raymath.h@{raymath.h}!Vector3OrthoNormalize@{Vector3OrthoNormalize}}
+\index{Vector3OrthoNormalize@{Vector3OrthoNormalize}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3OrthoNormalize()}{Vector3OrthoNormalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} void Vector3\+Ortho\+Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}} $\ast$}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}} $\ast$}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a3d7a1ad4dc9f7992ef9d4f2a6e1737f0}\label{raymath_8h_a3d7a1ad4dc9f7992ef9d4f2a6e1737f0}} 
+\index{raymath.h@{raymath.h}!Vector3Perpendicular@{Vector3Perpendicular}}
+\index{Vector3Perpendicular@{Vector3Perpendicular}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Perpendicular()}{Vector3Perpendicular()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Perpendicular (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab965a588540ea1bb46366a2f87e9aca1}\label{raymath_8h_ab965a588540ea1bb46366a2f87e9aca1}} 
+\index{raymath.h@{raymath.h}!Vector3Reflect@{Vector3Reflect}}
+\index{Vector3Reflect@{Vector3Reflect}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Reflect()}{Vector3Reflect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Reflect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{normal }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_ab79daf932f3afe960326048f9568207c}\label{raymath_8h_ab79daf932f3afe960326048f9568207c}} 
+\index{raymath.h@{raymath.h}!Vector3Refract@{Vector3Refract}}
+\index{Vector3Refract@{Vector3Refract}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Refract()}{Vector3Refract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Refract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{n,  }\item[{float}]{r }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a4f5012987d7666737237b12312e5d8b3}\label{raymath_8h_a4f5012987d7666737237b12312e5d8b3}} 
+\index{raymath.h@{raymath.h}!Vector3RotateByAxisAngle@{Vector3RotateByAxisAngle}}
+\index{Vector3RotateByAxisAngle@{Vector3RotateByAxisAngle}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3RotateByAxisAngle()}{Vector3RotateByAxisAngle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Rotate\+By\+Axis\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{axis,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a1b814bf604a5927365a949d33fc50efc}\label{raymath_8h_a1b814bf604a5927365a949d33fc50efc}} 
+\index{raymath.h@{raymath.h}!Vector3RotateByQuaternion@{Vector3RotateByQuaternion}}
+\index{Vector3RotateByQuaternion@{Vector3RotateByQuaternion}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3RotateByQuaternion()}{Vector3RotateByQuaternion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Rotate\+By\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{\mbox{\hyperlink{raylib_8h_a6dd5722261331a39205262505daaa349}{Quaternion}}}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_af00337f5400339f373edb3e8398097e8}\label{raymath_8h_af00337f5400339f373edb3e8398097e8}} 
+\index{raymath.h@{raymath.h}!Vector3Scale@{Vector3Scale}}
+\index{Vector3Scale@{Vector3Scale}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Scale()}{Vector3Scale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{float}]{scalar }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a6c10f5797e02ba55659c00b4b4f3949b}\label{raymath_8h_a6c10f5797e02ba55659c00b4b4f3949b}} 
+\index{raymath.h@{raymath.h}!Vector3Subtract@{Vector3Subtract}}
+\index{Vector3Subtract@{Vector3Subtract}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Subtract()}{Vector3Subtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Subtract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aaef8e89e905132d211d0e4a65615e4c0}\label{raymath_8h_aaef8e89e905132d211d0e4a65615e4c0}} 
+\index{raymath.h@{raymath.h}!Vector3SubtractValue@{Vector3SubtractValue}}
+\index{Vector3SubtractValue@{Vector3SubtractValue}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3SubtractValue()}{Vector3SubtractValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Subtract\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{float}]{sub }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_aa58b8701d2a45cf7a7d26a42eaba9454}\label{raymath_8h_aa58b8701d2a45cf7a7d26a42eaba9454}} 
+\index{raymath.h@{raymath.h}!Vector3ToFloatV@{Vector3ToFloatV}}
+\index{Vector3ToFloatV@{Vector3ToFloatV}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3ToFloatV()}{Vector3ToFloatV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{structfloat3}{float3}} Vector3\+To\+FloatV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a157a392e361e981a65dd27620d13d2e9}\label{raymath_8h_a157a392e361e981a65dd27620d13d2e9}} 
+\index{raymath.h@{raymath.h}!Vector3Transform@{Vector3Transform}}
+\index{Vector3Transform@{Vector3Transform}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Transform()}{Vector3Transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{v,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a84c94029a9c38fc54aec1cde99039ed5}\label{raymath_8h_a84c94029a9c38fc54aec1cde99039ed5}} 
+\index{raymath.h@{raymath.h}!Vector3Unproject@{Vector3Unproject}}
+\index{Vector3Unproject@{Vector3Unproject}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Unproject()}{Vector3Unproject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Unproject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector3}{Vector3}}}]{source,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{projection,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{view }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a6bdec50a530323f4074137aa62ceb8b9}\label{raymath_8h_a6bdec50a530323f4074137aa62ceb8b9}} 
+\index{raymath.h@{raymath.h}!Vector3Zero@{Vector3Zero}}
+\index{Vector3Zero@{Vector3Zero}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Vector3Zero()}{Vector3Zero()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} \mbox{\hyperlink{struct_vector3}{Vector3}} Vector3\+Zero (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{raymath_8h_a860599a4d89fb83090024811f068f114}\label{raymath_8h_a860599a4d89fb83090024811f068f114}} 
+\index{raymath.h@{raymath.h}!Wrap@{Wrap}}
+\index{Wrap@{Wrap}!raymath.h@{raymath.h}}
+\doxysubsubsection{\texorpdfstring{Wrap()}{Wrap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raymath_8h_a19c1202d4696b35627119b67a344dc44}{RMAPI}} float Wrap (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+

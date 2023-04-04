@@ -1,0 +1,17 @@
+digraph "ModelAnimation"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="ModelAnimation",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" bones" ];
+  Node2 [label="BoneInfo",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_bone_info.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" framePoses" ];
+  Node3 [label="Transform",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_transform.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" scale\ntranslation" ];
+  Node4 [label="Vector3",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_vector3.html",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" rotation" ];
+  Node5 [label="Vector4",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_vector4.html",tooltip=" "];
+}

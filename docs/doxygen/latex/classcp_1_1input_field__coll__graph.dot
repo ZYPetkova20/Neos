@@ -1,0 +1,24 @@
+digraph "cp::inputField"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="cp::inputField",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" textColor" ];
+  Node2 [label="Color",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_color.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" field" ];
+  Node3 [label="Rectangle",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_rectangle.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" type" ];
+  Node4 [label="string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" font" ];
+  Node5 [label="Font",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_font.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" texture" ];
+  Node6 [label="Texture",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_texture.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" recs" ];
+  Node7 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" glyphs" ];
+  Node7 [label="GlyphInfo",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_glyph_info.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" image" ];
+  Node8 [label="Image",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_image.html",tooltip=" "];
+}

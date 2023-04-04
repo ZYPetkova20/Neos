@@ -1,0 +1,48 @@
+\hypertarget{input_field_8h_source}{}\doxysection{input\+Field.\+h}
+\label{input_field_8h_source}\index{neos.components/include/inputField.h@{neos.components/include/inputField.h}}
+\mbox{\hyperlink{input_field_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{raylib_8h}{raylib.h}}>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecp}{cp}}\ \textcolor{comment}{//\ namespace\ for\ our\ own-\/written\ compounds}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcp_1_1input_field}{inputField}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Variables}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{classcp_1_1input_field_a3ba28946a11107075413c5c337d9f766}{textColor}};\ \textcolor{comment}{//\ Color\ of\ the\ text}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classcp_1_1input_field_a62b513810e5e776491bfc455c2286f98}{field}};\ \textcolor{comment}{//\ Position\ of\ the\ input\ field}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classcp_1_1input_field_a997e799eaf43356f35c46197bef5d491}{type}};\ \textcolor{comment}{//\ Type\ of\ the\ input\ (text,\ email,\ password)}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classcp_1_1input_field_a2cec9760b308934f71a7c92ff3b6f260}{input}}[30];\ \textcolor{comment}{//\ The\ text\ from\ the\ field}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classcp_1_1input_field_adb4ff8ecc08a1ef4dfec6bcf42c64969}{fontSize}};\ \textcolor{comment}{//\ Size\ of\ the\ text}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcp_1_1input_field_a93ea40715ebc063500f11387c9fe5aab}{charCount}}\ =\ 0;\ \textcolor{comment}{//\ Counts\ the\ inputed\ symbols}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcp_1_1input_field_a999ffaef2eb537ccec225ca96c8a1af9}{maxChars}};\ \textcolor{comment}{//\ Maximum\ characters\ in\ the\ field}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classcp_1_1input_field_aab0745180f7c506932e30656aadbbc3d}{animationCounter}};\ \textcolor{comment}{//\ counts\ frames\ for\ the\ animation}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classcp_1_1input_field_a829689fe47d2c19b26cfdbd2d82c45df}{isSelected}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fonts}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_font}{Font}}\ \mbox{\hyperlink{classcp_1_1input_field_aafb44e5542620498add38a091dd1d965}{font}};\ \textcolor{comment}{//\ Font\ to\ use/display\ when\ typing}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Private\ Methods}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcp_1_1input_field_a02bc6c5c96e143c2ddd6b7c4917f3f9a}{selectField}}(\mbox{\hyperlink{struct_vector2}{Vector2}}\ mousePos);\ \textcolor{comment}{//\ checks\ if\ the\ field\ is\ selected}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcp_1_1input_field_aa28a82676d110a90e479f4b354de2415}{printInput}}();\ \textcolor{comment}{//\ Displays\ the\ text\ from\ input}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcp_1_1input_field_af533e3c3e81db1c9ddd2bc1d7c8148cd}{handleInput}}();\ \textcolor{comment}{//\ Handles\ special\ symbols\ and\ other\ input}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classcp_1_1input_field_ac2f5eb8e06c474ebb8478e252546c530}{isKeyAllowed}}();\ \textcolor{comment}{//\ Checks\ if\ the\ pressed\ key\ can\ be\ typed}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field}{inputField}}(\mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classcp_1_1input_field_a62b513810e5e776491bfc455c2286f98}{field}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classcp_1_1input_field_a997e799eaf43356f35c46197bef5d491}{type}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classcp_1_1input_field_adb4ff8ecc08a1ef4dfec6bcf42c64969}{fontSize}},\ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{classcp_1_1input_field_a3ba28946a11107075413c5c337d9f766}{textColor}});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field_a8772e3cf6ab272553b9ff1213fc67304}{\string~inputField}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Public\ Methods}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcp_1_1input_field_ab596e3d07ae045fac14193a94f1d6267}{updateField}}(\mbox{\hyperlink{struct_vector2}{Vector2}}\ mousePos);\ \textcolor{comment}{//\ Updates\ the\ field}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcp_1_1input_field_afef139171c5dff13db0a1ba5e516c295}{resetField}}();\ \textcolor{comment}{//\ Resets\ the\ input\ when\ you\ exit\ the\ scene}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classcp_1_1input_field_a2f6f360ed29743fdbd547ba7182c8bce}{getResult}}(\textcolor{keywordtype}{string}\ str);\ \textcolor{comment}{//\ Returns\ the\ final\ result\ from\ the\ field}}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,50 @@
+\hypertarget{sign_in_form_8h_source}{}\doxysection{sign\+In\+Form.\+h}
+\label{sign_in_form_8h_source}\index{neos.components/include/signInForm.h@{neos.components/include/signInForm.h}}
+\mbox{\hyperlink{sign_in_form_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene_manager_8h}{sceneManager.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input_field_8h}{inputField.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{raylib_8h}{raylib.h}}>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsign_in_form}{signInForm}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classscene}{scene}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classsign_in_form_a08d867362982200340686ad910f215db}{mySceneManager}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Vector2}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}\ \mbox{\hyperlink{classsign_in_form_a8472829a7e85c0ca56417b3dc3129c1d}{mousePos}}\ =\ \{\ 0.f,\ 0.f\ \};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{darkGray}}\ =\ \{\ 64,\ 64,\ 64,\ 255\ \};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classsign_in_form_aba97957d3c6a26fcf6689be3e7089432}{signInButtonPos}}\ =\ \{\ 99,\ 435,\ 270\ ,\ 67\ \};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classsign_in_form_ac5f5f3d29349c34e96414ec1c205c8cc}{returnButton}}\ =\ \{\ 99\ ,\ 535\ ,\ 215,\ 25\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Input\ Fields}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field}{cp::inputField}}\ \ \ \ \mbox{\hyperlink{classsign_in_form_a58ead4ab871f0f6ce34359038cee84cf}{emailField}}\ =\ \{\ \{110,\ 325,\ 330,\ 30\},\ \textcolor{stringliteral}{"{}email"{}},\ 18,\ \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{darkGray}}\ \};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field}{cp::inputField}}\ \ \ \ \mbox{\hyperlink{classsign_in_form_add321352a114d4a2aee3b4617e3687f5}{passwordField}}\ =\ \{\ \{549,325,308,32\}\ ,\textcolor{stringliteral}{"{}password"{}},\ 22,\ \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{darkGray}}\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Textures}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classsign_in_form_ad9bf4c464c79d56221d4eb20c8d6c7bf}{headerText}};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classsign_in_form_a94741f46022d93f0b2408ab7dc88356d}{logoTexture}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classsign_in_form_add7d9ffba8b05817bd58edab7093312e}{backgroundTexture}};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classsign_in_form_a1fc8cb3ea2703bdfd19aad583ee8daf5}{signInButton}};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classsign_in_form_a2b9465bbb4203f0063151216cd570b9a}{labelsTexture}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Methods}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ For\ drawing\ textures}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsign_in_form_acdabd5d8afa8ae52227c7a76f6667bb4}{drawTextures}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ For\ handling\ collision\ events}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsign_in_form_ab831b1c58f3d3b8af7dbafeb6a618b82}{handleCollision}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classsign_in_form}{signInForm}}(std::string\ sceneName,\ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classscene_manager}{sceneManager}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Methods\ from\ class\ 'scene'}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsign_in_form_a4d4f372d9f7eec250b4e5bf7a988e658}{Start}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsign_in_form_aa4a5117e37796f44a6dca571772ebf5b}{Update}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsign_in_form_a82400a936d0fb315e7a6dae3fc819c5f}{onExit}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsign_in_form_aba1e374fa3861320f6d1aa32de34f2dc}{loadAssets}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsign_in_form_a1bc75511358d9a7280281574f5ec6cf1}{deleteAssets}}();}
+\DoxyCodeLine{00044\ \};}
+
+\end{DoxyCode}

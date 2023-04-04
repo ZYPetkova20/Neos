@@ -1,0 +1,53 @@
+\hypertarget{register_form_8h_source}{}\doxysection{register\+Form.\+h}
+\label{register_form_8h_source}\index{neos.components/include/registerForm.h@{neos.components/include/registerForm.h}}
+\mbox{\hyperlink{register_form_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene_manager_8h}{sceneManager.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input_field_8h}{inputField.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{raylib_8h}{raylib.h}}>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classregister_form}{registerForm}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classscene}{scene}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classregister_form_ad68bb0b1074216f45493c796f04ab7bc}{mySceneManager}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Vectors}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}\ \mbox{\hyperlink{classregister_form_aa9fd5b6a5cd89e109fd04fee291fba59}{mousePos}}\ =\ \{\ 0.f,\ 0.f\ \};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{darkGray}}\ =\ \{64,\ 64,\ 64,\ 255\};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classregister_form_abf1a4314015d8b177682625c4a8ba92e}{registerButtonPos}}\ =\ \{\ 99,\ 559,\ 270\ ,\ 67\ \};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_rectangle}{Rectangle}}\ \mbox{\hyperlink{classregister_form_a7767a4ff4e520a6f6c2c80dc338180be}{returnButton}}\ =\ \{\ 105\ ,660\ ,\ 215,\ 25\};}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Input\ Fields}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field}{cp::inputField}}\ \ \ \ \mbox{\hyperlink{classregister_form_af9bb12ca036865589689e170a3b1bed5}{fNameField}}\ =\ \{\ \{111,324,308,32\}\ ,\textcolor{stringliteral}{"{}text"{}},\ 22,\ \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{darkGray}}\ \};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field}{cp::inputField}}\ \ \ \ \mbox{\hyperlink{classregister_form_ac22453ff1710b586c9d5d0f73159daed}{lNameField}}\ =\ \{\ \{538,324,308,32\}\ ,\textcolor{stringliteral}{"{}text"{}},\ 22,\ \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{darkGray}}\ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field}{cp::inputField}}\ \ \ \ \mbox{\hyperlink{classregister_form_a5e0229ed33c7a3779e9e104089a0ddbe}{passwordField}}\ =\ \{\ \{538,452,308,32\}\ ,\textcolor{stringliteral}{"{}password"{}},\ 22,\ \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{darkGray}}\ \};}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classcp_1_1input_field}{cp::inputField}}\ \ \ \ \mbox{\hyperlink{classregister_form_ae0c2cb333ef8af86158513b5883510aa}{emailField}}\ =\ \{\ \{110,\ 456,\ 330,\ 27\},\ \textcolor{stringliteral}{"{}email"{}},\ 18,\ \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{darkGray}}\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Textures}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classregister_form_a80d4b22d912be53de2409d758977bd02}{headerText}};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classregister_form_aebd3b48ce65a4a570b30a63377bd1324}{logoTexture}};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classregister_form_a5162928ad25e5fbbffb93b2cbb4df624}{backgroundTexture}};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classregister_form_a2e7c162382c8b88a76aca8526027f8d0}{registerButton}};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classregister_form_a41a09e4166b553b25a7f9b9d997182b8}{labelsTexture}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Methods}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ For\ drawing\ textures}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregister_form_a8e167e7cc5a8f4aaa1779e82f68fcfd9}{drawTextures}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ For\ handling\ collision\ events}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregister_form_a09ee3009c185521e4c887f3e5fcafa05}{handleCollision}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classregister_form}{registerForm}}(std::string\ sceneName,\ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classscene_manager}{sceneManager}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Methods\ from\ class\ 'scene'}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregister_form_a17369b66eff02a96ab0be5f894f56b4e}{Start}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregister_form_a550f3b9c17c6aaef5861bb00d1378bda}{Update}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregister_form_a11209819dbd62233fba3f5b46c7fbcf8}{onExit}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregister_form_a396d68486132f594e498eabee16d926f}{loadAssets}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregister_form_adf8150023476ef1f2842091d04b89f6f}{deleteAssets}}();}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

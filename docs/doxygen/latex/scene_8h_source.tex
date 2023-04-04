@@ -1,0 +1,29 @@
+\hypertarget{scene_8h_source}{}\doxysection{scene.\+h}
+\label{scene_8h_source}\index{neos.components/include/scene.h@{neos.components/include/scene.h}}
+\mbox{\hyperlink{scene_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{raylib_8h}{raylib.h}}>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <ranges>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classscene}{scene}}\ }
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classscene_a5b05a26e377bc9c61c05808f50fe47bf}{scene}}(std::string\ sceneName)\ :\ \mbox{\hyperlink{classscene_aa36644f63cdc2039386fa1f6ca3263d9}{mySceneName}}(sceneName)}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \}}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ \mbox{\hyperlink{classscene_aa36644f63cdc2039386fa1f6ca3263d9}{mySceneName}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Basic\ variables\ for\ all\ scenes}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{classscene_a4fa409117e401be3bb6b09ee75d5e9ab}{backgroundColor}}\ =\ \{\ 248,\ 248,\ 248,\ 255\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Basic\ methods\ for\ all\ scenes}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{Start}}()\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{Update}}()\ =\ 0;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{onExit}}()\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{loadAssets}}()\ =\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{deleteAssets}}()\ =\ 0;}
+\DoxyCodeLine{00023\ \};}
+
+\end{DoxyCode}

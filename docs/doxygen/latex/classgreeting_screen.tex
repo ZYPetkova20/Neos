@@ -1,0 +1,255 @@
+\hypertarget{classgreeting_screen}{}\doxysection{greeting\+Screen Class Reference}
+\label{classgreeting_screen}\index{greetingScreen@{greetingScreen}}
+
+
+{\ttfamily \#include $<$greeting\+Screen.\+h$>$}
+
+Inheritance diagram for greeting\+Screen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgreeting_screen}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classgreeting_screen_a6ff459e735522f58c4e7ebb32670c261}{delete\+Assets}} ()
+\item 
+\mbox{\hyperlink{classgreeting_screen_a4dd5f94b853947aa71aef17a44ce1127}{greeting\+Screen}} (std\+::string scene\+Name, \mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&\mbox{\hyperlink{classscene_manager}{scene\+Manager}})
+\item 
+virtual void \mbox{\hyperlink{classgreeting_screen_aaa578fa4d84f1cfb7185e2e9e7ccd25b}{load\+Assets}} ()
+\item 
+virtual void \mbox{\hyperlink{classgreeting_screen_a0a26973fb866a298756822a957c79027}{on\+Exit}} ()
+\item 
+virtual void \mbox{\hyperlink{classgreeting_screen_ae9ee1afa17f09259d5f35190a2c68757}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{classgreeting_screen_af758ab844dd9b304be462281b90222e8}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{delete\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{load\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{on\+Exit}} ()=0
+\item 
+\mbox{\hyperlink{classscene_a5b05a26e377bc9c61c05808f50fe47bf}{scene}} (std\+::string scene\+Name)
+\item 
+virtual void \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{Start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{Update}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgreeting_screen_a8043c4fe97ab39e32653496df8672200}{draw\+Textures}} ()
+\item 
+void \mbox{\hyperlink{classgreeting_screen_aeb4c3ddda6906020203103c859040e4f}{fade\+Animation}} ()
+\item 
+void \mbox{\hyperlink{classgreeting_screen_ae79253b111ec1be4e5f60086764df53c}{handle\+Collisions}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classgreeting_screen_a13ef3ea61914ab0192b9d7e7623b4e48}{animation\+Counter}} = 0
+\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{classgreeting_screen_a09e9bdbb8f38824ea9e5341c7d0898fe}{animation\+Is\+Over}} = \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classgreeting_screen_a66b445d11accb0761b23f3c11f0dcf75}{background\+Texture}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classgreeting_screen_aa4f8b8c00a00396b550ce194f6afd7c7}{greeting\+Text}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classgreeting_screen_a7cad75ef430d760e739d50217992204c}{logo\+Texture}}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{classgreeting_screen_a015dfca8542292274cf4a5ce4e1eb3bc}{mouse\+Pos}} = \{ 0.f, 0.f \}
+\item 
+\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \& \mbox{\hyperlink{classgreeting_screen_ae6ebe923c7a88731f2fe75b0d84ba58b}{my\+Scene\+Manager}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classgreeting_screen_a296b3a893152965e0a176a8b2ef348e0}{register\+Button}}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{classgreeting_screen_a38408c20d49a930f20e9f71127733376}{register\+Button\+Pos}} = \{ 108, 440 \}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classgreeting_screen_a39bd91db36decc46b3511528f4b9e8c0}{sign\+In\+Button}}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{classgreeting_screen_a1b97c682ea12b3e9f18c624c06812ab2}{sign\+In\+Button\+Pos}} = \{ 108, 331 \}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classgreeting_screen_af9d1a4e591f22430f71a94ff224272b3}{transition\+Opacity}} = \{ 255, 255, 255, 255 \}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classgreeting_screen_af3d643fa513a31d68e22751f883564d0}{transition\+Texture}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Data Fields inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classscene_a4fa409117e401be3bb6b09ee75d5e9ab}{background\+Color}} = \{ 248, 248, 248, 255 \}
+\item 
+std\+::string \mbox{\hyperlink{classscene_aa36644f63cdc2039386fa1f6ca3263d9}{my\+Scene\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgreeting_screen_a4dd5f94b853947aa71aef17a44ce1127}\label{classgreeting_screen_a4dd5f94b853947aa71aef17a44ce1127}} 
+\index{greetingScreen@{greetingScreen}!greetingScreen@{greetingScreen}}
+\index{greetingScreen@{greetingScreen}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{greetingScreen()}{greetingScreen()}}
+{\footnotesize\ttfamily greeting\+Screen\+::greeting\+Screen (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name,  }\item[{\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&}]{scene\+Manager }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgreeting_screen_a6ff459e735522f58c4e7ebb32670c261}\label{classgreeting_screen_a6ff459e735522f58c4e7ebb32670c261}} 
+\index{greetingScreen@{greetingScreen}!deleteAssets@{deleteAssets}}
+\index{deleteAssets@{deleteAssets}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{deleteAssets()}{deleteAssets()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::delete\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{scene}}.
+
+\mbox{\Hypertarget{classgreeting_screen_a8043c4fe97ab39e32653496df8672200}\label{classgreeting_screen_a8043c4fe97ab39e32653496df8672200}} 
+\index{greetingScreen@{greetingScreen}!drawTextures@{drawTextures}}
+\index{drawTextures@{drawTextures}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{drawTextures()}{drawTextures()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::draw\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_aeb4c3ddda6906020203103c859040e4f}\label{classgreeting_screen_aeb4c3ddda6906020203103c859040e4f}} 
+\index{greetingScreen@{greetingScreen}!fadeAnimation@{fadeAnimation}}
+\index{fadeAnimation@{fadeAnimation}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{fadeAnimation()}{fadeAnimation()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::fade\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_ae79253b111ec1be4e5f60086764df53c}\label{classgreeting_screen_ae79253b111ec1be4e5f60086764df53c}} 
+\index{greetingScreen@{greetingScreen}!handleCollisions@{handleCollisions}}
+\index{handleCollisions@{handleCollisions}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{handleCollisions()}{handleCollisions()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::handle\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_aaa578fa4d84f1cfb7185e2e9e7ccd25b}\label{classgreeting_screen_aaa578fa4d84f1cfb7185e2e9e7ccd25b}} 
+\index{greetingScreen@{greetingScreen}!loadAssets@{loadAssets}}
+\index{loadAssets@{loadAssets}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{loadAssets()}{loadAssets()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::load\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{scene}}.
+
+\mbox{\Hypertarget{classgreeting_screen_a0a26973fb866a298756822a957c79027}\label{classgreeting_screen_a0a26973fb866a298756822a957c79027}} 
+\index{greetingScreen@{greetingScreen}!onExit@{onExit}}
+\index{onExit@{onExit}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{scene}}.
+
+\mbox{\Hypertarget{classgreeting_screen_ae9ee1afa17f09259d5f35190a2c68757}\label{classgreeting_screen_ae9ee1afa17f09259d5f35190a2c68757}} 
+\index{greetingScreen@{greetingScreen}!Start@{Start}}
+\index{Start@{Start}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{scene}}.
+
+\mbox{\Hypertarget{classgreeting_screen_af758ab844dd9b304be462281b90222e8}\label{classgreeting_screen_af758ab844dd9b304be462281b90222e8}} 
+\index{greetingScreen@{greetingScreen}!Update@{Update}}
+\index{Update@{Update}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void greeting\+Screen\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{scene}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classgreeting_screen_a13ef3ea61914ab0192b9d7e7623b4e48}\label{classgreeting_screen_a13ef3ea61914ab0192b9d7e7623b4e48}} 
+\index{greetingScreen@{greetingScreen}!animationCounter@{animationCounter}}
+\index{animationCounter@{animationCounter}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{animationCounter}{animationCounter}}
+{\footnotesize\ttfamily float greeting\+Screen\+::animation\+Counter = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a09e9bdbb8f38824ea9e5341c7d0898fe}\label{classgreeting_screen_a09e9bdbb8f38824ea9e5341c7d0898fe}} 
+\index{greetingScreen@{greetingScreen}!animationIsOver@{animationIsOver}}
+\index{animationIsOver@{animationIsOver}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{animationIsOver}{animationIsOver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} greeting\+Screen\+::animation\+Is\+Over = \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a66b445d11accb0761b23f3c11f0dcf75}\label{classgreeting_screen_a66b445d11accb0761b23f3c11f0dcf75}} 
+\index{greetingScreen@{greetingScreen}!backgroundTexture@{backgroundTexture}}
+\index{backgroundTexture@{backgroundTexture}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{backgroundTexture}{backgroundTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} greeting\+Screen\+::background\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_aa4f8b8c00a00396b550ce194f6afd7c7}\label{classgreeting_screen_aa4f8b8c00a00396b550ce194f6afd7c7}} 
+\index{greetingScreen@{greetingScreen}!greetingText@{greetingText}}
+\index{greetingText@{greetingText}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{greetingText}{greetingText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} greeting\+Screen\+::greeting\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a7cad75ef430d760e739d50217992204c}\label{classgreeting_screen_a7cad75ef430d760e739d50217992204c}} 
+\index{greetingScreen@{greetingScreen}!logoTexture@{logoTexture}}
+\index{logoTexture@{logoTexture}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{logoTexture}{logoTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} greeting\+Screen\+::logo\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a015dfca8542292274cf4a5ce4e1eb3bc}\label{classgreeting_screen_a015dfca8542292274cf4a5ce4e1eb3bc}} 
+\index{greetingScreen@{greetingScreen}!mousePos@{mousePos}}
+\index{mousePos@{mousePos}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{mousePos}{mousePos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} greeting\+Screen\+::mouse\+Pos = \{ 0.f, 0.f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_ae6ebe923c7a88731f2fe75b0d84ba58b}\label{classgreeting_screen_ae6ebe923c7a88731f2fe75b0d84ba58b}} 
+\index{greetingScreen@{greetingScreen}!mySceneManager@{mySceneManager}}
+\index{mySceneManager@{mySceneManager}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{mySceneManager}{mySceneManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscene_manager}{scene\+Manager}}\& greeting\+Screen\+::my\+Scene\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a296b3a893152965e0a176a8b2ef348e0}\label{classgreeting_screen_a296b3a893152965e0a176a8b2ef348e0}} 
+\index{greetingScreen@{greetingScreen}!registerButton@{registerButton}}
+\index{registerButton@{registerButton}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{registerButton}{registerButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} greeting\+Screen\+::register\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a38408c20d49a930f20e9f71127733376}\label{classgreeting_screen_a38408c20d49a930f20e9f71127733376}} 
+\index{greetingScreen@{greetingScreen}!registerButtonPos@{registerButtonPos}}
+\index{registerButtonPos@{registerButtonPos}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{registerButtonPos}{registerButtonPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} greeting\+Screen\+::register\+Button\+Pos = \{ 108, 440 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a39bd91db36decc46b3511528f4b9e8c0}\label{classgreeting_screen_a39bd91db36decc46b3511528f4b9e8c0}} 
+\index{greetingScreen@{greetingScreen}!signInButton@{signInButton}}
+\index{signInButton@{signInButton}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{signInButton}{signInButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} greeting\+Screen\+::sign\+In\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_a1b97c682ea12b3e9f18c624c06812ab2}\label{classgreeting_screen_a1b97c682ea12b3e9f18c624c06812ab2}} 
+\index{greetingScreen@{greetingScreen}!signInButtonPos@{signInButtonPos}}
+\index{signInButtonPos@{signInButtonPos}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{signInButtonPos}{signInButtonPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} greeting\+Screen\+::sign\+In\+Button\+Pos = \{ 108, 331 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_af9d1a4e591f22430f71a94ff224272b3}\label{classgreeting_screen_af9d1a4e591f22430f71a94ff224272b3}} 
+\index{greetingScreen@{greetingScreen}!transitionOpacity@{transitionOpacity}}
+\index{transitionOpacity@{transitionOpacity}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{transitionOpacity}{transitionOpacity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} greeting\+Screen\+::transition\+Opacity = \{ 255, 255, 255, 255 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classgreeting_screen_af3d643fa513a31d68e22751f883564d0}\label{classgreeting_screen_af3d643fa513a31d68e22751f883564d0}} 
+\index{greetingScreen@{greetingScreen}!transitionTexture@{transitionTexture}}
+\index{transitionTexture@{transitionTexture}!greetingScreen@{greetingScreen}}
+\doxysubsubsection{\texorpdfstring{transitionTexture}{transitionTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} greeting\+Screen\+::transition\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+neos.\+components/include/\mbox{\hyperlink{greeting_screen_8h}{greeting\+Screen.\+h}}\item 
+neos.\+components/src/\mbox{\hyperlink{greeting_screen_8cpp}{greeting\+Screen.\+cpp}}\end{DoxyCompactItemize}

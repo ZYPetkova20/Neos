@@ -1,0 +1,21 @@
+digraph "loadingScreen"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="loadingScreen",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="scene",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classscene.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" mySceneName" ];
+  Node3 [label="string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" backgroundColor" ];
+  Node4 [label="Color",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_color.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" mySceneManager" ];
+  Node5 [label="sceneManager",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classscene_manager.html",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" currentScene" ];
+  Node4 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" loadingOpacity" ];
+  Node6 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" defaultTexture\nlogoTexture\ntransitionTexture" ];
+  Node6 [label="Texture",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_texture.html",tooltip=" "];
+}

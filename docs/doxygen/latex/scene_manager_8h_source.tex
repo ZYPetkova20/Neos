@@ -1,0 +1,23 @@
+\hypertarget{scene_manager_8h_source}{}\doxysection{scene\+Manager.\+h}
+\label{scene_manager_8h_source}\index{neos.components/include/sceneManager.h@{neos.components/include/sceneManager.h}}
+\mbox{\hyperlink{scene_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene_8h}{scene.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classscene_manager}{sceneManager}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_manager_aeb97acb15e0dd0b3aa2847a760f47078}{setCurrentScene}}(std::string\ sceneName);}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_manager_ac32e2d8b41a627c40b89e5aa0a3f2a79}{updateScene}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classscene_manager_a45c552d829c98acdd6bb225bb7e941bc}{addScene}}(\mbox{\hyperlink{classscene}{scene}}*\ \mbox{\hyperlink{classscene}{scene}});}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classscene}{scene}}*\ \mbox{\hyperlink{classscene_manager_a48c6d996c4a052e694d288ebbe117fe0}{getScene}}(std::string\ sceneName);}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classscene}{scene}}*\ \mbox{\hyperlink{classscene_manager_a7ac6cfc2dd9bf82bd6b8e2abfc15c3b2}{currentScene}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<scene*>\ \mbox{\hyperlink{classscene_manager_af0bbb3a6b81d57f23b9be9452f5dd2f7}{allScenes}};}
+\DoxyCodeLine{00017\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,52 @@
+\hypertarget{greeting_screen_8h_source}{}\doxysection{greeting\+Screen.\+h}
+\label{greeting_screen_8h_source}\index{neos.components/include/greetingScreen.h@{neos.components/include/greetingScreen.h}}
+\mbox{\hyperlink{greeting_screen_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene_manager_8h}{sceneManager.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{raylib_8h}{raylib.h}}>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgreeting_screen}{greetingScreen}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classscene}{scene}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classgreeting_screen_ae6ebe923c7a88731f2fe75b0d84ba58b}{mySceneManager}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Variables}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classgreeting_screen_a09e9bdbb8f38824ea9e5341c7d0898fe}{animationIsOver}}\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Flag\ to\ indicate\ whether\ the\ animation\ is\ over\ or\ not}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classgreeting_screen_a13ef3ea61914ab0192b9d7e7623b4e48}{animationCounter}}\ =\ 0;\ \textcolor{comment}{//\ Counter\ for\ the\ animation}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Vector\ variables}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{classgreeting_screen_af9d1a4e591f22430f71a94ff224272b3}{transitionOpacity}}\ =\ \{\ 255,\ 255,\ 255,\ 255\ \};\ \textcolor{comment}{//\ Vector\ for\ the\ opacity\ of\ the\ transition}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}\ \mbox{\hyperlink{classgreeting_screen_a015dfca8542292274cf4a5ce4e1eb3bc}{mousePos}}\ =\ \{\ 0.f,\ 0.f\ \};\ \textcolor{comment}{//\ Vector\ for\ the\ mouse\ position}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Textures}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classgreeting_screen_aa4f8b8c00a00396b550ce194f6afd7c7}{greetingText}};\ \textcolor{comment}{//\ Texture\ for\ the\ greeting\ text}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classgreeting_screen_a7cad75ef430d760e739d50217992204c}{logoTexture}};\ \textcolor{comment}{//\ Texture\ for\ the\ logo}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classgreeting_screen_a66b445d11accb0761b23f3c11f0dcf75}{backgroundTexture}};\ \textcolor{comment}{//\ Texture\ for\ the\ background}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classgreeting_screen_a39bd91db36decc46b3511528f4b9e8c0}{signInButton}};\ \textcolor{comment}{//\ Texture\ for\ the\ sign-\/in\ button}}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classgreeting_screen_a296b3a893152965e0a176a8b2ef348e0}{registerButton}};\ \textcolor{comment}{//\ Texture\ for\ the\ register\ button}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classgreeting_screen_af3d643fa513a31d68e22751f883564d0}{transitionTexture}};\ \textcolor{comment}{//\ Texture\ for\ the\ transition\ effect}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Texture\ Positions}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}\ \mbox{\hyperlink{classgreeting_screen_a1b97c682ea12b3e9f18c624c06812ab2}{signInButtonPos}}\ =\ \{\ 108,\ 331\ \};\ \textcolor{comment}{//\ Position\ of\ the\ sign-\/in\ button}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}\ \mbox{\hyperlink{classgreeting_screen_a38408c20d49a930f20e9f71127733376}{registerButtonPos}}\ =\ \{\ 108,\ 440\ \};\ \textcolor{comment}{//\ Position\ of\ the\ register\ button}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Methods}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_ae79253b111ec1be4e5f60086764df53c}{handleCollisions}}();\ \textcolor{comment}{//\ Method\ to\ handle\ collisions\ between\ objects}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_aeb4c3ddda6906020203103c859040e4f}{fadeAnimation}}();\ \textcolor{comment}{//\ Method\ to\ fade\ out\ the\ texture}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Method\ for\ drawing\ textures}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_a8043c4fe97ab39e32653496df8672200}{drawTextures}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classgreeting_screen}{greetingScreen}}(std::string\ sceneName,\ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classscene_manager}{sceneManager}});\ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Methods\ from\ class\ 'scene'}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_ae9ee1afa17f09259d5f35190a2c68757}{Start}}();\ \textcolor{comment}{//\ Method\ to\ initialize\ the\ scene}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_af758ab844dd9b304be462281b90222e8}{Update}}();\ \textcolor{comment}{//\ Method\ to\ update\ the\ scene}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_a0a26973fb866a298756822a957c79027}{onExit}}();\ \textcolor{comment}{//\ Method\ to\ exit\ the\ scene}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_aaa578fa4d84f1cfb7185e2e9e7ccd25b}{loadAssets}}();\ \textcolor{comment}{//\ Method\ to\ load\ assets\ for\ the\ scene}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgreeting_screen_a6ff459e735522f58c4e7ebb32670c261}{deleteAssets}}();\ \textcolor{comment}{//\ Method\ to\ delete\ assets\ for\ the\ scene}}
+\DoxyCodeLine{00046\ \};}
+
+\end{DoxyCode}

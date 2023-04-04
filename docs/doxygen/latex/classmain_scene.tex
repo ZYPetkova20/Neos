@@ -1,0 +1,351 @@
+\hypertarget{classmain_scene}{}\doxysection{main\+Scene Class Reference}
+\label{classmain_scene}\index{mainScene@{mainScene}}
+
+
+{\ttfamily \#include $<$main\+Scene.\+h$>$}
+
+Inheritance diagram for main\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_scene}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmain_scene_a2ea1860b344372e81b69719a6a912727}{delete\+Assets}} ()
+\item 
+virtual void \mbox{\hyperlink{classmain_scene_a1a5b7290d519ca0746b107ce42e37005}{load\+Assets}} ()
+\item 
+\mbox{\hyperlink{classmain_scene_ab52fe15e63ddd049683960aef7245caf}{main\+Scene}} (std\+::string scene\+Name, \mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&\mbox{\hyperlink{classscene_manager}{scene\+Manager}})
+\item 
+virtual void \mbox{\hyperlink{classmain_scene_ab5c3fe7031e5e85ab97e80f1422f2b91}{on\+Exit}} ()
+\item 
+virtual void \mbox{\hyperlink{classmain_scene_a1f8caf5fd8292f6e4d8bc35daeaf060d}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{classmain_scene_a462b45f1597dfe7e83d76ea085d9cbf7}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{delete\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{load\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{on\+Exit}} ()=0
+\item 
+\mbox{\hyperlink{classscene_a5b05a26e377bc9c61c05808f50fe47bf}{scene}} (std\+::string scene\+Name)
+\item 
+virtual void \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{Start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{Update}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmain_scene_a55274d3499717f189a865246356ee387}{draw\+Textures}} ()
+\item 
+void \mbox{\hyperlink{classmain_scene_aebec5a62094b208b19630d6a1f365cad}{handle\+Collision}} ()
+\item 
+void \mbox{\hyperlink{classmain_scene_abbd5e8de7cbbe939ada7d15835e7f211}{set\+Atoms\+Pos}} ()
+\item 
+void \mbox{\hyperlink{classmain_scene_a61bca103b7f8d525fe06bd739ea1044a}{set\+Sections\+Pos}} ()
+\item 
+void \mbox{\hyperlink{classmain_scene_abda2ebc61cc2b2159ccae894ece39e92}{set\+Tabs\+Pos}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a94cf64629a72e4e39e5339f09cf106ac}{archive\+Tab}}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a2fa1c6760a547f880e63666aea8b6938}{background\+Texture}}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a311b4786cd30a321a62f6d4d70926ed1}{calculator\+Tab}}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classmain_scene_a05fbc4c69d640e80a89489667d6dff5c}{elements\+Pos}} \mbox{[}30\mbox{]}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a40fb8539324c13c0ab8f2ead950c63df}{header\+Text}}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a725b7f00da27974a8f338854f0f5e350}{log\+Out\+Button}}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classmain_scene_aa5f6b48c2e64a6666ac8a50c8a8e22de}{log\+Out\+Pos}}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{classmain_scene_ae2b645a540c8b08132d978e3da296a9b}{mouse\+Pos}} = \{0.f, 0.f\}
+\item 
+\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \& \mbox{\hyperlink{classmain_scene_a9d984929e676eb09bb7229ae43b09a95}{my\+Scene\+Manager}}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{classmain_scene_aba9d6761182b35b2a186ef15db803839}{section\+Pos}} \mbox{[}10\mbox{]}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_ad4d26b38425fb4c4414efe6cd7ff3097}{sections\+Texture}} \mbox{[}10\mbox{]}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a23f080b72ba339bb0c11ab9551958d21}{selected\+Tab}}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classmain_scene_a045ca4dfefcd6e0c6f8212967437d659}{selected\+Tab\+Pos}}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a6f40eda61f7c112e32c1f845dd4742a5}{settings\+Tab}}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a92e1364ae33d77bfc4b084e1e4cae361}{simulation\+Tab}}
+\item 
+int \mbox{\hyperlink{classmain_scene_a7785b7a1dd3052a88d3b04518c9daead}{s\+Index}} = 0
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_aa4764724c3497bf55d7334016eb7b39a}{table\+Hover}}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classmain_scene_abf3729e1892dd32585e60fe5f50a4f64}{table\+Hover\+Pos}}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_ab8452df4446f1c40032fc63318ec067e}{table\+Tab}}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_a585d6ee7fa6a95e7ec42da941a54faa9}{table\+Texture}}
+\item 
+int \mbox{\hyperlink{classmain_scene_a9a2a92bcea5254191ef392bb5b3e516d}{tabs\+Animation}} = 0
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classmain_scene_a7eefd0ded590fabd73e424cdde2688e7}{tabs\+Pos}} \mbox{[}5\mbox{]}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} \mbox{\hyperlink{classmain_scene_afcda896ac8365648ead915ac473f1f48}{user\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Data Fields inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classscene_a4fa409117e401be3bb6b09ee75d5e9ab}{background\+Color}} = \{ 248, 248, 248, 255 \}
+\item 
+std\+::string \mbox{\hyperlink{classscene_aa36644f63cdc2039386fa1f6ca3263d9}{my\+Scene\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmain_scene_ab52fe15e63ddd049683960aef7245caf}\label{classmain_scene_ab52fe15e63ddd049683960aef7245caf}} 
+\index{mainScene@{mainScene}!mainScene@{mainScene}}
+\index{mainScene@{mainScene}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{mainScene()}{mainScene()}}
+{\footnotesize\ttfamily main\+Scene\+::main\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name,  }\item[{\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&}]{scene\+Manager }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_scene_a2ea1860b344372e81b69719a6a912727}\label{classmain_scene_a2ea1860b344372e81b69719a6a912727}} 
+\index{mainScene@{mainScene}!deleteAssets@{deleteAssets}}
+\index{deleteAssets@{deleteAssets}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{deleteAssets()}{deleteAssets()}}
+{\footnotesize\ttfamily void main\+Scene\+::delete\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{scene}}.
+
+\mbox{\Hypertarget{classmain_scene_a55274d3499717f189a865246356ee387}\label{classmain_scene_a55274d3499717f189a865246356ee387}} 
+\index{mainScene@{mainScene}!drawTextures@{drawTextures}}
+\index{drawTextures@{drawTextures}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{drawTextures()}{drawTextures()}}
+{\footnotesize\ttfamily void main\+Scene\+::draw\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_aebec5a62094b208b19630d6a1f365cad}\label{classmain_scene_aebec5a62094b208b19630d6a1f365cad}} 
+\index{mainScene@{mainScene}!handleCollision@{handleCollision}}
+\index{handleCollision@{handleCollision}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{handleCollision()}{handleCollision()}}
+{\footnotesize\ttfamily void main\+Scene\+::handle\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a1a5b7290d519ca0746b107ce42e37005}\label{classmain_scene_a1a5b7290d519ca0746b107ce42e37005}} 
+\index{mainScene@{mainScene}!loadAssets@{loadAssets}}
+\index{loadAssets@{loadAssets}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{loadAssets()}{loadAssets()}}
+{\footnotesize\ttfamily void main\+Scene\+::load\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{scene}}.
+
+\mbox{\Hypertarget{classmain_scene_ab5c3fe7031e5e85ab97e80f1422f2b91}\label{classmain_scene_ab5c3fe7031e5e85ab97e80f1422f2b91}} 
+\index{mainScene@{mainScene}!onExit@{onExit}}
+\index{onExit@{onExit}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void main\+Scene\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{scene}}.
+
+\mbox{\Hypertarget{classmain_scene_abbd5e8de7cbbe939ada7d15835e7f211}\label{classmain_scene_abbd5e8de7cbbe939ada7d15835e7f211}} 
+\index{mainScene@{mainScene}!setAtomsPos@{setAtomsPos}}
+\index{setAtomsPos@{setAtomsPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{setAtomsPos()}{setAtomsPos()}}
+{\footnotesize\ttfamily void main\+Scene\+::set\+Atoms\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a61bca103b7f8d525fe06bd739ea1044a}\label{classmain_scene_a61bca103b7f8d525fe06bd739ea1044a}} 
+\index{mainScene@{mainScene}!setSectionsPos@{setSectionsPos}}
+\index{setSectionsPos@{setSectionsPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{setSectionsPos()}{setSectionsPos()}}
+{\footnotesize\ttfamily void main\+Scene\+::set\+Sections\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_abda2ebc61cc2b2159ccae894ece39e92}\label{classmain_scene_abda2ebc61cc2b2159ccae894ece39e92}} 
+\index{mainScene@{mainScene}!setTabsPos@{setTabsPos}}
+\index{setTabsPos@{setTabsPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{setTabsPos()}{setTabsPos()}}
+{\footnotesize\ttfamily void main\+Scene\+::set\+Tabs\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a1f8caf5fd8292f6e4d8bc35daeaf060d}\label{classmain_scene_a1f8caf5fd8292f6e4d8bc35daeaf060d}} 
+\index{mainScene@{mainScene}!Start@{Start}}
+\index{Start@{Start}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void main\+Scene\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{scene}}.
+
+\mbox{\Hypertarget{classmain_scene_a462b45f1597dfe7e83d76ea085d9cbf7}\label{classmain_scene_a462b45f1597dfe7e83d76ea085d9cbf7}} 
+\index{mainScene@{mainScene}!Update@{Update}}
+\index{Update@{Update}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void main\+Scene\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{scene}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmain_scene_a94cf64629a72e4e39e5339f09cf106ac}\label{classmain_scene_a94cf64629a72e4e39e5339f09cf106ac}} 
+\index{mainScene@{mainScene}!archiveTab@{archiveTab}}
+\index{archiveTab@{archiveTab}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{archiveTab}{archiveTab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::archive\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a2fa1c6760a547f880e63666aea8b6938}\label{classmain_scene_a2fa1c6760a547f880e63666aea8b6938}} 
+\index{mainScene@{mainScene}!backgroundTexture@{backgroundTexture}}
+\index{backgroundTexture@{backgroundTexture}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{backgroundTexture}{backgroundTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::background\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a311b4786cd30a321a62f6d4d70926ed1}\label{classmain_scene_a311b4786cd30a321a62f6d4d70926ed1}} 
+\index{mainScene@{mainScene}!calculatorTab@{calculatorTab}}
+\index{calculatorTab@{calculatorTab}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{calculatorTab}{calculatorTab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::calculator\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a05fbc4c69d640e80a89489667d6dff5c}\label{classmain_scene_a05fbc4c69d640e80a89489667d6dff5c}} 
+\index{mainScene@{mainScene}!elementsPos@{elementsPos}}
+\index{elementsPos@{elementsPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{elementsPos}{elementsPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} main\+Scene\+::elements\+Pos\mbox{[}30\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a40fb8539324c13c0ab8f2ead950c63df}\label{classmain_scene_a40fb8539324c13c0ab8f2ead950c63df}} 
+\index{mainScene@{mainScene}!headerText@{headerText}}
+\index{headerText@{headerText}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{headerText}{headerText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::header\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a725b7f00da27974a8f338854f0f5e350}\label{classmain_scene_a725b7f00da27974a8f338854f0f5e350}} 
+\index{mainScene@{mainScene}!logOutButton@{logOutButton}}
+\index{logOutButton@{logOutButton}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{logOutButton}{logOutButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::log\+Out\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_aa5f6b48c2e64a6666ac8a50c8a8e22de}\label{classmain_scene_aa5f6b48c2e64a6666ac8a50c8a8e22de}} 
+\index{mainScene@{mainScene}!logOutPos@{logOutPos}}
+\index{logOutPos@{logOutPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{logOutPos}{logOutPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} main\+Scene\+::log\+Out\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_ae2b645a540c8b08132d978e3da296a9b}\label{classmain_scene_ae2b645a540c8b08132d978e3da296a9b}} 
+\index{mainScene@{mainScene}!mousePos@{mousePos}}
+\index{mousePos@{mousePos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{mousePos}{mousePos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} main\+Scene\+::mouse\+Pos = \{0.f, 0.f\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a9d984929e676eb09bb7229ae43b09a95}\label{classmain_scene_a9d984929e676eb09bb7229ae43b09a95}} 
+\index{mainScene@{mainScene}!mySceneManager@{mySceneManager}}
+\index{mySceneManager@{mySceneManager}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{mySceneManager}{mySceneManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscene_manager}{scene\+Manager}}\& main\+Scene\+::my\+Scene\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_aba9d6761182b35b2a186ef15db803839}\label{classmain_scene_aba9d6761182b35b2a186ef15db803839}} 
+\index{mainScene@{mainScene}!sectionPos@{sectionPos}}
+\index{sectionPos@{sectionPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{sectionPos}{sectionPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} main\+Scene\+::section\+Pos\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_ad4d26b38425fb4c4414efe6cd7ff3097}\label{classmain_scene_ad4d26b38425fb4c4414efe6cd7ff3097}} 
+\index{mainScene@{mainScene}!sectionsTexture@{sectionsTexture}}
+\index{sectionsTexture@{sectionsTexture}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{sectionsTexture}{sectionsTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::sections\+Texture\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a23f080b72ba339bb0c11ab9551958d21}\label{classmain_scene_a23f080b72ba339bb0c11ab9551958d21}} 
+\index{mainScene@{mainScene}!selectedTab@{selectedTab}}
+\index{selectedTab@{selectedTab}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{selectedTab}{selectedTab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::selected\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a045ca4dfefcd6e0c6f8212967437d659}\label{classmain_scene_a045ca4dfefcd6e0c6f8212967437d659}} 
+\index{mainScene@{mainScene}!selectedTabPos@{selectedTabPos}}
+\index{selectedTabPos@{selectedTabPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{selectedTabPos}{selectedTabPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} main\+Scene\+::selected\+Tab\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a6f40eda61f7c112e32c1f845dd4742a5}\label{classmain_scene_a6f40eda61f7c112e32c1f845dd4742a5}} 
+\index{mainScene@{mainScene}!settingsTab@{settingsTab}}
+\index{settingsTab@{settingsTab}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{settingsTab}{settingsTab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::settings\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a92e1364ae33d77bfc4b084e1e4cae361}\label{classmain_scene_a92e1364ae33d77bfc4b084e1e4cae361}} 
+\index{mainScene@{mainScene}!simulationTab@{simulationTab}}
+\index{simulationTab@{simulationTab}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{simulationTab}{simulationTab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::simulation\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a7785b7a1dd3052a88d3b04518c9daead}\label{classmain_scene_a7785b7a1dd3052a88d3b04518c9daead}} 
+\index{mainScene@{mainScene}!sIndex@{sIndex}}
+\index{sIndex@{sIndex}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{sIndex}{sIndex}}
+{\footnotesize\ttfamily int main\+Scene\+::s\+Index = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_aa4764724c3497bf55d7334016eb7b39a}\label{classmain_scene_aa4764724c3497bf55d7334016eb7b39a}} 
+\index{mainScene@{mainScene}!tableHover@{tableHover}}
+\index{tableHover@{tableHover}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{tableHover}{tableHover}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::table\+Hover\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_abf3729e1892dd32585e60fe5f50a4f64}\label{classmain_scene_abf3729e1892dd32585e60fe5f50a4f64}} 
+\index{mainScene@{mainScene}!tableHoverPos@{tableHoverPos}}
+\index{tableHoverPos@{tableHoverPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{tableHoverPos}{tableHoverPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} main\+Scene\+::table\+Hover\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_ab8452df4446f1c40032fc63318ec067e}\label{classmain_scene_ab8452df4446f1c40032fc63318ec067e}} 
+\index{mainScene@{mainScene}!tableTab@{tableTab}}
+\index{tableTab@{tableTab}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{tableTab}{tableTab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::table\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a585d6ee7fa6a95e7ec42da941a54faa9}\label{classmain_scene_a585d6ee7fa6a95e7ec42da941a54faa9}} 
+\index{mainScene@{mainScene}!tableTexture@{tableTexture}}
+\index{tableTexture@{tableTexture}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{tableTexture}{tableTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::table\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a9a2a92bcea5254191ef392bb5b3e516d}\label{classmain_scene_a9a2a92bcea5254191ef392bb5b3e516d}} 
+\index{mainScene@{mainScene}!tabsAnimation@{tabsAnimation}}
+\index{tabsAnimation@{tabsAnimation}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{tabsAnimation}{tabsAnimation}}
+{\footnotesize\ttfamily int main\+Scene\+::tabs\+Animation = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_a7eefd0ded590fabd73e424cdde2688e7}\label{classmain_scene_a7eefd0ded590fabd73e424cdde2688e7}} 
+\index{mainScene@{mainScene}!tabsPos@{tabsPos}}
+\index{tabsPos@{tabsPos}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{tabsPos}{tabsPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} main\+Scene\+::tabs\+Pos\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmain_scene_afcda896ac8365648ead915ac473f1f48}\label{classmain_scene_afcda896ac8365648ead915ac473f1f48}} 
+\index{mainScene@{mainScene}!userInfo@{userInfo}}
+\index{userInfo@{userInfo}!mainScene@{mainScene}}
+\doxysubsubsection{\texorpdfstring{userInfo}{userInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}} main\+Scene\+::user\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+neos.\+components/include/\mbox{\hyperlink{main_scene_8h}{main\+Scene.\+h}}\item 
+neos.\+components/src/\mbox{\hyperlink{main_scene_8cpp}{main\+Scene.\+cpp}}\end{DoxyCompactItemize}

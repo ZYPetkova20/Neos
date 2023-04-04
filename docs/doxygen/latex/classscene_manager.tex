@@ -1,0 +1,75 @@
+\hypertarget{classscene_manager}{}\doxysection{scene\+Manager Class Reference}
+\label{classscene_manager}\index{sceneManager@{sceneManager}}
+
+
+{\ttfamily \#include $<$scene\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classscene_manager_a45c552d829c98acdd6bb225bb7e941bc}{add\+Scene}} (\mbox{\hyperlink{classscene}{scene}} $\ast$\mbox{\hyperlink{classscene}{scene}})
+\item 
+void \mbox{\hyperlink{classscene_manager_aeb97acb15e0dd0b3aa2847a760f47078}{set\+Current\+Scene}} (std\+::string scene\+Name)
+\item 
+void \mbox{\hyperlink{classscene_manager_ac32e2d8b41a627c40b89e5aa0a3f2a79}{update\+Scene}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscene}{scene}} $\ast$ \mbox{\hyperlink{classscene_manager_a48c6d996c4a052e694d288ebbe117fe0}{get\+Scene}} (std\+::string scene\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classscene}{scene}} $\ast$ $>$ \mbox{\hyperlink{classscene_manager_af0bbb3a6b81d57f23b9be9452f5dd2f7}{all\+Scenes}}
+\item 
+\mbox{\hyperlink{classscene}{scene}} $\ast$ \mbox{\hyperlink{classscene_manager_a7ac6cfc2dd9bf82bd6b8e2abfc15c3b2}{current\+Scene}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscene_manager_a45c552d829c98acdd6bb225bb7e941bc}\label{classscene_manager_a45c552d829c98acdd6bb225bb7e941bc}} 
+\index{sceneManager@{sceneManager}!addScene@{addScene}}
+\index{addScene@{addScene}!sceneManager@{sceneManager}}
+\doxysubsubsection{\texorpdfstring{addScene()}{addScene()}}
+{\footnotesize\ttfamily void scene\+Manager\+::add\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classscene}{scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classscene_manager_a48c6d996c4a052e694d288ebbe117fe0}\label{classscene_manager_a48c6d996c4a052e694d288ebbe117fe0}} 
+\index{sceneManager@{sceneManager}!getScene@{getScene}}
+\index{getScene@{getScene}!sceneManager@{sceneManager}}
+\doxysubsubsection{\texorpdfstring{getScene()}{getScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscene}{scene}} $\ast$ scene\+Manager\+::get\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classscene_manager_aeb97acb15e0dd0b3aa2847a760f47078}\label{classscene_manager_aeb97acb15e0dd0b3aa2847a760f47078}} 
+\index{sceneManager@{sceneManager}!setCurrentScene@{setCurrentScene}}
+\index{setCurrentScene@{setCurrentScene}!sceneManager@{sceneManager}}
+\doxysubsubsection{\texorpdfstring{setCurrentScene()}{setCurrentScene()}}
+{\footnotesize\ttfamily void scene\+Manager\+::set\+Current\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classscene_manager_ac32e2d8b41a627c40b89e5aa0a3f2a79}\label{classscene_manager_ac32e2d8b41a627c40b89e5aa0a3f2a79}} 
+\index{sceneManager@{sceneManager}!updateScene@{updateScene}}
+\index{updateScene@{updateScene}!sceneManager@{sceneManager}}
+\doxysubsubsection{\texorpdfstring{updateScene()}{updateScene()}}
+{\footnotesize\ttfamily void scene\+Manager\+::update\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classscene_manager_af0bbb3a6b81d57f23b9be9452f5dd2f7}\label{classscene_manager_af0bbb3a6b81d57f23b9be9452f5dd2f7}} 
+\index{sceneManager@{sceneManager}!allScenes@{allScenes}}
+\index{allScenes@{allScenes}!sceneManager@{sceneManager}}
+\doxysubsubsection{\texorpdfstring{allScenes}{allScenes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classscene}{scene}}$\ast$$>$ scene\+Manager\+::all\+Scenes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classscene_manager_a7ac6cfc2dd9bf82bd6b8e2abfc15c3b2}\label{classscene_manager_a7ac6cfc2dd9bf82bd6b8e2abfc15c3b2}} 
+\index{sceneManager@{sceneManager}!currentScene@{currentScene}}
+\index{currentScene@{currentScene}!sceneManager@{sceneManager}}
+\doxysubsubsection{\texorpdfstring{currentScene}{currentScene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscene}{scene}}$\ast$ scene\+Manager\+::current\+Scene = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+neos.\+components/include/\mbox{\hyperlink{scene_manager_8h}{scene\+Manager.\+h}}\item 
+neos.\+components/src/\mbox{\hyperlink{scene_manager_8cpp}{scene\+Manager.\+cpp}}\end{DoxyCompactItemize}

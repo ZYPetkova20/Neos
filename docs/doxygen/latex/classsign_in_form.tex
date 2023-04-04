@@ -1,0 +1,239 @@
+\hypertarget{classsign_in_form}{}\doxysection{sign\+In\+Form Class Reference}
+\label{classsign_in_form}\index{signInForm@{signInForm}}
+
+
+{\ttfamily \#include $<$sign\+In\+Form.\+h$>$}
+
+Inheritance diagram for sign\+In\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsign_in_form}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsign_in_form_a1bc75511358d9a7280281574f5ec6cf1}{delete\+Assets}} ()
+\item 
+virtual void \mbox{\hyperlink{classsign_in_form_aba1e374fa3861320f6d1aa32de34f2dc}{load\+Assets}} ()
+\item 
+virtual void \mbox{\hyperlink{classsign_in_form_a82400a936d0fb315e7a6dae3fc819c5f}{on\+Exit}} ()
+\item 
+\mbox{\hyperlink{classsign_in_form_a4ffaa8a1f8ffc0d7e2a877ed682c5bd0}{sign\+In\+Form}} (std\+::string scene\+Name, \mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&\mbox{\hyperlink{classscene_manager}{scene\+Manager}})
+\item 
+virtual void \mbox{\hyperlink{classsign_in_form_a4d4f372d9f7eec250b4e5bf7a988e658}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{classsign_in_form_aa4a5117e37796f44a6dca571772ebf5b}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{delete\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{load\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{on\+Exit}} ()=0
+\item 
+\mbox{\hyperlink{classscene_a5b05a26e377bc9c61c05808f50fe47bf}{scene}} (std\+::string scene\+Name)
+\item 
+virtual void \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{Start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{Update}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsign_in_form_acdabd5d8afa8ae52227c7a76f6667bb4}{draw\+Textures}} ()
+\item 
+void \mbox{\hyperlink{classsign_in_form_ab831b1c58f3d3b8af7dbafeb6a618b82}{handle\+Collision}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classsign_in_form_add7d9ffba8b05817bd58edab7093312e}{background\+Texture}}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{dark\+Gray}} = \{ 64, 64, 64, 255 \}
+\item 
+\mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} \mbox{\hyperlink{classsign_in_form_a58ead4ab871f0f6ce34359038cee84cf}{email\+Field}} = \{ \{110, 325, 330, 30\}, \char`\"{}email\char`\"{}, 18, \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{dark\+Gray}} \}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classsign_in_form_ad9bf4c464c79d56221d4eb20c8d6c7bf}{header\+Text}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classsign_in_form_a2b9465bbb4203f0063151216cd570b9a}{labels\+Texture}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classsign_in_form_a94741f46022d93f0b2408ab7dc88356d}{logo\+Texture}}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{classsign_in_form_a8472829a7e85c0ca56417b3dc3129c1d}{mouse\+Pos}} = \{ 0.f, 0.f \}
+\item 
+\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \& \mbox{\hyperlink{classsign_in_form_a08d867362982200340686ad910f215db}{my\+Scene\+Manager}}
+\item 
+\mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} \mbox{\hyperlink{classsign_in_form_add321352a114d4a2aee3b4617e3687f5}{password\+Field}} = \{ \{549,325,308,32\} ,\char`\"{}password\char`\"{}, 22, \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{dark\+Gray}} \}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classsign_in_form_ac5f5f3d29349c34e96414ec1c205c8cc}{return\+Button}} = \{ 99 , 535 , 215, 25 \}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classsign_in_form_a1fc8cb3ea2703bdfd19aad583ee8daf5}{sign\+In\+Button}}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classsign_in_form_aba97957d3c6a26fcf6689be3e7089432}{sign\+In\+Button\+Pos}} = \{ 99, 435, 270 , 67 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Data Fields inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classscene_a4fa409117e401be3bb6b09ee75d5e9ab}{background\+Color}} = \{ 248, 248, 248, 255 \}
+\item 
+std\+::string \mbox{\hyperlink{classscene_aa36644f63cdc2039386fa1f6ca3263d9}{my\+Scene\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsign_in_form_a4ffaa8a1f8ffc0d7e2a877ed682c5bd0}\label{classsign_in_form_a4ffaa8a1f8ffc0d7e2a877ed682c5bd0}} 
+\index{signInForm@{signInForm}!signInForm@{signInForm}}
+\index{signInForm@{signInForm}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{signInForm()}{signInForm()}}
+{\footnotesize\ttfamily sign\+In\+Form\+::sign\+In\+Form (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name,  }\item[{\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&}]{scene\+Manager }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsign_in_form_a1bc75511358d9a7280281574f5ec6cf1}\label{classsign_in_form_a1bc75511358d9a7280281574f5ec6cf1}} 
+\index{signInForm@{signInForm}!deleteAssets@{deleteAssets}}
+\index{deleteAssets@{deleteAssets}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{deleteAssets()}{deleteAssets()}}
+{\footnotesize\ttfamily void sign\+In\+Form\+::delete\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{scene}}.
+
+\mbox{\Hypertarget{classsign_in_form_acdabd5d8afa8ae52227c7a76f6667bb4}\label{classsign_in_form_acdabd5d8afa8ae52227c7a76f6667bb4}} 
+\index{signInForm@{signInForm}!drawTextures@{drawTextures}}
+\index{drawTextures@{drawTextures}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{drawTextures()}{drawTextures()}}
+{\footnotesize\ttfamily void sign\+In\+Form\+::draw\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_ab831b1c58f3d3b8af7dbafeb6a618b82}\label{classsign_in_form_ab831b1c58f3d3b8af7dbafeb6a618b82}} 
+\index{signInForm@{signInForm}!handleCollision@{handleCollision}}
+\index{handleCollision@{handleCollision}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{handleCollision()}{handleCollision()}}
+{\footnotesize\ttfamily void sign\+In\+Form\+::handle\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_aba1e374fa3861320f6d1aa32de34f2dc}\label{classsign_in_form_aba1e374fa3861320f6d1aa32de34f2dc}} 
+\index{signInForm@{signInForm}!loadAssets@{loadAssets}}
+\index{loadAssets@{loadAssets}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{loadAssets()}{loadAssets()}}
+{\footnotesize\ttfamily void sign\+In\+Form\+::load\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{scene}}.
+
+\mbox{\Hypertarget{classsign_in_form_a82400a936d0fb315e7a6dae3fc819c5f}\label{classsign_in_form_a82400a936d0fb315e7a6dae3fc819c5f}} 
+\index{signInForm@{signInForm}!onExit@{onExit}}
+\index{onExit@{onExit}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void sign\+In\+Form\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{scene}}.
+
+\mbox{\Hypertarget{classsign_in_form_a4d4f372d9f7eec250b4e5bf7a988e658}\label{classsign_in_form_a4d4f372d9f7eec250b4e5bf7a988e658}} 
+\index{signInForm@{signInForm}!Start@{Start}}
+\index{Start@{Start}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void sign\+In\+Form\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{scene}}.
+
+\mbox{\Hypertarget{classsign_in_form_aa4a5117e37796f44a6dca571772ebf5b}\label{classsign_in_form_aa4a5117e37796f44a6dca571772ebf5b}} 
+\index{signInForm@{signInForm}!Update@{Update}}
+\index{Update@{Update}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void sign\+In\+Form\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{scene}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classsign_in_form_add7d9ffba8b05817bd58edab7093312e}\label{classsign_in_form_add7d9ffba8b05817bd58edab7093312e}} 
+\index{signInForm@{signInForm}!backgroundTexture@{backgroundTexture}}
+\index{backgroundTexture@{backgroundTexture}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{backgroundTexture}{backgroundTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} sign\+In\+Form\+::background\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}\label{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}} 
+\index{signInForm@{signInForm}!darkGray@{darkGray}}
+\index{darkGray@{darkGray}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{darkGray}{darkGray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} sign\+In\+Form\+::dark\+Gray = \{ 64, 64, 64, 255 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_a58ead4ab871f0f6ce34359038cee84cf}\label{classsign_in_form_a58ead4ab871f0f6ce34359038cee84cf}} 
+\index{signInForm@{signInForm}!emailField@{emailField}}
+\index{emailField@{emailField}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{emailField}{emailField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} sign\+In\+Form\+::email\+Field = \{ \{110, 325, 330, 30\}, \char`\"{}email\char`\"{}, 18, \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{dark\+Gray}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_ad9bf4c464c79d56221d4eb20c8d6c7bf}\label{classsign_in_form_ad9bf4c464c79d56221d4eb20c8d6c7bf}} 
+\index{signInForm@{signInForm}!headerText@{headerText}}
+\index{headerText@{headerText}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{headerText}{headerText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} sign\+In\+Form\+::header\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_a2b9465bbb4203f0063151216cd570b9a}\label{classsign_in_form_a2b9465bbb4203f0063151216cd570b9a}} 
+\index{signInForm@{signInForm}!labelsTexture@{labelsTexture}}
+\index{labelsTexture@{labelsTexture}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{labelsTexture}{labelsTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} sign\+In\+Form\+::labels\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_a94741f46022d93f0b2408ab7dc88356d}\label{classsign_in_form_a94741f46022d93f0b2408ab7dc88356d}} 
+\index{signInForm@{signInForm}!logoTexture@{logoTexture}}
+\index{logoTexture@{logoTexture}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{logoTexture}{logoTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} sign\+In\+Form\+::logo\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_a8472829a7e85c0ca56417b3dc3129c1d}\label{classsign_in_form_a8472829a7e85c0ca56417b3dc3129c1d}} 
+\index{signInForm@{signInForm}!mousePos@{mousePos}}
+\index{mousePos@{mousePos}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{mousePos}{mousePos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} sign\+In\+Form\+::mouse\+Pos = \{ 0.f, 0.f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_a08d867362982200340686ad910f215db}\label{classsign_in_form_a08d867362982200340686ad910f215db}} 
+\index{signInForm@{signInForm}!mySceneManager@{mySceneManager}}
+\index{mySceneManager@{mySceneManager}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{mySceneManager}{mySceneManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscene_manager}{scene\+Manager}}\& sign\+In\+Form\+::my\+Scene\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_add321352a114d4a2aee3b4617e3687f5}\label{classsign_in_form_add321352a114d4a2aee3b4617e3687f5}} 
+\index{signInForm@{signInForm}!passwordField@{passwordField}}
+\index{passwordField@{passwordField}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{passwordField}{passwordField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} sign\+In\+Form\+::password\+Field = \{ \{549,325,308,32\} ,\char`\"{}password\char`\"{}, 22, \mbox{\hyperlink{classsign_in_form_a77fae846b26f332872a3b75c5eae7162}{dark\+Gray}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_ac5f5f3d29349c34e96414ec1c205c8cc}\label{classsign_in_form_ac5f5f3d29349c34e96414ec1c205c8cc}} 
+\index{signInForm@{signInForm}!returnButton@{returnButton}}
+\index{returnButton@{returnButton}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{returnButton}{returnButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} sign\+In\+Form\+::return\+Button = \{ 99 , 535 , 215, 25 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_a1fc8cb3ea2703bdfd19aad583ee8daf5}\label{classsign_in_form_a1fc8cb3ea2703bdfd19aad583ee8daf5}} 
+\index{signInForm@{signInForm}!signInButton@{signInButton}}
+\index{signInButton@{signInButton}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{signInButton}{signInButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} sign\+In\+Form\+::sign\+In\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsign_in_form_aba97957d3c6a26fcf6689be3e7089432}\label{classsign_in_form_aba97957d3c6a26fcf6689be3e7089432}} 
+\index{signInForm@{signInForm}!signInButtonPos@{signInButtonPos}}
+\index{signInButtonPos@{signInButtonPos}!signInForm@{signInForm}}
+\doxysubsubsection{\texorpdfstring{signInButtonPos}{signInButtonPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} sign\+In\+Form\+::sign\+In\+Button\+Pos = \{ 99, 435, 270 , 67 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+neos.\+components/include/\mbox{\hyperlink{sign_in_form_8h}{sign\+In\+Form.\+h}}\item 
+neos.\+components/src/\mbox{\hyperlink{sign_in_form_8cpp}{sign\+In\+Form.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,255 @@
+\hypertarget{classregister_form}{}\doxysection{register\+Form Class Reference}
+\label{classregister_form}\index{registerForm@{registerForm}}
+
+
+{\ttfamily \#include $<$register\+Form.\+h$>$}
+
+Inheritance diagram for register\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classregister_form}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classregister_form_adf8150023476ef1f2842091d04b89f6f}{delete\+Assets}} ()
+\item 
+virtual void \mbox{\hyperlink{classregister_form_a396d68486132f594e498eabee16d926f}{load\+Assets}} ()
+\item 
+virtual void \mbox{\hyperlink{classregister_form_a11209819dbd62233fba3f5b46c7fbcf8}{on\+Exit}} ()
+\item 
+\mbox{\hyperlink{classregister_form_aa5d89a4a9a92aa7a78ed9fad9cde2501}{register\+Form}} (std\+::string scene\+Name, \mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&\mbox{\hyperlink{classscene_manager}{scene\+Manager}})
+\item 
+virtual void \mbox{\hyperlink{classregister_form_a17369b66eff02a96ab0be5f894f56b4e}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{classregister_form_a550f3b9c17c6aaef5861bb00d1378bda}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{delete\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{load\+Assets}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{on\+Exit}} ()=0
+\item 
+\mbox{\hyperlink{classscene_a5b05a26e377bc9c61c05808f50fe47bf}{scene}} (std\+::string scene\+Name)
+\item 
+virtual void \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{Start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{Update}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classregister_form_a8e167e7cc5a8f4aaa1779e82f68fcfd9}{draw\+Textures}} ()
+\item 
+void \mbox{\hyperlink{classregister_form_a09ee3009c185521e4c887f3e5fcafa05}{handle\+Collision}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classregister_form_a5162928ad25e5fbbffb93b2cbb4df624}{background\+Texture}}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} = \{64, 64, 64, 255\}
+\item 
+\mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} \mbox{\hyperlink{classregister_form_ae0c2cb333ef8af86158513b5883510aa}{email\+Field}} = \{ \{110, 456, 330, 27\}, \char`\"{}email\char`\"{}, 18, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}
+\item 
+\mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} \mbox{\hyperlink{classregister_form_af9bb12ca036865589689e170a3b1bed5}{f\+Name\+Field}} = \{ \{111,324,308,32\} ,\char`\"{}text\char`\"{}, 22, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classregister_form_a80d4b22d912be53de2409d758977bd02}{header\+Text}}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classregister_form_a41a09e4166b553b25a7f9b9d997182b8}{labels\+Texture}}
+\item 
+\mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} \mbox{\hyperlink{classregister_form_ac22453ff1710b586c9d5d0f73159daed}{l\+Name\+Field}} = \{ \{538,324,308,32\} ,\char`\"{}text\char`\"{}, 22, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classregister_form_aebd3b48ce65a4a570b30a63377bd1324}{logo\+Texture}}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{classregister_form_aa9fd5b6a5cd89e109fd04fee291fba59}{mouse\+Pos}} = \{ 0.f, 0.f \}
+\item 
+\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \& \mbox{\hyperlink{classregister_form_ad68bb0b1074216f45493c796f04ab7bc}{my\+Scene\+Manager}}
+\item 
+\mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} \mbox{\hyperlink{classregister_form_a5e0229ed33c7a3779e9e104089a0ddbe}{password\+Field}} = \{ \{538,452,308,32\} ,\char`\"{}password\char`\"{}, 22, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}
+\item 
+\mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} \mbox{\hyperlink{classregister_form_a2e7c162382c8b88a76aca8526027f8d0}{register\+Button}}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classregister_form_abf1a4314015d8b177682625c4a8ba92e}{register\+Button\+Pos}} = \{ 99, 559, 270 , 67 \}
+\item 
+\mbox{\hyperlink{struct_rectangle}{Rectangle}} \mbox{\hyperlink{classregister_form_a7767a4ff4e520a6f6c2c80dc338180be}{return\+Button}} = \{ 105 ,660 , 215, 25\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Data Fields inherited from \mbox{\hyperlink{classscene}{scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{classscene_a4fa409117e401be3bb6b09ee75d5e9ab}{background\+Color}} = \{ 248, 248, 248, 255 \}
+\item 
+std\+::string \mbox{\hyperlink{classscene_aa36644f63cdc2039386fa1f6ca3263d9}{my\+Scene\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classregister_form_aa5d89a4a9a92aa7a78ed9fad9cde2501}\label{classregister_form_aa5d89a4a9a92aa7a78ed9fad9cde2501}} 
+\index{registerForm@{registerForm}!registerForm@{registerForm}}
+\index{registerForm@{registerForm}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{registerForm()}{registerForm()}}
+{\footnotesize\ttfamily register\+Form\+::register\+Form (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name,  }\item[{\mbox{\hyperlink{classscene_manager}{scene\+Manager}} \&}]{scene\+Manager }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classregister_form_adf8150023476ef1f2842091d04b89f6f}\label{classregister_form_adf8150023476ef1f2842091d04b89f6f}} 
+\index{registerForm@{registerForm}!deleteAssets@{deleteAssets}}
+\index{deleteAssets@{deleteAssets}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{deleteAssets()}{deleteAssets()}}
+{\footnotesize\ttfamily void register\+Form\+::delete\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a2073d7df1da02cee34cf745c91fb5d7b}{scene}}.
+
+\mbox{\Hypertarget{classregister_form_a8e167e7cc5a8f4aaa1779e82f68fcfd9}\label{classregister_form_a8e167e7cc5a8f4aaa1779e82f68fcfd9}} 
+\index{registerForm@{registerForm}!drawTextures@{drawTextures}}
+\index{drawTextures@{drawTextures}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{drawTextures()}{drawTextures()}}
+{\footnotesize\ttfamily void register\+Form\+::draw\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a09ee3009c185521e4c887f3e5fcafa05}\label{classregister_form_a09ee3009c185521e4c887f3e5fcafa05}} 
+\index{registerForm@{registerForm}!handleCollision@{handleCollision}}
+\index{handleCollision@{handleCollision}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{handleCollision()}{handleCollision()}}
+{\footnotesize\ttfamily void register\+Form\+::handle\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a396d68486132f594e498eabee16d926f}\label{classregister_form_a396d68486132f594e498eabee16d926f}} 
+\index{registerForm@{registerForm}!loadAssets@{loadAssets}}
+\index{loadAssets@{loadAssets}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{loadAssets()}{loadAssets()}}
+{\footnotesize\ttfamily void register\+Form\+::load\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_ac6b7cfce61f70e879cd411bebee09c75}{scene}}.
+
+\mbox{\Hypertarget{classregister_form_a11209819dbd62233fba3f5b46c7fbcf8}\label{classregister_form_a11209819dbd62233fba3f5b46c7fbcf8}} 
+\index{registerForm@{registerForm}!onExit@{onExit}}
+\index{onExit@{onExit}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void register\+Form\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a75fdc3a309f484ee422bba31c71bad80}{scene}}.
+
+\mbox{\Hypertarget{classregister_form_a17369b66eff02a96ab0be5f894f56b4e}\label{classregister_form_a17369b66eff02a96ab0be5f894f56b4e}} 
+\index{registerForm@{registerForm}!Start@{Start}}
+\index{Start@{Start}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void register\+Form\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a3607e35584006f62e88514b945437ba3}{scene}}.
+
+\mbox{\Hypertarget{classregister_form_a550f3b9c17c6aaef5861bb00d1378bda}\label{classregister_form_a550f3b9c17c6aaef5861bb00d1378bda}} 
+\index{registerForm@{registerForm}!Update@{Update}}
+\index{Update@{Update}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void register\+Form\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classscene_a99f9fff5fe2ba51c3e28beed8777ffe0}{scene}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classregister_form_a5162928ad25e5fbbffb93b2cbb4df624}\label{classregister_form_a5162928ad25e5fbbffb93b2cbb4df624}} 
+\index{registerForm@{registerForm}!backgroundTexture@{backgroundTexture}}
+\index{backgroundTexture@{backgroundTexture}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{backgroundTexture}{backgroundTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} register\+Form\+::background\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}\label{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}} 
+\index{registerForm@{registerForm}!darkGray@{darkGray}}
+\index{darkGray@{darkGray}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{darkGray}{darkGray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} register\+Form\+::dark\+Gray = \{64, 64, 64, 255\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_ae0c2cb333ef8af86158513b5883510aa}\label{classregister_form_ae0c2cb333ef8af86158513b5883510aa}} 
+\index{registerForm@{registerForm}!emailField@{emailField}}
+\index{emailField@{emailField}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{emailField}{emailField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} register\+Form\+::email\+Field = \{ \{110, 456, 330, 27\}, \char`\"{}email\char`\"{}, 18, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_af9bb12ca036865589689e170a3b1bed5}\label{classregister_form_af9bb12ca036865589689e170a3b1bed5}} 
+\index{registerForm@{registerForm}!fNameField@{fNameField}}
+\index{fNameField@{fNameField}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{fNameField}{fNameField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} register\+Form\+::f\+Name\+Field = \{ \{111,324,308,32\} ,\char`\"{}text\char`\"{}, 22, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a80d4b22d912be53de2409d758977bd02}\label{classregister_form_a80d4b22d912be53de2409d758977bd02}} 
+\index{registerForm@{registerForm}!headerText@{headerText}}
+\index{headerText@{headerText}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{headerText}{headerText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} register\+Form\+::header\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a41a09e4166b553b25a7f9b9d997182b8}\label{classregister_form_a41a09e4166b553b25a7f9b9d997182b8}} 
+\index{registerForm@{registerForm}!labelsTexture@{labelsTexture}}
+\index{labelsTexture@{labelsTexture}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{labelsTexture}{labelsTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} register\+Form\+::labels\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_ac22453ff1710b586c9d5d0f73159daed}\label{classregister_form_ac22453ff1710b586c9d5d0f73159daed}} 
+\index{registerForm@{registerForm}!lNameField@{lNameField}}
+\index{lNameField@{lNameField}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{lNameField}{lNameField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} register\+Form\+::l\+Name\+Field = \{ \{538,324,308,32\} ,\char`\"{}text\char`\"{}, 22, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_aebd3b48ce65a4a570b30a63377bd1324}\label{classregister_form_aebd3b48ce65a4a570b30a63377bd1324}} 
+\index{registerForm@{registerForm}!logoTexture@{logoTexture}}
+\index{logoTexture@{logoTexture}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{logoTexture}{logoTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} register\+Form\+::logo\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_aa9fd5b6a5cd89e109fd04fee291fba59}\label{classregister_form_aa9fd5b6a5cd89e109fd04fee291fba59}} 
+\index{registerForm@{registerForm}!mousePos@{mousePos}}
+\index{mousePos@{mousePos}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{mousePos}{mousePos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} register\+Form\+::mouse\+Pos = \{ 0.f, 0.f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_ad68bb0b1074216f45493c796f04ab7bc}\label{classregister_form_ad68bb0b1074216f45493c796f04ab7bc}} 
+\index{registerForm@{registerForm}!mySceneManager@{mySceneManager}}
+\index{mySceneManager@{mySceneManager}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{mySceneManager}{mySceneManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscene_manager}{scene\+Manager}}\& register\+Form\+::my\+Scene\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a5e0229ed33c7a3779e9e104089a0ddbe}\label{classregister_form_a5e0229ed33c7a3779e9e104089a0ddbe}} 
+\index{registerForm@{registerForm}!passwordField@{passwordField}}
+\index{passwordField@{passwordField}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{passwordField}{passwordField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcp_1_1input_field}{cp\+::input\+Field}} register\+Form\+::password\+Field = \{ \{538,452,308,32\} ,\char`\"{}password\char`\"{}, 22, \mbox{\hyperlink{classregister_form_a283e1a69b2fdf8769da0bd9592ab5af6}{dark\+Gray}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a2e7c162382c8b88a76aca8526027f8d0}\label{classregister_form_a2e7c162382c8b88a76aca8526027f8d0}} 
+\index{registerForm@{registerForm}!registerButton@{registerButton}}
+\index{registerButton@{registerButton}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{registerButton}{registerButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_a0f74897272c4257b58656025d91a16ed}{Texture2D}} register\+Form\+::register\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_abf1a4314015d8b177682625c4a8ba92e}\label{classregister_form_abf1a4314015d8b177682625c4a8ba92e}} 
+\index{registerForm@{registerForm}!registerButtonPos@{registerButtonPos}}
+\index{registerButtonPos@{registerButtonPos}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{registerButtonPos}{registerButtonPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} register\+Form\+::register\+Button\+Pos = \{ 99, 559, 270 , 67 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classregister_form_a7767a4ff4e520a6f6c2c80dc338180be}\label{classregister_form_a7767a4ff4e520a6f6c2c80dc338180be}} 
+\index{registerForm@{registerForm}!returnButton@{returnButton}}
+\index{returnButton@{returnButton}!registerForm@{registerForm}}
+\doxysubsubsection{\texorpdfstring{returnButton}{returnButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rectangle}{Rectangle}} register\+Form\+::return\+Button = \{ 105 ,660 , 215, 25\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+neos.\+components/include/\mbox{\hyperlink{register_form_8h}{register\+Form.\+h}}\item 
+neos.\+components/src/\mbox{\hyperlink{register_form_8cpp}{register\+Form.\+cpp}}\end{DoxyCompactItemize}

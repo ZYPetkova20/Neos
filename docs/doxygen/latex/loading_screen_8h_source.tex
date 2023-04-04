@@ -1,0 +1,43 @@
+\hypertarget{loading_screen_8h_source}{}\doxysection{loading\+Screen.\+h}
+\label{loading_screen_8h_source}\index{neos.components/include/loadingScreen.h@{neos.components/include/loadingScreen.h}}
+\mbox{\hyperlink{loading_screen_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene_manager_8h}{sceneManager.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{raylib_8h}{raylib.h}}>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classloading_screen}{loadingScreen}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classscene}{scene}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{classscene_manager}{sceneManager}}\ \&\mbox{\hyperlink{classloading_screen_ab63fc56f34a693213b1ca3dd5085aba2}{mySceneManager}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Variables}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classloading_screen_a347c41005aa3eadda2780e949dc2b673}{animationIsOver}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classloading_screen_a119ed1a4ceb3e208cc75623e1ef75bb8}{animationCounter}}\ =\ 0;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Vector\ variables}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{classloading_screen_aba88ac1be9ece0f968d191926f7bccbf}{loadingOpacity}}\ =\ \{255,\ 255,\ 255,\ 255\};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Textures}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classloading_screen_aff049402744db5d082d3139bb28c380f}{defaultTexture}};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classloading_screen_aaeb45f8ceae27bb9d01132cc11d6e4cc}{logoTexture}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture2D}}\ \mbox{\hyperlink{classloading_screen_a206f3cbb90d3fba385644f1d00a20b69}{transitionTexture}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Methods:}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_aba1b542abbd95eeaf6e134b4f2bc652a}{handleIntro}}();\ \textcolor{comment}{//\ For\ intro\ animation}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_a4c3d8779bbb6682c1264b7db59ebbd01}{increaseOpacity}}();\ \textcolor{comment}{//\ Fades\ in\ the\ texture}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_ac42beb31c03b0c4fdf769cd7715f6f44}{decreaseOpacity}}();\ \textcolor{comment}{//\ Fades\ out\ the\ texture}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_a6dd001bf4a86f7483b36d10ccd992090}{drawTextures}}();\ \ \textcolor{comment}{//\ For\ drawing\ textures}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classloading_screen}{loadingScreen}}(std::string\ sceneName,\ \mbox{\hyperlink{classscene_manager}{sceneManager}}\&\ \mbox{\hyperlink{classscene_manager}{sceneManager}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Methods\ from\ class\ 'scene'}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_ad3b059b2b5b9768b74737476535e20d4}{Start}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_ac6c85ccc4df946975d979e69b32d49dd}{Update}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_a356a95cb4d24c09435412c08e7866456}{onExit}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_a27b86dce965b7ab4967d82d943adc756}{loadAssets}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloading_screen_acfd4f78bc1cde99f6cff8074eea7b942}{deleteAssets}}();}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}
