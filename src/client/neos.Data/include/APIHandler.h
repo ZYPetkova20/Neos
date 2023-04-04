@@ -19,7 +19,9 @@ public:
     
 
     json JSONRes; // JSON object to store server response
-    std::vector<string> emails, passwords; // vectors to store user emails and passwords
+
+    std::vector<string> emails, passwords, firstNames, lastNames; 
+    // vectors to store user emails and passwords
 
     string enteredEmail = "ppenchos54v@gmail.com", enteredPassword = "malinki12"; // default values for user input
 
@@ -32,7 +34,7 @@ public:
 
     void registerHandler(); // function to handle user registration
 
-    bool checkLogin(string enteredEmail, string enteredPassword);
+    bool checkLoginRegister(string eneteredfName, string enteredlName, string enteredEmail, string enteredPassword, string logReg);
     string getFirstName(string enteredEmail);
     string getLastName(string enteredEmail);
     void getUsers(); // function to get user data from server

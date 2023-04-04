@@ -68,10 +68,29 @@ void APIHandler::registerHandler()
     }
 }
 
-bool APIHandler::checkLogin(string enteredEmail, string enteredPassword)
+bool APIHandler::checkLoginRegister(string eneteredFName, string enteredLName, string enteredEmail, string enteredPassword, string logReg)
 {
+    // extract email and password of each user from response JSON
+    for (const auto& obj : JSONRes) {
+        //email
+        string email = obj.at("email").get<string>();
+        emails.push_back(email);
+
+        //password
+        string password = obj.at("password").get<string>();
+        passwords.push_back(password);
+
+        //first name
+        string firstName = obj.at("firstName").get<string>();
+        firstNames.push_back(firstName);
+
+        //last name
+        string lastName = obj.at("lastName").get<string>();
+        lastNames.push_back(lastName);
+    }
+
     // check if matching email and password are found
-    bool foundPassword = 0;
+    bool foundPassword = false;
     for (const auto& password : passwords) {
         if (enteredPassword == password)
         {
@@ -80,7 +99,7 @@ bool APIHandler::checkLogin(string enteredEmail, string enteredPassword)
         }
     }
 
-    bool foundEmail = 0;
+    bool foundEmail = false;
     for (const auto& email : emails) {
         if (enteredEmail == email) {
             foundEmail = true;
@@ -88,7 +107,28 @@ bool APIHandler::checkLogin(string enteredEmail, string enteredPassword)
         }
     }
 
-    return foundEmail && foundPassword;
+    bool foundFirstName = false;
+    for (const auto& firstName : firstNames) {
+        if (eneteredFName == firstName) {
+            foundFirstName = true;
+            break;
+        }
+    }
+
+    bool foundLastName = false;
+    for (const auto& lastName : lastNames) {
+        if (enteredLName == lastName) {
+            foundLastName = true;
+            break;
+        }
+    }
+
+    if (logReg == "login")
+        return foundEmail && foundPassword;
+    else if (logReg == "register")
+        return foundEmail || foundPassword || foundFirstName || foundLastName;
+    else
+        return;
 }
 
 string APIHandler::getFirstName(string enteredEmail)
