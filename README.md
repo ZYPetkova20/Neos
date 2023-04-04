@@ -47,14 +47,15 @@
 ## 🔨 Tools
   <p align="left"> 
     <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
-    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/51/null/visual-studio-code-2019.png"/></a>
-    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/null/figma.png"/></a>
-    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/null/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png"/></a>
+    <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/color/51/null/visual-studio-code-2019.png"/></a>
+    <a href="https://www.figma.com/"><img src="https://img.icons8.com/fluency/48/null/figma.png"/></a>
+    <a href="https://www.postman.com/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/null/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png"/></a>
      <a href="https://www.adobe.com/creativecloud.html"><img src="https://www.adobe.com/content/dam/shared/images/product-icons/svg/creative-cloud.svg" alt="adobe creative cloud" width=48px /></a>
       <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px /></a>
     <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=48px />
     <a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo"/></a>
     <a href="https://git-scm.com/"><img src="https://img.icons8.com/color/48/000000/git.png" alt="Git"/></a>
+    <a href="https://www.testcaselab.com/"><img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_d64820c5928a1ce8f91d728566c58d72/testcaselab.jpg" alt="Test Case Lab" width=48px /></a>
   </p>   
   
   
