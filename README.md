@@ -37,11 +37,11 @@
   
 ## 🔗 DB & Server Tech Stack 
   <p align="left"> 
-    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/ios/50/null/prisma-orm.png"/></a>
-    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/48/null/postgreesql.png"/></a>
-    <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/null/azure-1.png"/></a>
-    <a href="https://visualstudio.microsoft.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092188134793560176/687474703a2f2f692e696d6775722e636f6d2f643958747974732e706e67_1.png"/></a>
-    <a href="https://visualstudio.microsoft.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092189749625753831/68747470733a2f2f6375726c2e73652f6c6f676f2f6375726c2d6c6f676f2e737667_1.png"/></a>
+    <a href="https://www.prisma.io/"><img src="https://img.icons8.com/ios/50/null/prisma-orm.png"/></a>
+    <a href="https://www.postgresql.org/"><img src="https://img.icons8.com/color/48/null/postgreesql.png"/></a>
+    <a href="https://azure.microsoft.com/en-us"><img src="https://img.icons8.com/fluency/48/null/azure-1.png"/></a>
+    <a href="https://docs.libcpr.org/introduction.html"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092188134793560176/687474703a2f2f692e696d6775722e636f6d2f643958747974732e706e67_1.png"/></a>
+    <a href="https://curl.se/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092189749625753831/68747470733a2f2f6375726c2e73652f6c6f676f2f6375726c2d6c6f676f2e737667_1.png"/></a>
   </p> 
   
 ## 🔨 Tools
