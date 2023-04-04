@@ -68,6 +68,20 @@
   - [QA Unit Testing](https://codingburgas-my.sharepoint.com/:x:/g/personal/smtashev20_codingburgas_bg/Ebi25gemNjBCoUS9hWusvrAB6ZYk34KQb7wtvvKlHFw_Kw?e=F0phq5)
   - [QA - Test Plan](https://codingburgas-my.sharepoint.com/:b:/g/personal/smtashev20_codingburgas_bg/EV5tnWXsHqRCizarP8p8LIkBGKeYv0Q_7rOza5dnRrPyyw?e=RkTI0I)
 
+## 📑 Diagrams
+<details open>
+<summary>Use Case Diagram</summary>
+<br>
+<img src ="https://cdn.discordapp.com/attachments/900689339179216926/1092940808379957348/NEOS_Diagram.png">
+</details>
+
+<details open>
+<summary>Tech Stack Diagram</summary>
+<br>
+<img src ="https://cdn.discordapp.com/attachments/900689339179216926/1092941387739189308/Tech_Stack_Diagram.png">
+</details>
+
+
 ## 🔧 Installation
 
 ```
