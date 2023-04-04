@@ -3,7 +3,7 @@ import express from "express"
 import cors from "cors"
 
 import {userRouter} from "./user/user.router"
-const reactionRouter = express.Router()
+import {reactionRouter} from "./reactions/reaction.router"
 
 dotenv.config();
 

@@ -4,5 +4,5 @@
 void ReqHandler::login()
 {
 	loginRegister logReg;
-	logReg.login("da", "az");
+	logReg.archive();
 }

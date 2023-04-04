@@ -16,7 +16,7 @@ class APIHandler {
 public:
     string adminPasswordString; // string to store the admin password
     std::ifstream myFile; // file stream to read from .env file
-    cpr::Response r;
+    
 
     json JSONRes; // JSON object to store server response
     std::vector<string> emails, passwords; // vectors to store user emails and passwords
@@ -27,6 +27,8 @@ public:
     int index = 0; // index to iterate through JSON array
     
     APIHandler(); // constructor to read admin password from .env file
+
+    void reactions();
 
     void registerHandler(); // function to handle user registration
 

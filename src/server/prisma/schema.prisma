@@ -16,10 +16,10 @@ model User {
   lastName String
   email String @unique @db.VarChar(30)
   password String
-  Reactions Reactions[]
+  Reaction Reaction[]
 }
 
-model Reactions {
+model Reaction {
   id Int @id @default(autoincrement())
   water Boolean
   user User @relation(fields: [fName], references: [firstName], onDelete: Cascade)

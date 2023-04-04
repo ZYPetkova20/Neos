@@ -12,6 +12,7 @@ public:
 
 	loginRegister();
 
+	void archive();
 	void reg(string fName, string lName, string email, string password);
 	void login(string email, string password);
 };

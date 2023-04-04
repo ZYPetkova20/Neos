@@ -14,22 +14,47 @@ APIHandler::APIHandler()
     myFile >> adminPasswordString;
 }
 
+void APIHandler::reactions()
+{
+    json jsonData = nlohmann::json{
+        "water", false,
+        "fName", "dnes"
+    };
+
+    cpr::Response r = cpr::Post(
+        cpr::Url{ "http://localhost:8000/api/reactions" },
+        cpr::Authentication{ "neosadmin", adminPasswordString },
+        cpr::Body{
+            jsonData.dump()
+        },
+        cpr::Header{ {"Content-Type", "application/json"} }
+    );
+
+    // check if request was successful
+    if (r.status_code >= 200 && r.status_code < 300) {
+        std::cout << "Data posted successfully!\n";
+    }
+    else {
+        std::cout << "Error posting data: " << r.text << "\n";
+    }
+}
+
 // read admin password from .env file
 void APIHandler::registerHandler()
 {
     // create JSON object with user data
-    nlohmann::json  my_json = nlohmann::json{
+    json jsonData = nlohmann::json{
         {"firstName", "dnes"},
         {"lastName", "ez"},
         {"email", "utre3"},
         {"password", "data"},
     };
 
-        r = cpr::Post(
+        cpr::Response r = cpr::Post(
         cpr::Url{ "http://localhost:8000/api/users" },
         cpr::Authentication{ "neosadmin", adminPasswordString },
         cpr::Body{
-            my_json.dump()
+            jsonData.dump()
         },
         cpr::Header{ {"Content-Type", "application/json"} }
     );
@@ -108,7 +133,7 @@ string APIHandler::getLastName(string enteredEmail)
 void APIHandler::getUsers()
 {
     // function to get all users from API and check user login credentials
-    r = cpr::Get(cpr::Url{ "http://localhost:8000/api/users"},
+    cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:8000/api/users"},
         cpr::Authentication{ "neosadmin", adminPasswordString });
 
     // check if request was successful
