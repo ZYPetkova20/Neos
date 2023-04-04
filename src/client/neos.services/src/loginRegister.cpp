@@ -4,28 +4,49 @@ loginRegister::loginRegister()
 {
 }
 
+string loginRegister::asciiToLower(string str)
+{
+	for (size_t i = 0; i < str.length(); i++)
+	{
+		if (str[i] <= 'Z' && str[i] >= 'A')
+			str[i] += 32;
+	}
+	return str;
+}
+
 void loginRegister::archive()
 {
 	handler.reactions();
 }
 
-void loginRegister::reg(string fName, string lName, string email, string password)
+int loginRegister::reg(string fName, string lName, string email, string password)
 {
-	handler.registerHandler(fName, lName, email, password);
+	return handler.registerHandler(fName, lName, email, password);
 }
 
-void loginRegister::login(string email, string password)
+int loginRegister::login(string email, string password)
 {
-	handler.getUsers();
+	return handler.loginHandler(email, password);
 }
 
 bool loginRegister::isLogRegValid(string fName, string lName, string email, string password, string logRegs)
 {
-	std::cout << "3 " << std::endl;
+	if (email == "" || password == "")
+		return 0;
+	if (logRegs == "register" && (fName == "" || lName == ""))
+		return 0;
+
+	email = asciiToLower(email);
+	std::cout << email << std::endl;
 	return handler.checkLoginRegister(fName, lName, email, password, logRegs);
 }
 
-string loginRegister::getFirstName(string email)
+string loginRegister::getfName(int userId)
 {
-	return handler.getFirstName(email);
+	return handler.getFirstName(userId);
+}
+
+string loginRegister::getlName(int userId)
+{
+	return handler.getLastName(userId);
 }

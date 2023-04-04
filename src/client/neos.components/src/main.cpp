@@ -22,6 +22,9 @@ void setup()
     signInForm sceneSignInForm{ "SignInForm", sceneManager };
     mainScene sceneMainScene{ "MainScene", sceneManager };
     calculatorPage sceneCalculatorPage{ "CalculatorPage", sceneManager };
+    simulatorPage sceneSimulatorPage{ "SimulatorPage", sceneManager };
+    archivePage sceneArchivePage{ "ArchivePage", sceneManager };
+    aboutPage sceneAboutPage{ "AboutPage", sceneManager };
 
     // Adding scenes to the scene vector
     sceneManager.addScene(&sceneLoadingScreen);
@@ -30,6 +33,9 @@ void setup()
     sceneManager.addScene(&sceneSignInForm);
     sceneManager.addScene(&sceneMainScene);
     sceneManager.addScene(&sceneCalculatorPage);
+    sceneManager.addScene(&sceneSimulatorPage);
+    sceneManager.addScene(&sceneArchivePage);
+    sceneManager.addScene(&sceneAboutPage);
 
     // Setting the first current scene
     sceneManager.setCurrentScene("LoadingScreen");

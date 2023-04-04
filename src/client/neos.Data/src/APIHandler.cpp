@@ -40,7 +40,7 @@ void APIHandler::reactions()
 }
 
 // read admin password from .env file
-void APIHandler::registerHandler(string fName, string lName, string email, string password)
+int APIHandler::registerHandler(string fName, string lName, string email, string password)
 {
     // create JSON object with user data
     json jsonData = nlohmann::json{
@@ -66,11 +66,25 @@ void APIHandler::registerHandler(string fName, string lName, string email, strin
     else {
         std::cout << "Error posting data: " << r.text << "\n";
     }
+    return loginHandler(email, password);
 }
 
-bool APIHandler::checkLoginRegister(string eneteredFName, string enteredLName, string enteredEmail, string enteredPassword, string logReg)
+int APIHandler::loginHandler(string enteredEmail, string password)
 {
-    std::cout << "4 " << std::endl;
+    getUsers();
+    int i = 0;
+    for (const auto& email : emails) {
+        if (enteredEmail == email) {
+            currentUserId = i;
+            return currentUserId;
+        }
+        i++;
+    }
+    return -1;
+}
+
+bool APIHandler::checkLoginRegister(string enteredFName, string enteredLName, string enteredEmail, string enteredPassword, string logReg)
+{
     getUsers();
     // extract email and password of each user from response JSON
     for (const auto& obj : JSONRes) {
@@ -110,7 +124,7 @@ bool APIHandler::checkLoginRegister(string eneteredFName, string enteredLName, s
 
     bool foundFirstName = false;
     for (const auto& firstName : firstNames) {
-        if (eneteredFName == firstName) {
+        if (enteredFName == firstName) {
             foundFirstName = true;
             break;
         }
@@ -133,41 +147,21 @@ bool APIHandler::checkLoginRegister(string eneteredFName, string enteredLName, s
     return 0;
 }
 
-string APIHandler::getFirstName(string enteredEmail)
+string APIHandler::getFirstName(int userId)
 {
-    // extract email and password of each user from response JSON
-    int index = 0;
-    string fName;
-    for (const auto& email : emails) {
-        if (enteredEmail == email) {
-            // extract firstName of each user from response JSON
-            obj = JSONRes[index];
-            fName = obj.at("firstName");
-            
-            break;
-        }
-        index++;
-    }
-
+    std::cout << userId << std::endl;
+    getUsers();
+    std::cout << userId << std::endl;
+    obj = JSONRes[userId];
+    string fName = obj.at("firstName");
     return fName;
 }
 
-string APIHandler::getLastName(string enteredEmail)
+string APIHandler::getLastName(int userId)
 {
-    // extract email and password of each user from response JSON
-    int index = 0;
-    string lName;
-    for (const auto& email : emails) {
-        if (enteredEmail == email) {
-            // extract firstName of each user from response JSON
-            obj = JSONRes[index];
-            lName = obj.at("lastName");
-
-            break;
-        }
-        index++;
-    }
-
+    getUsers();
+    obj = JSONRes[userId];
+    string lName = obj.at("lastName");
     return lName;
 }
 

@@ -11,13 +11,13 @@ void mainScene::Start()
 	setSectionsPos();
 	setTabsPos();
 	loadAssets();
+	displayUserInfo();
 }
 
 // Method updating the scene every frame
 void mainScene::Update()
 {
 	mousePos = GetMousePosition();
-
 	BeginDrawing();
 
 	ClearBackground(backgroundColor);
@@ -30,6 +30,7 @@ void mainScene::Update()
 // Method called when we exit the scene or the program
 void mainScene::onExit()
 {
+	profilePic = "";
 	deleteAssets();
 }
 
@@ -47,12 +48,15 @@ void mainScene::drawTextures()
 	DrawTexture(simulationTab, 42, 345, WHITE);
 	DrawTexture(archiveTab, 43, 395, WHITE);
 	DrawTexture(settingsTab, 41, 445, WHITE);
+	DrawTextEx(font, userName.c_str(), {80.6f, 32.f}, 32.0f, 0.1f, WHITE);
+	DrawTextEx(font, profilePic.c_str(), { 41, 42.5}, 32.0f, 0, BLACK);
+
 }
 
 // Method for handling collision events
 void mainScene::handleCollision()
 {
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		if (CheckCollisionPointRec(mousePos, tabsPos[i]))
 		{
@@ -66,18 +70,25 @@ void mainScene::handleCollision()
 			switch (i)
 			{
 			case 1:
-				mySceneManager.setCurrentScene("CalculatorPage");
+				ClearBackground(backgroundColor);
+				EndDrawing();
+				mySceneManager.setCurrentScene("CalculatorPage", loggedUserId);
 				break;
-				/*case 2:
-					mySceneManager.setCurrentScene("SignInForm");
-					break;
-				case 3:
-					mySceneManager.setCurrentScene("SignInForm");
-					break;
-				case 4:
-					mySceneManager.setCurrentScene("SignInForm");
-					break;
-				case 5:*/
+			case 2:
+				ClearBackground(backgroundColor);
+				EndDrawing();
+				mySceneManager.setCurrentScene("SimulatorPage", loggedUserId);
+				break;
+			case 3:
+				ClearBackground(backgroundColor);
+				EndDrawing();
+				mySceneManager.setCurrentScene("ArchivePage", loggedUserId);
+				break;
+			case 4:
+				ClearBackground(backgroundColor);
+				EndDrawing();
+				mySceneManager.setCurrentScene("AboutPage", loggedUserId);
+				break;
 			}
 		}
 		else if (tabsAnimation > 35)
@@ -128,6 +139,15 @@ void mainScene::handleCollision()
 			
 		}
 	}
+
+	if (!CheckCollisionPointRec(mousePos, logOutPos))
+		return;
+	if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+		return;
+	// If logout button pressed
+	//logReg.logout();
+	EndDrawing();
+	mySceneManager.setCurrentScene("GreetingScreen");
 }
 
 // Method for setting the atoms positions
@@ -196,6 +216,22 @@ void mainScene::setTabsPos()
 	tabsPos[1].y += 4.8f;
 	tabsPos[2].y += 2.8f;
 	selectedTabPos = tabsPos[0];
+	logOutPos = {47 , 704, 92, 28};
+}
+
+// Method for setting the user info
+void mainScene::displayUserInfo()
+{
+	ReqHandler logReg;
+	fName = logReg.getFirstName(loggedUserId);
+	lName = logReg.getLastName(loggedUserId);
+	font = LoadFontEx("../assets/fonts/texgyreadventor-bold.otf", 32.0f, 0, 0);
+	userName = fName + "" + lName;
+	char ch = fName[0];
+	char ch2 = lName[0];
+	profilePic += fName[0];
+	profilePic += lName[0];
+	std::cout << profilePic << std::endl;
 }
 
 // Method for loading the variables / assets

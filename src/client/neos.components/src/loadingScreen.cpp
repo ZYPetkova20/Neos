@@ -54,7 +54,10 @@ void loadingScreen::drawTextures()
 void loadingScreen::handleIntro()
 {
 	if (animationIsOver)
+	{
+		EndDrawing();
 		mySceneManager.setCurrentScene("GreetingScreen");
+	}
 
 	animationCounter++;
 	decreaseOpacity();

@@ -3,7 +3,7 @@
 #include <raylib.h>
 #include <string>
 
-class calculatorPage : public scene
+class aboutPage : public scene
 {
 private:
 	sceneManager& mySceneManager;
@@ -14,7 +14,6 @@ private:
 	Vector2 sectionPos[10]; // Positions of the table sections
 	int tabsAnimation = 0;
 	int sIndex = 0; // index of the current hovered section
-	int scrollSpeed = 16;
 	// User data
 	string fName;
 	string lName;
@@ -25,10 +24,6 @@ private:
 	Texture backgroundTexture;
 	Texture userInfo;
 	Texture logOutButton;
-	Texture h1;
-	Texture calculatorsTexture;
-	Texture scrollbarBase;
-	Texture scrollbarInner;
 	// Tabs
 	Texture selectedTab;
 	Texture tableTab;
@@ -41,9 +36,6 @@ private:
 	Rectangle tabsPos[5];
 	Rectangle selectedTabPos;
 	Rectangle logOutPos;
-	Rectangle calculatorsPos;
-	Rectangle scrollBasePos;
-	Rectangle scrollInnerPos;
 
 	// Methods
 	// For drawing textures
@@ -54,11 +46,9 @@ private:
 	void setTabsPos();
 	// For setting the user info in the tabs
 	void displayUserInfo();
-	// For handling scrolling
-	void handleScoll();
 
 public:
-	calculatorPage(std::string sceneName, sceneManager& sceneManager);
+	aboutPage(std::string sceneName, sceneManager& sceneManager);
 
 	// Methods from class 'scene'
 	virtual void Start();

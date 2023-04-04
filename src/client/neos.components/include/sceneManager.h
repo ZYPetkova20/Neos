@@ -5,7 +5,7 @@
 class sceneManager
 {
 public:
-    void setCurrentScene(std::string sceneName);
+    void setCurrentScene(std::string sceneName, int userId = -1);
     void updateScene();
     void addScene(scene* scene);
 

@@ -3,6 +3,7 @@
 #include "atomsScene.h"
 #include <raylib.h>
 #include <string>
+#include <iostream>
 
 class mainScene : public scene
 {
@@ -11,10 +12,16 @@ private:
 
 	// Variables
 	atomsScene atomsPreview;
+	Font font;
 	Vector2 mousePos = {0.f, 0.f};
 	Vector2 sectionPos[10]; // Positions of the table sections
 	int tabsAnimation = 0;
 	int sIndex = 0; // index of the current hovered section
+	// User data
+	string fName;
+	string lName;
+	string userName;
+	string profilePic = "";
 
 	// Textures
 	Texture backgroundTexture;
@@ -50,6 +57,8 @@ private:
 	void setSectionsPos();
 	// For setting the positions of the tabs
 	void setTabsPos();
+	// For setting the user info in the tabs
+	void displayUserInfo();
 
 public:
 	mainScene(std::string sceneName, sceneManager& sceneManager);

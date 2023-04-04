@@ -1,12 +1,13 @@
 #include "../include/sceneManager.h"
 
-void sceneManager::setCurrentScene(std::string sceneName)
+void sceneManager::setCurrentScene(std::string sceneName, int userId)
 {
     if (currentScene != nullptr)
     {
         currentScene->onExit();
     }
     currentScene = getScene(sceneName);
+    currentScene->loggedUserId = userId;
     currentScene->Start();
 }
 

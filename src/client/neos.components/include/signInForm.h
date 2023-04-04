@@ -1,7 +1,6 @@
 #pragma once
 #include "sceneManager.h"
 #include "inputField.h"
-#include "reqHandler.h" 
 #include <raylib.h>
 
 class signInForm : public scene
@@ -14,6 +13,7 @@ private:
 	Color darkGray = { 64, 64, 64, 255 };
 	Rectangle signInButtonPos = { 99, 435, 270 , 67 };
 	Rectangle returnButton = { 99 , 535 , 215, 25 };
+	bool showWarning = false;
 
 	// Input Fields
 	cp::inputField 	emailField = { {110, 325, 330, 30}, "email", 18, darkGray };
@@ -25,6 +25,7 @@ private:
 	Texture2D backgroundTexture;
 	Texture2D signInButton;
 	Texture2D labelsTexture;
+	Texture2D warningTexture;
 
 	// Methods
 

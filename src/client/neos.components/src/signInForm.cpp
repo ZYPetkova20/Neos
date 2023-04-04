@@ -24,7 +24,6 @@ void signInForm::Update()
 	emailField.updateField(mousePos);
 	passwordField.updateField(mousePos);
 
-
 	EndDrawing();
 }
 
@@ -44,24 +43,38 @@ void signInForm::drawTextures()
 	DrawTexture(labelsTexture, 99, 282, WHITE);
 	DrawTexture(headerText, 99, 37, WHITE);
 	DrawTexture(signInButton, signInButtonPos.x, signInButtonPos.y, WHITE);
+	if (showWarning)
+		DrawTexture(warningTexture, 99, 388, WHITE);
 }
 
 // Method for handling collision events
 void signInForm::handleCollision()
 {
+	ReqHandler logReg;
 	if (CheckCollisionPointRec(mousePos, signInButtonPos) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		ReqHandler logReg;
-		std::cout << emailField.getResult() << "   " << passwordField.getResult() << std::endl;
-		if (logReg.isLogRegValid("", "", emailField.getResult(), passwordField.getResult(), "login"))
+		string email = emailField.getResult();
+		string pass = passwordField.getResult();
+		if (logReg.isLogRegValid("", "", email, pass, "login"))
 		{
-			logReg.login(emailField.getResult(), passwordField.getResult());
-			mySceneManager.setCurrentScene("MainScene");
+			std::cout << "WORKSSSS!!!" << std::endl;
+			showWarning = false;
+			int userId = logReg.login(emailField.getResult(), passwordField.getResult());
+			mySceneManager.setCurrentScene("MainScene", userId);
+		}
+		else
+		{
+			emailField.resetField();
+			passwordField.resetField();
+			string resetKey = "resetSignInKey";
+			logReg.isLogRegValid(resetKey, resetKey, resetKey, resetKey, "login");
+			showWarning = true;
 		}
 	}
 
 	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
+		showWarning = false;
 		mySceneManager.setCurrentScene("RegisterForm");
 	}
 }
@@ -74,6 +87,7 @@ void signInForm::loadAssets()
 	backgroundTexture = LoadTexture("../assets/registerForm/backGroundImg.png");
 	signInButton = LoadTexture("../assets/signInForm/signInButton.png");
 	labelsTexture = LoadTexture("../assets/signInForm/labels.png");
+	warningTexture = LoadTexture("../assets/signInForm/warning.png");
 }
 
 // Method for unloading the variables / assets

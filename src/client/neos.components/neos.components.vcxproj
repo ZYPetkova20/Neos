@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\aboutPage.cpp" />
+    <ClCompile Include="src\archivePage.cpp" />
     <ClCompile Include="src\atomsScene.cpp" />
     <ClCompile Include="src\calculatorPage.cpp" />
     <ClCompile Include="src\greetingScreen.cpp" />
@@ -30,8 +32,11 @@
     <ClCompile Include="src\reqHandler.cpp" />
     <ClCompile Include="src\sceneManager.cpp" />
     <ClCompile Include="src\signInForm.cpp" />
+    <ClCompile Include="src\simulatorPage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\aboutPage.h" />
+    <ClInclude Include="include\archivePage.h" />
     <ClInclude Include="include\atomsScene.h" />
     <ClInclude Include="include\calculatorPage.h" />
     <ClInclude Include="include\greetingScreen.h" />
@@ -44,6 +49,7 @@
     <ClInclude Include="include\scene.h" />
     <ClInclude Include="include\sceneManager.h" />
     <ClInclude Include="include\signInForm.h" />
+    <ClInclude Include="include\simulatorPage.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

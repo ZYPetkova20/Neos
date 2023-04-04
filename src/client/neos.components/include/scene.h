@@ -1,4 +1,5 @@
 #pragma once
+#include "../include/reqHandler.h"
 #include <raylib.h>
 #include <string>
 #include <ranges>
@@ -13,6 +14,7 @@ public:
 
 	// Basic variables for all scenes
 	Color backgroundColor = { 248, 248, 248, 255 };
+	int loggedUserId = -1; // logIn and register in the scenes
 
 	// Basic methods for all scenes
 	virtual void Start() = 0;

@@ -48,6 +48,8 @@ void registerForm::drawTextures()
 	DrawTexture(labelsTexture, 99, 282, WHITE);
 	DrawTexture(headerText, 99, 37, WHITE);
 	DrawTexture(registerButton, registerButtonPos.x, registerButtonPos.y, WHITE);
+	if (showWarning)
+		DrawTexture(warningTexture, 99, 510, WHITE);
 }
 
 // Method for handling collision events
@@ -59,13 +61,25 @@ void registerForm::handleCollision()
 		std::cout << "1 " << std::endl;
 		if (logReg.isLogRegValid(fNameField.getResult(), lNameField.getResult(), emailField.getResult(), passwordField.getResult(), "register"))
 		{
-			logReg.signUp(fNameField.getResult(), lNameField.getResult(), emailField.getResult(), passwordField.getResult());
-			mySceneManager.setCurrentScene("MainScene");
+			showWarning = false;
+			int userId = logReg.signUp(fNameField.getResult(), lNameField.getResult(), emailField.getResult(), passwordField.getResult());
+			mySceneManager.setCurrentScene("MainScene", userId);
+		}
+		else
+		{
+			fNameField.resetField();
+			lNameField.resetField();
+			emailField.resetField();
+			passwordField.resetField();
+			string resetKey = "resetSignInKey";
+			logReg.isLogRegValid(resetKey, resetKey, resetKey, resetKey, "login");
+			showWarning = true;
 		}
 	}
 
 	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
+		showWarning = false;
 		mySceneManager.setCurrentScene("SignInForm");
 	}
 }
@@ -78,6 +92,7 @@ void registerForm::loadAssets()
 	backgroundTexture = LoadTexture("../assets/registerForm/backGroundImg.png");
 	registerButton = LoadTexture("../assets/registerButton.png");
 	labelsTexture = LoadTexture("../assets/registerForm/labels.png");
+	warningTexture = LoadTexture("../assets/registerForm/warning.png");
 }
 
 // Method for unloading the variables / assets
@@ -88,4 +103,5 @@ void registerForm::deleteAssets()
 	UnloadTexture(backgroundTexture);
 	UnloadTexture(registerButton);
 	UnloadTexture(labelsTexture);
+	UnloadTexture(warningTexture);
 }

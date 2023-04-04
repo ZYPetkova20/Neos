@@ -1,7 +1,6 @@
 #pragma once
 #include "sceneManager.h"
 #include "inputField.h"
-#include "reqHandler.h" 
 #include <raylib.h>
 
 class registerForm : public scene
@@ -14,6 +13,7 @@ private:
 	Color darkGray = {64, 64, 64, 255};
 	Rectangle registerButtonPos = { 99, 559, 270 , 67 };
 	Rectangle returnButton = { 105 ,660 , 215, 25};
+	bool showWarning = false;
 	
 
 	// Input Fields
@@ -28,6 +28,7 @@ private:
 	Texture2D backgroundTexture;
 	Texture2D registerButton;
 	Texture2D labelsTexture;
+	Texture2D warningTexture;
 
 	// Methods
 

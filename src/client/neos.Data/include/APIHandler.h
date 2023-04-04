@@ -1,5 +1,4 @@
 #pragma once // include guard to ensure this header is only included once
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -13,29 +12,27 @@ using std::string; // using declarations to avoid excessive namespace specificat
 using json = nlohmann::json;
 
 class APIHandler {
-public:
     string adminPasswordString; // string to store the admin password
     std::ifstream myFile; // file stream to read from .env file
-    
 
     json JSONRes; // JSON object to store server response
 
-    std::vector<string> emails, passwords, firstNames, lastNames; 
+    std::vector<string> emails, passwords, firstNames, lastNames;
     // vectors to store user emails and passwords
 
-    string enteredEmail = "ppenchos54v@gmail.com", enteredPassword = "malinki12"; // default values for user input
+    int currentUserId = 0; // Holds the Id for the data of the logged user
 
     json obj; // JSON object to store user info
     int index = 0; // index to iterate through JSON array
-    
-    APIHandler(); // constructor to read admin password from .env file
 
+public:
+    APIHandler(); // constructor to read admin password from .env file
     void reactions();
 
-    void registerHandler(string fName, string lName, string email, string password); // function to handle user registration
-
-    bool checkLoginRegister(string eneteredfName, string enteredlName, string enteredEmail, string enteredPassword, string logReg);
-    string getFirstName(string enteredEmail);
-    string getLastName(string enteredEmail);
-    void getUsers(); // function to get user data from server
+    void getUsers(); // method to get user data from server
+    int registerHandler(string fName, string lName, string email, string password); // method to handle user registration
+    int loginHandler(string enteredEmail, string password); // method to handle user login
+    bool checkLoginRegister(string enteredFName, string enteredlName, string enteredEmail, string enteredPassword, string logReg);
+    string getFirstName(int userId);
+    string getLastName(int userId);
 };

@@ -7,6 +7,9 @@
 #include "signInForm.h"
 #include "mainScene.h"
 #include "calculatorPage.h"
+#include "simulatorPage.h"
+#include "archivePage.h"
+#include "aboutPage.h"
 #include "reqHandler.h" 
 
 void setup(); // Starting function
