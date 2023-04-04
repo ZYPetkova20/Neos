@@ -1,4 +1,5 @@
 #include "../include/signInForm.h"
+#include <iostream>
 
 signInForm::signInForm(std::string sceneName, sceneManager& sceneManager) : scene(sceneName), mySceneManager(sceneManager)
 {
@@ -50,7 +51,13 @@ void signInForm::handleCollision()
 {
 	if (CheckCollisionPointRec(mousePos, signInButtonPos) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		mySceneManager.setCurrentScene("MainScene");
+		ReqHandler logReg;
+		std::cout << emailField.getResult() << "   " << passwordField.getResult() << std::endl;
+		if (logReg.isLogRegValid("", "", emailField.getResult(), passwordField.getResult(), "login"))
+		{
+			logReg.login(emailField.getResult(), passwordField.getResult());
+			mySceneManager.setCurrentScene("MainScene");
+		}
 	}
 
 	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))

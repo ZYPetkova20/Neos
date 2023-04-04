@@ -44,6 +44,8 @@ void inputField::printInput()
             toPass[i] = '\0';
     }
     DrawTextEx(font, type == "password" ? toPass : input, {field.x, field.y + 4}, fontSize, 4.f, textColor);
+    string str(input);
+    setResult(str);
 }
 
 void inputField::handleInput()
@@ -102,7 +104,12 @@ bool inputField::isKeyAllowed()
     return keyPressed;
 }
 
-string inputField::getResult(string str)
+void inputField::setResult(string str)
 {
-    return str;
+    result = str;
+}
+
+string inputField::getResult()
+{
+    return result;
 }

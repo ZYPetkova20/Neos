@@ -1,6 +1,7 @@
 #pragma once
 #include "sceneManager.h"
 #include "inputField.h"
+#include "reqHandler.h" 
 #include <raylib.h>
 
 class registerForm : public scene

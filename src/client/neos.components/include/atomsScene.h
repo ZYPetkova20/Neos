@@ -26,7 +26,8 @@ private:
     // Textures
     Texture atomInfo;
 
-    // Texture Positions
+    // Positions
+    Rectangle backButton = {42, 729, 138, 38};
 
     // Methods
     // handles Atom animations

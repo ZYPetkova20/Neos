@@ -21,7 +21,7 @@ void setup()
     registerForm sceneRegisterForm{ "RegisterForm", sceneManager };
     signInForm sceneSignInForm{ "SignInForm", sceneManager };
     mainScene sceneMainScene{ "MainScene", sceneManager };
-    //atomsScene sceneAtomScene{ "AtomScene", sceneManager };
+    calculatorPage sceneCalculatorPage{ "CalculatorPage", sceneManager };
 
     // Adding scenes to the scene vector
     sceneManager.addScene(&sceneLoadingScreen);
@@ -29,7 +29,7 @@ void setup()
     sceneManager.addScene(&sceneRegisterForm);
     sceneManager.addScene(&sceneSignInForm);
     sceneManager.addScene(&sceneMainScene);
-    //sceneManager.addScene(&sceneAtomScene);
+    sceneManager.addScene(&sceneCalculatorPage);
 
     // Setting the first current scene
     sceneManager.setCurrentScene("LoadingScreen");

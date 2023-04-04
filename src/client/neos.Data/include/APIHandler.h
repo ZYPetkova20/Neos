@@ -32,7 +32,7 @@ public:
 
     void reactions();
 
-    void registerHandler(); // function to handle user registration
+    void registerHandler(string fName, string lName, string email, string password); // function to handle user registration
 
     bool checkLoginRegister(string eneteredfName, string enteredlName, string enteredEmail, string enteredPassword, string logReg);
     string getFirstName(string enteredEmail);

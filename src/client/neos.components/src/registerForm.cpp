@@ -1,4 +1,5 @@
 #include "../include/registerForm.h"
+#include <iostream>
 
 registerForm::registerForm(std::string sceneName, sceneManager& sceneManager) : scene(sceneName), mySceneManager(sceneManager)
 {
@@ -54,7 +55,13 @@ void registerForm::handleCollision()
 {
 	if (CheckCollisionPointRec(mousePos, registerButtonPos) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		mySceneManager.setCurrentScene("MainScene");
+		ReqHandler logReg;
+		std::cout << "1 " << std::endl;
+		if (logReg.isLogRegValid(fNameField.getResult(), lNameField.getResult(), emailField.getResult(), passwordField.getResult(), "register"))
+		{
+			logReg.signUp(fNameField.getResult(), lNameField.getResult(), emailField.getResult(), passwordField.getResult());
+			mySceneManager.setCurrentScene("MainScene");
+		}
 	}
 
 	if (CheckCollisionPointRec(mousePos, returnButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))

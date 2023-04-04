@@ -14,6 +14,7 @@ namespace cp // namespace for our own-written compounds
         Color textColor; // Color of the text
         Rectangle field; // Position of the input field
         string type; // Type of the input (text, email, password)
+        string result = ""; // Result from the fields
         char input[30]; // The text from the field
         float fontSize; // Size of the text
         int charCount = 0; // Counts the inputed symbols
@@ -37,6 +38,7 @@ namespace cp // namespace for our own-written compounds
         // Public Methods
         void updateField(Vector2 mousePos); // Updates the field
         void resetField(); // Resets the input when you exit the scene
-        string getResult(string str); // Returns the final result from the field
+        void setResult(string str); // Returns the final result from the field
+        string getResult(); // Returns the final result from the field
     };
 }

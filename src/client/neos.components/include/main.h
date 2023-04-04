@@ -6,7 +6,7 @@
 #include "registerForm.h"
 #include "signInForm.h"
 #include "mainScene.h"
-//#include "atomsScene.h"
+#include "calculatorPage.h"
 #include "reqHandler.h" 
 
 void setup(); // Starting function

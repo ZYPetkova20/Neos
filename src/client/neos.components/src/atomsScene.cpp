@@ -28,6 +28,9 @@ void atomsScene::Update()
 	{
 		mousePos = GetMousePosition();
 
+		if (CheckCollisionPointRec(mousePos, backButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			break;
+
 		displayAtom(camera, cameraFlag);
 		UpdateCamera(&camera);
 
@@ -62,9 +65,11 @@ void atomsScene::onExit()
 // Method for loading the variables / assets
 void atomsScene::loadAssets()
 {
+	// Loads the model of the current element
 	std::string path = "../assets/3dModels/atomModel" + std::to_string(currentAtom) + ".glb";
 	atomModel = LoadModel(path.c_str());
 
+	// Loads the info of the current element
 	std::string path2 = "../assets/elementInfo/atomInfo" + std::to_string(currentAtom) + ".png";
 	atomInfo = LoadTexture(path2.c_str());
 

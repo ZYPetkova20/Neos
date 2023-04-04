@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\atomsScene.cpp" />
+    <ClCompile Include="src\calculatorPage.cpp" />
     <ClCompile Include="src\greetingScreen.cpp" />
     <ClCompile Include="src\inputField.cpp" />
     <ClCompile Include="src\loadingScreen.cpp" />
@@ -32,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\atomsScene.h" />
+    <ClInclude Include="include\calculatorPage.h" />
     <ClInclude Include="include\greetingScreen.h" />
     <ClInclude Include="include\inputField.h" />
     <ClInclude Include="include\loadingScreen.h" />

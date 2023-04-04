@@ -1,5 +1,4 @@
 #include "../include/mainScene.h"
-#include <iostream>
 
 mainScene::mainScene(std::string sceneName, sceneManager& sceneManager) : scene(sceneName), mySceneManager(sceneManager)
 {
@@ -60,6 +59,26 @@ void mainScene::handleCollision()
 			if (selectedTabPos.y != tabsPos[i].y)
 				selectedTabPos.y = tabsPos[i].y + (i * 1.4f);
 			tabsAnimation = 0;
+
+			if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				return;
+
+			switch (i)
+			{
+			case 1:
+				mySceneManager.setCurrentScene("CalculatorPage");
+				break;
+				/*case 2:
+					mySceneManager.setCurrentScene("SignInForm");
+					break;
+				case 3:
+					mySceneManager.setCurrentScene("SignInForm");
+					break;
+				case 4:
+					mySceneManager.setCurrentScene("SignInForm");
+					break;
+				case 5:*/
+			}
 		}
 		else if (tabsAnimation > 35)
 		{
@@ -215,4 +234,9 @@ void mainScene::deleteAssets()
 	UnloadTexture(simulationTab);
 	UnloadTexture(archiveTab);
 	UnloadTexture(settingsTab);
+	UnloadTexture(tableHover);
+	for (int i = 0; i < 10; i++)
+	{
+		UnloadTexture(sectionsTexture[i]);
+	}
 }

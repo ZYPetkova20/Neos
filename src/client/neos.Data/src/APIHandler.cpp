@@ -40,14 +40,14 @@ void APIHandler::reactions()
 }
 
 // read admin password from .env file
-void APIHandler::registerHandler()
+void APIHandler::registerHandler(string fName, string lName, string email, string password)
 {
     // create JSON object with user data
     json jsonData = nlohmann::json{
-        {"firstName", "dnes"},
-        {"lastName", "ez"},
-        {"email", "utre3"},
-        {"password", "data"},
+        {"firstName", fName},
+        {"lastName", lName},
+        {"email", email},
+        {"password", password},
     };
 
         cpr::Response r = cpr::Post(
@@ -70,6 +70,8 @@ void APIHandler::registerHandler()
 
 bool APIHandler::checkLoginRegister(string eneteredFName, string enteredLName, string enteredEmail, string enteredPassword, string logReg)
 {
+    std::cout << "4 " << std::endl;
+    getUsers();
     // extract email and password of each user from response JSON
     for (const auto& obj : JSONRes) {
         //email
@@ -88,7 +90,6 @@ bool APIHandler::checkLoginRegister(string eneteredFName, string enteredLName, s
         string lastName = obj.at("lastName").get<string>();
         lastNames.push_back(lastName);
     }
-
     // check if matching email and password are found
     bool foundPassword = false;
     for (const auto& password : passwords) {
@@ -126,9 +127,10 @@ bool APIHandler::checkLoginRegister(string eneteredFName, string enteredLName, s
     if (logReg == "login")
         return foundEmail && foundPassword;
     else if (logReg == "register")
-        return foundEmail || foundPassword || foundFirstName || foundLastName;
-    else
-        return;
+    {
+        return !(foundEmail || foundPassword || foundFirstName || foundLastName);
+    }
+    return 0;
 }
 
 string APIHandler::getFirstName(string enteredEmail)
