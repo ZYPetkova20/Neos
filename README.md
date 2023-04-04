@@ -22,16 +22,16 @@
 ## 🚀 Application Tech Stack 
   <p align="left"> 
      <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
-     <a href="https://www.cplusplus.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092194637701189822/Raylib_logo_1.png"/></a>
+     <a href="https://www.raylib.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092194637701189822/Raylib_logo_1.png"/></a>
   </p>
 
 ## 🔧 Website Tech Stack 
   <p align="left"> 
-      <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-color-tal-revivo.png"/></a>
-      <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/55/null/typescript--v1.png"/></a>
-      <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/55/null/html-5--v1.png"/></a> 
-      <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/color/55/null/sass.png"/></a>
-      <a href="https://visualstudio.microsoft.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092192709718048969/logo-with-shadow_1.png"/></a> 
+      <a href="https://vuejs.org/"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-color-tal-revivo.png"/></a>
+      <a href="https://www.typescriptlang.org/"><img src="https://img.icons8.com/fluency/55/null/typescript--v1.png"/></a>
+      <a href="https://html.com/html5/"><img src="https://img.icons8.com/color/55/null/html-5--v1.png"/></a> 
+      <a href="https://sass-lang.com/"><img src="https://img.icons8.com/color/55/null/sass.png"/></a>
+      <a href="https://vitejs.dev/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092192709718048969/logo-with-shadow_1.png"/></a> 
   </p> 
   
   
