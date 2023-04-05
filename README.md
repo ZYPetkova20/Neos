@@ -7,10 +7,10 @@
 <br>
 
 <p align = "center">
-    <img alt="GitHub top language" src ="https://img.shields.io/github/languages/top/SYSolakov20/onsens?style=for-the-badge">
-    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SYSolakov20/onsens?style=for-the-badge">
-    <img alt="Github languages count" src="https://img.shields.io/github/languages/count/SYSolakov20/onsens?style=for-the-badge">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/SYSolakov20/onsens?style=for-the-badge">
+    <img alt="GitHub top language" src ="https://img.shields.io/github/languages/top/ZYPetkova20/Neos?style=for-the-badge">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ZYPetkova20/Neos?style=for-the-badge">
+    <img alt="Github languages count" src="https://img.shields.io/github/languages/count/ZYPetkova20/Neos?style=for-the-badge">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ZYPetkova20/Neos?style=for-the-badge">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/SYSolakov20/onsens?style=for-the-badge">
 </p>
 <br>
@@ -61,12 +61,11 @@
   
   
 ## 📰 Docs
-  - [Doxygen](https://smtashev20.github.io/onsens-documentation/index.html)
-  - [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/smtashev20_codingburgas_bg/EY1_RLRBHW9HpcPIItgth34B8O6ahVzfYTFvJLxnABLu-g?e=75FR40)
-  - [Design documentation](https://codingburgas-my.sharepoint.com/:b:/g/personal/smtashev20_codingburgas_bg/EVzCky06sG9HmZ4zXHWple0B_2vvSgoKkPfWTwd0NN80BA?e=B8AoFy)
-  - [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/smtashev20_codingburgas_bg/EZJgDqwBizdEsS__nWfKLY8B0tvMTLdYYjmwt31oPsmuMA?e=8VSavq)
-  - [QA Unit Testing](https://codingburgas-my.sharepoint.com/:x:/g/personal/smtashev20_codingburgas_bg/Ebi25gemNjBCoUS9hWusvrAB6ZYk34KQb7wtvvKlHFw_Kw?e=F0phq5)
-  - [QA - Test Plan](https://codingburgas-my.sharepoint.com/:b:/g/personal/smtashev20_codingburgas_bg/EV5tnWXsHqRCizarP8p8LIkBGKeYv0Q_7rOza5dnRrPyyw?e=RkTI0I)
+  - [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/zypetkova20_codingburgas_bg/EQnk57jUBXZBp8ox0c6AD0sBkdcwf_WpmF8reL-wIUF-qA?e=EYffT4)
+  - [Design documentation](https://codingburgas-my.sharepoint.com/:b:/g/personal/zypetkova20_codingburgas_bg/Ec-xoCutAKNIhVNMk9nKJEYBrviNH63GcWOFy96nvIzSwg?e=0kZC17)
+  - [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/zypetkova20_codingburgas_bg/EVTq2qygeoVIuUl6NT_10NQBb9j_Og9i0pXRtsjuRbc_Nw?e=MFVTLL)
+  - [QA Unit Testing](https://codingburgas-my.sharepoint.com/:b:/g/personal/zypetkova20_codingburgas_bg/EVVMC4OOLxxHjr2ztVfBHvEBoRXLlmViaMaUEaFe_wGYgA?e=MlDMLp)
+  - [QA - Test Plan](https://codingburgas-my.sharepoint.com/:w:/g/personal/zypetkova20_codingburgas_bg/EZZm_QPWDKVLmJq30KkNHYABBJdEzFpi2itz4ion2mleAw?e=mG7Tpv)
 
 ## 📑 Diagrams
 <details open>
