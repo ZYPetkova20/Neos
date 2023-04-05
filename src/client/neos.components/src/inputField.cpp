@@ -107,6 +107,12 @@ bool inputField::isKeyAllowed()
     return keyPressed;
 }
 
+void inputField::changePos(float x, float y)
+{
+    field.x -= x;
+    field.y -= y;
+}
+
 void inputField::setResult(string str)
 {
     result = str;

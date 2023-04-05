@@ -39,6 +39,7 @@ namespace cp // namespace for our own-written compounds
         void updateField(Vector2 mousePos); // Updates the field
         void resetField(); // Resets the input when you exit the scene
         void setResult(string str); // Returns the final result from the field
+        void changePos(float x, float y); // Changes the field position
         string getResult(); // Returns the final result from the field
     };
 }

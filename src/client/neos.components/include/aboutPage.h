@@ -11,7 +11,6 @@ private:
 	// Variables
 	Font font;
 	Vector2 mousePos = { 0.f, 0.f };
-	Vector2 sectionPos[10]; // Positions of the table sections
 	Vector2 infoPos;
 	Vector2 scrollBasePos = {1360, 14};
 	int tabsAnimation = 0;

@@ -45,6 +45,8 @@ void archivePage::drawTextures()
 	DrawTexture(simulationTab, 42, 345, WHITE);
 	DrawTexture(archiveTab, 43, 395, WHITE);
 	DrawTexture(settingsTab, 41, 445, WHITE);
+	DrawTexture(h1, 332, 28, WHITE);
+	DrawTexture(archiveTable, 356, 147, WHITE);
 	DrawTextEx(font, userName.c_str(), { 80.6f, 32.f }, 32.0f, 0.1f, WHITE);
 	DrawTextEx(font, profilePic.c_str(), { 41, 42.5 }, 32.0f, 0, BLACK);
 }
@@ -89,7 +91,6 @@ void archivePage::handleCollision()
 		}
 		else if (tabsAnimation > 35)
 		{
-
 			if (selectedTabPos.y >= tabsPos[3].y)
 				selectedTabPos.y -= 10.0f;
 			if (selectedTabPos.y <= tabsPos[3].y)
@@ -152,6 +153,8 @@ void archivePage::loadAssets()
 	backgroundTexture = LoadTexture("../assets/mainScreen/backgroundTexture.png");
 	userInfo = LoadTexture("../assets/mainScreen/userTemplate.png");
 	logOutButton = LoadTexture("../assets/mainScreen/logOut.png");
+	h1 = LoadTexture("../assets/archivePage/h1.png");
+	archiveTable = LoadTexture("../assets/archivePage/archiveTable.png");
 }
 
 // Method for unloading the variables / assets
@@ -166,4 +169,6 @@ void archivePage::deleteAssets()
 	UnloadTexture(simulationTab);
 	UnloadTexture(archiveTab);
 	UnloadTexture(settingsTab);
+	UnloadTexture(h1);
+	UnloadTexture(archiveTable);
 }

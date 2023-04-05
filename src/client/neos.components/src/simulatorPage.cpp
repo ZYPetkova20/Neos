@@ -7,29 +7,43 @@ simulatorPage::simulatorPage(std::string sceneName, sceneManager& sceneManager) 
 // Method called once at the start of the scene
 void simulatorPage::Start()
 {
-	setTabsPos();
+	// Set camera
+	camera.position = { 0.0f, 0.0f, 3.0f };
+	camera.target = { 0.0f, 0.0f, 0.0f };
+	camera.up = { 0.0f, 1.0f, 0.0f };
+	camera.fovy = 45.0f;
+	camera.projection = CAMERA_PERSPECTIVE;
+	SetCameraMode(camera, CAMERA_FREE);
+
 	loadAssets();
-	displayUserInfo();
+	for (int i = 0; i < 6; i++)
+	{
+		elementsPos[i] = { 67.4f, 67.4f, 31.f + (i * 26), 23};
+		moleculesPos[i] = { 0,0,0,0 };
+	}
 }
 
 // Method updating the scene every frame
 void simulatorPage::Update()
 {
 	mousePos = GetMousePosition();
-
-	BeginDrawing();
-
-	ClearBackground(backgroundColor);
-	drawTextures();
 	handleCollision();
+	if (dragging != -1)
+		handleDragDrop();
 
+	UpdateCamera(&camera);
+	BeginDrawing();
+	//BeginMode3D(camera);
+	ClearBackground(backgroundColor);
+	//DrawModel(moleculesModel[0], { moleculesPos[0].x , moleculesPos[0].y, 0.0f}, 10.0f, WHITE);
+	//EndMode3D();
+	drawTextures();
 	EndDrawing();
 }
 
 // Method called when we exit the scene or the program
 void simulatorPage::onExit()
 {
-	profilePic = "";
 	deleteAssets();
 }
 
@@ -37,133 +51,59 @@ void simulatorPage::onExit()
 void simulatorPage::drawTextures()
 {
 	DrawTexture(backgroundTexture, 0, 0, WHITE);
-	DrawTexture(userInfo, 30, 37, WHITE);
-	DrawTexture(logOutButton, 40, 700, WHITE);
-	DrawTexture(selectedTab, selectedTabPos.x, selectedTabPos.y, WHITE);
-	DrawTexture(tableTab, 42, 242, WHITE);
-	DrawTexture(calculatorTab, 42, 295, WHITE);
-	DrawTexture(simulationTab, 42, 345, WHITE);
-	DrawTexture(archiveTab, 43, 395, WHITE);
-	DrawTexture(settingsTab, 41, 445, WHITE);
-	DrawTextEx(font, userName.c_str(), { 80.6f, 32.f }, 32.0f, 0.1f, WHITE);
-	DrawTextEx(font, profilePic.c_str(), { 41, 42.5 }, 32.0f, 0, BLACK);
+	DrawTexture(h1, 260, 28, WHITE);
 }
 
 // Method for handling collision events
 void simulatorPage::handleCollision()
 {
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 6; i++)
 	{
-		if (CheckCollisionPointRec(mousePos, tabsPos[i]))
-		{
-			if (selectedTabPos.y != tabsPos[i].y)
-				selectedTabPos.y = tabsPos[i].y /*+ (i * 1.4f)*/;
-			tabsAnimation = 0;
-
-			if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
-				return;
-
-			switch (i)
-			{
-			case 0:
-				ClearBackground(backgroundColor);
-				EndDrawing();
-				mySceneManager.setCurrentScene("MainScene", loggedUserId);
-				break;
-			case 1:
-				ClearBackground(backgroundColor);
-				EndDrawing();
-				mySceneManager.setCurrentScene("CalculatorPage", loggedUserId);
-				break;
-			case 3:
-				ClearBackground(backgroundColor);
-				EndDrawing();
-				mySceneManager.setCurrentScene("ArchivePage", loggedUserId);
-				break;
-			case 4:
-				ClearBackground(backgroundColor);
-				EndDrawing();
-				mySceneManager.setCurrentScene("AboutPage", loggedUserId);
-				break;
-			}
-		}
-		else if (tabsAnimation > 35)
-		{
-
-			if (selectedTabPos.y >= tabsPos[2].y)
-				selectedTabPos.y -= 10.0f;
-			if (selectedTabPos.y <= tabsPos[2].y)
-				selectedTabPos.y = tabsPos[2].y;
-		}
-		else
-		{
-			tabsAnimation++;
-		}
+		if (!CheckCollisionPointRec(mousePos, elementsPos[i]))
+			continue;
+		if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			continue;
+		dragging = i;
 	}
-
-	if (!CheckCollisionPointRec(mousePos, logOutPos))
+	
+	if (!CheckCollisionPointRec(mousePos, backButton))
 		return;
 	if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 		return;
-	// If logout button pressed
-	//logReg.logout();
+	//EndMode3D();
 	EndDrawing();
-	mySceneManager.setCurrentScene("GreetingScreen");
+	mySceneManager.setCurrentScene("MainScene", loggedUserId);
 }
 
-// Method for setting the tabs positions
-void simulatorPage::setTabsPos()
+// Method for handling drag and drop
+void simulatorPage::handleDragDrop()
 {
-	for (int i = 0; i < 5; i++)
+	if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
-		tabsPos[i] = { 0.0f, 230.0f + (50.1f * i), 250, 52 };
+		dragging = -1;
+		return;
 	}
-	tabsPos[1].y += 4.8f;
-	tabsPos[2].y += 4.8f;
-	tabsPos[3].y += 4.8f;
-	tabsPos[4].y += 4.8f;
-	selectedTabPos = tabsPos[2];
-	logOutPos = { 47 , 704, 92, 28 };
-}
-
-// Method for setting the user info
-void simulatorPage::displayUserInfo()
-{
-	ReqHandler logReg;
-	fName = logReg.getFirstName(loggedUserId);
-	lName = logReg.getLastName(loggedUserId);
-	font = LoadFontEx("../assets/fonts/texgyreadventor-bold.otf", 32.0f, 0, 0);
-	userName = fName + "" + lName;
-	char ch = fName[0];
-	char ch2 = lName[0];
-	profilePic += fName[0];
-	profilePic += lName[0];
+	moleculesPos[dragging].x = mousePos.x;
+	moleculesPos[dragging].y = mousePos.y;
 }
 
 // Method for loading the variables / assets
 void simulatorPage::loadAssets()
 {
-	selectedTab = LoadTexture("../assets/mainScreen/selectedTab.png");
-	tableTab = LoadTexture("../assets/mainScreen/tableTab.png");
-	calculatorTab = LoadTexture("../assets/mainScreen/calculatorTab.png");
-	simulationTab = LoadTexture("../assets/mainScreen/simulationTab.png");
-	archiveTab = LoadTexture("../assets/mainScreen/archiveTab.png");
-	settingsTab = LoadTexture("../assets/mainScreen/settingsTab.png");
-	backgroundTexture = LoadTexture("../assets/mainScreen/backgroundTexture.png");
-	userInfo = LoadTexture("../assets/mainScreen/userTemplate.png");
-	logOutButton = LoadTexture("../assets/mainScreen/logOut.png");
+	backgroundTexture = LoadTexture("../assets/simulatorPage/backgroundTexture.png");
+	h1 = LoadTexture("../assets/simulatorPage/h1.png");
+	//for (int i = 0; i < 6; i++)
+	//{
+	//	std::string path = "../assets/3dModels/compounds/compoundModel" + std::to_string(i) + ".glb";
+	//	moleculesModel[i] = LoadModel(path.c_str());
+	//}
 }
 
 // Method for unloading the variables / assets
 void simulatorPage::deleteAssets()
 {
 	UnloadTexture(backgroundTexture);
-	UnloadTexture(userInfo);
-	UnloadTexture(logOutButton);
-	UnloadTexture(selectedTab);
-	UnloadTexture(tableTab);
-	UnloadTexture(calculatorTab);
-	UnloadTexture(simulationTab);
-	UnloadTexture(archiveTab);
-	UnloadTexture(settingsTab);
+	UnloadTexture(h1);
+	//for (int i = 0; i < 6; i++)
+	//	UnloadModel(moleculesModel[i]);
 }

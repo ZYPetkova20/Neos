@@ -14,31 +14,6 @@ APIHandler::APIHandler()
     myFile >> adminPasswordString;
 }
 
-void APIHandler::reactions()
-{
-    json jsonData = nlohmann::json{
-        "water", false,
-        "fName", "dnes"
-    };
-
-    cpr::Response r = cpr::Post(
-        cpr::Url{ "http://localhost:8000/api/reactions" },
-        cpr::Authentication{ "neosadmin", adminPasswordString },
-        cpr::Body{
-            jsonData.dump()
-        },
-        cpr::Header{ {"Content-Type", "application/json"} }
-    );
-
-    // check if request was successful
-    if (r.status_code >= 200 && r.status_code < 300) {
-        std::cout << "Data posted successfully!\n";
-    }
-    else {
-        std::cout << "Error posting data: " << r.text << "\n";
-    }
-}
-
 // read admin password from .env file
 int APIHandler::registerHandler(string fName, string lName, string email, string password)
 {
@@ -149,9 +124,7 @@ bool APIHandler::checkLoginRegister(string enteredFName, string enteredLName, st
 
 string APIHandler::getFirstName(int userId)
 {
-    std::cout << userId << std::endl;
     getUsers();
-    std::cout << userId << std::endl;
     obj = JSONRes[userId];
     string fName = obj.at("firstName");
     return fName;
@@ -183,8 +156,6 @@ void APIHandler::getUsers()
             std::cout << "There is a problem with the server! Please try again later!";
         }
 
-        //std::cout << JSONRes.dump(2);
-
         // extract email and password of each user from response JSON
         for (const auto& obj : JSONRes) {
             string email = obj.at("email").get<string>();
@@ -193,17 +164,56 @@ void APIHandler::getUsers()
             string password = obj.at("password").get<string>();
             passwords.push_back(password);
         }
+    }
+    else {
+        std::cout << "Error posting data: " << r.text << "\n";
+    }
+}
 
-        // print all emails and passwords for testing purposes
-        for (const auto& email : emails) {
-            std::cout << email << " ";
-        }
-        std::cout << std::endl;
+//archive post method function
+void APIHandler::reactionsPost()
+{
+    json jsonData = nlohmann::json{
+        {"userId", 1},
+        {"ReactionType", 4}
+    };
 
-        for (const auto& password : passwords) {
-            std::cout << password << " ";
+    cpr::Response r = cpr::Post(
+        cpr::Url{ "http://localhost:8000/api/reactions" },
+        cpr::Authentication{ "neosadmin", adminPasswordString },
+        cpr::Body{
+            jsonData.dump()
+        },
+        cpr::Header{ {"Content-Type", "application/json"} }
+    );
+
+    // check if request was successful
+    if (r.status_code >= 200 && r.status_code < 300) {
+        std::cout << "Data posted successfully!\n";
+    }
+    else {
+        std::cout << "Error posting data: " << r.text << "\n";
+    }
+}
+
+//archive get method function
+void APIHandler::reactionsGet()
+{
+    cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:8000/api/reactions/1" },
+        cpr::Authentication{ "neosadmin", adminPasswordString });
+
+    json JSONResR;
+
+    // check if request was successful
+    if (r.status_code >= 200 && r.status_code < 300) {
+        try
+        {
+            JSONResR = json::parse(r.text);
         }
-        std::cout << std::endl;
+        catch (json::parse_error& ex)
+        {
+            std::cout << "There is a problem with the server! Please try again later!";
+        }
     }
     else {
         std::cout << "Error posting data: " << r.text << "\n";

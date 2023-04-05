@@ -231,7 +231,6 @@ void mainScene::displayUserInfo()
 	char ch2 = lName[0];
 	profilePic += fName[0];
 	profilePic += lName[0];
-	std::cout << profilePic << std::endl;
 }
 
 // Method for loading the variables / assets
