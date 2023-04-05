@@ -381,3 +381,5 @@ coverage
 *.njsproj
 *.sw?
 .env
+*.js
+*.js.map
