@@ -12,7 +12,7 @@
         <p class="hero-section__title">Chemistry</p>
         <p class="hero-section__title">Simulator</p>
       </div>
-      <button class="hero-section__button">Download</button>
+      <a href="https://github.com/ZYPetkova20/Neos" target="_blank"><button class="hero-section__button">Download</button></a>
     </div>
     <div class="hero-image">
       <router-link to="/login">
