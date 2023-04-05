@@ -380,3 +380,4 @@ coverage
 *.ntvs*
 *.njsproj
 *.sw?
+.env
