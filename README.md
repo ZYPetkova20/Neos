@@ -24,6 +24,8 @@
   <p align="left"> 
      <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
      <a href="https://www.raylib.com/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092194637701189822/Raylib_logo_1.png"/></a>
+     <a href="https://docs.libcpr.org/introduction.html"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092188134793560176/687474703a2f2f692e696d6775722e636f6d2f643958747974732e706e67_1.png"/></a>
+    <a href="https://curl.se/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092189749625753831/68747470733a2f2f6375726c2e73652f6c6f676f2f6375726c2d6c6f676f2e737667_1.png"/></a>
   </p>
 
 ## 🔧 Website Tech Stack 
@@ -41,8 +43,8 @@
     <a href="https://www.prisma.io/"><img src="https://img.icons8.com/ios/50/null/prisma-orm.png"/></a>
     <a href="https://www.postgresql.org/"><img src="https://img.icons8.com/color/48/null/postgreesql.png"/></a>
     <a href="https://azure.microsoft.com/en-us"><img src="https://img.icons8.com/fluency/48/null/azure-1.png"/></a>
-    <a href="https://docs.libcpr.org/introduction.html"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092188134793560176/687474703a2f2f692e696d6775722e636f6d2f643958747974732e706e67_1.png"/></a>
-    <a href="https://curl.se/"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1092189749625753831/68747470733a2f2f6375726c2e73652f6c6f676f2f6375726c2d6c6f676f2e737667_1.png"/></a>
+    <a href="https://azure.microsoft.com/en-us"><img src="https://cdn.discordapp.com/attachments/900689339179216926/1093035146963329084/image_6.png"/></a>
+   
   </p> 
   
 ## 🔨 Tools
@@ -57,6 +59,7 @@
     <a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo"/></a>
     <a href="https://git-scm.com/"><img src="https://img.icons8.com/color/48/000000/git.png" alt="Git"/></a>
     <a href="https://www.testcaselab.com/"><img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_d64820c5928a1ce8f91d728566c58d72/testcaselab.jpg" alt="Test Case Lab" width=48px /></a>
+    <a href="https://www.figma.com/"><img src="https://img.icons8.com/color/48/null/blender-3d.png"/></a>
   </p>   
   
   
