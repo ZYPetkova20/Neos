@@ -26,7 +26,7 @@ int APIHandler::registerHandler(string fName, string lName, string email, string
     };
 
         cpr::Response r = cpr::Post(
-        cpr::Url{ "http://localhost:8000/api/users" },
+        cpr::Url{ "https://neoswebapi.azurewebsites.net/api/users" },
         cpr::Authentication{ "neosadmin", adminPasswordString },
         cpr::Body{
             jsonData.dump()
@@ -142,7 +142,7 @@ string APIHandler::getLastName(int userId)
 void APIHandler::getUsers()
 {
     // function to get all users from API and check user login credentials
-    cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:8000/api/users"},
+    cpr::Response r = cpr::Get(cpr::Url{ "https://neoswebapi.azurewebsites.net/api/users"},
         cpr::Authentication{ "neosadmin", adminPasswordString });
 
     // check if request was successful
@@ -179,7 +179,7 @@ void APIHandler::reactionsPost()
     };
 
     cpr::Response r = cpr::Post(
-        cpr::Url{ "http://localhost:8000/api/reactions" },
+        cpr::Url{ "https://neoswebapi.azurewebsites.net/api/reactions" },
         cpr::Authentication{ "neosadmin", adminPasswordString },
         cpr::Body{
             jsonData.dump()
@@ -199,7 +199,7 @@ void APIHandler::reactionsPost()
 //archive get method function
 void APIHandler::reactionsGet()
 {
-    cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:8000/api/reactions/1" },
+    cpr::Response r = cpr::Get(cpr::Url{ "https://neoswebapi.azurewebsites.net/api/reactions/1" },
         cpr::Authentication{ "neosadmin", adminPasswordString });
 
     json JSONResR;
