@@ -143,21 +143,21 @@ npm run dev
     <li>Downloading it from our site link to site</li>
     <li>Downloading it from github release</li>
     <li>Or you can run the code on your local device by these steps:</li>
-    <li>Open cmd and clone our repo by typing:</li>
 </ol>
+
+*Open cmd and clone our repo by typing:*
 
 ```
 git clone https://github.com/ZYPetkova20/Neos.git
 ```
 
-*Then navigate to our solution file and open it with VS2022
-On platform and debugger choose:*
+*Then navigate to our solution file and open it with VS2022, on platform and debugger select:*
 
 ```
 release/x64 
 ```
 
-*then debug the project and run it or open the .exe file*
+*then debug the project, run it and enjoy our app!*
  
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&customColorList=2,3,12,19,21,23,26" width="1200px"/>
