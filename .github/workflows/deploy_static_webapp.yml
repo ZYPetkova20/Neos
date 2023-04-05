@@ -9,7 +9,7 @@ on:
     branches:
       - main
       
-  env:
+env:
    NPM_CONFIG_LEGACY_PEER_DEPS: true
 
 jobs:
