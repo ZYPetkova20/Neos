@@ -108,7 +108,7 @@ git clone https://github.com/SYSolakov20/onsens.git
 
 *You can access our website by pasting this link into your browser.*
 ```
-Paste link here.
+https://gray-mushroom-0dcc8a703.2.azurestaticapps.net/
 ```
 
 *To run the website on your local device follow these steps:*
