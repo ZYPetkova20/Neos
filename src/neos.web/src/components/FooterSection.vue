@@ -15,7 +15,6 @@
             <div class="footer__right-section__text__wrapper">
                 <p class="footer__right-section__text">2022 © NEOS | All rights reserved</p>
             </div>
-            
         </div>
     </footer>
 </template>
