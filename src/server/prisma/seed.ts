@@ -1,5 +1,5 @@
 //functionality
-import {db} from "../src/utils/db.server"
+import {db} from "../utils/db.server"
 
 type User = {
     firstName: string,

@@ -58,7 +58,6 @@ void registerForm::handleCollision()
 	if (CheckCollisionPointRec(mousePos, registerButtonPos) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
 		ReqHandler logReg;
-		std::cout << "1 " << std::endl;
 		if (logReg.isLogRegValid(fNameField.getResult(), lNameField.getResult(), emailField.getResult(), passwordField.getResult(), "register"))
 		{
 			showWarning = false;

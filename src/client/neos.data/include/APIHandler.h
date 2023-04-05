@@ -17,8 +17,9 @@ class APIHandler {
 
     json JSONRes; // JSON object to store server response
 
-    std::vector<string> emails, passwords, firstNames, lastNames;
     // vectors to store user emails and passwords
+    std::vector<string> emails, passwords, firstNames, lastNames;
+    
 
     int currentUserId = 0; // Holds the Id for the data of the logged user
 
@@ -27,9 +28,14 @@ class APIHandler {
 
 public:
     APIHandler(); // constructor to read admin password from .env file
-    void reactions();
 
     void getUsers(); // method to get user data from server
+
+    //reaction archive functions
+    void reactionsPost();
+    void reactionsGet();
+
+    //login/register functions
     int registerHandler(string fName, string lName, string email, string password); // method to handle user registration
     int loginHandler(string enteredEmail, string password); // method to handle user login
     bool checkLoginRegister(string enteredFName, string enteredlName, string enteredEmail, string enteredPassword, string logReg);

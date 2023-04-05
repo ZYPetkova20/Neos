@@ -10,6 +10,7 @@ void calculatorPage::Start()
 	setTabsPos();
 	loadAssets();
 	displayUserInfo();
+	calculatorFont = LoadFontEx("../assets/fonts/Comfortaa-SemiBold.ttf", 22, 0, 0);
 	calculatorsPos = {327,  188 , 1204 , 475};
 	scrollBasePos = {701,  741 , 282 , 16};
 	scrollInnerPos = {706,  745 , 224 , 8};
@@ -23,7 +24,13 @@ void calculatorPage::Update()
 	BeginDrawing();
 
 	ClearBackground(backgroundColor);
-	handleScoll();
+	handleScroll();
+	numField1.updateField(mousePos);
+	numField2.updateField(mousePos);
+	numField3.updateField(mousePos);
+	numField4.updateField(mousePos);
+	numField5.updateField(mousePos);
+	numField6.updateField(mousePos);
 	drawTextures();
 	handleCollision();
 
@@ -41,6 +48,24 @@ void calculatorPage::onExit()
 void calculatorPage::drawTextures()
 {
 	DrawTexture(calculatorsTexture, calculatorsPos.x, calculatorsPos.y, WHITE);
+	if (answer1 != -1)
+	{
+		string output = std::to_string(answer1);
+		string outputSubstr = output.substr(0, 4);
+		DrawTextEx(calculatorFont, outputSubstr.c_str(), { calculatorsPos.x + 50, calculatorsPos.y + 288 }, 22.0f, 0, BLACK);
+	}
+	if (answer2 != -1)
+	{
+		string output = std::to_string(answer2);
+		string outputSubstr = output.substr(0, 4);
+		DrawTextEx(calculatorFont, outputSubstr.c_str(), { calculatorsPos.x + 475, calculatorsPos.y + 288 }, 22.0f, 0, BLACK);
+	}
+	if (answer3 != -1)
+	{
+		string output = std::to_string(answer3);
+		string outputSubstr = output.substr(0, 4);
+		DrawTextEx(calculatorFont, outputSubstr.c_str(), { calculatorsPos.x + 900, calculatorsPos.y + 288 }, 22.0f, 0, BLACK);
+	}
 	DrawTexture(backgroundTexture, 0, 0, WHITE);
 	DrawTexture(userInfo, 30, 37, WHITE);
 	DrawTexture(logOutButton, 40, 700, WHITE);
@@ -55,11 +80,30 @@ void calculatorPage::drawTextures()
 	DrawTexture(scrollbarInner, scrollInnerPos.x, scrollInnerPos.y, WHITE);
 	DrawTextEx(font, userName.c_str(), { 80.6f, 32.f }, 32.0f, 0.1f, WHITE);
 	DrawTextEx(font, profilePic.c_str(), { 41, 42.5 }, 32.0f, 0, BLACK);
+	DrawTextEx(font, profilePic.c_str(), { 41, 42.5 }, 32.0f, 0, BLACK);
 }
 
 // Method for handling collision events
 void calculatorPage::handleCollision()
 {
+	if (CheckCollisionPointRec(mousePos, button1))
+	{
+		if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			return;
+		answer1 = calculator.molarMass(std::stof(numField1.getResult()), std::stof(numField2.getResult()), -1);
+	}
+	if (CheckCollisionPointRec(mousePos, button2))
+	{
+		if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			return;
+		answer2 = calculator.degreeOfDissocian(std::stof(numField3.getResult()), std::stof(numField4.getResult()), -1);
+	}
+	if (CheckCollisionPointRec(mousePos, button3))
+	{
+		if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			return;
+		answer3 = calculator.massDensity(std::stof(numField5.getResult()), std::stof(numField6.getResult()), -1);
+	}
 	for (int i = 0; i < 6; i++)
 	{
 		if (CheckCollisionPointRec(mousePos, tabsPos[i]))
@@ -149,13 +193,35 @@ void calculatorPage::displayUserInfo()
 }
 
 // Method for handling scroll input
-void calculatorPage::handleScoll()
+void calculatorPage::handleScroll()
 {
 	float mouseScroll = GetMouseWheelMove();
-	if(calculatorsPos.x > 128 && mouseScroll > 0)
+	if (calculatorsPos.x > 128 && mouseScroll > 0)
+	{
+		numField1.changePos((mouseScroll * scrollSpeed), 0);
+		numField2.changePos((mouseScroll * scrollSpeed), 0);
+		numField3.changePos((mouseScroll * scrollSpeed), 0);
+		numField4.changePos((mouseScroll * scrollSpeed), 0);
+		numField5.changePos((mouseScroll * scrollSpeed), 0);
+		numField6.changePos((mouseScroll * scrollSpeed), 0);
+		button1.x -= (mouseScroll * scrollSpeed);
+		button2.x -= (mouseScroll * scrollSpeed);
+		button3.x -= (mouseScroll * scrollSpeed);
 		calculatorsPos.x -= (mouseScroll * scrollSpeed);
+	}
 	if (calculatorsPos.x < 327 && mouseScroll < 0)
+	{
+		numField1.changePos((mouseScroll * scrollSpeed), 0);
+		numField2.changePos((mouseScroll * scrollSpeed), 0);
+		numField3.changePos((mouseScroll * scrollSpeed), 0);
+		numField4.changePos((mouseScroll * scrollSpeed), 0);
+		numField5.changePos((mouseScroll * scrollSpeed), 0);
+		numField6.changePos((mouseScroll * scrollSpeed), 0);
+		button1.x -= (mouseScroll * scrollSpeed);
+		button2.x -= (mouseScroll * scrollSpeed);
+		button3.x -= (mouseScroll * scrollSpeed);
 		calculatorsPos.x -= (mouseScroll * scrollSpeed);
+	}
 	if (scrollInnerPos.x >= 705 && mouseScroll > 0)
 		scrollInnerPos.x += calculatorsPos.x / 60;
 	else if (scrollInnerPos.x < 705) scrollInnerPos.x = 705;

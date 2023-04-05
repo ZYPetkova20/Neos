@@ -9,8 +9,11 @@ inputField::inputField(Rectangle _field, string _type, float _fontSize, Color _t
     fontSize = _fontSize;
     textColor = _textColor;
     font = LoadFontEx("../assets/fonts/Comfortaa-SemiBold.ttf", _type == "email" ? 18 : 22, 0, 0);
-    maxChars = this->type == "email" ? 28 : 18;
 
+    if (type == "num")
+        maxChars = 3;
+    else
+        maxChars = this->type == "email" ? 28 : 18;
     for (int i = 0; i < 30; i++)
     {
         input[i] = '\0';
@@ -102,6 +105,12 @@ bool inputField::isKeyAllowed()
     if ((key >= 32) && (key <= 126)) keyPressed = true;
 
     return keyPressed;
+}
+
+void inputField::changePos(float x, float y)
+{
+    field.x -= x;
+    field.y -= y;
 }
 
 void inputField::setResult(string str)

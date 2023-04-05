@@ -57,7 +57,6 @@ void signInForm::handleCollision()
 		string pass = passwordField.getResult();
 		if (logReg.isLogRegValid("", "", email, pass, "login"))
 		{
-			std::cout << "WORKSSSS!!!" << std::endl;
 			showWarning = false;
 			int userId = logReg.login(emailField.getResult(), passwordField.getResult());
 			mySceneManager.setCurrentScene("MainScene", userId);

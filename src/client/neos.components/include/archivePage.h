@@ -11,7 +11,6 @@ private:
 	// Variables
 	Font font;
 	Vector2 mousePos = { 0.f, 0.f };
-	Vector2 sectionPos[10]; // Positions of the table sections
 	int tabsAnimation = 0;
 	int sIndex = 0; // index of the current hovered section
 	// User data
@@ -24,6 +23,8 @@ private:
 	Texture backgroundTexture;
 	Texture userInfo;
 	Texture logOutButton;
+	Texture h1;
+	Texture archiveTable;
 	// Tabs
 	Texture selectedTab;
 	Texture tableTab;

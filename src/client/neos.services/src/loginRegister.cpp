@@ -16,7 +16,7 @@ string loginRegister::asciiToLower(string str)
 
 void loginRegister::archive()
 {
-	handler.reactions();
+	handler.reactionsPost();
 }
 
 int loginRegister::reg(string fName, string lName, string email, string password)
@@ -37,7 +37,6 @@ bool loginRegister::isLogRegValid(string fName, string lName, string email, stri
 		return 0;
 
 	email = asciiToLower(email);
-	std::cout << email << std::endl;
 	return handler.checkLoginRegister(fName, lName, email, password, logRegs);
 }
 

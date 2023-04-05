@@ -149,9 +149,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\calculator.cpp" />
     <ClCompile Include="src\loginRegister.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\calculator.h" />
     <ClInclude Include="include\loginRegister.h" />
   </ItemGroup>
   <ItemGroup>

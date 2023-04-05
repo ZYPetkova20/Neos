@@ -8,14 +8,13 @@
         <div class="footer__line"></div>
         <div class="footer__right-section">
             <div class="footer__right-section__nav">
-                <p class="footer__right-section__nav__links">Contact Us</p>
-                <p class="footer__right-section__nav__links">Download</p>
+                <a href="https://github.com/ZYPetkova20/Neos/discussions"><p class="footer__right-section__nav__links">Contact Us</p></a>
+                <a href="https://github.com/ZYPetkova20/Neos"><p class="footer__right-section__nav__links">Download</p></a>
                 <p class="footer__right-section__nav__links">Support</p>
             </div>
             <div class="footer__right-section__text__wrapper">
                 <p class="footer__right-section__text">2022 © NEOS | All rights reserved</p>
             </div>
-            
         </div>
     </footer>
 </template>
