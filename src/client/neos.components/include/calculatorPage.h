@@ -2,6 +2,8 @@
 #include "sceneManager.h"
 #include <raylib.h>
 #include <string>
+#include "inputField.h"
+#include "calculator.h"
 
 class calculatorPage : public scene
 {
@@ -9,7 +11,9 @@ private:
 	sceneManager& mySceneManager;
 
 	// Variables
+	calculator calculator;
 	Font font;
+	Font calculatorFont;
 	Vector2 mousePos = { 0.f, 0.f };
 	Vector2 sectionPos[10]; // Positions of the table sections
 	int tabsAnimation = 0;
@@ -20,6 +24,10 @@ private:
 	string lName;
 	string userName;
 	string profilePic = "";
+	// Input fields
+	float answer1 = -1;
+	cp::inputField 	numField1 = { {378,306,36,32} ,"num", 22, BLACK};
+	cp::inputField 	numField2 = { {574,306,36,32} ,"num", 22, BLACK};
 
 	// Textures
 	Texture backgroundTexture;
@@ -55,7 +63,7 @@ private:
 	// For setting the user info in the tabs
 	void displayUserInfo();
 	// For handling scrolling
-	void handleScoll();
+	void handleScroll();
 
 public:
 	calculatorPage(std::string sceneName, sceneManager& sceneManager);

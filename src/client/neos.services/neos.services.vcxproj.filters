@@ -18,9 +18,15 @@
     <ClCompile Include="src\loginRegister.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\calculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\loginRegister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\calculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

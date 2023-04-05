@@ -10,6 +10,7 @@ void calculatorPage::Start()
 	setTabsPos();
 	loadAssets();
 	displayUserInfo();
+	calculatorFont = LoadFontEx("../assets/fonts/Comfortaa-SemiBold.ttf", 22, 0, 0);
 	calculatorsPos = {327,  188 , 1204 , 475};
 	scrollBasePos = {701,  741 , 282 , 16};
 	scrollInnerPos = {706,  745 , 224 , 8};
@@ -23,8 +24,10 @@ void calculatorPage::Update()
 	BeginDrawing();
 
 	ClearBackground(backgroundColor);
-	handleScoll();
+	handleScroll();
 	drawTextures();
+	numField1.updateField(mousePos);
+	numField2.updateField(mousePos);
 	handleCollision();
 
 	EndDrawing();
@@ -55,11 +58,24 @@ void calculatorPage::drawTextures()
 	DrawTexture(scrollbarInner, scrollInnerPos.x, scrollInnerPos.y, WHITE);
 	DrawTextEx(font, userName.c_str(), { 80.6f, 32.f }, 32.0f, 0.1f, WHITE);
 	DrawTextEx(font, profilePic.c_str(), { 41, 42.5 }, 32.0f, 0, BLACK);
+	DrawTextEx(font, profilePic.c_str(), { 41, 42.5 }, 32.0f, 0, BLACK);
+	if (answer1 != -1)
+	{
+		string output = std::to_string(answer1);
+		string outputSubstr = output.substr(0, 4);
+		DrawTextEx(calculatorFont, outputSubstr.c_str(), {378, 472}, 22.0f, 0, BLACK);
+	}
 }
 
 // Method for handling collision events
 void calculatorPage::handleCollision()
 {
+	if (CheckCollisionPointRec(mousePos, Rectangle{ 327,570,350,93 }))
+	{
+		if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			return;
+		answer1 = calculator.molarMass(std::stof(numField1.getResult()), std::stof(numField2.getResult()), -1);
+	}
 	for (int i = 0; i < 6; i++)
 	{
 		if (CheckCollisionPointRec(mousePos, tabsPos[i]))
@@ -149,7 +165,7 @@ void calculatorPage::displayUserInfo()
 }
 
 // Method for handling scroll input
-void calculatorPage::handleScoll()
+void calculatorPage::handleScroll()
 {
 	float mouseScroll = GetMouseWheelMove();
 	if(calculatorsPos.x > 128 && mouseScroll > 0)

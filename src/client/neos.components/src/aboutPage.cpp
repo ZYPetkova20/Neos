@@ -10,6 +10,8 @@ void aboutPage::Start()
 	setTabsPos();
 	loadAssets();
 	displayUserInfo();
+	infoPos = {250, 0};
+	scrollInner = { 1364 ,38, 8, 224 };
 }
 
 // Method updating the scene every frame
@@ -20,6 +22,7 @@ void aboutPage::Update()
 	BeginDrawing();
 
 	ClearBackground(backgroundColor);
+	handleScroll();
 	drawTextures();
 	handleCollision();
 
@@ -45,6 +48,9 @@ void aboutPage::drawTextures()
 	DrawTexture(simulationTab, 42, 345, WHITE);
 	DrawTexture(archiveTab, 43, 395, WHITE);
 	DrawTexture(settingsTab, 41, 445, WHITE);
+	DrawTexture(aboutInfo, infoPos.x, infoPos.y, WHITE);
+	DrawTexture(scrollbarBase, scrollBasePos.x, scrollBasePos.y, WHITE);
+	DrawTexture(scrollbarInner, scrollInner.x, scrollInner.y, WHITE);
 	DrawTextEx(font, userName.c_str(), { 80.6f, 32.f }, 32.0f, 0.1f, WHITE);
 	DrawTextEx(font, profilePic.c_str(), { 41, 42.5 }, 32.0f, 0, BLACK);
 }
@@ -110,6 +116,8 @@ void aboutPage::handleCollision()
 	mySceneManager.setCurrentScene("GreetingScreen");
 }
 
+
+
 // Method for setting the tabs positions
 void aboutPage::setTabsPos()
 {
@@ -139,6 +147,24 @@ void aboutPage::displayUserInfo()
 	profilePic += lName[0];
 }
 
+// Method for handling scroll input
+void aboutPage::handleScroll()
+{
+	float mouseScroll = GetMouseWheelMove();
+	if (infoPos.y <= 0 && mouseScroll > 0)
+		infoPos.y += (mouseScroll * 60);
+	else if (infoPos.y > 0) infoPos.y = 0;
+	if (infoPos.y >= -3410 && mouseScroll < 0)
+		infoPos.y += (mouseScroll * 60);
+	else if (infoPos.y < -3410) infoPos.y = -3410;
+	if (scrollInner.y >= 40 && mouseScroll > 0)
+		scrollInner.y -= (mouseScroll * 10);
+	else if (scrollInner.y < 40) scrollInner.y = 40;
+	if (scrollInner.y <= 520 && mouseScroll < 0)
+		scrollInner.y -= (mouseScroll * 10);
+	else if (scrollInner.y > 520) scrollInner.y = 520;
+}
+
 // Method for loading the variables / assets
 void aboutPage::loadAssets()
 {
@@ -151,6 +177,9 @@ void aboutPage::loadAssets()
 	backgroundTexture = LoadTexture("../assets/mainScreen/backgroundTexture.png");
 	userInfo = LoadTexture("../assets/mainScreen/userTemplate.png");
 	logOutButton = LoadTexture("../assets/mainScreen/logOut.png");
+	aboutInfo = LoadTexture("../assets/aboutPage/aboutInfo.png");
+	scrollbarInner = LoadTexture("../assets/aboutPage/inner.png");
+	scrollbarBase = LoadTexture("../assets/aboutPage/base.png");
 }
 
 // Method for unloading the variables / assets
@@ -165,4 +194,7 @@ void aboutPage::deleteAssets()
 	UnloadTexture(simulationTab);
 	UnloadTexture(archiveTab);
 	UnloadTexture(settingsTab);
+	UnloadTexture(aboutInfo);
+	UnloadTexture(scrollbarInner);
+	UnloadTexture(scrollbarBase);
 }

@@ -13,7 +13,7 @@ namespace cp // namespace for our own-written compounds
         // Variables
         Color textColor; // Color of the text
         Rectangle field; // Position of the input field
-        string type; // Type of the input (text, email, password)
+        string type; // Type of the input (text, email, password, numbers)
         string result = ""; // Result from the fields
         char input[30]; // The text from the field
         float fontSize; // Size of the text
