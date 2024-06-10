@@ -72,13 +72,13 @@
   - [Doxygen](https://saboev20.github.io/neos-docs/)
 
 ## 📑 Diagrams
-<details open>
+<details close>
 <summary>Use Case Diagram</summary>
 <br>
 <img src ="https://cdn.discordapp.com/attachments/900689339179216926/1092940808379957348/NEOS_Diagram.png">
 </details>
 
-<details open>
+<details close>
 <summary>Tech Stack Diagram</summary>
 <br>
 <img src ="https://cdn.discordapp.com/attachments/900689339179216926/1092941387739189308/Tech_Stack_Diagram.png">
@@ -104,7 +104,8 @@ git clone https://github.com/SYSolakov20/onsens.git
  ## 🎬 Demo of the project 
   
   <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/900689339179216926/1092207084529008711/Pro_Display_XDR_Front_View_Mockup.png" width = "900px" >
+  <img src="https://cdn.discordapp.com/attachments/981951996682706954/1249857110326509578/image2.png?ex=6668d3a4&is=66678224&hm=ff0556ce7ccbdefdce2d8c2318d1450bc162976ac46acd754ec92ed070bfb036&" width = "900px" >
+    <img src="https://cdn.discordapp.com/attachments/981951996682706954/1249857110959849533/image.png?ex=6668d3a4&is=66678224&hm=7d8e474acc65ca05cb52f8f46b751b69f5ed4d30d884b73231298f7fafb1865b&" width = "900px" >
   </p>
 
 ## ⚙ Website Access
